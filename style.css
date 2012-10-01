@@ -24,10 +24,7 @@
 @font-face {
     font-family: 'DejaWeb';
     src: url('fonts/dejaweb.eot');
-    src: url('fonts/dejaweb.svg#dejaweb') format('svg'),
-         url('fonts/dejaweb.eot?#iefix') format('embedded-opentype'),
-         url('fonts/dejaweb.woff') format('woff'),
-         url('fonts/dejaweb.ttf') format('truetype');
+    src: url('fonts/dejaweb.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
