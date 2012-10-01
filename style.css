@@ -24,10 +24,10 @@
 @font-face {
     font-family: 'DejaWeb';
     src: url('fonts/dejaweb.eot');
-    src: url('fonts/dejaweb.eot?#iefix') format('embedded-opentype'),
+    src: url('fonts/dejaweb.svg#dejaweb') format('svg'),
+         url('fonts/dejaweb.eot?#iefix') format('embedded-opentype'),
          url('fonts/dejaweb.woff') format('woff'),
-         url('fonts/dejaweb.ttf') format('truetype'),
-         url('fonts/dejaweb.svg#dejaweb') format('svg');
+         url('fonts/dejaweb.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -162,6 +162,8 @@ textarea {
 	font-weight: 400;
 	vertical-align: baseline;
 	color: #404040;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px;
 	
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
