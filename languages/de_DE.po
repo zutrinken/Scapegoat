@@ -1,0 +1,606 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: scapegoat v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-09-30 22:47:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:11
+#: functions.php:438
+#@ scapegoat
+msgid "404"
+msgstr "404"
+
+#: archive.php:11
+#: functions.php:430
+#@ scapegoat
+msgid "Tag"
+msgstr "Tag"
+
+#: archive.php:15
+#@ scapegoat
+msgid "Category"
+msgstr "Kategorie"
+
+#: archive.php:19
+#: functions.php:435
+#: single.php:59
+#@ scapegoat
+msgid "Author"
+msgstr "Autor"
+
+#: archive.php:22
+#@ scapegoat
+msgid "Date"
+msgstr "Datum"
+
+#: archive.php:26
+#@ scapegoat
+msgid "Month"
+msgstr "Monat"
+
+#: archive.php:30
+#@ scapegoat
+msgid "Year"
+msgstr "Jahr"
+
+#: archive.php:34
+#@ scapegoat
+msgid "Archive"
+msgstr "Archiv"
+
+#: comments.php:3
+#, php-format
+#@ default
+msgid "Theme without %1$s"
+msgstr ""
+
+#: comments.php:3
+#, php-format
+#@ default
+msgid "Please include a %1$s template in your theme."
+msgstr ""
+
+#: comments.php:16
+#, php-format
+#@ scapegoat
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Ein Kommentar"
+msgstr[1] "%1$s Kommentare"
+
+#: comments.php:45
+#@ scapegoat
+msgid "Comments closed."
+msgstr "Kommentare geschlossen."
+
+#: comments.php:57
+#@ scapegoat
+msgid "What do you think?"
+msgstr "Was denkst du?"
+
+#: comments.php:57
+#, php-format
+#@ scapegoat
+msgid "Leave a reply to %s"
+msgstr "Antworte auf %s"
+
+#: comments.php:65
+#, php-format
+#@ scapegoat
+msgid "You have to be <a href=\"%s\">logged in</a>."
+msgstr "Du musst <a href=\"%s\">eingeloggt</a> sein."
+
+#: comments.php:73
+#, php-format
+#@ scapegoat
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr "Eingeloggt als <a href=\"%1$s\">%2$s</a>."
+
+#: comments.php:73
+#@ default
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:73
+#@ scapegoat
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: comments.php:79
+#@ scapegoat
+msgid "Name"
+msgstr "Name"
+
+#: comments.php:84
+#@ scapegoat
+msgid "eMail"
+msgstr "eMail"
+
+#: archive.php:66
+#: comments.php:89
+#: single.php:79
+#@ scapegoat
+msgid "Website"
+msgstr "Website"
+
+#: comments.php:94
+#, php-format
+#@ default
+msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+msgstr ""
+
+#: comments.php:101
+#@ piraten
+msgid "Abschicken"
+msgstr ""
+
+#: functions.php:59
+#: theme-options.php:99
+#: theme-options.php:110
+#@ scapegoat
+msgid "Header"
+msgstr "Kopfzeile"
+
+#: functions.php:60
+#@ scapegoat
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: functions.php:68
+#: functions.php:355
+#@ scapegoat
+msgid "Start"
+msgstr "Start"
+
+#: functions.php:264
+#@ scapegoat
+msgid "more"
+msgstr "weiterlesen"
+
+#: functions.php:427
+#@ scapegoat
+msgid "Search"
+msgstr "Suche"
+
+#: functions.php:443
+#@ scapegoat
+msgid "Page"
+msgstr "Seite"
+
+#: functions.php:493
+#@ scapegoat
+msgid "Title:"
+msgstr "Titel:"
+
+#: functions.php:498
+#@ scapegoat
+msgid "Image url:"
+msgstr "Bild url:"
+
+#: functions.php:503
+#@ scapegoat
+msgid "Link url:"
+msgstr "Link url:"
+
+#: functions.php:525
+#, php-format
+#@ scapegoat
+msgid "%s"
+msgstr "%s"
+
+#: functions.php:529
+#@ default
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:537
+#@ scapegoat
+msgid "Your comment will be public soon."
+msgstr "Dein Kommentar wird bald veröffentlicht."
+
+#: index.php:34
+#@ scapegoat
+msgid "Leave a comment"
+msgstr "Hinterlasse einen Kommentar"
+
+#: index.php:34
+#@ scapegoat
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: index.php:34
+#@ scapegoat
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: index.php:34
+#@ scapegoat
+msgid "Comments closed"
+msgstr "Kommentare geschlossen"
+
+#: index.php:52
+#: single.php:48
+#@ scapegoat
+msgid "Posted in:"
+msgstr "Abgelegt in:"
+
+#: searchform.php:2
+#@ scapegoat
+msgid "search ..."
+msgstr "Suche ..."
+
+#: archive.php:52
+#: single.php:65
+#@ scapegoat
+msgid "Twitter"
+msgstr "Twitter"
+
+#: archive.php:59
+#: single.php:72
+#@ scapegoat
+msgid "Wiki"
+msgstr "Wiki"
+
+#: single.php:86
+#@ scapegoat
+msgid "Biography"
+msgstr "Biografie"
+
+#: theme-options.php:34
+#@ scapegoat
+msgid "Settings saved!"
+msgstr "Einstellungen gespeichert!"
+
+#: theme-options.php:124
+#@ default
+msgid "slider-cat"
+msgstr ""
+
+#: theme-options.php:128
+#@ default
+msgid "slider-num"
+msgstr ""
+
+#: theme-options.php:139
+#@ default
+msgid "featured-link-1"
+msgstr ""
+
+#: theme-options.php:140
+#@ default
+msgid "featured-link-title-1"
+msgstr ""
+
+#: theme-options.php:146
+#@ default
+msgid "featured-link-2"
+msgstr ""
+
+#: theme-options.php:147
+#@ default
+msgid "featured-link-title-2"
+msgstr ""
+
+#: theme-options.php:153
+#@ default
+msgid "featured-link-3"
+msgstr ""
+
+#: theme-options.php:154
+#@ default
+msgid "featured-link-title-3"
+msgstr ""
+
+#: theme-options.php:162
+#@ default
+msgid "rss"
+msgstr ""
+
+#: theme-options.php:166
+#@ default
+msgid "twitter"
+msgstr ""
+
+#: theme-options.php:170
+#@ default
+msgid "facebook"
+msgstr ""
+
+#: theme-options.php:178
+#@ default
+msgid "youtube"
+msgstr ""
+
+#: theme-options.php:182
+#@ default
+msgid "mail"
+msgstr ""
+
+#: theme-options.php:49
+#: theme-options.php:51
+#@ default
+msgid "logo"
+msgstr ""
+
+#: theme-options.php:58
+#: theme-options.php:60
+#@ default
+msgid "icon"
+msgstr ""
+
+#: functions.php:342
+#: theme-options.php:87
+#@ scapegoat
+msgid "Submenu"
+msgstr "Unterseiten"
+
+#: theme-options.php:174
+#@ default
+msgid "google"
+msgstr ""
+
+#: page-full.php:18
+#: page-full.php:20
+#: page.php:15
+#: page.php:17
+#: single.php:21
+#: single.php:23
+#@ scapegoat
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: functions.php:458
+#@ scapegoat
+msgid "Banner"
+msgstr "Banner"
+
+#: functions.php:460
+#@ scapegoat
+msgid "A simple Widget for Images."
+msgstr "Ein einfaches Widget für Bilder."
+
+#: functions.php:29
+#@ scapegoat
+msgid "Twitter (without @)"
+msgstr "Twitter (ohne @)"
+
+#: functions.php:31
+#@ scapegoat
+msgid "Wiki (Username)"
+msgstr "Wiki (Benutzername)"
+
+#: comments.php:20
+#: comments.php:32
+#@ scapegoat
+msgid "Older comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:21
+#: comments.php:33
+#@ scapegoat
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: functions.php:89
+#@ scapegoat
+msgid "Main-Sidebar"
+msgstr "Haupt-Sidebar"
+
+#: functions.php:90
+#@ scapegoat
+msgid "The default sidebar."
+msgstr "Die Standard Sidebar"
+
+#: functions.php:100
+#@ scapegoat
+msgid "Footer-Sidebar"
+msgstr "Fußzeile-Sidebar"
+
+#: functions.php:101
+#@ scapegoat
+msgid "Widgets for the Footer-section."
+msgstr "Widgets für die Fußzeile-Sidebar"
+
+#: functions.php:528
+#, php-format
+#@ default
+msgid "%1$s &bull; %2$s"
+msgstr ""
+
+#: index.php:53
+#: single.php:49
+#@ scapegoat
+msgid "<aside class=\"tags\">Tagged with:"
+msgstr "<aside class=\"tags\">getaggt mit:"
+
+#: theme-options.php:186
+#@ default
+msgid "podcast"
+msgstr ""
+
+#: comments.php:8
+#@ scapegoat
+msgid "This is not the content you are looking for."
+msgstr "Das ist nicht der Inhalt, den du suchst."
+
+#: comments.php:79
+#: comments.php:84
+#@ scapegoat
+msgid "*"
+msgstr "*"
+
+#: search.php:9
+#@ scapegoat
+msgid "Search for"
+msgstr "Suche nach"
+
+#: single.php:12
+#: single.php:27
+#@ scapegoat
+msgid "Next"
+msgstr "Nächste"
+
+#: single.php:13
+#: single.php:28
+#@ scapegoat
+msgid "Last"
+msgstr "Vorherige"
+
+#: archive.php:92
+#: index.php:9
+#: page-full.php:11
+#: page.php:9
+#: single.php:10
+#@ scapegoat
+msgid "Edit"
+msgstr "bearbeiten"
+
+#: functions.php:122
+#@ scapegoat
+msgid "Default"
+msgstr "Standard"
+
+#: theme-options.php:29
+#@ scapegoat
+msgid "Scapegoat Theme-Options"
+msgstr "Scapegoat Theme-Optionen"
+
+#: theme-options.php:43
+#@ scapegoat
+msgid "Graphics"
+msgstr "Bilder"
+
+#: theme-options.php:65
+#@ scapegoat
+msgid "Articles"
+msgstr "Artikel"
+
+#: theme-options.php:68
+#@ scapegoat
+msgid "Excerpt"
+msgstr "Auszug"
+
+#: theme-options.php:71
+#@ scapegoat
+msgid "automatic excerpts"
+msgstr "automatische Auszüge"
+
+#: theme-options.php:71
+#@ scapegoat
+msgid "if this is checked, you don't need more-tags"
+msgstr "bei Aktivierung benötigst du keine more-tags"
+
+#: theme-options.php:76
+#@ scapegoat
+msgid "Navigation"
+msgstr "Navigation"
+
+#: theme-options.php:79
+#@ scapegoat
+msgid "Breadcrumb-Navigation"
+msgstr "Breadcrumb-Navigation"
+
+#: theme-options.php:82
+#: theme-options.php:90
+#@ scapegoat
+msgid "show"
+msgstr "anzeigen"
+
+#: theme-options.php:100
+#@ scapegoat
+msgid "Customize the Header on the Front-Page."
+msgstr "Individualisiere die Kopfzeile deiner Sartseite."
+
+#: theme-options.php:103
+#@ scapegoat
+msgid "What should be displayed?"
+msgstr "Was soll angezeigt werden?"
+
+#: theme-options.php:106
+#@ scapegoat
+msgid "Slider"
+msgstr "Slider"
+
+#: theme-options.php:114
+#@ scapegoat
+msgid "Nothing"
+msgstr "Nichts"
+
+#: theme-options.php:120
+#@ scapegoat
+msgid "Slider-settings"
+msgstr "Slider-Einstellungen"
+
+#: theme-options.php:123
+#@ scapegoat
+msgid "Category (ID)"
+msgstr "Kategorie (ID)"
+
+#: theme-options.php:127
+#@ scapegoat
+msgid "Amount of slides"
+msgstr "Anzahl der Slides"
+
+#: theme-options.php:128
+#@ scapegoat
+msgid "Slides"
+msgstr "Slides"
+
+#: theme-options.php:134
+#@ scapegoat
+msgid "Featured Links"
+msgstr "Wichtige Links"
+
+#: theme-options.php:140
+#: theme-options.php:147
+#: theme-options.php:154
+#@ scapegoat
+msgid "Title"
+msgstr "Titel"
+
+#: theme-options.php:158
+#@ scapegoat
+msgid "Social Networks"
+msgstr "Soziale Netzwerke"
+
+#: theme-options.php:162
+#@ scapegoat
+msgid "if this is empty, the default Wordpress-feed will set"
+msgstr "Wenn nichts ausgwählt ist, wird der dein Standard Wordpress Feed verwendet"
+
+#: theme-options.php:190
+#@ scapegoat
+msgid "Save"
+msgstr "Speichern"
+
+#: comments.php:103
+#@ scapegoat
+msgid "Please use <a target=\"_blank\" href=\"http://gravatar.com/\">Gravatar</a>!"
+msgstr "Bitte benutze <a target=\"_blank\" href=\"http://gravatar.com/\">Gravatar</a>!"
+
+#: theme-options.php:44
+#, php-format
+#@ scapegoat
+msgid "Choose an Image from your <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Library</a> or <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">upload</a> a new one."
+msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Mediathek</a> oder <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">lade</a> ein neues hoch."
+
+#: theme-options.php:90
+#@ scapegoat
+msgid "at the top of the sidebar"
+msgstr "am Anfang der Sidebar"
+
