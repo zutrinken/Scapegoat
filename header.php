@@ -146,27 +146,22 @@
 									<ul>
 										<?php if($options['featured-link-1'] && $options['featured-link-title-1'] == TRUE) : ?>
 											<li>
-												<a class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>"><?php echo $options['featured-link-title-1']; ?></a>
+												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>"><?php echo $options['featured-link-title-1']; ?></a>
 											</li>
 										<?php endif; ?>
 										<?php if($options['featured-link-2'] && $options['featured-link-title-2'] == TRUE) : ?>
 											<li>
-												<a class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>"><?php echo $options['featured-link-title-2']; ?></a>
+												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>"><?php echo $options['featured-link-title-2']; ?></a>
 											</li>
 										<?php endif; ?>
 										<?php if($options['featured-link-3'] && $options['featured-link-title-3'] == TRUE) : ?>
 											<li>
-												<a class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>"><?php echo $options['featured-link-title-3']; ?></a>
+												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>"><?php echo $options['featured-link-title-3']; ?></a>
 											</li>
 										<?php endif; ?>
 									</ul>
 								</aside>
 							<?php endif; ?>
-							<span id="slider-description-outer">
-								<span id="slider-description-inner">
-									<?php bloginfo('description'); ?>
-								</span>
-							</span>
 						</div><!-- front-page-adverts -->
 						<div class="clear"></div>
 					</div><!-- toggling -->

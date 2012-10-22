@@ -48,7 +48,7 @@ add_theme_support (
 /* add custom image-sizes */
 if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support('post-thumbnails');
-	add_image_size('featured', 620, 320, true);
+	add_image_size('featured', 1140, 320, true);
 }
 
 /* register all menus */
