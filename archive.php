@@ -89,7 +89,7 @@
 
 			<?php while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>
+				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
 
 					<?php if($options['custom-excerpt'] == TRUE) : ?>
 						<?php if(has_post_thumbnail()) : ?>

@@ -24,3 +24,4 @@
 
 * 01.10.12 - Release
 * 22.10.12 - Slider redesign, CSS fixes, new font for titles
+* 03.11.12 - New colours, some new icons, scroll fix on mobile, slight navigation changes, font updates, Slider update

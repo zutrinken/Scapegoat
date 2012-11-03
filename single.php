@@ -7,7 +7,7 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 			<section id="post-<?php the_ID(); ?>" <?php post_class('single-post-view'); ?>>
-				<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>	
+				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
 				<!--<nav class="post-nav post-nav-top">
 					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
 					<span class="post-nav-prev"><?php previous_post_link('%link', __('Last','scapegoat')); ?></span>
