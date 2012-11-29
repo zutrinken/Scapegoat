@@ -17,7 +17,6 @@
 
 == ISSUES ==
 
-* retina icons
 * rtl support
 
 == LOG ==
@@ -25,3 +24,4 @@
 * 01.10.12 - Release
 * 22.10.12 - Slider redesign, CSS fixes, new font for titles
 * 03.11.12 - New colours, some new icons, scroll fix on mobile, slight navigation changes, font updates, Slider update
+* 29.11.12 - Retina icons, new unorderd list stlye, main menu update, mobile detection queries for slider and bredcrumb, optimizing widgets, dynamic navigation fontsize

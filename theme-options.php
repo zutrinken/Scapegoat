@@ -92,15 +92,18 @@ function scapegoat_theme_options_page() {
 					</td>
 				</tr>
 			</table>
-
-
-
-
-			<h3><?php _e('Header','scapegoat'); ?></h3>
-			<p><?php _e('Customize the Header on the Front-Page.','scapegoat'); ?></p>
+			<h3><?php _e('Frontpage','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row"><?php _e('What should be displayed?','scapegoat'); ?></th>
+					<th scope="row"><?php _e('Frontpage Layout','scapegoat'); ?></th>
+					<td>
+						<label for="scapegoat_theme_options[frnt-page]">
+							<input id="scapegoat_theme_options[front-page]" type="checkbox" name="scapegoat_theme_options[front-page]" value="1" <?php checked( '1', $options['front-page'] ); ?> /> <?php _e('show','scapegoat'); ?> <span class="description"><?php _e('use custom frontpage layout','scapegoat'); ?></span></td>
+						</label>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e('Header','scapegoat'); ?></th>
 					<td>
 						<label for="show-slider">
 							<input id="show-slider" type="radio" name="scapegoat_theme_options[header-option]" value="show-slider" <?php checked( 'show-slider' == $options['header-option'] ); ?> /> <?php _e('Slider','scapegoat'); ?>
@@ -152,6 +155,13 @@ function scapegoat_theme_options_page() {
 					<td>
 						<input id="scapegoat_theme_options[featured-link-3]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-3]" value="<?php esc_attr_e( $options['featured-link-3'] ); ?>" /> <span class="description">URL</span><br />
 						<input id="scapegoat_theme_options[featured-link-title-3]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-title-3]" value="<?php esc_attr_e( $options['featured-link-title-3'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Link 3</th>
+					<td>
+						<input id="scapegoat_theme_options[featured-link-4]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-4]" value="<?php esc_attr_e( $options['featured-link-4'] ); ?>" /> <span class="description">URL</span><br />
+						<input id="scapegoat_theme_options[featured-link-title-4]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-title-4]" value="<?php esc_attr_e( $options['featured-link-title-4'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
 					</td>
 				</tr>
 			</table>

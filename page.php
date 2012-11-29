@@ -1,8 +1,21 @@
 		<?php get_header(); ?>
 
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
+
 		<div id="container">
 			
 			<div id="content">
+			
+			<!-- Mobile Query -->
+			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+				<?php if($options['breadcrumb-show']) : ?>
+					<?php if(function_exists('breadcrumb')) : ?>
+						<?php breadcrumb(); ?> 
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endif; ?>
+			<!-- Mobile Query -->
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -9,10 +9,15 @@
 				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
 				<header class="header">
 					<?php if(has_post_thumbnail() && ($options['custom-excerpt'] == TRUE)) : ?>
-						<figure class="postimage">
+						<figure class="post-image">
 							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail('featured'); ?>
 							</a>
+							<?php if(get_post(get_post_thumbnail_id())->post_excerpt == TRUE) : ?>
+								<span class="meta-thumbnail-caption">
+									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+								</span>
+							<?php endif; ?>
 						</figure>
 					<?php elseif((catch_that_image() != '') && ($options['custom-excerpt'] == TRUE)) : ?>
 						<figure class="postimage">

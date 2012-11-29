@@ -1,10 +1,23 @@
 <?php /* Template Name: Ohne Sidebar */ ?>
 
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
+
 		<?php get_header(); ?>
 
 		<div id="container">
 			
 			<div id="full">
+			
+			<!-- Mobile Query -->
+			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+				<?php if($options['breadcrumb-show']) : ?>
+					<?php if(function_exists('breadcrumb')) : ?>
+						<?php breadcrumb(); ?> 
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endif; ?>
+			<!-- Mobile Query -->
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

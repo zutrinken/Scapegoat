@@ -1,12 +1,10 @@
  <?php
-
-_deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.0', null, sprintf( __('Please include a %1$s template in your theme.'), basename(__FILE__) ) );
-/* Do not delete these lines */
+	_deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.0', null, sprintf( __('Please include a %1$s template in your theme.'), basename(__FILE__) ) );
+	/* Do not delete these lines */
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
-	if ( post_password_required() ) { ?>
-		<p class="nocomments"><?php _e('This is not the content you are looking for.','scapegoat'); ?></p>
-	<?php
+	if ( post_password_required() ) {
+		?><p class="nocomments"><?php _e('This is not the content you are looking for.','scapegoat'); ?></p><?php
 		return;
 	}
 ?>

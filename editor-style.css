@@ -71,12 +71,14 @@ button {  width: auto; overflow: visible; }
 	/* ================== */
 
 
+.alignnone {
+	margin: 20px 0;
+}
 .aligncenter,
 .center {
 	text-align: center;
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+	margin: 20px auto;
 }
 figure.aligncenter,
 img.center,
@@ -104,7 +106,6 @@ img[align="right"] {
 }
 
 
-
 	/* ------------------------------ Main */
 
 body#tinymce {padding: 10px 20px;}
@@ -115,20 +116,16 @@ body#tinymce {padding: 10px 20px;}
 	font-weight: 400;
 	vertical-align: baseline;
 	color: #404040;
-	
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-o-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px;
 }
 
 	/* ------------------------------ Headlines */
 
 h1, h2, h3, h4, h5, h6, h7 {
 	font-family: 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
-	font-weight: normal;
-	color: #8fb7bf;
+	font-weight: 400;
+	color: #1483a8;
 }
 
 h1 {
@@ -190,11 +187,20 @@ i {
 }
 
 q:before,
-q:after,
+q:after {
+	color: #1483a8;
+}
+q:before {
+	content: '„';
+}
+q:after {
+	content: '“';
+}
+
 blockquote:before,
 blockquote:after {
     background: none repeat scroll 0 0 #fff;
-    color: #8fb7bf;
+    color: #1483a8;
     content: '”';
     
     font-size: 36px;
@@ -208,18 +214,17 @@ blockquote:after {
     margin: 0 0 0 -10px;
     padding: 0 10px;
 }
-q:after,
 blockquote:after {
 	top: auto;
 	left: auto;
 	right: 20px;
 	bottom: -6px;
 }
-q,
 blockquote {
 	border: 1px solid #bfbfbf;
-    font-family: Georgia, Serif;
-    font-size: 0.9em;
+	font-family: Georgia, Serif;
+	font-size: 0.9em;
+	line-height: 1.4em;
 	font-style: italic;
 	color: #808080;
 
@@ -267,16 +272,16 @@ pre code {
 ul,
 ol,
 dl {
-	margin: 1.5em 0 1.5em 2em;
+	margin: 1.5em 0 1.5em 1.5em;
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-	margin: 0 0 0 2em;
+	margin: 0 0 0 1.5em;
 }
 ul {
-	list-style-image: url(images/icon-list.png);
+	list-style: none;
 }
 ol {
     list-style: decimal outside none;
@@ -294,6 +299,16 @@ li {
 	margin: 0;
 	padding: 0.1em;
 }
+ul li:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 0 0 -1.8em;
+	padding: 0.1em;
+	background: transparent url('images/icon-list.png') no-repeat scroll center center;
+}
 dt {
 	font-weight: 700;
 }
@@ -310,7 +325,7 @@ table {
 }
 th {
 	text-align: left;
- 	color: #8FB7BF;
+ 	color: #1483a8;
 	font-weight: 700;
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -325,84 +340,21 @@ td {
 
 	/* ------------------------------ Figures */
 
-.size-thumbnail {}
-.size-medium {}
-.size-large {}
-.size-full {}
-
 img {
 	max-width: 100%;
 	height: auto;
 }
-.wp-caption {
-	max-width: 100%;
-	height: auto;
-	font-size: 0.7em;
-	line-height: 1em;
-}
-.wp-caption .wp-caption-text {
-	display: block;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	color: #808080;
-}
-.wp-caption .wp-caption-text a,
-.wp-caption .wp-caption-text a:active
-.wp-caption .wp-caption-text a:visited {
-	color: inherit;
-	text-decoration: underline;
-}
-.wp-caption .wp-caption-text a:hover {
-	text-decoration: none;
-}
-
-.gallery {
-	margin: auto;
-	font-size: 0.7em;
-	line-height: 1em;
-}
-.gallery .gallery-item {
-	text-align: center;
-	margin: auto;
-}
-.gallery .gallery-item .gallery-icon {
-	padding: 10px;
-}
-.gallery .gallery-item .gallery-icon img {
-	border: 2px solid #fff !important;
-	
-	-webkit-box-shadow: 0 0 5px #bbb;
-	-moz-box-shadow: 0 0 5px #bbb;
-	box-shadow: 0 0 5px #bbb;
-	
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-}
-.gallery .gallery-item:hover .gallery-icon img {
-	-webkit-box-shadow: 0 0 0 5px #ddd;
-	-moz-box-shadow: 0 0 0 5px #ddd;
-	box-shadow: 0 0 0 5px #ddd;
-}
-.gallery .gallery-item .gallery-caption {
-	margin: 0;
-	color: #808080;
-}
-
-.gallery .gallery-item .gallery-caption a,
-.gallery .gallery-item .gallery-caption a:active
-.gallery .gallery-item .gallery-caption a:visited {
-	color: inherit;
-	text-decoration: underline;
-}
-.gallery .gallery-item .gallery-caption a:hover {
-	text-decoration: none;
-}
-
 object,
 audio {
 	max-width: 100%;
+}
+
+@media	only screen and (-webkit-min-device-pixel-ratio: 2), 
+		only screen and (-moz-min-device-pixel-ratio: 2), 
+		only screen and (-o-min-device-pixel-ratio: 2/1), 
+		only screen and (min-device-pixel-ratio: 2) {
+	.article ul li:before {
+		background: transparent url('images/icon-list@2x.png') no-repeat scroll center center;
+		background-size: 15px 15px;
+	}
 }

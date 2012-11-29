@@ -1,12 +1,25 @@
 		<?php get_header(); ?>
+		
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
 
 		<div id="container">
 			
-			<div id="full">
+			<div id="content">
+			
+			<!-- Mobile Query -->
+			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+				<?php if($options['breadcrumb-show']) : ?>
+					<?php if(function_exists('breadcrumb')) : ?>
+						<?php breadcrumb(); ?> 
+					<?php endif; ?>
+				<?php endif; ?>
+			<?php endif; ?>
+			<!-- Mobile Query -->
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			<section id="post-<?php the_ID(); ?>" <?php post_class('single-post-view'); ?>>
+			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
 				<!--<nav class="post-nav post-nav-top">
 					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
@@ -29,6 +42,18 @@
 				</nav>
 
 			</section>
+
+			</section>
+
+			<?php endwhile; ?>
+
+				<section id="replys">
+					<?php comments_template(); ?>
+				</section>
+			
+			<?php endif; ?>
+			</div>
+			
 			<section id="sidebar" class="meta">
 				<aside class="post-info">
 					<?php if(has_post_thumbnail()) : ?>
@@ -51,7 +76,7 @@
 			
 				<aside class="author-meta">
 					<figure class="author_avatar">
-						<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 100); }?>
+						<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 60); }?>
 					</figure>
 					<div class="author_info">
 						<span class="author_meta_row author_meta_name">
@@ -88,16 +113,6 @@
 						<?php endif; ?>
 					</div>
 				</aside>
-			</section>
-
-			<?php endwhile; ?>
-
-				<section id="replys">
-					<?php comments_template(); ?>
-				</section>
-			
-			<?php endif; ?>
-			</div>
 
 		</div>
 

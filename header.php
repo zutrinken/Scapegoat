@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
+	<!-- Mobiel Detect -->
+	<?php $detect = new Mobile_Detect(); ?>
+
 	<!-- load the Theme Options -->
 	<?php $options = get_option('scapegoat_theme_options'); ?>
 
@@ -54,14 +57,16 @@
 		<!--[if IE]>
 			<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-1.7.min.js"></script>
 		<![endif]-->
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/global.js"></script>
-
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 
 		<div id="header-outside">
-			<header id="header-inside" class="inside clearfix">
+			<header id="header-inside" class="inside">
+				<nav id="main-nav">
+					<a href="#main-nav" class="menu-toggle">Navigation</a>
+					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
+				</nav>
 				<figure id="logo">
 					<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
 						<?php if($options['logo'] == TRUE) : ?>
@@ -71,40 +76,19 @@
 						<?php endif; ?>
 					</a>
 				</figure>
-
-				<nav id="main-nav">
-					<a href="#main-nav" class="menu-toggle">Navigation</a>
-					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
-				</nav>
+				<div id="description">
+					<span id="description-inner">
+						<?php bloginfo('description'); ?>
+					</span>
+				</div>
 				<div class="clear"></div>
-				<aside id="header-social-links">
-					<?php if($options['rss'] == TRUE) : ?>
-						<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed">Feed</a>
-					<?php else : ?>
-						<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed">Feed</a>
-					<?php endif; ?>
-					<?php if($options['twitter'] == TRUE) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter">Twitter</a><?php endif; ?>
-					<?php if($options['facebook'] == TRUE) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
-					<?php if($options['google'] == TRUE) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
-					<?php if($options['youtube'] == TRUE) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
-					<?php if($options['mail'] == TRUE) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Newsletter">Newsletter</a><?php endif; ?>
-					<?php if($options['podcast'] == TRUE) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
-				</aside><!-- header-social-links -->
 			</header><!-- header-inside -->
 		</div><!-- header-outside -->
-		
-		<?php if($options['breadcrumb-show'] && (is_single() || is_page() || is_archive())) : ?>
-			<?php if(function_exists('breadcrumb')) : ?>
-				<div id="breadcrumb-outside">
-					<div id="breadcrumb-inside" class="inside clearfix">
-						<?php breadcrumb(); ?> 
-					</div><!-- breadcrumb-inside -->
-				</div><!-- breadcrumb-outside -->
-			<?php endif; ?>
-		<?php endif; ?>
-		
+
+		<!-- Mobile Query -->
+		<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
 		<!-- Featured Container for Frontpage Slider and "Sidebar" -->
-		<?php if(is_home() && !is_paged() &&  is_front_page()) : ?>
+		<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
 			<?php if($options['header-option'] == 'show-slider') : ?>
 			<!-- customize slider by theme-options -->
 			<?php if($options['slider-num'] == TRUE) : $num=$options['slider-num']; else : $num=5; endif; ?>
@@ -140,29 +124,42 @@
 								<?php endwhile; ?>
 							</div><!-- front-page-slider -->
 						</div><!-- slideshow -->
-						<div id="front-page-adverts">
-							<?php if($options['featured-link-1'] || $options['featured-link-2'] || $options['featured-link-3'] == TRUE) : ?>
+						<?php if($options['featured-link-1'] && $options['featured-link-2'] && $options['featured-link-3'] && $options['featured-link-4']) : ?>
+							<div id="front-page-adverts">
 								<aside id="featured-links">
 									<ul>
-										<?php if($options['featured-link-1'] && $options['featured-link-title-1'] == TRUE) : ?>
-											<li>
-												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>"><?php echo $options['featured-link-title-1']; ?></a>
-											</li>
-										<?php endif; ?>
-										<?php if($options['featured-link-2'] && $options['featured-link-title-2'] == TRUE) : ?>
-											<li>
-												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>"><?php echo $options['featured-link-title-2']; ?></a>
-											</li>
-										<?php endif; ?>
-										<?php if($options['featured-link-3'] && $options['featured-link-title-3'] == TRUE) : ?>
-											<li>
-												<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>"><?php echo $options['featured-link-title-3']; ?></a>
-											</li>
-										<?php endif; ?>
+										<li>
+											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
+												<?php if($options['featured-link-title-1']) : ?>
+													<?php echo $options['featured-link-title-1']; ?>
+												<?php endif; ?>
+											</a>
+										</li>
+										<li>
+											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
+												<?php if($options['featured-link-title-2']) : ?>
+													<?php echo $options['featured-link-title-2']; ?>
+												<?php endif; ?>
+											</a>
+										</li>
+										<li>
+											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">
+												<?php if($options['featured-link-title-3']) : ?>
+													<?php echo $options['featured-link-title-3']; ?>
+												<?php endif; ?>
+											</a>
+										</li>
+										<li>
+											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
+												<?php if($options['featured-link-title-4']) : ?>
+													<?php echo $options['featured-link-title-4']; ?>
+												<?php endif; ?>
+											</a>
+										</li>
 									</ul>
 								</aside>
-							<?php endif; ?>
-						</div><!-- front-page-adverts -->
+							</div><!-- front-page-adverts -->
+						<?php endif; ?>
 						<div class="clear"></div>
 					</div><!-- toggling -->
 					<a id="front-page-slider-toggle"></a>
@@ -180,6 +177,8 @@
 			<?php endif; ?>
 		<?php endif; ?>
 		<!-- Featured Container End -->
+		<?php endif; ?>
+		<!-- Mobile Query -->
 
 		<div id="wrapper-outside">
 			<div id="wrapper-inside" class="inside">

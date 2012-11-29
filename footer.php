@@ -46,7 +46,7 @@
 		</div><!-- end-outside -->
 
 		<?php wp_footer(); ?>
-
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
 <!-- The only constant is change. -->
 <!-- -->
 <!--              ▲              -->

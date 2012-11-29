@@ -6,7 +6,7 @@
 	float: left;
 }
 #footer-widgets .widget-footer .widget-inner {
-	padding: 0 10px;
+	padding: 0 15px;
 }
 #archive {
 	overflow: auto;
@@ -26,18 +26,21 @@
 		float: left;
 	}
 	#sidebar .widget-sidebar .widget-inner {
-		margin: 0 10px;
+		margin: 10px;
 	}
 	#footer-widgets .widget-footer {
-		width: 40%;
+		width: 50%;
 	}
-	.post-info,
-	.author-meta {
+	.post-info {
 		width: 44%;
 		float: left;
 	}
+	.author-meta {
+		width: 44%;
+		float: right;
+	}
 }
-@media only screen and (max-width: 640px)  {
+@media only screen and (max-width: 660px)  {
 	#footer-widgets .widget-footer {
 		width: auto;
 		float: none;

@@ -1,4 +1,8 @@
 <?php
+
+/* Mobile Detect */
+include 'functions/mobile_detect.php';
+
 /* localization */
 load_theme_textdomain('scapegoat', TEMPLATEPATH .'/languages');
 
@@ -105,7 +109,6 @@ function my_register_sidebars() {
 			'after_title' => '</h3>',
 		)
 	);
-
 }
 
 /* Add support for custom headers */
@@ -194,7 +197,7 @@ function catch_that_image() {
 }
 
 /* custom background */
-add_custom_background('new_custom_background_cb');
+/*add_custom_background('new_custom_background_cb');
 
 function new_custom_background_cb() {
 	$background = get_background_image();
@@ -237,7 +240,7 @@ function new_custom_background_cb() {
 		@media only screen and (max-width: 640px) {#wrapper-outside {padding: 20px;}}
 	</style>
 	<?php
-}
+}*/
 
 /* custom excerpt */
 function custom_wp_trim_excerpt($text) {
