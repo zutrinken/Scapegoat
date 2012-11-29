@@ -170,7 +170,8 @@
 			<?php elseif($options['header-option'] == 'show-header') : ?>
 				<?php $header_image = get_header_image(); if($header_image == TRUE) : ?>
 					<section id="front-page-header-image-outside">
-						<div id="front-page-header-image-inside" class="custom-header inside">
+						<div id="front-page-header-image-inside" class="inside">
+							<figure class="custom-header"></figure>
 						</div>
 					</section>
 				<?php endif; ?>

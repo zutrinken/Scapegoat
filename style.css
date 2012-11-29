@@ -1751,7 +1751,8 @@ body {
 }
 
 #front-page-header-image-outside {}
-#front-page-header-image-inside {
+#front-page-header-image-inside {}
+.custom-header {
 	height: 320px;
 }
 
@@ -2825,7 +2826,8 @@ ul#smart-archives-block li span.empty-month {
 	#description {
 		display: none;
 	}
-	#front-page-header-outside {
+	#front-page-header-outside,
+	#front-page-header-image-outside {
 		display: none;
 	}
 	#container {
