@@ -1871,7 +1871,7 @@ body {
 
 	/* Widget Banner */
 
-.widget_banner,
+.widget_banner {}
 .widget_banner .widget-inner {
 	padding: 0 !important;
 	border: 0 !important;
