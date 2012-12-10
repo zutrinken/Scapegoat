@@ -514,13 +514,13 @@ add_action('widgets_init', create_function('', 'return register_widget("banner")
 /* custom comment-list */
 function custom_comment($comment, $args, $depth) {
 	global $comment_counter;
-	if ($comment->comment_parent<1) {
+	if ($comment->comment_parent < 1) {
 		$comment_counter ++;
 	}
 	$GLOBALS['comment'] = $comment;
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-		<?php if ($comment->comment_parent<1) {echo '<span class="comment-number">' . $comment_counter . '</span>';} ?>
+		<?php if ($comment->comment_parent < 1) {echo '<span class="comment-number">' . $comment_counter . '</span>';} ?>
 		<div id="comment-<?php comment_ID(); ?>" class="comment-body">
 			<div class="comment-info">
 				<div class="comment-author vcard">

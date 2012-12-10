@@ -68,13 +68,18 @@
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
 				</nav>
 				<figure id="logo">
-					<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
-						<?php if($options['logo'] == TRUE) : ?>
+					
+					<?php if($options['logo'] == TRUE) : ?>
+						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
 							<img src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
-						<?php else : ?>
-							<?php bloginfo('name'); ?>
-						<?php endif; ?>
-					</a>
+						</a>
+					<?php else : ?>
+						<span id="logo-text">
+							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+								<?php bloginfo('name'); ?>
+							</a>
+						</span>
+					<?php endif; ?>
 				</figure>
 				<div id="description">
 					<span id="description-inner">

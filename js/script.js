@@ -3,19 +3,13 @@ $(document).ready(function(){
 	$('.menu-toggle').smoothScroll().click(function () {
 		$('#main-nav div').slideToggle('200');
 	});
-	
-	$(window).resize(arrr);
-	arrr();
 	function arrr() {
 		/* Navigation Font Size */
 		var holo = 0.8 + ($('#main-nav').width() / 2000);
 		$('#main-nav').css({'font-size': holo + 'em'});
-
-		/* Description Height */
-		var foo = $('#logo').height();
-		$('#description').css({'height': foo + 'px'});
 	}
-
+	arrr();
+	$(window).resize(arrr);
 	/* Extra Class for smarter comment structure */
 	$('li.depth-1').has('ul.children').addClass('comment-group');
 
