@@ -1270,6 +1270,7 @@ body {
 }
 #header-social-links {
 	margin: 0 auto 10px;
+	text-align: right;
 }
 
 #breadcrumb-outside {}
@@ -1459,6 +1460,7 @@ body {
 	height: 24px;
 	margin: 2px 0;
 	text-indent: -10000px;
+	text-align: center;
 	background-color: rgba(0,0,0,0.1);
 	background-position: center center;
 	background-repeat: no-repeat;
