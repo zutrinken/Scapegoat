@@ -43,8 +43,6 @@
 
 			</section>
 
-			</section>
-
 			<?php endwhile; ?>
 
 				<section id="replys">
@@ -52,7 +50,7 @@
 				</section>
 			
 			<?php endif; ?>
-			</div>
+			</div><!-- content -->
 			
 			<section id="sidebar" class="meta">
 				<aside class="post-info">
@@ -62,15 +60,19 @@
 							<a href="<?php echo $image_url[0]; ?>" title="<?php the_title(); ?>">
 								<?php the_post_thumbnail('medium'); ?>
 							</a>
-							<?php if(get_post(get_post_thumbnail_id())->post_excerpt == TRUE) : ?>
+							<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
 								<span class="meta-thumbnail-caption">
 									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
 								</span>
 							<?php endif; ?>
 						</figure>
 					<?php endif; ?>
-					<span class="post-date"><?php the_time('j.m.y'); ?></span>
-					<aside class="categories"><?php _e('Posted in:','scapegoat'); ?><?php the_category(' '); ?></aside>
+					<span class="post-date">
+						<?php the_time('j.m.y'); ?>
+					</span>
+					<aside class="categories">
+						<?php _e('Posted in:','scapegoat'); ?><?php the_category(' '); ?>
+					</aside>
 					<?php the_tags(__('<aside class="tags">Tagged with:','scapegoat'),'','</aside>'); ?>
 				</aside>
 			
@@ -113,7 +115,8 @@
 						<?php endif; ?>
 					</div>
 				</aside>
-
-		</div>
+			</section>
+			<div class="clear"></div>
+		</div><!-- container -->
 
 		<?php get_footer(); ?>

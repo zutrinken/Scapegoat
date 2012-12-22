@@ -5,9 +5,11 @@
 			<?php get_sidebar(); ?>
 			
 			<div id="content">
-				<header class="heading">
-					<h1 class="title"><?php _e('Search for','scapegoat'); ?> "<?php the_search_query(); ?>"</h1>
-				</header>
+
+				<?php if(function_exists('breadcrumb')) : ?>
+					<?php breadcrumb(); ?> 
+				<?php endif; ?>
+
 
 			<?php if (have_posts()) : ?>
 
@@ -30,7 +32,7 @@
 
 			</div>
 			
-				<nav id="postnav">
+				<nav id="pagination">
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>
@@ -41,13 +43,11 @@
 
 			<?php else : ?>
 
-			<section class="post">
-			
-			</section>
-
 			<?php endif; ?>
-			</div>
+			</div><!-- content -->
+			
 
-		</div>
+			<div class="clear"></div>
+		</div><!-- container -->
 
 		<?php get_footer(); ?>

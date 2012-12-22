@@ -1,4 +1,7 @@
 		<?php get_header(); ?>
+		
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
 
 		<div id="container">
 			
@@ -7,26 +10,30 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php if (is_front_page()) { post_class('front-post'); } else { post_class(); } ?>>
 				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
-				<header class="header">
-					<?php if(has_post_thumbnail() && ($options['custom-excerpt'] == TRUE)) : ?>
-						<figure class="post-image">
-							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+				<?php if(has_post_thumbnail() && ($options['custom-excerpt'])) : ?>
+					<figure class="post-image">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<!-- Mobile Query -->
+							<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
+								<?php the_post_thumbnail('medium'); ?>
+							<?php else : ?>							
 								<?php the_post_thumbnail('featured'); ?>
-							</a>
-							<?php if(get_post(get_post_thumbnail_id())->post_excerpt == TRUE) : ?>
-								<span class="meta-thumbnail-caption">
-									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-								</span>
 							<?php endif; ?>
-						</figure>
-					<?php elseif((catch_that_image() != '') && ($options['custom-excerpt'] == TRUE)) : ?>
-						<figure class="postimage">
-							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-								<?php echo catch_that_image(); ?>
-							</a>
-						</figure>
-					<?php endif; ?>
-
+						</a>
+						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+							<span class="meta-thumbnail-caption">
+								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+							</span>
+						<?php endif; ?>
+					</figure>
+				<?php elseif((catch_that_image() != '') && ($options['custom-excerpt'])) : ?>
+					<figure class="postimage">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<?php echo catch_that_image(); ?>
+						</a>
+					</figure>
+				<?php endif; ?>
+				<header class="header">
 					<h2 class="post-title">
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 							<?php the_title(); ?>
@@ -42,7 +49,7 @@
 				</header>
 		
 				<article class="article">
-					<?php if($options['custom-excerpt'] == FALSE) : ?>
+					<?php if(!$options['custom-excerpt']) : ?>
 						<?php the_content(); ?>
 					<?php elseif(has_post_format('status')) : ?>
 						<?php the_content(); ?>
@@ -62,7 +69,7 @@
 			
 			<?php endwhile; ?>
 			
-				<nav id="postnav">
+				<nav id="pagination">
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>
@@ -72,10 +79,11 @@
 				</nav>
 
 			<?php endif; ?>
-			</div>
+			</div><!-- content -->
 			
 			<?php get_sidebar(); ?>
 
-		</div>
+			<div class="clear"></div>
+		</div><!-- container -->
 
 		<?php get_footer(); ?>

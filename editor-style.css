@@ -6,11 +6,13 @@
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
 @font-face {
-    font-family: 'DejaWeb';
-    src: url('fonts/dejaweb.eot');
-    src: url('fonts/dejaweb.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Dejaweb';
+	src:	url('fonts/dejaweb.eot') format('embedded-opentype'),
+			url('fonts/dejaweb.woff') format('woff'),
+			url('fonts/dejaweb.svg') format('svg'),
+			url('fonts/dejaweb.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 	  /* ============= */
@@ -272,13 +274,13 @@ pre code {
 ul,
 ol,
 dl {
-	margin: 1.5em 0 1.5em 1.5em;
+	margin: 1.5em 0 1.5em 2em;
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-	margin: 0 0 0 1.5em;
+	margin: 0 0 0 2em;
 }
 ul {
 	list-style: none;
@@ -319,7 +321,6 @@ dd {
 	/* ------------------------------ Tables */
 
 table {
-    border-bottom: 1px solid #bfbfbf;
     margin: 1.5em 0;
     width: 100%;   
 }
@@ -330,13 +331,13 @@ th {
 	font-size: 0.8em;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	border-bottom: 1px solid #bfbfbf;
 }
 td {
-    border-top: 1px solid #bfbfbf;
-    padding: 6px 10px 6px 0;
-    font-size: 0.9em;
-    line-height: 1.5em;
-}
+	border-bottom: 1px solid #bfbfbf;
+	padding: 6px 10px 6px 0;
+	font-size: 0.9em;
+	line-hei
 
 	/* ------------------------------ Figures */
 

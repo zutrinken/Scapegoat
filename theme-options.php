@@ -6,6 +6,15 @@
 add_action( 'admin_init', 'theme_options_init' );
 add_action( 'admin_menu', 'theme_options_add_page' );
 
+
+add_action('admin_init', 'scapegoat_add_init');
+function scapegoat_add_init() {
+	$file_dir = get_template_directory_uri();
+	wp_enqueue_style("scapegoatCss", $file_dir."/theme-options.css", false, "1.0", "all");
+}
+
+
+
 // Einstellungen registrieren (http://codex.wordpress.org/Function_Reference/register_setting)
 function theme_options_init(){
 	register_setting( 'scapegoat_options', 'scapegoat_theme_options', 'scapegoat_validate_options' );
@@ -23,7 +32,7 @@ function scapegoat_theme_options_page() {
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
 
-	<div class="wrap">
+	<div class="wrap" id="arrr">
 
 		<!-- Titel -->
 		<?php screen_icon(); ?><h2><?php _e('Scapegoat Theme-Options','scapegoat'); ?></h2> 
@@ -168,31 +177,31 @@ function scapegoat_theme_options_page() {
 			<h3><?php _e('Social Networks','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row"><img style="background: #ee9900;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-rss.png" alt="" /> Feed (Url)</th>
+					<th scope="row"><span class="social-icon rss"></span> Feed</th>
 					<td><input id="scapegoat_theme_options[rss]" class="regular-text" type="text" name="scapegoat_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" /> <span class="description"> <?php _e('if this is empty, the default Wordpress-feed will set','scapegoat'); ?></span></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #3ea9dd;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-twitter.png" alt="" /> Twitter (Url)</th>
+					<th scope="row"><span class="social-icon twitter"></span> Twitter</th>
 					<td><input id="scapegoat_theme_options[twitter]" class="regular-text" type="text" name="scapegoat_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #3c5a98;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-facebook.png" alt="" /> Facebook (Url)</th>
+					<th scope="row"><span class="social-icon facebook"></span> Facebook</th>
 					<td><input id="scapegoat_theme_options[facebook]" class="regular-text" type="text" name="scapegoat_theme_options[facebook]" value="<?php esc_attr_e( $options['facebook'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #d14836;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-plus.png" alt="" /> Google + (Url)</th>
+					<th scope="row"><span class="social-icon google"></span> Google +</th>
 					<td><input id="scapegoat_theme_options[google]" class="regular-text" type="text" name="scapegoat_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #c6312b;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-youtube.png" alt="" /> Youtube (Url)</th>
+					<th scope="row"><span class="social-icon youtube"></span> Youtube</th>
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #829f0c;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-mail.png" alt="" /> Newsletter (URL)</th>
+					<th scope="row"><span class="social-icon mail"></span> Newsletter</th>
 					<td><input id="scapegoat_theme_options[mail]" class="regular-text" type="text" name="scapegoat_theme_options[mail]" value="<?php esc_attr_e( $options['mail'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><img style="background: #408ad2;vertical-align: middle;padding: 2px;margin: 0 10px 0 0;" src="<?php bloginfo('template_directory') ?>/images/icon-podcast.png" alt="" /> Podcast (URL)</th>
+					<th scope="row"><span class="social-icon podcast"></span> Podcast</th>
 					<td><input id="scapegoat_theme_options[podcast]" class="regular-text" type="text" name="scapegoat_theme_options[podcast]" value="<?php esc_attr_e( $options['podcast'] ); ?>" /></td>
 				</tr>
 			</table>

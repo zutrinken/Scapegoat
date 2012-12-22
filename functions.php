@@ -1,13 +1,13 @@
 <?php
 
+/* load theme options */
+$options = get_option('scapegoat_theme_options');
+
 /* Mobile Detect */
 include 'functions/mobile_detect.php';
 
 /* localization */
 load_theme_textdomain('scapegoat', TEMPLATEPATH .'/languages');
-
-/* load theme options */
-$options = get_option('scapegoat_theme_options');
 
 /* add "editor-style.css" for the admin-interface */
 add_editor_style();
@@ -40,6 +40,15 @@ add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
 /* Allowing Html in user-description */
 remove_filter('pre_user_description', 'wp_filter_kses');
 add_filter( 'pre_user_description', 'wp_filter_post_kses' );
+
+/* Block WordPress Filters */
+$filters = array('pre_term_description', 'pre_link_description', 'pre_link_notes', 'pre_user_description');
+foreach ( $filters as $filter ) {
+	remove_filter($filter, 'wp_filter_kses');
+}
+foreach ( array( 'term_description' ) as $filter ) {
+	remove_filter( $filter, 'wp_kses_data' );
+}
 
 /* register post formats */
 add_theme_support (
@@ -195,52 +204,6 @@ function catch_that_image() {
 		return '<img src="' . $first_img . '" alt="" />';
 	}
 }
-
-/* custom background */
-/*add_custom_background('new_custom_background_cb');
-
-function new_custom_background_cb() {
-	$background = get_background_image();
-	$color = get_background_color();
-	if ( ! $background && ! $color )
-	return;
-
-	$style = $color ? "background-color: #$color;" : 'background: #$color;';
-
-	if ( $background ) {
-		$image = "background-image: url(' " . $background . "');";
-
-		$repeat = get_theme_mod( 'background_repeat', 'repeat' );
-		if (!in_array($repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ))) {
-			$repeat = 'repeat';
-		}
-		$repeatout = "background-repeat: " . $repeat . ";";
-
-		$position = get_theme_mod( 'background_position_x', 'left' );
-		if (!in_array($position, array( 'center', 'right', 'left' ))) {
-			$position = 'left';
-		}
-		$positionout = "background-position: " . $position . " top;";
-
-		$attachment = get_theme_mod( 'background_attachment', 'scroll' );
-		if (!in_array($attachment, array( 'fixed', 'scroll' ))) {
-			$attachment = 'scroll';
-		}
-		$attachmentout = "background-attachment: ". $attachment . ";";
-
-		$style .= $positionout . $repeatout . $attachmentout . $image;
-	}
-
-	?>
-	<style type="text/css">
-		body {<?php echo trim($style); ?>}
-		#front-page-header-image-outside {background: #000;}
-		#front-page-header-outside {background: url('images/bg-pattern-1.png') 0 0 repeat scroll;}
-		#wrapper-inside {padding: 20px;background: #fff;-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.2);-moz-box-shadow: 0 0 1px rgba(0,0,0,0.2);box-shadow: 0 0 1px rgba(0,0,0,0.2);}
-		@media only screen and (max-width: 640px) {#wrapper-outside {padding: 20px;}}
-	</style>
-	<?php
-}*/
 
 /* custom excerpt */
 function custom_wp_trim_excerpt($text) {

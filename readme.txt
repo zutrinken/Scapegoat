@@ -26,3 +26,4 @@
 * 03.11.12 - New colours, some new icons, scroll fix on mobile, slight navigation changes, font updates, Slider update
 * 29.11.12 - Retina icons, new unorderd list stlye, main menu update, mobile detection queries for slider and bredcrumb, optimizing widgets, dynamic navigation fontsize
 * 10.12.12 - More retina icons, new menu and slider style, many bug fixes
+* xx.12.12 - Html Tags in Category Description, featured images on pages, smaller meta icons, better css structure, new background style, fix of a hard font embeding fail

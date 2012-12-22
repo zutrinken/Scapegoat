@@ -25,15 +25,11 @@
 			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/ie.css" media="screen" />
 		<![endif]-->
 
-		<?php if($options['style'] == TRUE) : ?>
-			<style type="text/css"><?php echo $options['style']; ?></style>
-		<?php endif; ?>
-
 		<!-- Favicon -->
 		<link rel="Shortcut Icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 
 		<!-- Touch Icon -->
-		<?php if($options['icon'] == TRUE) : ?>
+		<?php if($options['icon']) : ?>
 			<link rel="apple-touch-icon" href="<?php echo $options['icon']; ?>"/>
 			<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
 		<?php else : ?>
@@ -54,22 +50,20 @@
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.fitvids.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.smoothscroll.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cookie.js"></script>
-		<!--[if IE]>
-			<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-1.7.min.js"></script>
-		<![endif]-->
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-1.7.min.js"></script>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-
 		<div id="header-outside">
 			<header id="header-inside" class="inside">
 				<nav id="main-nav">
-					<a href="#main-nav" class="menu-toggle">Navigation</a>
+					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
+					<div class="clear"></div>
 				</nav>
 				<figure id="logo">
-					
-					<?php if($options['logo'] == TRUE) : ?>
+					<?php if($options['logo']) : ?>
 						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
 							<img src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
 						</a>
@@ -81,10 +75,25 @@
 						</span>
 					<?php endif; ?>
 				</figure>
-				<div id="description">
-					<span id="description-inner">
-						<?php bloginfo('description'); ?>
-					</span>
+				<div id="description-outer">
+					<div id="description-inner">
+						<aside id="header-social-links">
+							<?php if($options['rss']) : ?>
+								<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed">Feed</a>
+							<?php else : ?>
+								<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed">Feed</a>
+							<?php endif; ?>
+							<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter">Twitter</a><?php endif; ?>
+							<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
+							<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
+							<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
+							<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Newsletter">Newsletter</a><?php endif; ?>
+							<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
+						</aside>
+						<span id="description">
+							<?php bloginfo('description'); ?>
+						</span>
+					</div>
 				</div>
 				<div class="clear"></div>
 			</header><!-- header-inside -->

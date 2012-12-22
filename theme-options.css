@@ -1,0 +1,105 @@
+/* ----------------- */
+/* theme options css */
+/* ----------------- */
+
+.column-description img {
+	max-width: 100%; /* Bug Fix, while enabling <img /> in category description. Independend from Theme-Options here. */
+	height: auto;
+}
+
+
+
+#arrr {
+	position: relative;
+}
+#arrr:after {
+	display: block;
+	content: '';
+	width: 128px;
+	height: 128px;
+	position: absolute;
+	background: url('images/logo_small.png') right top scroll no-repeat;
+	
+	right: 0;
+	top: 0;
+	
+	margin: 20px 20px 0 0;
+
+	filter:alpha(opacity=10);
+	-moz-opacity: 0.1;
+	-khtml-opacity: 0.1;
+	opacity: 0.1;
+}
+
+.social-icon {
+	display: block;
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin: -4px 8px 0 0;
+	text-indent: -10000px;
+	background-color: #ea2178;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.social-icon.rss {
+	background-image: url('images/icon-social-rss.png');
+	background-color: #ee9900;
+}
+.social-icon.twitter {
+	background-image: url('images/icon-social-twitter.png');
+	background-color: #3ea9dd;
+}
+.social-icon.facebook {
+	background-image: url('images/icon-social-facebook.png');
+	background-color: #3c5a98;
+}
+.social-icon.google {
+	background-image: url('images/icon-social-plus.png');
+	background-color: #d14836;
+}
+.social-icon.youtube {
+	background-image: url('images/icon-social-youtube.png');
+	background-color: #c6312b;
+}
+.social-icon.mail {
+	background-image: url('images/icon-social-mail.png');
+	background-color: #efbf00;
+}
+.social-icon.podcast {
+	background-image: url('images/icon-social-podcast.png');
+	background-color: #408ad2;
+}
+
+
+@media	only screen and (-webkit-min-device-pixel-ratio: 2), 
+		only screen and (-moz-min-device-pixel-ratio: 2), 
+		only screen and (-o-min-device-pixel-ratio: 2/1), 
+		only screen and (min-device-pixel-ratio: 2) {
+	.social-icon.rss {
+		background-image: url('images/icon-social-rss@2x.png');
+	}
+	.social-icon.twitter {
+		background-image: url('images/icon-social-twitter@2x.png');
+	}
+	.social-icon.facebook {
+		background-image: url('images/icon-social-facebook@2x.png');
+	}
+	.social-icon.google {
+		background-image: url('images/icon-social-plus@2x.png');
+	}
+	.social-icon.youtube {
+		background-image: url('images/icon-social-youtube@2x.png');
+	}
+	.social-icon.mail {
+		background-image: url('images/icon-social-mail@2x.png');
+	}
+	.social-icon.podcast {
+		background-image: url('images/icon-social-podcast@2x.png');
+	}
+}

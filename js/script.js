@@ -5,11 +5,12 @@ $(document).ready(function(){
 	});
 	function arrr() {
 		/* Navigation Font Size */
-		var holo = 0.8 + ($('#main-nav').width() / 2000);
+		var holo = 0.75 + ($('#main-nav').width() / 2000);
 		$('#main-nav').css({'font-size': holo + 'em'});
 	}
 	arrr();
 	$(window).resize(arrr);
+	
 	/* Extra Class for smarter comment structure */
 	$('li.depth-1').has('ul.children').addClass('comment-group');
 

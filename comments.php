@@ -98,7 +98,6 @@
 			<p>
 				<input name="submit" type="submit" id="submit" class="button" tabindex="6" value="<?php _e('Abschicken','piraten'); ?>" />
 				<?php comment_id_fields(); ?>
-				<span class="gravatar-info"><?php _e('Please use <a target="_blank" href="http://gravatar.com/">Gravatar</a>!','scapegoat'); ?></span>
 			</p>
 			<?php do_action('comment_form', $post->ID); ?>
 		</form>
