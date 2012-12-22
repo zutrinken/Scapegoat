@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	/* Cut the first image of the category description and set it as a featured image */
 	/* This method is realy crappy, but I don't want more horrible php/mysql in this theme or a need of plugins */
-	if($('.category-description').find('img')) {
+	if($('.category-description').find('img') && $('.category-description').length>0) {
 		$('#content').prepend('<figure class="page-image"></figure>');
 		$('.category-description').find('img').first().appendTo('.page-image');
 	}
