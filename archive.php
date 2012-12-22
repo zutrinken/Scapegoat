@@ -5,15 +5,17 @@
 		
 		<div id="container">
 			<div id="content">
-			
 				<?php if(function_exists('breadcrumb')) : ?>
 					<?php breadcrumb(); ?> 
 				<?php endif; ?>
-			
+
 				<header class="heading">
 					<?php if (is_category()) : ?>
-						<?php echo category_description(); ?>
+						<div class="category-description">
+							<?php echo category_description(); ?>
+						</div>
 					<?php elseif (is_author()) : ?>
+						<p>
 						<?php global $author; $userdata = get_userdata($author); ?>
 						<?php $userInfo = get_user_by('slug', get_query_var('author_name')); ?>
 						<?php if (function_exists('get_avatar')) { echo get_avatar($userInfo->user_email, 48); } ?>
@@ -48,6 +50,7 @@
 								<?php echo $userdata->description; ?>
 							</div>
 						<?php endif; ?>
+						</p>
 					<?php endif; ?>
 				</header>
 				<?php if (have_posts()) : ?>
