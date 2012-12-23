@@ -8,14 +8,15 @@
 		<div id="container">
 
 			<div id="full">
-			
+
 				<?php if(has_post_thumbnail()) : ?>
 					<figure class="page-image">
-						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+						<?php $image_id = get_post_thumbnail_id();$image_url = wp_get_attachment_image_src($image_id,'full', true); ?>
+						<a title="<?php the_title(); ?>" href="<?php echo $image_url[0]; ?>">
 							<!-- Mobile Query -->
 							<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
 								<?php the_post_thumbnail('medium'); ?>
-							<?php else : ?>							
+							<?php else : ?>
 								<?php the_post_thumbnail('featured'); ?>
 							<?php endif; ?>
 						</a>

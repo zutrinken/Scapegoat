@@ -4,6 +4,7 @@ $(document).ready(function(){
 	if($('.category-description').find('img') && $('.category-description').length>0) {
 		$('#content').prepend('<figure class="page-image"></figure>');
 		$('.category-description').find('img').first().appendTo('.page-image');
+		$('.category-description').find('.meta-thumbnail-caption').appendTo('.page-image');
 	}
 
 	/* Toggle Menu */

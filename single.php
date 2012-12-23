@@ -7,6 +7,25 @@
 			
 			<div id="content">
 			
+				<?php if(has_post_thumbnail()) : ?>
+					<figure class="page-image">
+						<?php $image_id = get_post_thumbnail_id();$image_url = wp_get_attachment_image_src($image_id,'full', true); ?>
+						<a title="<?php the_title(); ?>" href="<?php echo $image_url[0]; ?>">
+							<!-- Mobile Query -->
+							<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
+								<?php the_post_thumbnail('medium'); ?>
+							<?php else : ?>
+								<?php the_post_thumbnail('featured'); ?>
+							<?php endif; ?>
+						</a>
+						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+							<span class="meta-thumbnail-caption">
+								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+							</span>
+						<?php endif; ?>
+					</figure>
+				<?php endif; ?>
+			
 			<!-- Mobile Query -->
 			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
 				<?php if($options['breadcrumb-show']) : ?>
@@ -54,19 +73,6 @@
 			
 			<section id="sidebar" class="meta">
 				<aside class="post-info">
-					<?php if(has_post_thumbnail()) : ?>
-					<?php $image_id = get_post_thumbnail_id();$image_url = wp_get_attachment_image_src($image_id,'full', true); ?>
-						<figure class="meta-thumbnail">
-							<a href="<?php echo $image_url[0]; ?>" title="<?php the_title(); ?>">
-								<?php the_post_thumbnail('medium'); ?>
-							</a>
-							<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-								<span class="meta-thumbnail-caption">
-									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-								</span>
-							<?php endif; ?>
-						</figure>
-					<?php endif; ?>
 					<span class="post-date">
 						<?php the_time('j.m.y'); ?>
 					</span>

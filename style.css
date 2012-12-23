@@ -692,6 +692,9 @@ audio {
 
 	max-height: 320px;
 }
+.full-image {
+	max-height: none !important;
+}
 .page-image,
 .front-post:first-child .post-image {
 	margin: -40px -40px 40px;
@@ -716,6 +719,7 @@ audio {
 	width: 100%;
 }
 .post-archiv-image .meta-thumbnail-caption,
+.page-image .meta-thumbnail-caption,
 .post-image .meta-thumbnail-caption {
 	position: absolute;
 	bottom: 20px;
@@ -727,7 +731,6 @@ audio {
 	color: #fff;
 	font-size: 0.8em;
 	line-height: 1.3em;
-	font-weight: 700;
 	
 	padding: 0.1em 0.4em;
 
@@ -926,32 +929,6 @@ audio {
 }
 
 	/* ------------------------------ Meta Infos - Single-View */
-
-
-.meta-thumbnail {
-	text-align: center;
-	margin-bottom: 20px !important;
-	font-size: 0.8em;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	overflow: hidden;
-}
-.meta-thumbnail img {
-	display: block;
-	
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-}
-.meta-thumbnail .meta-thumbnail-caption {
-	display: block;
-	padding: 10px 0;
-	text-align: center;
-	color: #808080;
-	border-bottom: 1px solid #bfbfbf;
-}
 
 .post-info {
 	margin: 0 0 40px;
@@ -1758,6 +1735,7 @@ body {
 #front-page-header-image-inside {}
 .custom-header {
 	height: 320px;
+	margin: 0 0 40px;
 }
 
 /* __________________________________________________________________.09 Widgets */
@@ -2995,6 +2973,7 @@ ul#smart-archives-block li span.empty-month {
 		padding: 0 20px 10px;
 	}
 	.post-archiv-image .meta-thumbnail-caption,
+	.page-image .meta-thumbnail-caption,
 	.post-image .meta-thumbnail-caption {
 		right: 10px;
 		bottom: 10px;

@@ -182,7 +182,7 @@
 			</section><!-- front-page-header-outside -->
 			<?php endif; wp_reset_query(); ?>
 			<?php elseif($options['header-option'] == 'show-header') : ?>
-				<?php $header_image = get_header_image(); if($header_image == TRUE) : ?>
+				<?php $header_image = get_header_image(); if($header_image) : ?>
 					<section id="front-page-header-image-outside">
 						<div id="front-page-header-image-inside" class="inside">
 							<figure class="custom-header"></figure>
