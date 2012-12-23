@@ -15,7 +15,7 @@
 							<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
 								<?php the_post_thumbnail('medium'); ?>
 							<?php else : ?>
-								<?php the_post_thumbnail('featured'); ?>
+								<?php the_post_thumbnail('teaser'); ?>
 							<?php endif; ?>
 						</a>
 						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
@@ -40,11 +40,6 @@
 			
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
-				<!--<nav class="post-nav post-nav-top">
-					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
-					<span class="post-nav-prev"><?php previous_post_link('%link', __('Last','scapegoat')); ?></span>
-				</nav>-->
-
 				<header class="header">
 					<h1 class="post-title"><?php the_title(); ?></h1>
 				</header>
@@ -54,11 +49,6 @@
 					<?php the_content(); ?>
 					<?php wp_link_pages('before=<nav class="pagination_post">'. __("Pages:","scapegoat") .'&after=</nav>'); ?>
 				</article>
-
-				<nav class="post-nav post-nav-bottom">
-					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
-					<span class="post-nav-prev"><?php previous_post_link('%link', __('Last','scapegoat')); ?></span>
-				</nav>
 
 			</section>
 
@@ -72,6 +62,11 @@
 			</div><!-- content -->
 			
 			<section id="sidebar" class="meta">
+				<nav class="post-nav">
+					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
+					<span class="post-nav-prev"><?php previous_post_link('%link', __('Last','scapegoat')); ?></span>
+				</nav>
+			
 				<aside class="post-info">
 					<span class="post-date">
 						<?php the_time('j.m.y'); ?>

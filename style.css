@@ -5,7 +5,7 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.4
+	Version: 1.4.1
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, gray, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
@@ -1202,7 +1202,6 @@ body {
 	line-height: 100%;
 	vertical-align: bottom;
 	text-transform: uppercase;
-	text-align: right;
 
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
@@ -1223,7 +1222,7 @@ body {
 }
 #logo-text {
 	display: block;
-	padding: 30px 0;
+	padding: 40px 0;
 }
 #description-outer {
 	float: right;
@@ -2222,11 +2221,7 @@ ul#smart-archives-block li span.empty-month {
 	overflow: auto;
 	font-size: 0.9em;
 	line-height: 1.2em;
-	margin: 20px auto;
-}
-.post-nav-top {} 
-.post-nav-bottom {
-	margin: 60px auto 0;
+	margin: 0 auto 40px;
 }
 .post-nav a,
 .post-nav a:active,
@@ -2249,14 +2244,16 @@ ul#smart-archives-block li span.empty-month {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 
-	background-color: #1483a8;
+	background-color: rgba(0,0,0,0.1);
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-size: 18px 18px;
+	
+	width: 49.5%;
 }
 .post-nav .post-nav-prev:hover,
 .post-nav .post-nav-next:hover {
-	background-color: #404040;
+	background-color: rgba(0,0,0,0.2);
 }
 .post-nav .post-nav-prev a,
 .post-nav .post-nav-next a {
@@ -2604,16 +2601,10 @@ ul#smart-archives-block li span.empty-month {
 		width: auto;
 	}
 }
-@media only screen and (max-width: 1280px) {
-	.inside {}
-	#logo-text {
-		padding: 40px 0;
-	}
-}
 
 	/* ------------------------------ Tablets */
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 860px) {
 	.inside {
 		width: auto;
 	}
@@ -2703,7 +2694,7 @@ ul#smart-archives-block li span.empty-month {
 
 	/* ------------------------------ Smartphones */
 
-@media only screen and (max-width: 660px)  {
+@media only screen and (max-width: 640px)  {
 	#main-nav {
 		background: #808080;
 		border: 0;

@@ -17,7 +17,7 @@
 							<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
 								<?php the_post_thumbnail('medium'); ?>
 							<?php else : ?>							
-								<?php the_post_thumbnail('featured'); ?>
+								<?php the_post_thumbnail('teaser'); ?>
 							<?php endif; ?>
 						</a>
 						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
@@ -27,7 +27,7 @@
 						<?php endif; ?>
 					</figure>
 				<?php elseif((catch_that_image() != '') && ($options['custom-excerpt'])) : ?>
-					<figure class="postimage">
+					<figure class="post-image">
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 							<?php echo catch_that_image(); ?>
 						</a>
