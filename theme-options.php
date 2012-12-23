@@ -103,14 +103,14 @@ function scapegoat_theme_options_page() {
 			</table>
 			<h3><?php _e('Frontpage','scapegoat'); ?></h3>
 			<table class="form-table">
-				<tr valign="top">
+				<!--<tr valign="top">
 					<th scope="row"><?php _e('Frontpage Layout','scapegoat'); ?></th>
 					<td>
 						<label for="scapegoat_theme_options[frnt-page]">
 							<input id="scapegoat_theme_options[front-page]" type="checkbox" name="scapegoat_theme_options[front-page]" value="1" <?php checked( '1', $options['front-page'] ); ?> /> <?php _e('show','scapegoat'); ?> <span class="description"><?php _e('use custom frontpage layout','scapegoat'); ?></span></td>
 						</label>
 					</td>
-				</tr>
+				</tr>-->
 				<tr valign="top">
 					<th scope="row"><?php _e('Header','scapegoat'); ?></th>
 					<td>
