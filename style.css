@@ -50,13 +50,10 @@
 @import url(https://fonts.googleapis.com/css?family=Viga);
 
 @font-face {
-	font-family: 'Dejaweb';
-	src:	url('fonts/dejaweb.eot') format('embedded-opentype'),
-			url('fonts/dejaweb.woff') format('woff'),
-			url('fonts/dejaweb.svg') format('svg'),
-			url('fonts/dejaweb.ttf') format('truetype');
-	font-weight: normal;
+	font-family: 'DejaWeb';
 	font-style: normal;
+	font-weight: normal;
+	src: local('☺'), local('DejaWeb'), url('fonts/DejaWeb.woff') format('woff');
 }
 
 
@@ -2511,13 +2508,13 @@ ul#smart-archives-block li span.empty-month {
 	/* ------------------------------ Footer Navigation */
 
 #footer_navigation {
+	font-family: 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
+	text-transform: uppercase;w
 	overflow: auto;
 	clear: both;
 	padding: 0;
 }
 #footer_navigation ul {
-	font-family: 'Abel', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
-	text-transform: uppercase;
 	line-height: 100%;
 	font-size: 1.1em;
 	line-height: 2em;
@@ -2541,7 +2538,6 @@ ul#smart-archives-block li span.empty-month {
 #footer_navigation ul li:hover a {}
 #footer_navigation ul ul {
 	float: none;
-	font-family: 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 0.8em;
 	line-height: 1.2em;
 	text-transform: none;

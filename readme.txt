@@ -29,3 +29,4 @@
 * 10.12.12 - More retina icons, new menu and slider style, many bug fixes
 * 22.12.12 - Html Tags in Category Description, featured images on pages, smaller meta icons, better css structure, new background style, fix of a hard font embeding fail
 * 24.12.12 - second size for featured images above posts, postnavigation position changed, useless media-query removed
+* 24.12.12 - fixed font bug on Windows webkit and gecko browsers
