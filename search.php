@@ -19,20 +19,17 @@
 
 			<?php while (have_posts()) : the_post(); ?>
 						<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
-							<?php if($options['custom-excerpt']) : ?>
-								<?php if(has_post_thumbnail()) : ?>
-									<figure class="post-archiv-image">
-										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail('medium'); ?>
-										</a>
-										<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-											<span class="meta-thumbnail-caption">
-												<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-											</span>
-										<?php endif; ?>
-									</figure>
-								<?php endif; ?>
+							<?php if(has_post_thumbnail()) : ?>
+								<figure class="post-archiv-image">
+									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail('medium'); ?>
+									</a>
+									<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+										<span class="meta-thumbnail-caption">
+											<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+										</span>
+									<?php endif; ?>
+								</figure>
 							<?php endif; ?>
 							<header class="header">
 								<h2 class="post-title">

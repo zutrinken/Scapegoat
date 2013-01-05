@@ -55,6 +55,10 @@ input#user_login:focus, input#user_pass:focus {
 	border: 0!important;
 	text-shadow: none!important;
 	color: #fff!important;
+	
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
 }
 #login form .submit input:hover {
 	background: #000 !important;

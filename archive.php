@@ -56,13 +56,48 @@
 				<?php if (have_posts()) : ?>
 					<div id="archive">
 					<?php while (have_posts()) : the_post(); ?>
-						<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
-							<?php if($options['custom-excerpt']) : ?>
-								<?php if(has_post_thumbnail()) : ?>
-									<figure class="post-archiv-image">
+					
+						<?php if($options['custom-excerpt']) : ?>
+						
+						
+							<section id="post-<?php the_ID(); ?>" <?php post_class('archive-post'); ?>>
+
+								<!-- Mobile Query -->
+								<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+									<?php if(has_post_thumbnail()) : ?>
+										<figure class="post-image">
+											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+												<?php the_post_thumbnail('thumbnail'); ?>
+											</a>
+										</figure>
+									<?php endif; ?>
+								<?php endif; ?>
+								<header class="header">
+									<h2 class="post-title">
 										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail('medium'); ?>
+											<?php the_title(); ?>
+										</a>
+									</h2>
+									<aside class="meta">
+										<span class="post-date"><?php the_time('j.m.y'); ?></span>
+										<span class="post-author"><?php the_author_posts_link(); ?></span>
+										<aside class="categories"><?php _e('Posted in: ','scapegoat'); ?><?php the_category(', '); ?></aside>
+										<?php the_tags(__('<aside class="tags">Tagged with: ','scapegoat'),', ','</aside>'); ?>
+									</aside>
+								</header>
+								<div class="clear"></div>
+							</section><!-- .post -->
+						<?php else : ?>
+							<section id="post-<?php the_ID(); ?>" <?php post_class('front-post'); ?>>
+								<?php if(has_post_thumbnail()) : ?>
+									<figure class="post-image">
+										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+											<!-- Mobile Query -->
+											<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
+												<?php the_post_thumbnail('medium'); ?>
+											<?php else : ?>							
+												<?php the_post_thumbnail('teaser'); ?>
+											<?php endif; ?>
 										</a>
 										<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
 											<span class="meta-thumbnail-caption">
@@ -71,22 +106,31 @@
 										<?php endif; ?>
 									</figure>
 								<?php endif; ?>
-							<?php endif; ?>
-							<header class="header">
-								<h2 class="post-title">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<aside class="meta">
-									<span class="post-date"><?php the_time('j.m.y'); ?></span>
-									<span class="post-author"><?php the_author_posts_link(); ?></span>
-								</aside>
-							</header>
-							<article class="article">
-								<?php the_excerpt(); ?>
-							</article>
-						</section><!-- .post -->
+								<header class="header">
+									<h2 class="post-title">
+										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h2><!-- .post-title -->
+									<aside class="info meta">
+										<span class="post-date"><?php the_time('j.m.y'); ?></span>
+										<span class="post-author"><?php the_author_posts_link(); ?></span>
+										<?php if(!has_post_format('status')) : ?>
+											<span class="replys"><?php comments_popup_link(__('Leave a comment','scapegoat'),__('1 Comment','scapegoat'),__('% Comments','scapegoat'), 'comments-link',__('Comments closed','scapegoat'));?></span>
+										<?php endif; ?>
+									</aside><!-- .info -->
+								</header><!-- .header -->						
+								<article class="article">
+									<?php the_content(); ?>
+								</article><!-- .article -->
+								<footer class="footer meta">
+									<aside class="categories"><?php _e('Posted in: ','scapegoat'); ?><?php the_category(', '); ?></aside>
+									<?php the_tags(__('<aside class="tags">Tagged with: ','scapegoat'),', ','</aside>'); ?>
+								</footer><!-- .footer -->
+								<div class="clear"></div>
+							</section><!-- .post -->
+						<?php endif; ?>
+
 					<?php endwhile; ?>
 					</div><!-- #archive -->
 					<nav id="pagination">

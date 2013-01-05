@@ -11,12 +11,12 @@
 
 		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
 
-		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-
 		<!-- ♥ ♥ ♥ Oh nice, you take a look at the sourcecode. I'm flattered. ♥ ♥ ♥ -->
 		<meta name="author" content="Peter Amende" />
 		<meta name="description" content="<?php bloginfo('description'); ?>" />
+
+		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
@@ -55,13 +55,18 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<div id="header-outside">
-			<header id="header-inside" class="inside">
+		<div id="main-nav-outside">
+			<div id="main-nav-inside" class="inside">
 				<nav id="main-nav">
 					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
-				</nav>
+				</nav><!-- main-nav -->
+			</div><!-- main-nav-inside -->
+		</div><!-- main-nav-outside -->
+
+		<div id="header-outside">
+			<header id="header-inside" class="inside">
 				<figure id="logo">
 					<?php if($options['logo']) : ?>
 						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
@@ -74,7 +79,7 @@
 							</a>
 						</span>
 					<?php endif; ?>
-				</figure>
+				</figure><!-- logo -->
 				<div id="description-outer">
 					<div id="description-inner">
 						<aside id="header-social-links">
@@ -93,8 +98,8 @@
 						<span id="description">
 							<?php bloginfo('description'); ?>
 						</span>
-					</div>
-				</div>
+					</div><!-- discription-inner -->
+				</div><!-- discription-outer -->
 				<div class="clear"></div>
 			</header><!-- header-inside -->
 		</div><!-- header-outside -->
@@ -126,15 +131,15 @@
 												<?php the_title(); ?>
 											</a>
 										</h2>
-									</header>
+									</header><!-- slide-text -->
 									<?php if(has_post_thumbnail()) : ?>
 									<figure class="slide-image">
 										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('featured'); ?>
 										</a>
-									</figure>
+									</figure><!-- slide-image -->
 									<?php endif; ?>
-								</section>
+								</section><!-- front-page-slide -->
 								<?php endwhile; ?>
 							</div><!-- front-page-slider -->
 						</div><!-- slideshow -->
@@ -171,7 +176,7 @@
 											</a>
 										</li>
 									</ul>
-								</aside>
+								</aside><!-- featured-links -->
 							</div><!-- front-page-adverts -->
 						<?php endif; ?>
 						<div class="clear"></div>
@@ -186,8 +191,8 @@
 					<section id="front-page-header-image-outside">
 						<div id="front-page-header-image-inside" class="inside">
 							<figure class="custom-header"></figure>
-						</div>
-					</section>
+						</div><!-- front-page-header-image-inside -->
+					</section><!-- front-page-header-image-outside --> 
 				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif; ?>

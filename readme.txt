@@ -19,6 +19,8 @@
 
 * rtl support
 * optimize font-sizes in relation to the responsive behaviour
+* custom frontpage-layout
+* custom frontpage-"about me"-layout
 
 == LOG ==
 
@@ -27,6 +29,7 @@
 * 03.11.12 - New colours, some new icons, scroll fix on mobile, slight navigation changes, font updates, Slider update
 * 29.11.12 - Retina icons, new unorderd list stlye, main menu update, mobile detection queries for slider and bredcrumb, optimizing widgets, dynamic navigation fontsize
 * 10.12.12 - More retina icons, new menu and slider style, many bug fixes
-* 22.12.12 - Html Tags in Category Description, featured images on pages, smaller meta icons, better css structure, new background style, fix of a hard font embeding fail
+* 22.12.12 - Html Tags in Category Description, featured images on pages, smaller meta icons, better css structure, new background style, fix of a hard font embedding fail
 * 24.12.12 - second size for featured images above posts, postnavigation position changed, useless media-query removed
 * 24.12.12 - fixed font bug on Windows webkit and gecko browsers
+* 05.01.13 - change navigation size and bar style, fixed footer navigation bug, new lightweight comments, deactivated auto image catch, better archive logic

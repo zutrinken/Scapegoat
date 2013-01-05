@@ -2,9 +2,9 @@ $(document).ready(function(){
 	/* Cut the first image of the category description and set it as a featured image */
 	/* This method is realy crappy, but I don't want more horrible php/mysql in this theme or a need of plugins */
 	if($('.category-description').find('img') && $('.category-description').length>0) {
-		$('#content').prepend('<figure class="page-image"></figure>');
-		$('.category-description').find('img').first().appendTo('.page-image');
-		$('.category-description').find('.meta-thumbnail-caption').appendTo('.page-image');
+		$('#content').prepend('<figure class="post-image" id="category-image"></figure>');
+		$('.category-description').find('img').first().appendTo('#category-image');
+		$('.category-description').find('.meta-thumbnail-caption').appendTo('#category-image');
 	}
 
 	/* Toggle Menu */
@@ -13,14 +13,11 @@ $(document).ready(function(){
 	});
 	function arrr() {
 		/* Navigation Font Size */
-		var holo = 0.75 + ($('#main-nav').width() / 2000);
+		var holo = 0.666 + ($('#main-nav').width() / 2000);
 		$('#main-nav').css({'font-size': holo + 'em'});
 	}
 	arrr();
 	$(window).resize(arrr);
-	
-	/* Extra Class for smarter comment structure */
-	$('li.depth-1').has('ul.children').addClass('comment-group');
 
 	/* Dynamic equal width in Footer-Menu */
 	var n = 100 / ($('#footer_navigation ul li').length - $('#footer_navigation ul ul li').length);

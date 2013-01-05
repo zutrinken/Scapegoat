@@ -193,19 +193,6 @@ add_shortcode('wp_caption', 'custom_caption');
 add_shortcode('caption', 'custom_caption');
 
 
-/* catch the first image of a post, if the author is to stupid to select a featured image */
-function catch_that_image() {
-	global $post, $posts;
-	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	$first_img = $matches [1] [0];
-	if(!empty($first_img)) {
-		return '<img src="' . $first_img . '" alt="" />';
-	}
-}
-
 /* custom excerpt */
 function custom_wp_trim_excerpt($text) {
 	$raw_excerpt = $text;
@@ -488,16 +475,20 @@ function custom_comment($comment, $args, $depth) {
 		<div id="comment-<?php comment_ID(); ?>" class="comment-body">
 			<div class="comment-info">
 				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment->comment_author_email, 48 ); ?>
-					<cite class="fn"><?php printf(__('%s','scapegoat'), get_comment_author_link()) ?></cite>
+					<!--<?php echo get_avatar( $comment->comment_author_email, 48 ); ?>-->
+					<cite class="fn">
+						<?php printf(__('%s','scapegoat'), get_comment_author_link()) ?>
+					</cite>
 				</div>
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s &bull; %2$s'), get_comment_date('d.m.Y'),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)'),'  ','') ?>
-				</div>
-				<div class="reply">
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-				</div>
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>">
+						<?php printf(__('%1$s'), get_comment_date('d.m.Y')) ?>
+					</a>
+					<span class="reply">
+						<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					</span>
+					<?php /* edit_comment_link(__('(Edit)'),'  ','') */ ?>
+				</div>				
 			</div><!--comment-info-->
 			<div class="comment-text">
 				<?php if ($comment->comment_approved == '0') : ?>

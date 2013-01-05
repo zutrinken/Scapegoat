@@ -6,14 +6,12 @@
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
 @font-face {
-	font-family: 'Dejaweb';
-	src:	url('fonts/dejaweb.eot') format('embedded-opentype'),
-			url('fonts/dejaweb.woff') format('woff'),
-			url('fonts/dejaweb.svg') format('svg'),
-			url('fonts/dejaweb.ttf') format('truetype');
-	font-weight: normal;
+	font-family: 'DejaWeb';
 	font-style: normal;
+	font-weight: normal;
+	src: local('☺'), local('DejaWeb'), url('fonts/DejaWeb.woff') format('woff');
 }
+
 
 	  /* ============= */
 	 /* === RESET === */

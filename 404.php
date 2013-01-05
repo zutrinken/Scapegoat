@@ -2,7 +2,7 @@
 
 		<div id="container">
 			<div id="full">
-				<figure class="page-image full-image">
+				<figure class="post-image full-image">
 					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404.jpg" alt="" /></a>
 				</figure>
 				<section id="post-404">

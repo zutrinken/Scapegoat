@@ -84,14 +84,14 @@ function scapegoat_theme_options_page() {
 			</table>
 			<h3><?php _e('Navigation','scapegoat'); ?></h3>
 			<table class="form-table">
-				<tr valign="top">
+				<!--<tr valign="top">
 					<th scope="row"><?php _e('Breadcrumb-Navigation','scapegoat'); ?></th>
 					<td>
 						<label for="scapegoat_theme_options[breadcrumb-show]">
 							<input id="scapegoat_theme_options[breadcrumb-show]" type="checkbox" name="scapegoat_theme_options[breadcrumb-show]" value="1" <?php checked( '1', $options['breadcrumb-show'] ); ?> /> <?php _e('show','scapegoat'); ?>
 						</label>
 					</td>
-				</tr>
+				</tr>-->
 				<tr valign="top">
 					<th scope="row"><?php _e('Submenu','scapegoat'); ?></th>
 					<td>

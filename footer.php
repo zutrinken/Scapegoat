@@ -32,6 +32,7 @@
 				<?php endif; ?>
 				<nav id="footer_navigation">
 					<?php wp_nav_menu(array('theme_location'=>'footer', 'fallback_cb'=>'FALSE')); ?>
+					<div class="clear"></div>
 				</nav><!-- footer_navigation -->
 			</footer><!-- footer-inside -->
 		</div><!-- footer-outside -->
