@@ -10,8 +10,9 @@
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, gray, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
 
-	License: GNU/GPL Version 2 or later
-	License URI: http://www.gnu.org/licenses/gpl.html
+
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
@@ -1558,7 +1559,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 44px;
-	line-height: 62px;
+	line-height: 64px;
 	color: #fff;
 	background: rgba(0,0,0,0.75);
 	display: inline;

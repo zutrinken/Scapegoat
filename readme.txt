@@ -1,6 +1,7 @@
 = SCAPEGOAT =
 
-* by Peter Amende, http://peteramende.de/
+* Author: Peter Amende, http://peteramende.de/
+* License: GNU General Public License v2 or later
 
 == ABOUT SCAPEGOAT ==
 
