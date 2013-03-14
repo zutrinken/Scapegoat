@@ -59,7 +59,6 @@
 					
 						<?php if($options['custom-excerpt']) : ?>
 						
-						
 							<section id="post-<?php the_ID(); ?>" <?php post_class('archive-post'); ?>>
 
 								<!-- Mobile Query -->

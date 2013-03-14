@@ -1,5 +1,6 @@
 			</div><!-- wrapper-inside -->
 		</div><!-- wrapper-outside -->
+		
 		<?php $options = get_option('scapegoat_theme_options'); ?>
 		<div id="footer-top-outside">
 			<aside id="footer-top-inside" class="inside">
@@ -13,7 +14,7 @@
 					<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
 					<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
 					<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
-					<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Newsletter">Newsletter</a><?php endif; ?>
+					<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail">Mail</a><?php endif; ?>
 					<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
 				</div><!-- footer-top-social -->
 				<div id="footer-search">
@@ -40,23 +41,13 @@
 		<div id="end-outside">
 			<div idend-inside class="inside">
 				<aside id="end">
-					<!-- I dont't always delete a backlink, but when I do, I swear I'll drink a beer with Peter Amende. -->
-					Theme by <a target="_blank" title="Peter Amende" href="http://zutrinken.com/">Peter Amende</a>
+					<a target="_blank" href="http://zutrinken.com/">Amende</a>
 				</aside><!-- end -->
 			</div><!-- end-inside -->
 		</div><!-- end-outside -->
 
 		<?php wp_footer(); ?>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
-<!-- The only constant is change. -->
-<!--  -->
 <!--              ▲              -->
 <!--             ▲ ▲             -->
-<!--  -->
-<!-- ALL CREDITS GOES TO @krasse_herde -->
-<!-- @Lotterleben --> 
-<!-- @fRANDOM74 -->
-<!-- @mirgehtsganzgut -->
-
 	</body>
 </html>

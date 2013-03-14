@@ -5,10 +5,10 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.4.2
+	Version: 1.4.3
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
-	Tags: light, white, gray, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
+	Tags: light, white, grey, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
 
 
 	License: GNU General Public License v2 or later
@@ -39,16 +39,7 @@
 */
 
 
-
-
 /* __________________________________________________________________.01 Fonts */
-
-
-/* Abel - Matthew Desmond - SIL Open Font License, 1.1 */
-@import url(http://fonts.googleapis.com/css?family=Abel);
-
-/* Viga - Fontstage - SIL Open Font License, 1.1 */
-@import url(https://fonts.googleapis.com/css?family=Viga);
 
 @font-face {
 	font-family: 'DejaWeb';
@@ -622,7 +613,7 @@ audio {
 	line-height: 1em;
 	color: #404040;
 	padding: 0.5em 0;
-	margin: 0 0 0.5em;
+	margin: 0;
 	overflow: hidden;
 	font-family: 'Viga', 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
 
@@ -927,7 +918,6 @@ audio {
 	margin: 0 0 40px;
 	overflow: auto;
 	height: 100%;
-	text-shadow: 0 1px 0 #fff;
 }
 .post-info > * {
 	float: none;
@@ -949,7 +939,6 @@ audio {
 	font-size: 0.9em;
 	line-height: 1.4em;
 	color: #808080;
-	text-shadow: 0 1px 0 #fff;
 }
 .author-meta .author_avatar {}
 .author-meta .author_avatar .avatar {
@@ -1343,25 +1332,21 @@ body {
 
 #end-outside {
 	background: #000;
+	padding: 0.5em 0;
 }
 #end-inside {}
 #end {
-	font-size: 0.7em;
-	padding: 10px 0;
-	text-align: right;
+	font-size: 1em;
+	padding: 0.5em 0;
+	text-align: center;
+	font-family: 'Arial Black',Arial,sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 #end a {
-	padding: 2px 5px;
-	margin: 0 4px;
-	background: #404040;
-	color: #bfbfbf !important;
-	
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	color: #b2b2b2 !important;
 }
 #end a:hover {
-	background: #808080;
 	color: #fff !important;
 }
 
@@ -1517,19 +1502,19 @@ body {
 	position: relative;
 	background: url('images/bg-featured-1.jpg') no-repeat scroll 0 0 #404040;
 }
-#front-page-slider .front-page-slide:nth-child(1n) {
+#front-page-slider li:nth-child(1n) .front-page-slide {
 	background: url('images/bg-featured-1.jpg') no-repeat scroll 0 0 #404040;	
 }
-#front-page-slider .front-page-slide:nth-child(2n) {
+#front-page-slider li:nth-child(2n) .front-page-slide {
 	background: url('images/bg-featured-2.jpg') no-repeat scroll 0 0 #404040;
 }
-#front-page-slider .front-page-slide:nth-child(3n) {
+#front-page-slider li:nth-child(3n) .front-page-slide {
 	background: url('images/bg-featured-3.jpg') no-repeat scroll 0 0 #404040;
 }
-#front-page-slider .front-page-slide:nth-child(4n) {
+#front-page-slider li:nth-child(4n) .front-page-slide {
 	background: url('images/bg-featured-4.jpg') no-repeat scroll 0 0 #404040;
 }
-#front-page-slider .front-page-slide:nth-child(5n) {
+#front-page-slider li:nth-child(5n) .front-page-slide {
 	background: url('images/bg-featured-5.jpg') no-repeat scroll 0 0 #404040;
 }
 
@@ -1568,81 +1553,6 @@ body {
 	color: #fff;
 }
 #front-page-slider .front-page-slide .slide-text .slide-text-title a:hover {}
-
-#slideshow #prev,
-#slideshow #next {
-	display: none !important;
-	bottom: 128px;
-	width: 28px;
-	height: 64px;
-	line-height: 64px;
-	position: absolute;
-	color: #bfbfbf;
-	cursor: pointer;
-	text-align: center;
-	z-index: 2000;
-	text-indent: -999em;
-	
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-
-	filter:alpha(opacity=50);
-	-moz-opacity: 0.5;
-	-khtml-opacity: 0.5;
-	opacity: 0.5;
-}
-#slideshow:hover #prev,
-#slideshow:hover #next {
-	display: block !important;
-}
-#slideshow #prev:hover,
-#slideshow #next:hover {
-	color: #fff;
-	filter:alpha(opacity=100);
-	-moz-opacity: 1;
-	-khtml-opacity: 1;
-	opacity: 1;
-}
-#slideshow #prev {
-	left: 0;
-	background: rgba(0,0,0,0.5) url('images/arrow-left.png') center center no-repeat scroll;
-	background-size: 14px 26px;
-}
-#slideshow #next {
-	right: 0;
-	background: rgba(0,0,0,0.5) url('images/arrow-right.png') center center no-repeat scroll;
-	background-size: 14px 26px;
-}
-#slide-pager {
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 32px 0 0 32px;
-	padding: 6px 10px;
-	text-align: center;
-	z-index: 2000;
-	background: rgba(0,0,0,0.75);
-}
-#slide-pager a {
-	display: inline-block;
-	height: 8px;
-	line-height: 8px;
-	width: 8px;
-	margin: 0 4px;
-	background: #fff;
-	color: #000;
-	text-indent: -10000px;
-	
-	-webkit-border-radius: 2em;
-	-moz-border-radius: 2em;
-	border-radius: 2em;
-}
-#slide-pager a.activeSlide,
-#slide-pager a.activeSlide:hover {
-	background: #f80;
-	color: #fff;
-}
 
 #front-page-adverts {
 	font-family: 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
@@ -1783,7 +1693,6 @@ body {
 
 .widget-sidebar {
 	padding: 20px 0;
-	text-shadow: 0 1px 0 #fff;
 }
 .widget-sidebar:first-child {
 	padding-top: 0;
@@ -1794,11 +1703,7 @@ body {
 .widget-sidebar .widget-inner {
 	padding: 0;
 }
-.widget-sidebar .widget-title {
-	-webkit-box-shadow: 0 1px 0 #fff;
-	-moz-box-shadow: 0 1px 0 #fff;
-	box-shadow: 0 1px 0 #fff;
-}
+.widget-sidebar .widget-title {}
 
 
 	/* ------------------------------ Widget Footer */

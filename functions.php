@@ -4,13 +4,44 @@
 $options = get_option('scapegoat_theme_options');
 
 /* Mobile Detect */
-include 'functions/mobile_detect.php';
+include 'inc/mobile_detect.php';
+
+/* add scripts */
+function enqueue_scripts() {
+	$template = get_template_directory_uri();
+	wp_enqueue_script('modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
+
+	wp_deregister_script('jquery');
+	wp_register_script('jquery-custom', $template.'/js/libs/jquery.1.7.1.js', array(), null, false);
+	wp_enqueue_script('jquery-custom');
+
+	wp_enqueue_script('jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array('jquery-custom'), null, false);
+	wp_enqueue_script('jquery.smoothscroll', $template.'/js/libs/jquery.smoothscroll.js', array('jquery-custom'), null, false);
+
+	if(is_front_page()) {
+		wp_enqueue_style('jquery.flexslider', $template.'/css/style-flexslider.css', array(), null, false);
+		wp_enqueue_script('jquery.flexslider', $template.'/js/libs/jquery.flexslider.js', array('jquery-custom'), null, false);
+		wp_enqueue_script('jquery.cookie', $template.'/js/libs/jquery.cookie.js', array('jquery-custom'), null, false);
+	}
+	wp_enqueue_script('custom-script', $template.'/js/script.js', array('jquery-custom'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
+/* Load Google Web Fonts */
+function load_fonts() {
+	wp_register_style('viga', 'https://fonts.googleapis.com/css?family=Viga');
+	wp_enqueue_style('viga');
+	wp_register_style('abel', 'https://fonts.googleapis.com/css?family=Abel');
+	wp_enqueue_style('abel');
+}
+add_action('admin_enqueue_scripts', 'load_fonts');
+add_action('wp_enqueue_scripts', 'load_fonts');
 
 /* localization */
 load_theme_textdomain('scapegoat', TEMPLATEPATH .'/languages');
 
 /* add "editor-style.css" for the admin-interface */
-add_editor_style();
+add_editor_style('css/editor-style.css');
 
 /* add a favicon for the admin area */
 function favicon4admin() {
@@ -20,12 +51,12 @@ add_action( 'admin_head', 'favicon4admin' );
 
 /* load "login.css" for the login */
 function custom_login() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/login.css" />';
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css" />';
 }
 add_action('login_head', 'custom_login');
 
 /* add custom theme-options */
-require_once ( get_stylesheet_directory() . '/theme-options.php' );
+require_once(get_stylesheet_directory().'/inc/theme-options.php');
 
 /* add twitter and wiki profile */
 function add_twitter_contactmethod( $contactmethods ) {

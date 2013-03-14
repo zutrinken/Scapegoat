@@ -21,7 +21,6 @@
 * rtl support
 * optimize font-sizes in relation to the responsive behaviour
 * custom frontpage-layout
-* custom frontpage-"about me"-layout
 
 == LOG ==
 
@@ -34,3 +33,4 @@
 * 24.12.12 - second size for featured images above posts, postnavigation position changed, useless media-query removed
 * 24.12.12 - fixed font bug on Windows webkit and gecko browsers
 * 05.01.13 - change navigation size and bar style, fixed footer navigation bug, new lightweight comments, deactivated auto image catch, better archive logic
+* 14.03.13 - implement flexslider.js, including scripts and fonts the right way, new modernizer version, ordered files

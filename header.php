@@ -20,9 +20,9 @@
 
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/print.css" media="print" />
 		<!--[if IE]>
-			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/ie.css" media="screen" />
+			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/ie.css" media="screen" />
 		<![endif]-->
 
 		<!-- Favicon -->
@@ -30,27 +30,15 @@
 
 		<!-- Touch Icon -->
 		<?php if($options['icon']) : ?>
-			<link rel="apple-touch-icon" href="<?php echo $options['icon']; ?>"/>
 			<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
 		<?php else : ?>
-			<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/touch-icon.png"/>
-			<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/touch-icon.png"/>
+			<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/touch-icon.png"/>
 		<?php endif; ?>
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
-		<link rel='canonical' href='<?php bloginfo('url'); ?>' />
+		<link rel="canonical" href="<?php bloginfo('url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<link rel='index' title='<?php bloginfo('description'); ?>' href='<?php bloginfo('url'); ?>' />
-		
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.1.7.1.js"></script>
-		<?php if(is_front_page()) : ?>
-			<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cycle.js"></script>
-			<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.easing.1.3.js"></script>
-		<?php endif; ?>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.fitvids.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.smoothscroll.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-1.7.min.js"></script>
+		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
 		<?php wp_head(); ?>
 	</head>
@@ -92,7 +80,7 @@
 							<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
 							<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
 							<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
-							<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Newsletter">Newsletter</a><?php endif; ?>
+							<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail">Mail</a><?php endif; ?>
 							<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
 						</aside>
 						<span id="description">
@@ -106,97 +94,11 @@
 
 		<!-- Mobile Query -->
 		<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
-		<!-- Featured Container for Frontpage Slider and "Sidebar" -->
-		<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
-			<?php if($options['header-option'] == 'show-slider') : ?>
-			<!-- customize slider by theme-options -->
-			<?php if($options['slider-num'] == TRUE) : $num=$options['slider-num']; else : $num=5; endif; ?>
-			<?php if($options['slider-cat'] == TRUE) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
-			<!-- filter post formats from slider query -->
-			<?php $no_formats = array(array('taxonomy' => 'post_format', 'field' => 'slug', 'terms' => array('post-format-status'), 'operator' => 'NOT IN')); ?>
-			<!-- all parameters for the query -->
-			<?php $args = array('posts_per_page'=>$num,'cat'=>$cat,'tax_query'=>$no_formats,'post__not_in'=>get_option('sticky_posts')); ?>
-			<?php query_posts($args); ?>
-			<?php if(have_posts()) : ?>
-			<section id="front-page-header-outside">
-				<div id="front-page-header-inside" class="inside">
-					<div id="toggling" class="toggling">
-						<div id="slideshow">
-							<div id="front-page-slider">
-								<?php while (have_posts()) : the_post(); ?>
-								<section class="front-page-slide">
-									<header class="slide-text">
-										<h2 class="slide-text-title">
-											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h2>
-									</header><!-- slide-text -->
-									<?php if(has_post_thumbnail()) : ?>
-									<figure class="slide-image">
-										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail('featured'); ?>
-										</a>
-									</figure><!-- slide-image -->
-									<?php endif; ?>
-								</section><!-- front-page-slide -->
-								<?php endwhile; ?>
-							</div><!-- front-page-slider -->
-						</div><!-- slideshow -->
-						<?php if($options['featured-link-1'] && $options['featured-link-2'] && $options['featured-link-3'] && $options['featured-link-4']) : ?>
-							<div id="front-page-adverts">
-								<aside id="featured-links">
-									<ul>
-										<li>
-											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
-												<?php if($options['featured-link-title-1']) : ?>
-													<?php echo $options['featured-link-title-1']; ?>
-												<?php endif; ?>
-											</a>
-										</li>
-										<li>
-											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
-												<?php if($options['featured-link-title-2']) : ?>
-													<?php echo $options['featured-link-title-2']; ?>
-												<?php endif; ?>
-											</a>
-										</li>
-										<li>
-											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">
-												<?php if($options['featured-link-title-3']) : ?>
-													<?php echo $options['featured-link-title-3']; ?>
-												<?php endif; ?>
-											</a>
-										</li>
-										<li>
-											<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
-												<?php if($options['featured-link-title-4']) : ?>
-													<?php echo $options['featured-link-title-4']; ?>
-												<?php endif; ?>
-											</a>
-										</li>
-									</ul>
-								</aside><!-- featured-links -->
-							</div><!-- front-page-adverts -->
-						<?php endif; ?>
-						<div class="clear"></div>
-					</div><!-- toggling -->
-					<a id="front-page-slider-toggle"></a>
-					<div class="clear"></div>
-				</div><!-- front-page-header-inside -->
-			</section><!-- front-page-header-outside -->
-			<?php endif; wp_reset_query(); ?>
-			<?php elseif($options['header-option'] == 'show-header') : ?>
-				<?php $header_image = get_header_image(); if($header_image) : ?>
-					<section id="front-page-header-image-outside">
-						<div id="front-page-header-image-inside" class="inside">
-							<figure class="custom-header"></figure>
-						</div><!-- front-page-header-image-inside -->
-					</section><!-- front-page-header-image-outside --> 
-				<?php endif; ?>
+			<!-- Featured Container for Frontpage Slider and "Sidebar" -->
+			<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
+				<?php include('slider.php'); ?>
 			<?php endif; ?>
-		<?php endif; ?>
-		<!-- Featured Container End -->
+			<!-- Featured Container End -->
 		<?php endif; ?>
 		<!-- Mobile Query -->
 
