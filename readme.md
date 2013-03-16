@@ -5,7 +5,7 @@
 
 ## ABOUT SCAPEGOAT
 
-* the theme is made for the [Piratenpartei Berlin]()http://berlin.piratenpartei.de/)
+* the theme is made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
 * the default slider images and the 404 image are taken by [Ben de Biel](http://www.bendebiel.com/)
 
 ## HOW TO
