@@ -1,14 +1,14 @@
-= SCAPEGOAT =
+# SCAPEGOAT
 
-* Author: Peter Amende, http://peteramende.de/
+* Author: [Peter Amende](http://peteramende.de/)
 * License: GNU General Public License v2 or later
 
-== ABOUT SCAPEGOAT ==
+## ABOUT SCAPEGOAT
 
-* the theme is made for the Piratenpartei Berlin, http://berlin.piratenpartei.de/
-* the default slider images and the 404 image are taken by Ben de Biel, http://www.bendebiel.com/
+* the theme is made for the [Piratenpartei Berlin]()http://berlin.piratenpartei.de/)
+* the default slider images and the 404 image are taken by [Ben de Biel](http://www.bendebiel.com/)
 
-== HOW TO ==
+## HOW TO
 
 * first of all, you have to insert some informations about yourself in your profile-section
 * use custom menues and insert the start-page to the main-menu, if you want to display the home icon in your header menu
@@ -16,13 +16,13 @@
 * take a look at the theme-options and improve your front-page with it
 * give your categories a description! You can use html-tags there as well and also images with caption. Insert your <img src=" + image url + " /> and <span class="meta-thumbnail-caption"> + caption + </span> at the Top of the Description. It will be cut by jQuery and append to the right place automatically.
 
-== ISSUES ==
+## ISSUES
 
 * rtl support
 * optimize font-sizes in relation to the responsive behaviour
 * custom frontpage-layout
 
-== LOG ==
+## LOG
 
 * 01.10.12 - Release
 * 22.10.12 - Slider redesign, CSS fixes, new font for titles
@@ -34,3 +34,4 @@
 * 24.12.12 - fixed font bug on Windows webkit and gecko browsers
 * 05.01.13 - change navigation size and bar style, fixed footer navigation bug, new lightweight comments, deactivated auto image catch, better archive logic
 * 14.03.13 - implement flexslider.js, including scripts and fonts the right way, new modernizer version, ordered files
+* 17.03.13 - new screenshot.png, some styles fixed, changes readme to .md

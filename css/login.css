@@ -1,5 +1,6 @@
 html, body {
-	background: #f4f4f4!important;
+	background: #f4f4f4 url('../images/bg-main.png') repeat top center scroll !important;
+	background-size: 100px 100px !important;
 }
 body {
 	font-family: Arial, sans-serif;
@@ -51,7 +52,7 @@ input#user_login:focus, input#user_pass:focus {
 }
 
 #login form .submit input { 
-	background: #f68713!important;
+	background: #ff9f40!important;
 	border: 0!important;
 	text-shadow: none!important;
 	color: #fff!important;
@@ -61,7 +62,7 @@ input#user_login:focus, input#user_pass:focus {
 	box-shadow: none !important;
 }
 #login form .submit input:hover {
-	background: #000 !important;
+	background: #ff7f00 !important;
 	color: #fff!important;
 }
 .login #nav, .login #backtoblog {
@@ -92,4 +93,12 @@ input#user_login:focus, input#user_pass:focus {
 }
 .login #nav a:hover {
 	color: #000 !important;
+}
+@media	only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2) {
+	body {
+		background-image: url('../images/bg-main@2x.png') !important;
+	}
 }

@@ -1160,7 +1160,8 @@ audio {
 /* __________________________________________________________________.07 Layout */
 
 body {
-	background: #f4f4f4 url(images/bg-main.png) repeat top center scroll;
+	background: #f4f4f4 url('images/bg-main.png') repeat top center scroll;
+	background-size: 100px 100px;
 }
 .inside {
 	max-width: 1140px;
@@ -2890,10 +2891,13 @@ ul#smart-archives-block li span.empty-month {
 
 	/* ------------------------------ Retina Graphics */
 
-@media	only screen and (-webkit-min-device-pixel-ratio: 2), 
-		only screen and (-moz-min-device-pixel-ratio: 2), 
-		only screen and (-o-min-device-pixel-ratio: 2/1), 
+@media	only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
 		only screen and (min-device-pixel-ratio: 2) {
+	body {
+		background-image: url('images/bg-main@2x.png');
+	}
 	.article ul li:before {
 		background-image: url('images/icon-list@2x.png');
 	}
