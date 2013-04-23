@@ -7,35 +7,24 @@ $options = get_option('scapegoat_theme_options');
 include 'inc/mobile_detect.php';
 
 /* add scripts */
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts() {
 	$template = get_template_directory_uri();
 	wp_enqueue_script('modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
 
-	wp_deregister_script('jquery');
-	wp_register_script('jquery-custom', $template.'/js/libs/jquery.1.7.1.js', array(), null, false);
+	wp_register_script('jquery-custom', $template.'/js/libs/jquery.1.7.1.min.js', array(), null, false);
 	wp_enqueue_script('jquery-custom');
 
-	wp_enqueue_script('jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array('jquery-custom'), null, false);
-	wp_enqueue_script('jquery.smoothscroll', $template.'/js/libs/jquery.smoothscroll.js', array('jquery-custom'), null, false);
+	wp_enqueue_script('jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false);
+	wp_enqueue_script('jquery.smoothscroll', $template.'/js/libs/jquery.smoothscroll.js', array(), null, false);
 
 	if(is_front_page()) {
 		wp_enqueue_style('jquery.flexslider', $template.'/css/style-flexslider.css', array(), null, false);
-		wp_enqueue_script('jquery.flexslider', $template.'/js/libs/jquery.flexslider.js', array('jquery-custom'), null, false);
-		wp_enqueue_script('jquery.cookie', $template.'/js/libs/jquery.cookie.js', array('jquery-custom'), null, false);
+		wp_enqueue_script('jquery.flexslider', $template.'/js/libs/jquery.flexslider-min.js', array(), null, false);
+		wp_enqueue_script('jquery.cookie', $template.'/js/libs/jquery.cookie.js', array(), null, false);
 	}
-	wp_enqueue_script('custom-script', $template.'/js/script.js', array('jquery-custom'), null, true);
+	wp_enqueue_script('custom-script', $template.'/js/script.js', array(), null, true);
 }
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
-
-/* Load Google Web Fonts */
-function load_fonts() {
-	wp_register_style('viga', 'https://fonts.googleapis.com/css?family=Viga');
-	wp_enqueue_style('viga');
-	wp_register_style('abel', 'https://fonts.googleapis.com/css?family=Abel');
-	wp_enqueue_style('abel');
-}
-add_action('admin_enqueue_scripts', 'load_fonts');
-add_action('wp_enqueue_scripts', 'load_fonts');
 
 /* localization */
 load_theme_textdomain('scapegoat', TEMPLATEPATH .'/languages');
@@ -192,9 +181,97 @@ function admin_header_style() {
 add_custom_image_header('header_style', 'admin_header_style');
 
 
+
+/* Shortcodes */
+/* Enable shortcodes in widget areas */
+add_filter( 'widget_text', 'do_shortcode' );
+
+/* Replace WP autop formatting */
+if (!function_exists( "scapegoat_remove_wpautop")) {
+	function scapegoat_remove_wpautop($content) { 
+		$content = do_shortcode( shortcode_unautop( $content ) ); 
+		$content = preg_replace( '#^<\/p>|^<br \/>|<p>$#', '', $content);
+		return $content;
+	}
+}
+
+
+/* Two Columns */
+function scapegoat_shortcode_two_columns_one( $atts, $content = null ) {
+   return '<div class="two-columns-one">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'two_columns_one', 'scapegoat_shortcode_two_columns_one' );
+
+function scapegoat_shortcode_two_columns_one_last( $atts, $content = null ) {
+   return '<div class="two-columns-one last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'two_columns_one_last', 'scapegoat_shortcode_two_columns_one_last' );
+
+
+/* Three Columns */
+function scapegoat_shortcode_three_columns_one($atts, $content = null) {
+   return '<div class="three-columns-one">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'three_columns_one', 'scapegoat_shortcode_three_columns_one' );
+
+function scapegoat_shortcode_three_columns_one_last($atts, $content = null) {
+   return '<div class="three-columns-one last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'three_columns_one_last', 'scapegoat_shortcode_three_columns_one_last' );
+
+function scapegoat_shortcode_three_columns_two($atts, $content = null) {
+   return '<div class="three-columns-two">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'three_columns_two', 'scapegoat_shortcode_three_columns' );
+
+function scapegoat_shortcode_three_columns_two_last($atts, $content = null) {
+   return '<div class="three-columns-two last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'three_columns_two_last', 'scapegoat_shortcode_three_columns_two_last' );
+
+
+/* Four Columns */
+function scapegoat_shortcode_four_columns_one($atts, $content = null) {
+   return '<div class="four-columns-one">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_one', 'scapegoat_shortcode_four_columns_one' );
+
+function scapegoat_shortcode_four_columns_one_last($atts, $content = null) {
+   return '<div class="four-columns-one last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_one_last', 'scapegoat_shortcode_four_columns_one_last' );
+
+function scapegoat_shortcode_four_columns_two($atts, $content = null) {
+   return '<div class="four-columns-two">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_two', 'scapegoat_shortcode_four_columns_two' );
+
+function scapegoat_shortcode_four_columns_two_last($atts, $content = null) {
+   return '<div class="four-columns-two last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_two_last', 'scapegoat_shortcode_four_columns_two_last' );
+
+function scapegoat_shortcode_four_columns_three($atts, $content = null) {
+   return '<div class="four-columns-three">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_three', 'scapegoat_shortcode_four_columns_three' );
+
+function scapegoat_shortcode_four_columns_three_last($atts, $content = null) {
+   return '<div class="four-columns-three last">' . scapegoat_remove_wpautop($content) . '</div>';
+}
+add_shortcode( 'four_columns_three_last', 'scapegoat_shortcode_four_columns_three_last' );
+
+/* Divide Text Shortcode */
+function scapegoat_shortcode_divider($atts, $content = null) {
+   return '<div class="divider"></div>';
+}
+add_shortcode( 'divider', 'scapegoat_shortcode_divider' );
+
+
+
 /* add custom caption-function */
 function custom_caption($attr, $content = null) {
-	// New-style shortcode with the caption inside the shortcode with the link and image tags.
+	/* New-style shortcode with the caption inside the shortcode with the link and image tags. */
 	if ( ! isset( $attr['caption'] ) ) {
 		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
 			$content = $matches[1];
@@ -278,14 +355,23 @@ function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
 		}
 		// More than one page -> render pagination
 		if ( $total_pages > 1 ) {
-			echo '<nav class="pagination_navi">';
+			echo '<span class="pagination-info">';
+			echo _e('Page ','scapegoat');
+			echo $current_page; 
+			echo _e(' of ','scapegoat');
+			echo $total_pages;
+			echo '</span>';
+		
+			echo '<nav class="pagination">';
            	if ( $current_page > 1 ) {
-				echo '<a href="' .get_pagenum_link($current_page-1) .'" title="previous">&laquo;</a>';
+				echo '<a class="pagination-previous" href="' .get_pagenum_link($current_page-1) .'" title="previous">&laquo;</a>';
+			} else {
+				echo '<span class="pagination-previous" title="previous">&laquo;</span>';
 			}
 			for ( $i = 1; $i <= $total_pages; $i++) {
 				if ( $i == $current_page ){
 					// Current page
-					echo '<a href="'.get_pagenum_link($current_page).'" class="current-page" title="page '.$i.'" >'.($current_page).'</a>';
+					echo '<a href="'.get_pagenum_link($current_page).'" class="pagination-current-page" title="page '.$i.'" >'.($current_page).'</a>';
 				} else {
 					// Pages before and after the current page
 					if ( ($i >= ($current_page - $left_offset)) && ($i <= ($current_page + $right_offset)) ){
@@ -296,12 +382,14 @@ function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
 					} elseif ( (($i == ($min_max_offset + 1)) && ($i < ($current_page - $left_offset + 1))) ||
 								(($i == ($total_pages - $min_max_offset)) && ($i > ($current_page + $right_offset ))) ) {
 						// Dots after/before min_max_offset
-						echo '<span class="dots">...</span>';
+						echo '<span class="pagination-dots">...</span>';
 					}
 				}
 			}
 			if ( $current_page != $total_pages ) {
-				echo '<a href="'.get_pagenum_link($current_page+1).'" title="next">&raquo;</a>';
+				echo '<a class="pagination-next" href="'.get_pagenum_link($current_page+1).'" title="next">&raquo;</a>';
+			} else {
+				echo '<span class="pagination-next" title="next">&raquo;</span>';
 			}
 			echo '</nav>'; //Close pagination
 		}

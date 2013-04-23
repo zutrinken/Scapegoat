@@ -20,6 +20,7 @@
 
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/plugins.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/print.css" media="print" />
 		<!--[if IE]>
 			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/ie.css" media="screen" />

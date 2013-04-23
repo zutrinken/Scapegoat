@@ -1,5 +1,16 @@
 (function ($, document, window) {
 	$(document).ready(function () {
+
+		/* Main Navigation Font Size */
+		function navFontSize() {
+			var fontSize;
+			var nav = $('#main-nav')
+			fontSize = 0.5 + (nav.width() / 1500);
+			nav.css({'font-size': fontSize + 'em'});
+		}
+		navFontSize();
+		$(window).resize(navFontSize);
+	
 		/* Cut the first image of the category description and set it as a featured image */
 		/* This method is realy crappy, I guess */
 		var catDes = $('.category-description');
@@ -13,16 +24,6 @@
 		$('.menu-toggle').smoothScroll().click(function () {
 			$('#main-nav div').slideToggle('200');
 		});
-
-		/* Main Navigation Font Size */
-		function navFontSize() {
-			var fontSize;
-			var nav = $('#main-nav')
-			fontSize = 0.5 + (nav.width() / 1500);
-			nav.css({'font-size': fontSize + 'em'});
-		}
-		navFontSize();
-		$(window).resize(navFontSize);
 
 		/* Dynamic equal width in Footer-Menu */
 		var n = 100 / ($('#footer_navigation ul li').length - $('#footer_navigation ul ul li').length);

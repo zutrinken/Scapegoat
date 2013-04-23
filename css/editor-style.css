@@ -8,6 +8,12 @@
 	font-weight: normal;
 	src: local('☺'), local('DejaWeb'), url('../fonts/DejaWeb.woff') format('woff');
 }
+@font-face {
+	font-family: 'Scapegoat';
+	font-style: normal;
+	font-weight: normal;
+	src: local('☺'), local('Scapegoat'), url('../fonts/Scapegoat.woff') format('woff');
+}
 
 
 	  /* ============= */
@@ -120,40 +126,35 @@ body#tinymce {padding: 10px 20px;}
 	/* ------------------------------ Headlines */
 
 h1, h2, h3, h4, h5, h6, h7 {
-	font-family: 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'Scapegoat', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-weight: 400;
-	color: #1483a8;
+	margin: 1em 0;
+	color: #181818;
 }
 
 h1 {
-	font-size: 1.5em;
+	font-size: 2.4em;
 	line-height: 1em;
-	margin: 1.5em 0;
 }
 h2 {
-	font-size: 1.4em;
+	font-size: 1.9em;
 	line-height: 1em;
-	margin: 1.4em 0;
 }
 h3 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	line-height: 1em;
-	margin: 1.3em 0;
 }
 h4 {
 	font-size: 1.2em;
 	line-height: 1em;
-	margin: 1.2em 0;
 }
 h5 {
-	font-size: 1.1em;
+	font-size: 1em;
 	line-height: 1em;
-	margin: 1.1em 0;
 }
 h6 {
 	font-size: 1em;
 	line-height: 1em;
-	margin: 1em 0;
 }
 
 	/* ------------------------------ Text */
@@ -194,45 +195,25 @@ q:after {
 	content: '“';
 }
 
-blockquote:before,
-blockquote:after {
-    background: none repeat scroll 0 0 #fff;
+blockquote:before {
     color: #1483a8;
     content: '”';
-    
-    font-size: 36px;
+    font-size: 3em;
     line-height: 100%;
 	font-weight: 700;
-
     position: absolute;
-    top: -14px;
-    left: 30px;
-    height: 18px;
-    margin: 0 0 0 -10px;
-    padding: 0 10px;
-}
-blockquote:after {
-	top: auto;
-	left: auto;
-	right: 20px;
-	bottom: -6px;
+    top: 0;
+    left: 0.25em;
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 blockquote {
-	border: 1px solid #bfbfbf;
-	font-family: Georgia, Serif;
-	font-size: 0.9em;
-	line-height: 1.4em;
 	font-style: italic;
 	color: #808080;
-
-	padding: 0 20px;
-	margin: 1.5em 0;
-	
+	padding: 0 0 0 4em;
+	margin: 1.5em 0;	
 	position: relative;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
 }
 cite,
 small {

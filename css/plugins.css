@@ -1,0 +1,148 @@
+/*
+	
+	Custom style for some common Plugins
+	
+	* MailChimp List Subscribe Form
+	* Smart Archives Reloaded
+	* 2 Click Social Media Buttons
+		
+*/
+
+	/* ------------------------------------------------------------------------------- */
+	/* MailChimp List Subscribe Form */
+	/* http://wordpress.org/extend/plugins/mailchimp/ */
+
+.widget_mailchimpsf_widget {}
+#mc_signup {}
+#mc_signup_form {}
+.mc_form_inside {
+	background: #fff;
+	padding: 10px;
+	margin: 3px;
+	
+	border: 1px solid #d1d1d1;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}		
+#mc_message {}
+.mc_merge_var {
+	overflow: auto;
+	padding: 0 !important;
+	margin: 0 0 10px !important;
+}
+.mc_merge_var .mc_var_label {
+	display: block;
+}
+.mc_merge_var .mc_var_label .mc_required {
+	color: #1483a8;
+	font-weight: 700;
+	margin: 0 2px;
+}
+.mc_merge_var .mc_input {
+	width: 100%;
+}
+#mc-indicates-required {
+	display: none !important;
+}			
+.mc_signup_submit {
+	text-align: inherit !important;
+	margin: 0 0 10px;
+}
+.mc_signup_submit .button {}
+	
+	
+#mc_unsub_link {
+	text-align: inherit !important;
+}
+#mc_unsub_link a {}
+
+
+
+
+
+	/* ------------------------------------------------------------------------------- */
+	/* Smart Archives Reloaded */
+	/* http://wordpress.org/extend/plugins/smart-archives-reloaded/ */
+
+ul#smart-archives-block {
+	margin: 0 0 50px;
+	padding: 30px 30px 10px;
+	overflow: hidden;
+	background: #f4f4f4;
+	border: 1px solid #e3e3e3;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+ul#smart-archives-block li {
+	margin: 0;
+	padding: 0 0 20px;
+	list-style: none !important;
+	line-height: 1em;
+}
+ul#smart-archives-block li:before,
+ul#smart-archives-block li:after {
+	display: none;
+}
+ul#smart-archives-block li a {
+	margin: 0 0.1em;
+	padding: 0.2em 0.4em;
+	display: inline-block;
+	color: #404040;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+ul#smart-archives-block li a:hover {
+	color: #181818;
+	background: #e3e3e3;
+}
+ul#smart-archives-block li strong {
+	display: inline-block;
+	margin: 0 0.5em 0 0;
+	padding: 0.2em 0.4em;
+}
+ul#smart-archives-block li span.empty-month {
+	display: inline-block;
+	margin: 0 0.1em;
+	padding: 0.2em 0.4em;
+	color: #bfbfbf;
+}
+#smart-archives-list h2 {}
+#smart-archives-list ul {
+	margin: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+#smart-archives-list ul li {
+	padding: 0.3em 0;
+	list-style: none;
+    border-top: 1px solid #e3e3e3;
+}
+#smart-archives-list ul li a {
+	color: #404040;
+}
+#smart-archives-list ul li a:hover {
+	color: #181818;
+}
+
+
+
+
+	/* ------------------------------------------------------------------------------- */
+	/* 2 Click Social Media Buttons */
+	/* http://wordpress.org/extend/plugins/2-click-socialmedia-buttons/ */
+
+.social_share_privacy {}
+.social_share_privacy ul {}
+.social_share_privacy ul li {}
+.social_share_privacy ul li:before {
+	display: none !important;
+}
