@@ -7,7 +7,7 @@
 
 * the theme is made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
 * the default slider images and the 404 image are taken by [Ben de Biel](http://www.bendebiel.com/)
-* the font "Scapegoat" is made by [Fred Bordfeld](http://kaklotter.de/)
+* the font "PoliticsHeadBold" is made by [Fred Bordfeld](http://kaklotter.de/)
 
 ## HOW TO
 
@@ -39,4 +39,4 @@
 * 05.01.13 - change navigation size and bar style, fixed footer navigation bug, new lightweight comments, deactivated auto image catch, better archive logic
 * 14.03.13 - implement flexslider.js, including scripts and fonts the right way, new modernizer version, ordered files
 * 17.03.13 - new screenshot.png, some styles fixed, changes readme to .md
-* 24.04.13 - Finally integrate our own font "Scapegoat" \o/ – thanks to fRED, font style adjustment, image alignment adjustments. Fix jquery implementation. Added Shortcode Function for coloums, checkout plugin style in extra css
+* 24.04.13 - Finally integrate our own font "PoliticsHeadBold" \o/ – thanks to fRED, font style adjustment, image alignment adjustments. Fix jquery implementation. Added Shortcode Function for coloums, checkout plugin style in extra css

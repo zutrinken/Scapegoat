@@ -9,10 +9,10 @@
 	src: local('☺'), local('DejaWeb'), url('../fonts/DejaWeb.woff') format('woff');
 }
 @font-face {
-	font-family: 'Scapegoat';
+	font-family: 'PoliticsHeadBold';
 	font-style: normal;
 	font-weight: normal;
-	src: local('☺'), local('Scapegoat'), url('../fonts/Scapegoat.woff') format('woff');
+	src: local('☺'), local('PoliticsHeadBold'), url('../fonts/PoliticsHeadBold.woff') format('woff');
 }
 
 
@@ -126,7 +126,7 @@ body#tinymce {padding: 10px 20px;}
 	/* ------------------------------ Headlines */
 
 h1, h2, h3, h4, h5, h6, h7 {
-	font-family: 'Scapegoat', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-weight: 400;
 	margin: 1em 0;
 	color: #181818;
