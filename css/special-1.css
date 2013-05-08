@@ -1,0 +1,131 @@
+#special-header {
+	position: relative;
+	width: auto;
+	height: 0;
+	padding: 0 0 33.333%;
+	margin: 0 auto 4em;
+	overflow: hidden;
+
+	background-color: #5cafc6;
+	background-image: url('../images/special-1-bg-blue.jpg');
+	background-size: 100% 640px;
+	background-position: center bottom;
+
+	/*background:-webkit-radial-gradient(top, #5cafc6, #073d60);
+	background:-moz-radial-gradient(top, #5cafc6, #073d60);
+	background:radial-gradient(top, #5cafc6, #073d60);*/
+	
+	-webkit-box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1), 0 1px 0 #fff;
+	-moz-box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1), 0 1px 0 #fff;
+	box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1), 0 1px 0 #fff;
+}
+#special-header-inside {
+	position: relative;
+	overflow: hidden;
+	max-width: 1140px;
+	height: 0;
+	margin: 0 auto;
+	padding: 0 0 33.333%;
+}
+
+
+
+#special-logo {
+	position: absolute;
+	left: 0;
+	bottom: 2.5em;
+	width: auto;
+	max-width: 42%;
+	padding: 0;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-size: 2.8em;
+	line-height: 100%;
+	vertical-align: bottom;
+	text-transform: uppercase;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-o-hyphens: none;
+	hyphens: none;
+	
+	z-index: 9999;
+}
+#special-logo a,
+#special-logo a:active,
+#special-logo a:visited,
+#special-logo a:hover {
+	color: #fff;
+}
+#special-logo img {
+	display: block;
+	padding: 1em 0;
+}
+#special-logo-text {
+	display: block;
+	padding: 55px 0;
+	line-height: 75%;
+}
+
+
+
+#special-portrait {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 33.333%;
+	height: 100%;
+}
+#special-portrait img {
+	width: auto;
+	max-width: none;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#full,
+#content {
+	position: relative;
+	margin: -12em auto 0;
+}
+@media only screen and (max-width: 1220px) {
+	#special-header,
+	#special-header-inside {
+		padding: 0;
+		height: 406px;
+	}
+	#special-logo {
+		margin-left: 40px;
+	}
+	#special-portrait {
+		margin-right: 40px;
+	}
+}
+@media only screen and (max-width: 860px) {
+	#special-header,
+	#special-header-inside {
+		height: auto;
+	}
+	#special-portrait {
+		display: none;
+	}
+	#special-logo {
+		position: static;
+		width: auto;
+		max-width: 50%;
+		margin: 0 auto;
+	}
+	#special-logo img {
+		padding: 1em 0 2em;
+	}
+	#full,
+	#content {
+		margin: -8em auto 0;
+	}
+}
+@media only screen and (max-width: 640px) {
+	#special-logo {
+		max-width: 75%;
+	}
+}

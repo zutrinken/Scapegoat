@@ -1,7 +1,7 @@
 <?php if($options['header-option'] == 'show-slider') : ?>
 	<!-- customize slider by theme-options -->
-	<?php if($options['slider-num'] == TRUE) : $num=$options['slider-num']; else : $num=5; endif; ?>
-	<?php if($options['slider-cat'] == TRUE) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
+	<?php if($options['slider-num']) : $num=$options['slider-num']; else : $num=5; endif; ?>
+	<?php if($options['slider-cat']) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
 	<!-- filter post formats from slider query -->
 	<?php $no_formats = array(array('taxonomy' => 'post_format', 'field' => 'slug', 'terms' => array('post-format-status'), 'operator' => 'NOT IN')); ?>
 	<!-- all parameters for the query -->
@@ -75,7 +75,6 @@
 				<?php endif; ?>
 				<div class="clear"></div>
 			</div><!-- toggling -->
-			<a id="front-page-slider-toggle"></a>
 			<div class="clear"></div>
 		</div><!-- front-page-header-inside -->
 	</section><!-- front-page-header-outside -->

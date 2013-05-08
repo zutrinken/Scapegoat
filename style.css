@@ -1227,7 +1227,7 @@ body {
 	width: 480px;
 	max-width: 50%;
 	padding: 0;
-	font-family: 'PoliticsHeadBold', 'Abel', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 2.8em;
 	line-height: 100%;
 	vertical-align: bottom;
@@ -1272,7 +1272,7 @@ body {
 	display: block;
 	text-align: right;
 
-	color: #bfbfbf;
+	color: rgba(0,0,0,0.25);
 }
 #header-social-links {
 	margin: 0 auto 10px;
@@ -1293,6 +1293,7 @@ body {
 	padding: 0 0 40px;
 }
 #full {
+	position: relative;
 	overflow: auto;
 
 	-webkit-box-sizing: border-box;
@@ -1308,6 +1309,7 @@ body {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 #content {
+	position: relative;
 	width: 73%;
 	float: left;
 	
@@ -1328,6 +1330,7 @@ body {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 #sidebar {
+	position: relative;
 	width: 23%;
 	float: right;
 	
@@ -1496,7 +1499,9 @@ body {
 
 /* __________________________________________________________________.08 Frontpage */
 
-#front-page-header-outside {}
+#front-page-header-outside {
+	position: relative;
+}
 #front-page-header-inside {
 	position: relative;
 }
@@ -1507,24 +1512,6 @@ body {
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-#front-page-slider-toggle {
-	top: -24px;
-	right: 40px;
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	line-height: 24px;
-	display: block;
-	color: #fff;
-	background: rgba(0,0,0,0.1) url('images/icon-slideshow.png') no-repeat scroll center center;
-	background-size: 16px 16px;
-	
-	cursor: pointer;
-	z-index: 2000;
-}
-#front-page-slider-toggle:hover {
-	background-color: rgba(0,0,0,0.2);;
 }
 
 #slideshow {
@@ -1662,8 +1649,12 @@ body {
 	color: #fff;
 }
 
-#front-page-header-image-outside {}
-#front-page-header-image-inside {}
+#front-page-header-image-outside {
+	position: relative;
+}
+#front-page-header-image-inside {
+	position: relative;
+}
 .custom-header {
 	height: 320px;
 	margin: 0 0 40px;

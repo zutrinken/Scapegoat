@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: scapegoat v1.4.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-05-07 11:39:41+0000\n"
+"PO-Revision-Date: 2013-05-08 22:17:27+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -124,8 +124,7 @@ msgid "Abschicken"
 msgstr ""
 
 #: functions.php:93
-#: inc/theme-options.php:115
-#: inc/theme-options.php:122
+#: inc/theme-options.php:206
 #@ scapegoat
 msgid "Header"
 msgstr "Kopfzeile"
@@ -228,95 +227,93 @@ msgstr "Wiki"
 msgid "Biography"
 msgstr "Biografie"
 
-#: inc/theme-options.php:43
+#: inc/theme-options.php:44
 #@ scapegoat
 msgid "Settings saved!"
 msgstr "Einstellungen gespeichert!"
 
-#: inc/theme-options.php:136
+#: inc/theme-options.php:165
 #@ default
 msgid "slider-cat"
 msgstr ""
 
-#: inc/theme-options.php:140
+#: inc/theme-options.php:169
 #@ default
 msgid "slider-num"
 msgstr ""
 
-#: inc/theme-options.php:151
+#: inc/theme-options.php:177
 #@ default
 msgid "featured-link-1"
 msgstr ""
 
-#: inc/theme-options.php:152
+#: inc/theme-options.php:178
 #@ default
 msgid "featured-link-title-1"
 msgstr ""
 
-#: inc/theme-options.php:158
+#: inc/theme-options.php:184
 #@ default
 msgid "featured-link-2"
 msgstr ""
 
-#: inc/theme-options.php:159
+#: inc/theme-options.php:185
 #@ default
 msgid "featured-link-title-2"
 msgstr ""
 
-#: inc/theme-options.php:165
+#: inc/theme-options.php:191
 #@ default
 msgid "featured-link-3"
 msgstr ""
 
-#: inc/theme-options.php:166
+#: inc/theme-options.php:192
 #@ default
 msgid "featured-link-title-3"
 msgstr ""
 
-#: inc/theme-options.php:181
+#: inc/theme-options.php:220
 #@ default
 msgid "rss"
 msgstr ""
 
-#: inc/theme-options.php:185
+#: inc/theme-options.php:224
 #@ default
 msgid "twitter"
 msgstr ""
 
-#: inc/theme-options.php:189
+#: inc/theme-options.php:228
 #@ default
 msgid "facebook"
 msgstr ""
 
-#: inc/theme-options.php:197
+#: inc/theme-options.php:236
 #@ default
 msgid "youtube"
 msgstr ""
 
-#: inc/theme-options.php:201
+#: inc/theme-options.php:240
 #@ default
 msgid "mail"
 msgstr ""
 
-#: inc/theme-options.php:58
-#: inc/theme-options.php:60
+#: inc/theme-options.php:59
 #@ default
 msgid "logo"
 msgstr ""
 
-#: inc/theme-options.php:67
-#: inc/theme-options.php:69
+#: inc/theme-options.php:65
 #@ default
 msgid "icon"
 msgstr ""
 
 #: functions.php:415
-#: inc/theme-options.php:96
+#: inc/theme-options.php:83
 #@ scapegoat
 msgid "Submenu"
 msgstr "Unterseiten"
 
-#: inc/theme-options.php:193
+#: inc/theme-options.php:232
 #@ default
 msgid "google"
 msgstr ""
@@ -383,7 +380,7 @@ msgstr "Fußzeile-Sidebar"
 msgid "Widgets for the Footer-section."
 msgstr "Widgets für die Fußzeile-Sidebar"
 
-#: inc/theme-options.php:205
+#: inc/theme-options.php:244
 #@ default
 msgid "podcast"
 msgstr ""
@@ -415,123 +412,104 @@ msgid "Edit"
 msgstr "bearbeiten"
 
 #: functions.php:155
+#: inc/theme-options.php:98
+#: inc/theme-options.php:120
+#: inc/theme-options.php:144
 #@ scapegoat
 msgid "Default"
 msgstr "Standard"
 
-#: inc/theme-options.php:38
+#: inc/theme-options.php:39
 #@ scapegoat
 msgid "Scapegoat Theme-Options"
 msgstr "Scapegoat Theme-Optionen"
 
-#: inc/theme-options.php:52
+#: inc/theme-options.php:53
 #@ scapegoat
 msgid "Graphics"
 msgstr "Bilder"
 
-#: inc/theme-options.php:74
+#: inc/theme-options.php:69
 #@ scapegoat
 msgid "Articles"
 msgstr "Artikel"
 
-#: inc/theme-options.php:77
+#: inc/theme-options.php:72
 #@ scapegoat
 msgid "Excerpt"
 msgstr "Auszug"
 
-#: inc/theme-options.php:80
+#: inc/theme-options.php:75
 #@ scapegoat
 msgid "automatic excerpts"
 msgstr "automatische Auszüge"
 
-#: inc/theme-options.php:80
+#: inc/theme-options.php:75
 #@ scapegoat
 msgid "if this is checked, you don't need more-tags"
 msgstr "bei Aktivierung benötigst du keine more-tags"
 
-#: header.php:50
-#: inc/theme-options.php:85
+#: header.php:66
+#: inc/theme-options.php:80
 #@ scapegoat
 msgid "Navigation"
 msgstr "Navigation"
 
-#: inc/theme-options.php:88
-#@ scapegoat
-msgid "Breadcrumb-Navigation"
-msgstr "Breadcrumb-Navigation"
-
-#: inc/theme-options.php:91
-#: inc/theme-options.php:99
-#: inc/theme-options.php:110
+#: inc/theme-options.php:86
 #@ scapegoat
 msgid "show"
 msgstr "anzeigen"
 
-#: inc/theme-options.php:118
+#: inc/theme-options.php:159
 #@ scapegoat
 msgid "Slider"
 msgstr "Slider"
 
-#: inc/theme-options.php:126
+#: inc/theme-options.php:210
 #@ scapegoat
 msgid "Nothing"
 msgstr "Nichts"
 
-#: inc/theme-options.php:132
-#@ scapegoat
-msgid "Slider-settings"
-msgstr "Slider-Einstellungen"
-
-#: inc/theme-options.php:135
+#: inc/theme-options.php:164
 #@ scapegoat
 msgid "Category (ID)"
 msgstr "Kategorie (ID)"
 
-#: inc/theme-options.php:139
+#: inc/theme-options.php:168
 #@ scapegoat
 msgid "Amount of slides"
 msgstr "Anzahl der Slides"
 
-#: inc/theme-options.php:140
-#@ scapegoat
-msgid "Slides"
-msgstr "Slides"
-
-#: inc/theme-options.php:146
-#@ scapegoat
-msgid "Featured Links"
-msgstr "Wichtige Links"
-
-#: inc/theme-options.php:152
-#: inc/theme-options.php:159
-#: inc/theme-options.php:166
-#: inc/theme-options.php:173
+#: inc/theme-options.php:178
+#: inc/theme-options.php:185
+#: inc/theme-options.php:192
+#: inc/theme-options.php:199
 #@ scapegoat
 msgid "Title"
 msgstr "Titel"
 
-#: inc/theme-options.php:177
+#: inc/theme-options.php:216
 #@ scapegoat
 msgid "Social Networks"
 msgstr "Soziale Netzwerke"
 
-#: inc/theme-options.php:181
+#: inc/theme-options.php:220
 #@ scapegoat
 msgid "if this is empty, the default Wordpress-feed will set"
 msgstr "Wenn nichts ausgwählt ist, wird der dein Standard Wordpress Feed verwendet"
 
-#: inc/theme-options.php:209
+#: inc/theme-options.php:248
 #@ scapegoat
 msgid "Save"
 msgstr "Speichern"
 
-#: inc/theme-options.php:53
+#: inc/theme-options.php:54
 #, php-format
 #@ scapegoat
 msgid "Choose an Image from your <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Library</a> or <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">upload</a> a new one."
 msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Mediathek</a> oder <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">lade</a> ein neues hoch."
 
-#: inc/theme-options.php:99
+#: inc/theme-options.php:86
 #@ scapegoat
 msgid "at the top of the sidebar"
 msgstr "am Anfang der Sidebar"
@@ -568,28 +546,113 @@ msgstr "von "
 msgid "%1$s"
 msgstr ""
 
-#: inc/theme-options.php:104
+#: inc/theme-options.php:156
 #@ scapegoat
 msgid "Frontpage"
 msgstr "Startseite"
 
-#: inc/theme-options.php:107
-#@ scapegoat
-msgid "Frontpage Layout"
-msgstr "Startseite Layout"
-
-#: inc/theme-options.php:110
-#@ scapegoat
-msgid "use custom frontpage layout"
-msgstr "Verwende ein individuelles Startseiten Layout"
-
-#: inc/theme-options.php:172
+#: inc/theme-options.php:198
 #@ default
 msgid "featured-link-4"
 msgstr ""
 
-#: inc/theme-options.php:173
+#: inc/theme-options.php:199
 #@ default
 msgid "featured-link-title-4"
 msgstr ""
+
+#: inc/theme-options.php:92
+#@ scapegoat
+msgid "Appearance"
+msgstr "Darstellung"
+
+#: inc/theme-options.php:95
+#@ scapegoat
+msgid "Style"
+msgstr "Stil"
+
+#: inc/theme-options.php:104
+#@ scapegoat
+msgid "#BTW13 - Personal Blog"
+msgstr "#BTW13 - Persönlicher Blog"
+
+#: inc/theme-options.php:104
+#@ scapegoat
+msgid "If activated the frontpage settings are useless"
+msgstr "Bei Aktivierung sind die Startseiteneinstellungen nutzlos"
+
+#: inc/theme-options.php:109
+#: inc/theme-options.php:137
+#@ scapegoat
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/theme-options.php:110
+#@ default
+msgid "special-1-logo"
+msgstr ""
+
+#: inc/theme-options.php:110
+#: inc/theme-options.php:138
+#@ scapegoat
+msgid "Optimal Pixel Size: 720x240"
+msgstr "Optimale Größe in Pixel: 720x240"
+
+#: inc/theme-options.php:113
+#@ scapegoat
+msgid "Portrait"
+msgstr "Portrait"
+
+#: inc/theme-options.php:114
+#@ default
+msgid "special-1-portrait"
+msgstr ""
+
+#: inc/theme-options.php:114
+#@ scapegoat
+msgid "Optimal Pixel Size: 640x960"
+msgstr "Optimale Größe in Pixel: 640x960"
+
+#: inc/theme-options.php:117
+#: inc/theme-options.php:141
+#@ scapegoat
+msgid "Background"
+msgstr "Hintergrund"
+
+#: inc/theme-options.php:120
+#: inc/theme-options.php:144
+#@ scapegoat
+msgid "Blue"
+msgstr "Blau"
+
+#: inc/theme-options.php:124
+#: inc/theme-options.php:148
+#@ scapegoat
+msgid "Orange"
+msgstr "Orange"
+
+#: inc/theme-options.php:132
+#@ scapegoat
+msgid "#BTW13 - Organisation Blog"
+msgstr "#BTW13 - Organisation/Verein Blog"
+
+#: inc/theme-options.php:138
+#@ default
+msgid "special-2-logo"
+msgstr ""
+
+#: inc/theme-options.php:165
+#@ scapegoat
+msgid "If empty all categories will shown"
+msgstr "Wenn unausgefüllt werden alle Kategorien angezeigt"
+
+#: inc/theme-options.php:169
+#@ scapegoat
+msgid "If empty 5 Slides will shown"
+msgstr "Wenn unasugefüllt werden 5 Slides angezeigt"
+
+#: inc/theme-options.php:206
+#@ scapegoat
+msgid "Default Wordpress Header Function"
+msgstr "Standard Wordpress Kopfzeile Funktion"
 

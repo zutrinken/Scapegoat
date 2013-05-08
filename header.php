@@ -41,6 +41,22 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
+		<?php if($options['style-option'] == 'show-special-1') : ?>
+			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/special-1.css" media="screen" />
+			<?php if($options['special-1-bg-option'] == 'special-1-bg-1') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-blue.jpg");background-color:#5cafc6;}</style>
+			<?php elseif($options['special-1-bg-option'] == 'special-1-bg-2') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-orange.jpg");background-color:#f80;}</style>
+			<?php endif; ?>
+		<?php elseif($options['style-option'] == 'show-special-2') : ?>
+			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/special-2.css" media="screen" />
+			<?php if($options['special-2-bg-option'] == 'special-2-bg-1') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-blue.jpg");background-color:#5cafc6;}</style>
+			<?php elseif($options['special-2-bg-option'] == 'special-2-bg-2') : ?>
+				<style>#special-header {background-image: url("<?php bloginfo('template_directory'); ?>/images/special-1-bg-orange.jpg");background-color:#f80;}</style>
+			<?php endif; ?>
+		<?php endif; ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -54,54 +70,121 @@
 			</div><!-- main-nav-inside -->
 		</div><!-- main-nav-outside -->
 
-		<div id="header-outside">
-			<header id="header-inside" class="inside">
-				<figure id="logo">
-					<?php if($options['logo']) : ?>
-						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
-							<img src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
-						</a>
-					<?php else : ?>
-						<span id="logo-text">
+		<?php if($options['style-option'] == 'show-special-1') : ?>
+			<div id="special-header">
+				<header id="special-header-inside">
+					<figure id="special-logo">
+						<?php if($options['special-1-logo']) : ?>
 							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
-								<?php bloginfo('name'); ?>
+								<img src="<?php echo $options['special-1-logo']; ?>" alt="<?php bloginfo('name'); ?>" />
 							</a>
-						</span>
-					<?php endif; ?>
-				</figure><!-- logo -->
-				<div id="description-outer">
-					<div id="description-inner">
-						<aside id="header-social-links">
-							<?php if($options['rss']) : ?>
-								<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed">Feed</a>
-							<?php else : ?>
-								<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed">Feed</a>
-							<?php endif; ?>
-							<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter">Twitter</a><?php endif; ?>
-							<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
-							<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
-							<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
-							<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail">Mail</a><?php endif; ?>
-							<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
-						</aside>
-						<span id="description">
-							<?php bloginfo('description'); ?>
-						</span>
-					</div><!-- discription-inner -->
-				</div><!-- discription-outer -->
-				<div class="clear"></div>
-			</header><!-- header-inside -->
-		</div><!-- header-outside -->
-
-		<!-- Mobile Query -->
-		<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
-			<!-- Featured Container for Frontpage Slider and "Sidebar" -->
-			<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
-				<?php include('slider.php'); ?>
-			<?php endif; ?>
-			<!-- Featured Container End -->
+						<?php else : ?>
+							<span id="special-logo-text">
+								<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+									<?php bloginfo('name'); ?>
+								</a>
+							</span>
+						<?php endif; ?>
+					</figure><!-- logo -->
+					<figure id="special-portrait">
+						<?php if($options['special-1-portrait']) : ?>
+							<img src="<?php echo $options['special-1-portrait']; ?>" />
+						<?php endif; ?>
+					</figure>
+				</header>
+			</div>
+		<?php elseif($options['style-option'] == 'show-special-2') : ?>
+			<div id="special-header">
+				<header id="special-header-inside">
+					<figure id="special-logo">
+						<?php if($options['special-2-logo']) : ?>
+							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+								<img src="<?php echo $options['special-2-logo']; ?>" alt="<?php bloginfo('name'); ?>" />
+							</a>
+						<?php else : ?>
+							<span id="special-logo-text">
+								<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+									<?php bloginfo('name'); ?>
+								</a>
+							</span>
+						<?php endif; ?>
+					</figure><!-- logo -->
+					<div id="description-outer">
+						<div id="description-inner">
+							<aside id="header-social-links">
+								<?php if($options['rss']) : ?>
+									<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed">Feed</a>
+								<?php else : ?>
+									<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed">Feed</a>
+								<?php endif; ?>
+								<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter">Twitter</a><?php endif; ?>
+								<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
+								<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
+								<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
+								<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail">Mail</a><?php endif; ?>
+								<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
+							</aside>
+							<span id="description">
+								<?php bloginfo('description'); ?>
+							</span>
+						</div><!-- discription-inner -->
+					</div><!-- discription-outer -->
+					<div class="clear"></div>
+				</header><!-- header-inside -->
+			</div>
+		<?php else : ?>
+			<div id="header-outside">
+				<header id="header-inside" class="inside">
+					<figure id="logo">
+						<?php if($options['logo']) : ?>
+							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+								<img src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
+							</a>
+						<?php else : ?>
+							<span id="logo-text">
+								<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+									<?php bloginfo('name'); ?>
+								</a>
+							</span>
+						<?php endif; ?>
+					</figure><!-- logo -->
+					<div id="description-outer">
+						<div id="description-inner">
+							<aside id="header-social-links">
+								<?php if($options['rss']) : ?>
+									<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed">Feed</a>
+								<?php else : ?>
+									<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed">Feed</a>
+								<?php endif; ?>
+								<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter">Twitter</a><?php endif; ?>
+								<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook">Facebook</a><?php endif; ?>
+								<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +">Google +</a><?php endif; ?>
+								<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube">Youtube</a><?php endif; ?>
+								<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail">Mail</a><?php endif; ?>
+								<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast">Podcast</a><?php endif; ?>
+							</aside>
+							<span id="description">
+								<?php bloginfo('description'); ?>
+							</span>
+						</div><!-- discription-inner -->
+					</div><!-- discription-outer -->
+					<div class="clear"></div>
+				</header><!-- header-inside -->
+			</div><!-- header-outside -->
 		<?php endif; ?>
-		<!-- Mobile Query -->
+
+		
+		<?php if($options['style-option'] != 'show-special-1') : ?>
+			<!-- Mobile Query -->
+			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+				<!-- Featured Container for Frontpage Slider and "Sidebar" -->
+				<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
+					<?php include('slider.php'); ?>
+				<?php endif; ?>
+				<!-- Featured Container End -->
+			<?php endif; ?>
+			<!-- Mobile Query -->
+		<?php endif; ?>
 
 		<div id="wrapper-outside">
 			<div id="wrapper-inside" class="inside">

@@ -140,6 +140,11 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .active {opacity: 1; cursor: default;}
 
+@media only screen and (max-width: 860px) {
+	.flex-direction-nav a {
+		bottom: 64px;
+	}
+}
 
 @media	only screen and (-webkit-min-device-pixel-ratio: 2), 
 		only screen and (-moz-min-device-pixel-ratio: 2), 

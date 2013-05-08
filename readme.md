@@ -24,7 +24,6 @@
 
 * rtl support
 * optimize font-sizes in relation to the responsive behaviour
-* custom frontpage-layout
 
 ## LOG
 
@@ -40,3 +39,4 @@
 * 14.03.13 - implement flexslider.js, including scripts and fonts the right way, new modernizer version, ordered files
 * 17.03.13 - new screenshot.png, some styles fixed, changes readme to .md
 * 24.04.13 - Finally integrate our own font "PoliticsHeadBold" \o/ – thanks to fRED, font style adjustment, image alignment adjustments. Fix jquery implementation. Added Shortcode Function for coloums, checkout plugin style in extra css
+* 09.05.13 - Added two ustom style options (organisation & personal) for the german election campaign 2013 of the Piratenpartei Deutschland, kicked the toggle option for the slider

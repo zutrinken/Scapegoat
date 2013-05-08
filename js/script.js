@@ -48,25 +48,6 @@
 									$('body').removeClass('loading');
 								}
 			});
-			var tgl = $('.toggling');
-
-			/* Cookie if Slider is hidden */
-			if($.cookie('keks') == 'true') {
-				tgl.hide();
-			} else {
-				tgl.show();
-			};
-
-			/* Toggle the Slider */
-			$('#front-page-slider-toggle').click(function() {
-				if(tgl.css('display') == 'block') {
-					$.cookie('keks','true');
-					tgl.slideUp(500, function() {});
-				} else {
-					$.cookie('keks','false');
-					tgl.slideDown(500, function() {});
-				}
-			});
 		}
 	});
 }(jQuery, document, window))

@@ -7,7 +7,9 @@
 	height: auto;
 }
 
-
+.widefat {
+	margin: 8px auto 12px;
+}
 
 #arrr {
 	position: relative;
@@ -18,17 +20,14 @@
 	width: 128px;
 	height: 128px;
 	position: absolute;
-	background: url('../images/logo_small.png') right top scroll no-repeat;
+	background: url('../images/logo.png') right top scroll no-repeat;
+	background-size: 128px 128px;
 	
 	right: 0;
-	top: 0;
+	top: 72px;
 	
 	margin: 20px 20px 0 0;
-
-	filter:alpha(opacity=10);
-	-moz-opacity: 0.1;
-	-khtml-opacity: 0.1;
-	opacity: 0.1;
+	z-index: -1;
 }
 
 .social-icon {
