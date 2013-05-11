@@ -303,12 +303,6 @@ add_shortcode('caption', 'custom_caption');
 
 /* catch the first image */
 
-/*
-	It expects an image uploaded by wordpress, so that thumbnailsize 150x150 exists.
-	If it somes from an outer non wordpress source, the source is wrong.
-	I haven't a better solution yet.
-*/
-
 function catch_that_image() {
 	global $post, $posts;
 	$first_img = '';
@@ -317,6 +311,11 @@ function catch_that_image() {
 	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 	$first_img = $matches [1] [0];
 	
+	if(!empty($first_img)) {
+		return '<figure class="post-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '"><img src="' . $first_img . '" alt="" /></a></figure>';
+	}
+	
+	/*
 	$explodepoint = explode(".",$first_img);
 	$count = count($explodepoint);
 	$size = "-150x150";
@@ -325,6 +324,7 @@ function catch_that_image() {
 	if(!empty($first_img)) {
 		return '<figure class="post-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '"><img src="' . $thumb_img . '" alt="" /></a></figure>';
 	}
+	*/
 }
 
 
