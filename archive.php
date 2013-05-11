@@ -69,7 +69,11 @@
 												<?php the_post_thumbnail('thumbnail'); ?>
 											</a>
 										</figure>
-									<?php endif; ?>
+									<?php else : ?>
+									
+										<?php echo catch_that_image(); ?>
+									
+									<?php endif; ?>									
 								<?php endif; ?>
 								<header class="header">
 									<h2 class="post-title">
