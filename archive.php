@@ -71,7 +71,7 @@
 										</figure>
 									<?php else : ?>
 									
-										<?php echo catch_that_image(); ?>
+										<?php echo catch_post_image(); ?>
 									
 									<?php endif; ?>									
 								<?php endif; ?>

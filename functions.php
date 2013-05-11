@@ -302,30 +302,29 @@ add_shortcode('caption', 'custom_caption');
 
 
 /* catch the first image */
+function catch_post_image($size = 'thumbnail') {
+	global $post;
 
-function catch_that_image() {
-	global $post, $posts;
-	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	$first_img = $matches [1] [0];
+	$photos = get_children(
+		array(
+			'post_parent' => $post->ID,
+			'post_status' => 'inherit',
+			'post_type' => 'attachment',
+			'post_mime_type' => 'image',
+			'order' => 'ASC',
+			'orderby' => 'menu_order ID'
+		)
+	);
 	
-	if(!empty($first_img)) {
-		return '<figure class="post-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '"><img src="' . $first_img . '" alt="" /></a></figure>';
+	if ($photos) {
+		$photo = array_shift($photos);
+		$catched = wp_get_attachment_image($photo->ID, $size);
+		return '<figure class="post-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '">' . $catched . '</a></figure>';
 	}
-	
-	/*
-	$explodepoint = explode(".",$first_img);
-	$count = count($explodepoint);
-	$size = "-150x150";
-	$explodepoint[$count-2]= $explodepoint[$count-2]."".$size;
-	$thumb_img = implode(".",$explodepoint);
-	if(!empty($first_img)) {
-		return '<figure class="post-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '"><img src="' . $thumb_img . '" alt="" /></a></figure>';
-	}
-	*/
+
+	return false;
 }
+
 
 
 /* custom excerpt */
