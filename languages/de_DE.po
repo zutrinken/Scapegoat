@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: scapegoat v1.4.4\n"
+"Project-Id-Version: scapegoat v1.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-05-08 22:17:27+0000\n"
+"PO-Revision-Date: 2013-06-04 20:04:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,17 +21,17 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: 404.php:10
-#: functions.php:511
+#: functions.php:537
 #@ scapegoat
 msgid "404"
 msgstr "404"
 
-#: functions.php:503
+#: functions.php:529
 #@ scapegoat
 msgid "Tag"
 msgstr "Tag"
 
-#: functions.php:508
+#: functions.php:534
 #: single.php:77
 #@ scapegoat
 msgid "Author"
@@ -135,71 +135,71 @@ msgid "Footer"
 msgstr "Fußzeile"
 
 #: functions.php:102
-#: functions.php:428
+#: functions.php:454
 #@ scapegoat
 msgid "Start"
 msgstr "Start"
 
-#: functions.php:326
+#: functions.php:352
 #@ scapegoat
 msgid "more"
 msgstr "weiterlesen"
 
-#: functions.php:500
+#: functions.php:526
 #@ scapegoat
 msgid "Search"
 msgstr "Suche"
 
-#: functions.php:516
+#: functions.php:542
 #@ scapegoat
 msgid "Page"
 msgstr "Seite"
 
-#: functions.php:566
+#: functions.php:592
 #@ scapegoat
 msgid "Title:"
 msgstr "Titel:"
 
-#: functions.php:571
+#: functions.php:597
 #@ scapegoat
 msgid "Image url:"
 msgstr "Bild url:"
 
-#: functions.php:576
+#: functions.php:602
 #@ scapegoat
 msgid "Link url:"
 msgstr "Link url:"
 
-#: functions.php:599
+#: functions.php:625
 #, php-format
 #@ scapegoat
 msgid "%s"
 msgstr "%s"
 
-#: functions.php:614
+#: functions.php:640
 #@ scapegoat
 msgid "Your comment will be public soon."
 msgstr "Dein Kommentar wird bald veröffentlicht."
 
-#: archive.php:118
+#: archive.php:129
 #: index.php:37
 #@ scapegoat
 msgid "Leave a comment"
 msgstr "Hinterlasse einen Kommentar"
 
-#: archive.php:118
+#: archive.php:129
 #: index.php:37
 #@ scapegoat
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
-#: archive.php:118
+#: archive.php:129
 #: index.php:37
 #@ scapegoat
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: archive.php:118
+#: archive.php:129
 #: index.php:37
 #@ scapegoat
 msgid "Comments closed"
@@ -307,7 +307,7 @@ msgstr ""
 msgid "icon"
 msgstr ""
 
-#: functions.php:415
+#: functions.php:441
 #: inc/theme-options.php:83
 #@ scapegoat
 msgid "Submenu"
@@ -328,12 +328,12 @@ msgstr ""
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:531
+#: functions.php:557
 #@ scapegoat
 msgid "Banner"
 msgstr "Banner"
 
-#: functions.php:533
+#: functions.php:559
 #@ scapegoat
 msgid "A simple Widget for Images."
 msgstr "Ein einfaches Widget für Bilder."
@@ -514,33 +514,33 @@ msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/uploa
 msgid "at the top of the sidebar"
 msgstr "am Anfang der Sidebar"
 
-#: archive.php:83
-#: archive.php:126
+#: archive.php:88
+#: archive.php:137
 #: index.php:55
 #: single.php:65
 #@ scapegoat
 msgid "Posted in: "
-msgstr "Abgelegt in:"
+msgstr "Abgelegt in: "
 
-#: archive.php:84
-#: archive.php:127
+#: archive.php:89
+#: archive.php:138
 #: index.php:56
 #: single.php:67
 #@ scapegoat
 msgid "<aside class=\"tags\">Tagged with: "
 msgstr "<aside class=\"tags\">Getaggt mit: "
 
-#: functions.php:359
+#: functions.php:385
 #@ scapegoat
 msgid "Page "
 msgstr "Seite "
 
-#: functions.php:361
+#: functions.php:387
 #@ scapegoat
 msgid " of "
 msgstr "von "
 
-#: functions.php:604
+#: functions.php:630
 #, php-format
 #@ default
 msgid "%1$s"
