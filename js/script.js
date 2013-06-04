@@ -44,6 +44,7 @@
 				touch:			true,
 				pauseOnAction:	false,
 				pauseOnHover:	false,
+				pausePlay:		true,
 				start:			function(slider) {
 									$('body').removeClass('loading');
 								}
