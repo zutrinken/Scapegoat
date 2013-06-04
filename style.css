@@ -709,7 +709,7 @@ audio {
 }
 .article {
 	font-size: 1.2em;
-	line-height: 1.7em;
+	line-height: 1.6em;
 }
 
 .info {
@@ -839,8 +839,12 @@ audio {
 .archive-post .post-title {
 	font-size: 1.8em;
 }
+.archive-post .article {
+	font-size: 1em;
+	line-height: 1.333em;
+}
 .archive-post .post-image {
-	margin: 0.5em 0 0;
+	margin: 0.5em 0 1em 1em;
 	float: right;
 	width: 25%;
 	max-width: 150px;
@@ -2821,6 +2825,7 @@ body {
 	}
 	.article {
 		font-size: 1em;
+		line-height: 1.333em;
 	}
 	.front-post .replys {
 		display: none;

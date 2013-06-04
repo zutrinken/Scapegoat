@@ -81,13 +81,20 @@
 											<?php the_title(); ?>
 										</a>
 									</h2>
+									<!--
 									<aside class="meta">
 										<span class="post-date"><?php the_time('j.m.y'); ?></span>
 										<span class="post-author"><?php the_author_posts_link(); ?></span>
 										<aside class="categories"><?php _e('Posted in: ','scapegoat'); ?><?php the_category(', '); ?></aside>
 										<?php the_tags(__('<aside class="tags">Tagged with: ','scapegoat'),', ','</aside>'); ?>
 									</aside>
+									-->
 								</header>
+								
+								<article class="article">
+									<?php the_excerpt(); ?>
+								</article><!-- .article -->
+
 								<div class="clear"></div>
 							</section><!-- .post -->
 						<?php else : ?>
