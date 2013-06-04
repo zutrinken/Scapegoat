@@ -1499,6 +1499,10 @@ body {
 
 /* __________________________________________________________________.08 Frontpage */
 
+
+.no-js #front-page-header-outside {
+	display: none;
+}
 #front-page-header-outside {
 	position: relative;
 }
