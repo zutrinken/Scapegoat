@@ -4,7 +4,7 @@
 		<?php $detect = new Mobile_Detect(); ?>
 		
 		<div id="container">
-			<div id="content">
+			<div id="content" role="main">
 				<?php if(function_exists('breadcrumb')) : ?>
 					<?php breadcrumb(); ?> 
 				<?php endif; ?>
@@ -143,7 +143,7 @@
 
 					<?php endwhile; ?>
 					</div><!-- #archive -->
-					<nav id="pagination">
+					<nav id="pagination" role="navigation">
 						<?php if( function_exists('wp_pagination_navi') ) : ?>
 							<?php wp_pagination_navi(); ?>
 						<?php else : ?>

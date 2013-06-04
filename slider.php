@@ -8,7 +8,7 @@
 	<?php $args = array('posts_per_page'=>$num,'cat'=>$cat,'tax_query'=>$no_formats,'post__not_in'=>get_option('sticky_posts')); ?>
 	<?php query_posts($args); ?>
 	<?php if(have_posts()) : ?>
-	<section id="front-page-header-outside">
+	<section id="front-page-header-outside" role="complementary">
 		<div id="front-page-header-inside" class="inside">
 			<div id="toggling" class="toggling">
 				<div id="slideshow">

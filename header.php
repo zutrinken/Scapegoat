@@ -62,7 +62,7 @@
 	<body <?php body_class(); ?>>
 		<div id="main-nav-outside">
 			<div id="main-nav-inside" class="inside">
-				<nav id="main-nav">
+				<nav id="main-nav" role="navigation">
 					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
@@ -71,7 +71,7 @@
 		</div><!-- main-nav-outside -->
 
 		<?php if($options['style-option'] == 'show-special-1') : ?>
-			<div id="special-header">
+			<div id="special-header" role="banner">
 				<header id="special-header-inside">
 					<figure id="special-logo">
 						<?php if($options['special-1-logo']) : ?>
@@ -94,7 +94,7 @@
 				</header>
 			</div>
 		<?php elseif($options['style-option'] == 'show-special-2') : ?>
-			<div id="special-header">
+			<div id="special-header" role="banner">
 				<header id="special-header-inside">
 					<figure id="special-logo">
 						<?php if($options['special-2-logo']) : ?>
@@ -133,7 +133,7 @@
 				</header><!-- header-inside -->
 			</div>
 		<?php else : ?>
-			<div id="header-outside">
+			<div id="header-outside" role="banner">
 				<header id="header-inside" class="inside">
 					<figure id="logo">
 						<?php if($options['logo']) : ?>

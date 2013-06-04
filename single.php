@@ -4,7 +4,7 @@
 		<?php $detect = new Mobile_Detect(); ?>
 
 		<div id="container">
-			<div id="content">
+			<div id="content" role="main">
 				<?php if(has_post_thumbnail()) : ?>
 					<figure class="post-image">
 						<?php $image_id = get_post_thumbnail_id();$image_url = wp_get_attachment_image_src($image_id,'full', true); ?>
@@ -51,8 +51,8 @@
 			<?php endif; ?>
 			</div><!-- #content -->
 			
-			<section id="sidebar" class="meta">
-				<nav class="post-nav">
+			<section id="sidebar" class="meta" role="complementary">
+				<nav class="post-nav" role="navigation">
 					<span class="post-nav-next"><?php next_post_link('%link', __('Next','scapegoat')); ?></span>
 					<span class="post-nav-prev"><?php previous_post_link('%link', __('Last','scapegoat')); ?></span>
 				</nav><!-- .post-nav -->

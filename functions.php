@@ -436,7 +436,7 @@ function submenu() {
 
 		$children = wp_list_pages("title_li=&child_of=". $parent ."&echo=0");
 		if ($children) { ?>
-			<aside class="widget widget-sidebar widget_pages">
+			<aside class="widget widget-sidebar widget_pages" role="navigation">
 				<div class="widget-inner">
 				<h3 class="widget-title"><?php _e('Submenu','scapegoat'); ?></h3>
 				<ul id="subnavi">

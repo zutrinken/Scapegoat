@@ -4,7 +4,7 @@
 		<?php $detect = new Mobile_Detect(); ?>
 
 		<div id="container">
-			<div id="content">			
+			<div id="content" role="main">			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<section id="post-<?php the_ID(); ?>" <?php if (is_front_page()) { post_class('front-post'); } else { post_class(); } ?>>
 					<?php if(has_post_thumbnail()) : ?>
@@ -60,7 +60,7 @@
 				
 				<?php endwhile; ?>
 				
-					<nav id="pagination">
+					<nav id="pagination" role="navigation">
 						<?php if( function_exists('wp_pagination_navi') ) : ?>
 							<?php wp_pagination_navi(); ?>
 						<?php else : ?>

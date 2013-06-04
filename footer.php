@@ -2,7 +2,7 @@
 		</div><!-- wrapper-outside -->
 		
 		<?php $options = get_option('scapegoat_theme_options'); ?>
-		<div id="footer-top-outside">
+		<div id="footer-top-outside" role="complementary">
 			<aside id="footer-top-inside" class="inside">
 				<div id="footer-social-links">
 					<?php if($options['rss']) : ?>
@@ -24,21 +24,21 @@
 			</aside><!-- footer-top-inside -->
 		</div><!-- footer-top-outside -->
 
-		<div id="footer-outside">
+		<div id="footer-outside" role="complementary">
 			<footer id="footer-inside" class="inside">
 				<?php if (is_active_sidebar('Footer-Sidebar')) : ?>
 					<aside id="footer-widgets">
 						<?php dynamic_sidebar('Footer-Sidebar'); ?>
 					</aside><!-- footer-widgets -->
 				<?php endif; ?>
-				<nav id="footer_navigation">
+				<nav id="footer_navigation" role="navigation">
 					<?php wp_nav_menu(array('theme_location'=>'footer', 'fallback_cb'=>'FALSE')); ?>
 					<div class="clear"></div>
 				</nav><!-- footer_navigation -->
 			</footer><!-- footer-inside -->
 		</div><!-- footer-outside -->
 		
-		<div id="end-outside">
+		<div id="end-outside" role="contentinfo">
 			<div idend-inside class="inside">
 				<aside id="end">
 					<a target="_blank" href="http://zutrinken.com/">Amende</a>

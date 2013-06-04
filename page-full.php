@@ -7,7 +7,7 @@
 
 		<div id="container">
 
-			<div id="full">
+			<div id="full" role="main">
 
 				<!-- Mobile Query -->
 				<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>

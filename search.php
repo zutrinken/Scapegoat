@@ -2,7 +2,7 @@
 
 		<div id="container">
 			
-			<div id="content">
+			<div id="content" role="main">
 
 				<?php if(function_exists('breadcrumb')) : ?>
 					<?php breadcrumb(); ?> 
@@ -50,7 +50,7 @@
 
 			</div>
 			
-				<nav id="pagination">
+				<nav id="pagination" role="navigation">
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>
