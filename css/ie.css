@@ -17,7 +17,7 @@
 	float: left;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 860px) {
 	#sidebar {
 		overflow: auto;
 	}
@@ -40,7 +40,7 @@
 		float: right;
 	}
 }
-@media only screen and (max-width: 660px)  {
+@media only screen and (max-width: 640px)  {
 	#footer-widgets .widget-footer {
 		width: auto;
 		float: none;
