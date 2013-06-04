@@ -2117,7 +2117,7 @@ body {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 
-	background-color: rgba(0,0,0,0.1);
+	background-color: #6BB39B;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-size: 18px 18px;
@@ -2126,7 +2126,7 @@ body {
 }
 .post-nav .post-nav-prev:hover,
 .post-nav .post-nav-next:hover {
-	background-color: rgba(0,0,0,0.2);
+	background-color: #404040;
 }
 .post-nav .post-nav-prev a,
 .post-nav .post-nav-next a {
