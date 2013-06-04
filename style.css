@@ -1379,9 +1379,17 @@ body {
 	column-gap: 40px;
 }
 
+#footer-nav-outside {
+	background: #000;
+	padding: 40px 0;
+	border-top: 1px solid #404040;
+}
+#footer-nav-inside {}
+
 #end-outside {
 	background: #000;
 	padding: 0.5em 0;
+	border-top: 1px solid #232323;
 }
 #end-inside {}
 #end {
@@ -2396,15 +2404,16 @@ body {
 	/* ------------------------------ Footer Navigation */
 
 #footer_navigation {
-	text-transform: uppercase;w
 	overflow: auto;
 	clear: both;
 	padding: 0;
 }
 #footer_navigation ul {
+	text-transform: uppercase;
 	line-height: 100%;
-	font-size: 1.1em;
-	line-height: 2em;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: 700;
 }
 #footer_navigation ul li {
 	float: left;
@@ -2420,36 +2429,27 @@ body {
 	padding: 0;
 	height: 2em;
 	overflow: hidden;
-	color: #808080;
+	color: #fff;
 }
 #footer_navigation ul li:hover a {}
 #footer_navigation ul ul {
 	float: none;
 	font-size: 0.8em;
-	line-height: 1.2em;
+	line-height: 1em;
+	font-weight: 400;
 	text-transform: none;
 }
 #footer_navigation ul ul li {
 	float: none;
 	width: auto !important;
 }
-#footer_navigation ul ul li:before {
-	position: absolute;
-	display: block;
-	height: 10px;
-	width: 10px;
-	line-height: 10px;
-	content: '•';
-	color: #f80;
-	margin: 2px 0 0;
-}
 #footer_navigation ul ul li a,
 #footer_navigation ul ul li a:active,
 #footer_navigation ul ul li a:visited {
 	overflow: hidden;
 	height: auto;
-	padding: 0 0 0 15px;
-	margin: 10px 0;
+	padding: 0.5em 0;
+	margin: 0;
 	border: 0;
 	color: #bfbfbf;
 }
@@ -2767,18 +2767,17 @@ body {
 		float: none;
 		width: 100% !important;
 		max-width: 100%;
-		margin: 0 0 20px;
+		margin: 20px 0 40px;
 	}
 	#footer_navigation ul li a {
-		display: block;
 		border-bottom: 2px solid #808080;
 	}
 	#footer_navigation ul li ul {
 		max-width: 100%;
 	}
-	#footer_navigation ul li ul li {
+	#footer_navigation ul ul li {
 		max-width: auto;
-		margin: 0;
+		margin: 5px 0;
 	}
 	.post-image {
 		margin: -20px -20px 20px;
