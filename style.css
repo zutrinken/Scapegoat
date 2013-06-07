@@ -2560,7 +2560,10 @@ body {
 		margin: 0;
 		text-shadow: 0 -1px 0 #000;
 	}
-	#main-nav div {
+	.js #main-nav .menu-toggle {
+		display: block;
+	}
+	.js #main-nav div {
 		display: none;
 	}
 	#main-nav ul,
@@ -2578,7 +2581,10 @@ body {
 		background: #232323;
 	}
 	#main-nav ul {
-		font-size: 1.4em
+		font-size: 1.4em;
+	}
+	.no-js #main-nav ul {
+		font-size: 1em;
 	}
 	#main-nav ul ul {
 		background: rgba(0,0,0,0.333);
@@ -2666,10 +2672,6 @@ body {
 	#main-nav ul ul ul > li.current_page_item > a {
 		color: #fff;
 		background: transparent;
-	}
-
-	#main-nav .menu-toggle {
-		display: block;
 	}
 
 	#pagination .pagination-info,
