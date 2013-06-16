@@ -2407,6 +2407,7 @@ body {
 	overflow: auto;
 	clear: both;
 	padding: 0;
+	margin: 0 -1em;
 }
 #footer_navigation ul {
 	text-transform: uppercase;
@@ -2422,13 +2423,15 @@ body {
 	margin: 0;
 	color: #404040;
 }
+#footer_navigation ul li a {
+	display: block;
+	padding: 0 1em;
+	height: 2em;
+	overflow: hidden;
+}
 #footer_navigation ul li a,
 #footer_navigation ul li a:active,
 #footer_navigation ul li a:visited {
-	display: block;
-	padding: 0;
-	height: 2em;
-	overflow: hidden;
 	color: #fff;
 }
 #footer_navigation ul li:hover a {}
@@ -2443,14 +2446,13 @@ body {
 	float: none;
 	width: auto !important;
 }
+#footer_navigation ul ul li a {
+	height: auto;
+	padding: 0.5em 1.25em;
+}
 #footer_navigation ul ul li a,
 #footer_navigation ul ul li a:active,
 #footer_navigation ul ul li a:visited {
-	overflow: hidden;
-	height: auto;
-	padding: 0.5em 0;
-	margin: 0;
-	border: 0;
 	color: #bfbfbf;
 }
 #footer_navigation ul ul li:hover a {
@@ -2769,17 +2771,16 @@ body {
 		float: none;
 		width: 100% !important;
 		max-width: 100%;
-		margin: 20px 0 40px;
+		margin: 0 0 2em;
 	}
 	#footer_navigation ul li a {
-		border-bottom: 2px solid #808080;
 	}
 	#footer_navigation ul li ul {
 		max-width: 100%;
 	}
 	#footer_navigation ul ul li {
 		max-width: auto;
-		margin: 5px 0;
+		margin: auto;
 	}
 	.post-image {
 		margin: -20px -20px 20px;
