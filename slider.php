@@ -29,6 +29,11 @@
 											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 												<?php the_post_thumbnail('featured'); ?>
 											</a>
+											<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+												<span class="meta-thumbnail-caption">
+													<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+												</span>
+											<?php endif; ?>
 										</figure><!-- slide-image -->
 									<?php endif; ?>
 								</section><!-- front-page-slide -->

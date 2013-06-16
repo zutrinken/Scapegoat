@@ -695,7 +695,7 @@ audio {
 	display: block;
 	width: 100%;
 }
-.post-image .meta-thumbnail-caption {
+.meta-thumbnail-caption {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
