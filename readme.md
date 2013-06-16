@@ -1,6 +1,6 @@
 # SCAPEGOAT
 
-* Author: [Peter Amende](http://peteramende.de/)
+* Author: [Peter Amende](http://zutrinken.com/)
 * License: GNU General Public License v2 or later
 
 ## ABOUT SCAPEGOAT
