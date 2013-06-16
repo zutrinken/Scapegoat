@@ -5,7 +5,7 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.5.2
+	Version: 1.5.3
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, grey, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
@@ -79,7 +79,7 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
-* {outline: 0;}
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content: ''; content: none; }
@@ -97,6 +97,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 html { overflow-y: scroll; }
 a:hover, a:active { outline: none; }
+a:focus { outline: thin dotted; }
 ul, ol { margin-left: 0; }
 ol { list-style-type: decimal; }
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
@@ -121,7 +122,7 @@ input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection{ background: #0077b3; color:#fff; text-shadow: none; }
+::-moz-selection { background: #0077b3; color: #fff; text-shadow: none; }
 ::selection { background:#0077b3; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #0077b3; }
 
@@ -2165,7 +2166,7 @@ body {
 	clear: both;
 	float: none;
 	overflow: auto;
-	padding: 0;
+	padding: 0.1em 0;
 	margin: 0;
 	text-align: center;
 }
