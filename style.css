@@ -46,9 +46,7 @@
 	Orange:	#ff9f40
 			#ff7f00
 
-	Blue:	#1483A8
-
-	Green:	#6BB39B
+	Blue:	#0077b3
 
 */
 
@@ -123,9 +121,9 @@ input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection{ background: #1483A8; color:#fff; text-shadow: none; }
-::selection { background:#1483A8; color:#fff; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: #1483A8; }
+::-moz-selection{ background: #0077b3; color:#fff; text-shadow: none; }
+::selection { background:#0077b3; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #0077b3; }
 
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
@@ -306,26 +304,31 @@ img[align="right"] {
 	/* ------------------------------ Searchform */
 
 .searchform {
-	border: 1px solid #404040;
+	background: #fff;
+	margin: 4px;
 	padding: 1px;
 	overflow: auto;
 
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	-webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
 }
 .searchform .searchinput {
 	float: left;
-	width: 70%;
-	color: #bfbfbf;
+	width: 60%;
+	color: #808080;
 	border: 0;
 	background: transparent;
 	padding: 4px 0 4px 4px;
 	margin: 0 10% 0 0;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 .searchform .searchinput:hover,
 .searchform .searchinput:focus {
-	color: #808080;
+	color: #404040;
 	border: 0;
 	background: transparent;
 }
@@ -333,7 +336,7 @@ img[align="right"] {
 .searchform .searchsubmit:hover {
 	float: right;
 	border: 0;
-	font-size: 1.125em;
+	font-size: 1.5em;
 	display: block;
 	padding: 0;
 	margin: 0 4px 0 0;
@@ -341,8 +344,11 @@ img[align="right"] {
 	min-width: 14px;
 	background: url('images/icon-search.png') center center scroll no-repeat;
 	background-size: 14px 14px;
-}
 
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 
 
 	
@@ -425,7 +431,7 @@ i {
 
 q:before,
 q:after {
-	color: #1483a8;
+	color: #0077b3;
 }
 q:before {
 	content: '„';
@@ -435,7 +441,7 @@ q:after {
 }
 
 blockquote:before {
-    color: #1483a8;
+    color: #0077b3;
     content: '”';
     font-size: 3em;
     line-height: 100%;
@@ -588,7 +594,7 @@ input[type="checkbox"] {
 }
 .article dt {
 	font-weight: 700;
-	color: #1483A8;
+	color: #0077b3;
 }
 .article dd {
 	margin: 0 0 1.5em;
@@ -602,7 +608,7 @@ input[type="checkbox"] {
 }
 .article th {
 	text-align: left;
- 	color: #1483a8;
+ 	color: #0077b3;
 	font-weight: 700;
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -782,7 +788,7 @@ audio {
 .tags a,
 .tags a:active,
 .tags a:visited {
-	color: #6BB39B;
+	color: #0077b3;
 	border-bottom: 1px solid #e3e3e3;
 }
 .categories a:hover,
@@ -1460,7 +1466,7 @@ body {
 	margin: 2px 0;
 	text-indent: -10000px;
 	text-align: center;
-	background-color: #6BB39B;
+	background-color: #0077b3;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
@@ -1720,7 +1726,7 @@ body {
 .widget a,
 .widget a:active,
 .widget a:visited {
-	color: #6bb39b;
+	color: #0077b3;
 }
 .widget a:hover {
 	color: #404040;
@@ -1966,7 +1972,7 @@ body {
 .widget_tag_cloud .tagcloud a:visited {
 	font-size: inherit !important;
 	display: inline-block;
-	background: #6bb39b;
+	background: #0077b3;
 	color: #fff;
 	padding: 0.3em 0.6em;
 	margin: 0.15em 0;
@@ -2117,7 +2123,7 @@ body {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 
-	background-color: #6BB39B;
+	background-color: #0077b3;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-size: 18px 18px;
@@ -2177,7 +2183,7 @@ body {
 #pagination .pagination span {
 	display: inline-block;
 	text-align: center;
-	color: #1483a8;
+	color: #0077b3;
 	width: 2em;
 	height: 2em;
 	line-height: 2em;
@@ -2222,7 +2228,7 @@ body {
 	text-align: center;
 	display: inline-block;
 	color: #fff;
-	background: #1483a8;
+	background: #0077b3;
 	width: 24px;
 	height: 24px;
 	line-height: 24px;
@@ -2247,7 +2253,7 @@ body {
 }
 #breadcrumb .breadcrumb-seperator {}
 #breadcrumb .breadcrumb-item {
-	color: #1483a8;
+	color: #0077b3;
 }
 
 
