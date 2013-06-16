@@ -130,6 +130,7 @@
 						</div><!-- discription-inner -->
 					</div><!-- discription-outer -->
 					<div class="clear"></div>
+					<h2 id="header-title" class="visuallyhidden"><?php bloginfo('name'); ?></h2>
 				</header><!-- header-inside -->
 			</div>
 		<?php else : ?>

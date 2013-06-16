@@ -1687,8 +1687,8 @@ body {
 .widget {
 	overflow: auto;
 	height: 100%;
-	margin: 0;
-	padding: 0 0 40px;
+	padding: 0;
+	margin: 0 0 4em;
 
 	font-size: 0.8em;
 	line-height: 1.3em;
@@ -1745,9 +1745,7 @@ body {
 
 	/* ------------------------------ Widget Sidebar */
 
-.widget-sidebar {
-	padding: 20px 0;
-}
+.widget-sidebar {}
 .widget-sidebar:first-child {
 	padding-top: 0;
 }
@@ -1763,7 +1761,6 @@ body {
 	/* ------------------------------ Widget Footer */
 
 .widget-footer {
-	margin: 0;
 	color: #808080;
 }
 .widget-footer .widget-inner {

@@ -36,7 +36,7 @@
 				<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<!--<?php edit_post_link( __( 'Edit', 'scapegoat' ), '<span class="edit-link">', '</span>' ); ?>-->
 					<header class="header">
-						<h1 class="post-title"><?php the_title(); ?></h1>
+						<h2 class="post-title"><?php the_title(); ?></h2>
 					</header>
 					<article class="article">
 						<?php wp_link_pages('before=<nav class="pagination_post">'. __("Pages:","scapegoat") .'&after=</nav>'); ?>

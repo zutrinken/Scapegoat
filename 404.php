@@ -7,7 +7,7 @@
 				</figure>
 				<section id="post-404">
 					<hgroup class="header">
-						<h1 class="post-title"><?php _e('404','scapegoat'); ?></h1>
+						<h2 class="post-title"><?php _e('404','scapegoat'); ?></h2>
 					</hgroup>
 				
 				</section>
