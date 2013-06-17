@@ -63,6 +63,7 @@
 		<div id="main-nav-outside">
 			<div id="main-nav-inside" class="inside">
 				<nav id="main-nav" role="navigation">
+					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
 					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
