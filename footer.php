@@ -58,7 +58,6 @@
 				(function ($, document, window) {
 					$(document).ready(function () {
 						if($('#front-page-header-outside').length>0) {
-							console.log('penis');
 							$('#content').css({'margin-top':'0'});
 						}
 						if($('#front-page-header-image-outside').length>0) {
