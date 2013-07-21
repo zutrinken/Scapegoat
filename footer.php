@@ -25,14 +25,39 @@
 		</div><!-- footer-top-outside -->
 
 		<div id="footer-outside" role="complementary">
-			<footer id="footer-inside" class="inside">
-				<?php if (is_active_sidebar('Footer-Sidebar')) : ?>
-					<aside id="footer-widgets">
-						<?php dynamic_sidebar('Footer-Sidebar'); ?>
-					</aside><!-- footer-widgets -->
-				<?php endif; ?>
-				</nav><!-- footer_navigation -->
-			</footer><!-- footer-inside -->
+			<div id="footer-inside" class="inside">
+				<footer id="footer-widgets" role="complementary">
+					<?php if (is_active_sidebar('Footer-Sidebar-1')) : ?>
+						<div class="footer-sidebar-outside">
+							<aside id="footer-sidebar-1" class="footer-sidebar-inside">
+								<?php dynamic_sidebar('Footer-Sidebar-1'); ?>
+							</aside>
+						</div>
+					<?php endif; ?>
+					<?php if (is_active_sidebar('Footer-Sidebar-2')) : ?>
+						<div class="footer-sidebar-outside">
+							<aside id="footer-sidebar-2" class="footer-sidebar-inside">
+								<?php dynamic_sidebar('Footer-Sidebar-2'); ?>
+							</aside>
+						</div>
+					<?php endif; ?>
+					<?php if (is_active_sidebar('Footer-Sidebar-3')) : ?>
+						<div class="footer-sidebar-outside">
+							<aside id="footer-sidebar-3" class="footer-sidebar-inside">
+								<?php dynamic_sidebar('Footer-Sidebar-3'); ?>
+							</aside>
+						</div>
+					<?php endif; ?>
+					<?php if (is_active_sidebar('Footer-Sidebar-4')) : ?>
+						<div class="footer-sidebar-outside">
+							<aside id="footer-sidebar-4" class="footer-sidebar-inside">
+								<?php dynamic_sidebar('Footer-Sidebar-4'); ?>
+							</aside>
+						</div>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</footer><!-- footer-widgets -->
+			</div><!-- footer-inside -->
 		</div><!-- footer-outside -->
 
 		<div id="footer-nav-outside">
@@ -58,7 +83,6 @@
 				(function ($, document, window) {
 					$(document).ready(function () {
 						if($('#front-page-header-outside').length>0) {
-							console.log('penis');
 							$('#content').css({'margin-top':'0'});
 						}
 						if($('#front-page-header-image-outside').length>0) {

@@ -174,8 +174,41 @@ function my_register_sidebars() {
 	);
 	register_sidebar(
 		array(
-			'id'=>'footer-sidebar',
-			'name'=>__('Footer-Sidebar','scapegoat'),
+			'id'=>'footer-sidebar-1',
+			'name'=>__('Footer-Sidebar-1','scapegoat'),
+			'description' => __('Widgets for the Footer-section.','scapegoat'),
+			'before_widget' => '<aside id="%1$s" class="widget widget-footer %2$s" role="group"><div class="widget-inner">',
+			'after_widget' => '</div></aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'=>'footer-sidebar-2',
+			'name'=>__('Footer-Sidebar-2','scapegoat'),
+			'description' => __('Widgets for the Footer-section.','scapegoat'),
+			'before_widget' => '<aside id="%1$s" class="widget widget-footer %2$s" role="group"><div class="widget-inner">',
+			'after_widget' => '</div></aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'=>'footer-sidebar-3',
+			'name'=>__('Footer-Sidebar-3','scapegoat'),
+			'description' => __('Widgets for the Footer-section.','scapegoat'),
+			'before_widget' => '<aside id="%1$s" class="widget widget-footer %2$s" role="group"><div class="widget-inner">',
+			'after_widget' => '</div></aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'=>'footer-sidebar-4',
+			'name'=>__('Footer-Sidebar-4','scapegoat'),
 			'description' => __('Widgets for the Footer-section.','scapegoat'),
 			'before_widget' => '<aside id="%1$s" class="widget widget-footer %2$s" role="group"><div class="widget-inner">',
 			'after_widget' => '</div></aside>',

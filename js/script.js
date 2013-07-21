@@ -1,6 +1,55 @@
 (function ($, document, window) {
 	$(document).ready(function () {
 
+	function SameHeight() {
+		var maxHeight1 = -1;
+		$('.footer-sidebar-inside').each(function() {
+			$(this).height('auto');
+			maxHeight1 = maxHeight1 > $(this).height() ? maxHeight1 : $(this).height();
+			$(this).height(maxHeight1);
+		});
+		
+		var maxHeight2 = -1;
+		var footerList = $('#footer_navigation li').not('#footer_navigation li li');
+		footerList.each(function() {
+			$(this).height('auto');
+			console.log(maxHeight2);
+			maxHeight2 = maxHeight2 > $(this).height() ? maxHeight2 : $(this).height();
+			$(this).height(maxHeight2);
+		});
+		/* Dynamic equal width in Footer-Menu */
+		var c = footerList.length;
+		var n = 100 / c;
+		if(($(window).width() < 960) && ($(window).width() > 640)) {
+			switch(c) {
+				case (c = 4 || 8):
+					footerList.css('width', '25%');
+					break;
+				case (c = 6 || 9):
+					footerList.css('width', '33.333%');
+					break;
+				default:
+					footerList.css('width', n + '%');
+			}
+		} else {
+			switch(c) {
+				case (c == 4 || 8):
+					footerList.css('width', '25%');
+					break;
+				case (c == 12):
+					footerList.css('width', '16.666%');
+					break;
+				case (c == 5 || 10 || 15):
+					footerList.css('width', '20%');
+					break;
+				default:
+					footerList.css('width', n + '%');
+			}
+		}
+	}
+	SameHeight();
+	$(window).resize(SameHeight);
+
 		/* Main Navigation Font Size */
 		function navFontSize() {
 			var fontSize;
@@ -24,10 +73,6 @@
 		$('.menu-toggle').smoothScroll().click(function () {
 			$('#main-nav div').slideToggle('200');
 		});
-
-		/* Dynamic equal width in Footer-Menu */
-		var n = 100 / ($('#footer_navigation ul li').length - $('#footer_navigation ul ul li').length);
-		$('#footer_navigation ul li').css('width', n + '%');
 
 		/* Responsive Youtube/Vimeo Videos */
 		$('.article').fitVids();
