@@ -60,17 +60,6 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<div id="main-nav-outside">
-			<div id="main-nav-inside" class="inside">
-				<nav id="main-nav" role="navigation">
-					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
-					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
-					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
-					<div class="clear"></div>
-				</nav><!-- main-nav -->
-			</div><!-- main-nav-inside -->
-		</div><!-- main-nav-outside -->
-
 		<?php if($options['style-option'] == 'show-special-1') : ?>
 			<div id="special-header" role="banner">
 				<header id="special-header-inside">
@@ -174,6 +163,17 @@
 				</header><!-- header-inside -->
 			</div><!-- header-outside -->
 		<?php endif; ?>
+
+		<div id="main-nav-outside">
+			<div id="main-nav-inside" class="inside">
+				<nav id="main-nav" role="navigation">
+					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
+					<a href="#main-nav" class="menu-toggle"><?php _e('Navigation','scapegoat'); ?></a>
+					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
+					<div class="clear"></div>
+				</nav><!-- main-nav -->
+			</div><!-- main-nav-inside -->
+		</div><!-- main-nav-outside -->
 
 		
 		<?php if($options['style-option'] != 'show-special-1') : ?>

@@ -6,7 +6,9 @@ $options = get_option('scapegoat_theme_options');
 /* Mobile Detect */
 include 'inc/mobile_detect.php';
 
-/* add scripts */
+/*-----------------------------------------------------------------------------------*/
+/* Load Scripts
+/*-----------------------------------------------------------------------------------*/
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts() {
 	$template = get_template_directory_uri();
