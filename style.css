@@ -5,7 +5,7 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.5.4
+	Version: 1.6
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, grey, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
@@ -1854,7 +1854,6 @@ body {
 }
 #front-page-adverts #featured-links ul li {
 	display: table;
-	width: 25%;
 	position: relative;
 	float: left;
 
@@ -1862,13 +1861,26 @@ body {
 	-moz-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
 }
+#front-page-adverts #featured-links ul li:nth-child(1n) {
+	background: #e6a117;
+}
+#front-page-adverts #featured-links ul li:nth-child(2n) {
+	background: #e69017;
+}
+#front-page-adverts #featured-links ul li:nth-child(3n) {
+	background: #e67e17;
+}
+#front-page-adverts #featured-links ul li:nth-child(4n) {
+	background: #e66d17;
+}
+#front-page-adverts #featured-links ul li:nth-child(5n) {
+	background: #e65c17;
+}
 #front-page-adverts #featured-links ul li:hover,
 #front-page-adverts #featured-links ul li:focus {
-	-webkit-box-shadow: inset 0 4px 12px rgba(0,0,0,0.2);
-	-moz-box-shadow: inset 0 4px 12px rgba(0,0,0,0.2);
-	box-shadow: inset 0 4px 12px rgba(0,0,0,0.2);
-
-	background: #bfbfbf;
+	-webkit-box-shadow: inset 0 0.25em 1em rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 0.25em 1em rgba(0,0,0,0.25);
+	box-shadow: inset 0 0.25em 1em rgba(0,0,0,0.25);
 }
 #front-page-adverts #featured-links ul li .featured-link {
 	display: table-cell;
@@ -1877,11 +1889,8 @@ body {
 	width: 100%;
 	height: 59px;
 
-	color: #808080;
+	color: #fff;
 	font-weight: 400;
-
-	border-bottom: 1px solid #bfbfbf;
-	border-right: 1px solid #bfbfbf;
 
 	-webkit-transition: all 0.1s ease-out;
 	-moz-transition: all 0.1s ease-out;

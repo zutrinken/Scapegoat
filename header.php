@@ -187,6 +187,18 @@
 			<?php endif; ?>
 			<!-- Mobile Query -->
 		<?php endif; ?>
+		
+		<?php if(is_paged() && is_front_page()) : ?>
+			<div id="title-outside">
+				<div id="title-inside" class="inside">
+					<header class="title-header">
+						<h3 class="post-title">
+							<?php current_paged(); ?>
+						</h3>
+					</header>
+				</div>			
+			</div>
+		<?php endif; ?>
 
 		<div id="wrapper-outside">
 			<div id="wrapper-inside" class="inside">

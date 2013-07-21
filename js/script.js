@@ -50,6 +50,11 @@
 	SameHeight();
 	$(window).resize(SameHeight);
 
+
+	/* Dynamic equal width for Featured Links */
+	var m = 100 / ($('#featured-links li').length);
+	$('#featured-links li').css('width', m + '%');
+
 		/* Main Navigation Font Size */
 		function navFontSize() {
 			var fontSize;
