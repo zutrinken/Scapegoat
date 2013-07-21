@@ -81,8 +81,8 @@ add_theme_support (
 /* add custom image-sizes */
 if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support('post-thumbnails');
-	add_image_size('featured', 1140, 320, true);
-	add_image_size('teaser', 840, 560, true);
+	add_image_size('featured', 1440, 486, true);
+	add_image_size('teaser', 720, 243, true);
 }
 
 

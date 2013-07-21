@@ -17,13 +17,19 @@
 							<?php while (have_posts()) : the_post(); ?>
 							<li>
 								<section class="front-page-slide">
-									<header class="slide-text">
-										<h2 class="slide-text-title">
-											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h2>
-									</header><!-- slide-text -->
+									<div class="slide-content inside">
+										<header class="slide-text">
+											<h2 class="slide-text-title">
+												<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+													<?php the_title(); ?>
+												</a>
+											</h2>
+											<article class="slide-text-article">
+												<?php echo custom_excerpt(30); ?>
+												<a href="<?php the_permalink(); ?>" class="slide-text-more"><?php _e('more','farewell'); ?> &#x9b;</a>
+											</article>
+										</header><!-- slide-text -->
+									</div>
 									<?php if(has_post_thumbnail()) : ?>
 										<figure class="slide-image">
 											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
@@ -37,6 +43,7 @@
 										</figure><!-- slide-image -->
 									<?php endif; ?>
 								</section><!-- front-page-slide -->
+								
 							</li>
 							<?php endwhile; ?>
 						</ul>
