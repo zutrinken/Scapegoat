@@ -1,161 +1,164 @@
 		<?php get_header(); ?>
-		
-		<!-- Mobiel Detect -->
-		<?php $detect = new Mobile_Detect(); ?>
-		
-		<div id="container">
-			<div id="content" role="main">
-				<?php if(function_exists('breadcrumb')) : ?>
-					<?php breadcrumb(); ?> 
-				<?php endif; ?>
 
-				<header class="heading">
-					<?php if (is_category()) : ?>
-						<div class="category-description">
+		<div id="title-outside">
+			<div id="title-inside" class="inside">
+				<header class="title-header">
+					<h2 class="post-title">
+						<?php if (is_category()) : ?>
+							<?php _e('Category','scapegoat'); ?> "<?php single_cat_title(); ?>"
+					
+						<?php elseif (is_tag()) : ?>
+							<?php _e('Tag','scapegoat'); ?> "<?php single_tag_title(); ?>"
+
+						<?php elseif (is_author()) : ?>
+							<?php _e('Author','scapegoat'); ?>
+							<?php $userInfo = get_user_by('slug', get_query_var('author_name'));
+								echo '"' .$userInfo->display_name . '"';
+							?>
+
+						<?php elseif (is_day()) : ?>
+							<?php _e('Day','scapegoat'); ?> "<?php the_time('j. F Y'); ?>"
+							
+						<?php elseif (is_month()) : ?>
+							<?php _e('Month','scapegoat'); ?> "<?php the_time('F Y'); ?>"
+							
+						<?php elseif (is_year()) : ?>
+							<?php _e('Year','scapegoat'); ?> "<?php the_time('Y'); ?>"
+							
+						<?php else : ?>
+							<?php _e('Archive','scapegoat'); ?>
+							
+						<?php endif; ?>
+					</h2>
+					<?php if ((is_category()) && (category_description())) : ?>
+						<aside class="post-description">
 							<?php echo category_description(); ?>
-						</div>
-					<?php elseif (is_author()) : ?>
-						<p>
-						<?php global $author; $userdata = get_userdata($author); ?>
-						<?php $userInfo = get_user_by('slug', get_query_var('author_name')); ?>
-						<?php if (function_exists('get_avatar')) { echo get_avatar($userInfo->user_email, 48); } ?>
-						<div class="sub-title-links">
-						<?php if($userdata->twitter) : ?>
-							<span class="sub-title-link sub-title-twitter">
-								<a target="_blank" href="https://twitter.com/<?php echo $userdata->twitter; ?>">
-									@<?php echo $userdata->twitter; ?>
-								</a>
-								<span class="label">// <?php _e('Twitter','scapegoat') ?></span>
-							</span>
-						<?php endif; ?>
-						<?php if($userdata->wiki) : ?>
-							<span class="sub-title-link sub-title-wiki">
-								<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php echo $userdata->wiki; ?>">
-									<?php echo $userdata->wiki; ?>
-								</a>
-								<span class="label">// <?php _e('Wiki','scapegoat') ?></span>
-							</span>
-						<?php endif; ?>
-						<?php if($userdata->user_url) : ?>
-							<span class="sub-title-link sub-title-website">
-								<a target="_blank" href="<?php echo $userdata->user_url; ?>">
-									<?php echo $userdata->user_url; ?>
-								</a>
-								<span class="label">// <?php _e('Website','scapegoat') ?></span>
-							</span>
-						<?php endif; ?>
-						</div>
-						<?php if($userdata->description) : ?>
-							<div class="sub-title-description">
-								<?php echo $userdata->description; ?>
-							</div>
-						<?php endif; ?>
-						</p>
+						</aside>
 					<?php endif; ?>
 				</header>
-				<?php if (have_posts()) : ?>
-					<div id="archive">
-					<?php while (have_posts()) : the_post(); ?>
+			</div>			
+		</div>
+		
+		<div id="wrapper-outside">
+			<div id="wrapper-inside" class="inside">
+
+		<div id="container">
+			<?php if (is_author()) : ?>
+				
+				<section id="author-meta-archive" class="post-meta sidebar" role="complementary">
+					<?php $userInfo = get_user_by('slug', get_query_var('author_name')); ?>
+					<figure class="author-avatar">
+						<?php if (function_exists('get_avatar')) { echo get_avatar($userInfo->user_email, 96); } ?>
+					</figure>
+					<?php if($userInfo->twitter) : ?>
+					<span class="author-twitter">
+						<span class="label">
+							<?php _e('Twitter: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="https://twitter.com/<?php echo $userInfo->twitter; ?>">@<?php echo $userInfo->twitter; ?></a>
+						</span>
+					</span>
+					<?php endif; ?>
+
+					<?php if($userInfo->wiki) : ?>
+					<span class="author-wiki">
+						<span class="label">
+							<?php _e('Wiki: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php echo $userInfo->wiki; ?>"><?php echo $userInfo->wiki; ?></a>
+						</span>
+					</span>
+					<?php endif; ?>
 					
-						<?php if($options['custom-excerpt']) : ?>
-						
-							<section id="post-<?php the_ID(); ?>" <?php post_class('archive-post'); ?>>
+					<?php if($userInfo->user_url) : ?>
+					<span class="author-website">
+						<span class="label">
+							<?php _e('Website: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="<?php echo $userInfo->user_url; ?>"><?php echo $userInfo->user_url; ?></a>
+						</span>
+					</span>
+					<?php endif; ?>
 
-								<!-- Mobile Query -->
-								<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
-									<?php if(has_post_thumbnail()) : ?>
-										<figure class="post-image">
-											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-												<?php the_post_thumbnail('thumbnail'); ?>
-											</a>
-										</figure>
-									<?php else : ?>
-									
-										<?php echo catch_post_image(); ?>
-									
-									<?php endif; ?>									
-								<?php endif; ?>
-								<header class="header">
-									<h2 class="post-title">
-										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<?php the_title(); ?>
-										</a>
-									</h2>
-									<!--
-									<aside class="meta">
-										<span class="post-date"><?php the_time('j.m.y'); ?></span>
-										<span class="post-author"><?php the_author_posts_link(); ?></span>
-										<aside class="categories"><?php _e('Posted in: ','scapegoat'); ?><?php the_category(', '); ?></aside>
-										<?php the_tags(__('<aside class="tags">Tagged with: ','scapegoat'),', ','</aside>'); ?>
-									</aside>
-									-->
-								</header>
-								
-								<article class="article">
-									<?php the_excerpt(); ?>
-								</article><!-- .article -->
+					<?php if($userInfo->description) : ?>
+					<span class="author-biography">
+						<!--<span class="label">
+							<?php _e('Biography: ','scapegoat') ?>
+						</span>-->
+						<span class="value">
+							<?php echo $userInfo->description; ?>
+						</span>
+					</span>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</section>				
+			<?php endif; ?>
 
-								<div class="clear"></div>
-							</section><!-- .post -->
-						<?php else : ?>
-							<section id="post-<?php the_ID(); ?>" <?php post_class('front-post'); ?>>
-								<?php if(has_post_thumbnail()) : ?>
-									<figure class="post-image">
-										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<!-- Mobile Query -->
-											<?php if($detect->isMobile() && !$detect->isTablet()) : ?>
-												<?php the_post_thumbnail('medium'); ?>
-											<?php else : ?>							
-												<?php the_post_thumbnail('teaser'); ?>
-											<?php endif; ?>
-										</a>
-										<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-											<span class="meta-thumbnail-caption">
-												<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-											</span>
-										<?php endif; ?>
-									</figure>
-								<?php endif; ?>
-								<header class="header">
-									<h2 class="post-title">
-										<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-											<?php the_title(); ?>
-										</a>
-									</h2><!-- .post-title -->
-									<aside class="info meta">
-										<span class="post-date"><?php the_time('j.m.y'); ?></span>
-										<span class="post-author"><?php the_author_posts_link(); ?></span>
-										<?php if(!has_post_format('status')) : ?>
-											<span class="replys"><?php comments_popup_link(__('Leave a comment','scapegoat'),__('1 Comment','scapegoat'),__('% Comments','scapegoat'), 'comments-link',__('Comments closed','scapegoat'));?></span>
-										<?php endif; ?>
-									</aside><!-- .info -->
-								</header><!-- .header -->						
-								<article class="article">
-									<?php the_content(); ?>
-								</article><!-- .article -->
-								<footer class="footer meta">
-									<aside class="categories"><?php _e('Posted in: ','scapegoat'); ?><?php the_category(', '); ?></aside>
-									<?php the_tags(__('<aside class="tags">Tagged with: ','scapegoat'),', ','</aside>'); ?>
-								</footer><!-- .footer -->
-								<div class="clear"></div>
-							</section><!-- .post -->
+			<div id="content" class="content" role="main">
+			
+			<?php breadcrumb(); ?>
+			
+			<?php if (have_posts()) : ?>
+
+			<?php while (have_posts()) : the_post(); ?>
+			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+
+				<header class="header">
+					<h2 class="post-title">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+						<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
+					</h2>
+				</header>
+				
+				<?php if(has_post_thumbnail()) : ?>
+					<figure class="post-image">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail('thumbnail-gray'); ?>
+						</a>
+						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+							<span class="post-image-caption">
+								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+							</span>
 						<?php endif; ?>
-
-					<?php endwhile; ?>
-					</div><!-- #archive -->
-					<nav id="pagination" role="navigation">
-						<?php if( function_exists('wp_pagination_navi') ) : ?>
-							<?php wp_pagination_navi(); ?>
-						<?php else : ?>
-							<div class="alignleft"><?php previous_posts_link('&laquo; prev', 0); ?></div>
-							<div class="alignright"><?php next_posts_link('next &raquo;', 0) ?></div>
-						<?php endif; ?>
-					</nav>
+					</figure>
+				<?php else : ?>
+					<?php echo catch_post_image(); ?>
 				<?php endif; ?>
-			</div><!-- content -->
+
+				<article class="article">
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
+				</article>
+				
+				<div class="clear"></div>
+				
+			</section>
+			
+			<?php endwhile; ?>
+			
+				<nav id="pagination">
+					<h2 id="pagination-title" class="visuallyhidden"><?php _e('Article Navigation','scapegoat'); ?></h2>
+					<?php if( function_exists('wp_pagination_navi') ) : ?>
+						<?php wp_pagination_navi(); ?>
+					<?php else : ?>
+						<div class="alignleft"><?php previous_posts_link('&laquo; prev', 0); ?></div>
+						<div class="alignright"><?php next_posts_link('next &raquo;', 0) ?></div>
+					<?php endif; ?>
+				</nav>
+
+			<?php endif; ?>
+			</div>
 			
 			<?php get_sidebar(); ?>
-
 			<div class="clear"></div>
-		</div><!-- container -->
+		</div>
+		
+			</div><!-- wrapper-inside -->
+		</div><!-- wrapper-outside -->
+
 		<?php get_footer(); ?>

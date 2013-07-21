@@ -81,6 +81,7 @@
 
 		/* Responsive Youtube/Vimeo Videos */
 		$('.article').fitVids();
+		$('.post-video').fitVids();
 	
 		/* Check if Slider exists */
 		if($('#front-page-slider').length>0) {

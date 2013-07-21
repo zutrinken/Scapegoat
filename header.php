@@ -199,6 +199,3 @@
 				</div>			
 			</div>
 		<?php endif; ?>
-
-		<div id="wrapper-outside">
-			<div id="wrapper-inside" class="inside">

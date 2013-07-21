@@ -1,6 +1,3 @@
-			</div><!-- wrapper-inside -->
-		</div><!-- wrapper-outside -->
-		
 		<?php $options = get_option('scapegoat_theme_options'); ?>
 		<div id="footer-top-outside" role="complementary">
 			<aside id="footer-top-inside" class="inside">
