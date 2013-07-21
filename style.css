@@ -5,7 +5,7 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.5.3
+	Version: 1.5.4
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, grey, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
@@ -51,7 +51,9 @@
 */
 
 
-/* __________________________________________________________________.01 Fonts */
+/*-----------------------------------------------------------------------------------*/
+/* Fonts
+/*-----------------------------------------------------------------------------------*/
 
 @font-face {
 	font-family: 'DejaWeb';
@@ -66,7 +68,9 @@
 	src: local('☺'), local('PoliticsHeadBold'), url('fonts/PoliticsHeadBold.woff') format('woff');
 }
 
-/* __________________________________________________________________.02 Reset */
+/*-----------------------------------------------------------------------------------*/
+/* Reset
+/*-----------------------------------------------------------------------------------*/
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -145,7 +149,9 @@ a:hover, a:focus {}
 
 
 
-/* __________________________________________________________________.03 WP-Presets */
+/*-----------------------------------------------------------------------------------*/
+/* WP Stuff
+/*-----------------------------------------------------------------------------------*/
 
 
 
@@ -261,7 +267,7 @@ img[align="right"] {
 }
 
 
-	/* ------------------------------ Shortcodes */
+	/* ------------------------------ Shortcodes - Coloumns */
 
 .two-columns-one {
 	width:48%;
@@ -303,6 +309,122 @@ img[align="right"] {
 	display: block;
 	clear: both;
 }
+
+
+	/* ------------------------------ Shortcodes - Buttons */
+.standard-btn {
+	display: inline-block;
+	margin: 0.5em 0.5em 0;
+	padding: 0.75em 1em;
+	overflow: hidden;
+	cursor: pointer;
+	font-size: 1em;
+	text-align: center;
+	font-weight: 400;
+	text-decoration: none !important;
+	-webkit-transition:.2s background ease;
+	-moz-transition:.2s background ease;
+	transition:.2s background ease;
+
+	color: #fff;
+	background: #f80;
+}
+.standard-btn:hover,
+.standard-btn:focus {
+	background: #f50;
+	color:#fff !important;
+}
+.round-btn {
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+}
+.bold-btn {
+	font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+.standard-btn.xsmall-btn.bold-btn {
+	font-size:10px;
+}
+.standard-btn.small-btn.bold-btn {
+	font-size:12px;
+}
+.standard-btn.bold-btn {
+	font-size:14px;
+}
+.standard-btn.large-btn.bold-btn {
+	font-size:16px;
+}
+.standard-btn.xlarge-btn.bold-btn {
+	font-size:18px;
+}
+.standard-btn.xsmall-btn {
+	padding: 0.25em 0.75em;
+	font-size: 0.75em;
+}
+.standard-btn.small-btn {
+	padding: 0.5em 1em;
+	font-size: 0.875em;
+}
+.standard-btn.large-btn {
+	margin: 0.75em 0.75em 0;
+	padding: 1em 1.25em;
+	font-size: 1.125em;
+}
+.standard-btn.xlarge-btn {
+	margin: 1em 1em 0;
+	padding: 1.25em 1.5em;
+	font-size: 1.25em;
+}
+
+.blue-btn {
+	background: #005580;
+}
+.blue-btn:hover,
+.blue-btn:focus {
+	background: #00334d;
+}
+
+
+.red-btn {
+	background: #cc3314;
+}
+.red-btn:hover,
+.red-btn:focus {
+	background: #a62911;
+}
+.green-btn {
+	background: #89b336;
+}
+.green-btn:hover,
+.green-btn:focus {
+	background: #75992e;
+}
+
+
+.grey-btn {
+	background: #808080;
+}
+.grey-btn:hover,
+.grey-btn:focus {
+	background: #404040;
+}
+.lightgrey-btn {
+	background: #bfbfbf;
+}
+.lightgrey-btn:hover,
+.lightgrey-btn:focus {
+	background: #808080;
+}
+.darkgrey-btn {
+	background: #404040;
+}
+.darkgrey-btn:hover,
+.darkgrey-btn:focus {
+	background: #000;
+}
+
+
 
 	/* ------------------------------ Searchform */
 
@@ -356,7 +478,9 @@ img[align="right"] {
 
 
 	
-/* __________________________________________________________________.04 Presets */
+/*-----------------------------------------------------------------------------------*/
+/* Presets
+/*-----------------------------------------------------------------------------------*/
 
 body,
 input,
@@ -649,7 +773,9 @@ audio {
 }
 
 
-/* __________________________________________________________________.05 Article */
+/*-----------------------------------------------------------------------------------*/
+/* Post
+/*-----------------------------------------------------------------------------------*/
 
 	/* ------------------------------ Article */
 
@@ -1036,7 +1162,9 @@ audio {
 }
 
 
-/* __________________________________________________________________.06 Comments */
+/*-----------------------------------------------------------------------------------*/
+/* Comments
+/*-----------------------------------------------------------------------------------*/
 
 
 	/* ------------------------------ Comment List */
@@ -1231,7 +1359,9 @@ audio {
 }
 
 
-/* __________________________________________________________________.07 Layout */
+/*-----------------------------------------------------------------------------------*/
+/* Layout
+/*-----------------------------------------------------------------------------------*/
 
 body {
 	background: #f4f4f4 url('images/bg-main.png') repeat top center scroll;
@@ -1539,7 +1669,9 @@ body {
 }
 
 
-/* __________________________________________________________________.08 Frontpage */
+/*-----------------------------------------------------------------------------------*/
+/* Frontpage
+/*-----------------------------------------------------------------------------------*/
 
 
 .no-js #front-page-header-outside {
@@ -1707,7 +1839,9 @@ body {
 	margin: 0 0 40px;
 }
 
-/* __________________________________________________________________.09 Widgets */
+/*-----------------------------------------------------------------------------------*/
+/* Widgets
+/*-----------------------------------------------------------------------------------*/
 	
 .widget {
 	overflow: auto;
@@ -2121,7 +2255,9 @@ body {
 .widget_search .searchform .searchsubmit:focus {}
 
 
-/* __________________________________________________________________.10 Navigation */
+/*-----------------------------------------------------------------------------------*/
+/* Navigation
+/*-----------------------------------------------------------------------------------*/
 
 
 
@@ -2507,7 +2643,9 @@ body {
 }
 
 
-/* __________________________________________________________________.11 Media Queries */
+/*-----------------------------------------------------------------------------------*/
+/* Media Queries
+/*-----------------------------------------------------------------------------------*/
 
 
 	/* ------------------------------ Tablets */

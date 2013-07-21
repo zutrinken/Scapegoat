@@ -85,6 +85,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size('teaser', 840, 560, true);
 }
 
+
+/*-----------------------------------------------------------------------------------*/
+/* Navigation
+/*-----------------------------------------------------------------------------------*/
+
 /* register all menus */
 add_action( 'init', 'register_my_menus' );
 function register_my_menus() {
@@ -150,7 +155,9 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 	}
 }
 
-/* register sidebars */
+/*-----------------------------------------------------------------------------------*/
+/* Sidebars
+/*-----------------------------------------------------------------------------------*/
 
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
@@ -219,7 +226,9 @@ add_custom_image_header('header_style', 'admin_header_style');
 
 
 
-/* Shortcodes */
+/*-----------------------------------------------------------------------------------*/
+/* Shortcodes
+/*-----------------------------------------------------------------------------------*/
 /* Enable shortcodes in widget areas */
 add_filter( 'widget_text', 'do_shortcode' );
 
@@ -304,6 +313,29 @@ function scapegoat_shortcode_divider($atts, $content = null) {
 }
 add_shortcode( 'divider', 'scapegoat_shortcode_divider' );
 
+
+
+function scapegoat_button( $atts, $content = null ) {
+    extract(shortcode_atts(array(
+    'link'	=> '#',
+    'target' => '',
+    'color'	=> '',
+    'size'	=> '',
+	 'form'	=> '',
+	 'font'	=> '',
+    ), $atts));
+
+	$color = ($color) ? ' '.$color. '-btn' : '';
+	$size = ($size) ? ' '.$size. '-btn' : '';
+	$form = ($form) ? ' '.$form. '-btn' : '';
+	$font = ($font) ? ' '.$font. '-btn' : '';
+	$target = ($target == 'blank') ? ' target="_blank"' : '';
+
+	$out = '<a' .$target. ' class="standard-btn' .$color.$size.$form.$font. '" href="' .$link. '"><span>' .do_shortcode($content). '</span></a>';
+
+    return $out;
+}
+add_shortcode('button', 'scapegoat_button');
 
 
 /* add custom caption-function */
