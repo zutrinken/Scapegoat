@@ -1851,78 +1851,68 @@ body {
 /*-----------------------------------------------------------------------------------*/
 	
 .widget {
-	overflow: auto;
-	height: 100%;
+	overflow: visible;
+	margin: 0;
 	padding: 0;
-	margin: 0 0 4em;
 
-	font-size: 0.8em;
-	line-height: 1.3em;
-
+	font-size: 0.75em;
+	line-height: 1em;
+	
 	-webkit-column-break-inside: avoid;
 	-moz-column-break-inside: avoid;
 	column-break-inside: avoid;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 .widget-inner {
-	overflow: auto;
+	overflow: visible;
 	height: 100%;
 
 	-webkit-column-break-inside: avoid;
 	-moz-column-break-inside: avoid;
 	column-break-inside: avoid;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .widget-title {
 	color: #404040;
-	border-bottom: 1px solid #808080;
 	padding: 0 0 0.5em;
-	margin: 0;
-}
-.widget a,
-.widget a:active,
-.widget a:visited {
-	color: #0077b3;
-}
-.widget a:hover,
-.widget a:focus {
-	color: #404040;
-}
+	margin: 0.5em 0;
 
+	font-weight: 400;
+	font-size: 1.5em;
+}
 .widget ul {
 	margin: 0;
 	list-style: none;
 }
 .widget ul li {
-	border-bottom: 1px solid #808080;
-	padding: 1em 0;
+	padding: 0.75em 0;
 	margin: 0;
 }
 
 	/* ------------------------------ Widget Sidebar */
 
-.widget-sidebar {}
-.widget-sidebar:first-child {
-	padding-top: 0;
+.widget-sidebar {
+	color: #808080;
+	padding: 1em;
+	margin: 0 0 4em;
 }
 .widget-sidebar:last-child {
-	padding-bottom: 0;
+	margin: 0;
 }
-.widget-sidebar .widget-inner {
-	padding: 0;
+.widget-sidebar .widget-title {
+	padding: 0.666em;
+	margin: -0.666em -0.666em 0.666em;
+	background: #e3e3e3;
 }
-.widget-sidebar .widget-title {}
+
+.widget-sidebar a,
+.widget-sidebar a:active,
+.widget-sidebar a:visited {
+	color: #404040;
+}
+.widget-sidebar a:hover,
+.widget-sidebar a:focus {
+	color: #000;
+}
 
 
 	/* ------------------------------ Widget Footer */
@@ -1960,40 +1950,22 @@ body {
 	/* Widget Submenu */
 
 .widget_nav_menu,
-.widget_pages {
-	margin: 0 -20px;
-}
-.widget-footer.widget_nav_menu,
-.widget-footer.widget_pages {
-	position: relative;
-	top: -20px;
-}
-.widget_nav_menu .widget-inner,
-.widget_pages .widget-inner {
-	background: #232323 !important;
-	border: 0 !important;
-	padding: 20px !important;
-}
-.widget_nav_menu .widget-title,
-.widget_pages .widget-title {
-	border-bottom: 1px solid #404040;
-	color: #808080;
-	margin: 0;
+.widget_pages {}
 
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
+.widget_nav_menu .widget-inner ,
+.widget_pages .widget-inner {}
+
+.widget_nav_menu .widget-title,
+.widget_pages .widget-title {}
+
 .widget_nav_menu ul,
 .widget_pages ul {
-	font-size: 1.3em;
-	line-height: 1.5em;
 	margin: 0;
 }
 .widget_nav_menu ul li,
 .widget_pages ul li {
 	border: 0;
-	border-top: 1px solid #404040;
+	border-top: 1px solid #808080;
 	padding: 0;
 }
 .widget_nav_menu ul li:hover,
@@ -2007,37 +1979,50 @@ body {
 	border: 0;
 }
 .widget_nav_menu ul li a,
-.widget_pages ul li a  {
+.widget_pages ul li a {
 	display: block;
-	color: #bfbfbf !important;
-	padding: 0.5em 0;
-}
-.widget_nav_menu ul li a:hover,
-.widget_nav_menu ul li a:focus,
-.widget_pages ul li a:hover,
-.widget_pages ul li a:focus {
-	color: #fff !important;
-	background: transparent;
+	padding: 0.875em 0;
 }
 .widget_nav_menu ul li.current_page_item > a,
 .widget_pages ul li.current_page_item > a {
-	color: #fff !important;
+	color: #fff;
 }
 .widget_nav_menu ul ul,
 .widget_pages ul ul {
-	border-top: 1px solid #404040;
+	border-top: 1px solid #808080;
 	padding: 0;
 	margin: 0;
-	font-size: 0.9em;
+	font-size: 0.875em;
 }
 .widget_nav_menu ul ul li,
 .widget_pages ul ul li {
-	margin: 0 0 0 20px;
+	position: relative;
+	margin: 0 0 0 2em;
+}
+.widget_nav_menu ul ul li:before,
+.widget_pages ul ul li:before {
+	position: absolute;
+	display: block;
+	content: '›';
+	color: #808080;
+	padding: 0.875em 0;
+	left: -1em;
 }
 .widget_nav_menu ul ul ul,
 .widget_pages ul ul ul {
 	font-size: 1em;
 }
+
+
+
+.submenu {
+	margin: 0 auto 2em;
+}
+.submenu .widget_nav_menu,
+.submenu .widget_pages {}
+
+.submenu .widget_nav_menu .widget-inner ,
+.submenu .widget_pages .widget-inner {}
 
 	/* Widget Text */
 

@@ -429,29 +429,32 @@ function catch_post_image($size = 'thumbnail') {
 
 
 
-/* custom excerpt */
+/*-----------------------------------------------------------------------------------*/
+/* Custom Excerpt
+/*-----------------------------------------------------------------------------------*/
 function custom_wp_trim_excerpt($text) {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
-		/* Retrieve the post content */
+		// Retrieve the post content
 		$text = get_the_content('');
  
-		/* Delete all shortcode tags from the content */
+		// Delete all shortcode tags from the content
 		$text = strip_shortcodes( $text );
  
 		$text = apply_filters('the_content', $text);
 		$text = str_replace(']]>', ']]&gt;', $text);
  
- 		/* MODIFY THIS. Add the allowed HTML tags separated by a comma */
-		$allowed_tags = '<p>,<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<blockquote>,<pre>,<code>,<hr />,<br>,<br />';
+ 		// MODIFY THIS. Add the allowed HTML tags separated by a comma
+		$allowed_tags = '<p>,<br>,<br />';
 		$text = strip_tags($text, $allowed_tags);
  
- 		/* MODIFY THIS. change the excerpt word count to any integer you like */
-		$excerpt_word_count = 60;
+ 		// MODIFY THIS. change the excerpt word count to any integer you like
+		$excerpt_word_count = 55;
 		$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
  
- 		/* MODIFY THIS. change the excerpt endind to something else */
-		$excerpt_end = '... <a href="'. get_permalink($post->ID) . '">' . __("more","scapegoat") .' &rarr;</a>';
+ 		// MODIFY THIS. change the excerpt endind to something else
+		$excerpt_end = '[...] <a href="'. get_permalink($post->ID) . '">' . __("more","scapegoat") .' &rarr;</a>';
+		//$excerpt_end = '[...]';
 		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
  
 		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
@@ -467,6 +470,43 @@ function custom_wp_trim_excerpt($text) {
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'custom_wp_trim_excerpt');
+
+
+
+function custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
+	$text = '';
+	
+	if($id) {
+		$the_post = & get_post( $my_id = $id );
+		$text = ($the_post->post_excerpt) ? $the_post->post_excerpt : $the_post->post_content;
+	} else {
+		global $post;
+		$text = ($post->post_excerpt) ? $post->post_excerpt : get_the_content('');
+	}
+	
+	$text = strip_shortcodes( $text );
+	$text = apply_filters('the_content', $text);
+	$text = str_replace(']]>', ']]&gt;', $text);
+	$text = strip_tags($text);
+	
+	$excerpt_more = ' ' . '[...]';
+	$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+	if ( count($words) > $excerpt_length ) {
+		array_pop($words);
+		$text = implode(' ', $words);
+		$text = $text . $excerpt_more;
+	} else {
+		$text = implode(' ', $words);
+	}
+	if($echo)
+	echo apply_filters('the_content', $text);
+	else
+	return $text;
+}
+	
+function get_custom_excerpt($excerpt_length = 55, $id = false, $echo = false) {
+	return custom_excerpt($excerpt_length, $id, $echo);
+}
 
 
 /* pagination */
