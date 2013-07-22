@@ -75,20 +75,8 @@
 			</div><!-- end-inside -->
 		</div><!-- end-outside -->
 
-		<?php if($options['style-option'] == 'show-special-2') : ?>
-			<script type="text/javascript">
-				(function ($, document, window) {
-					$(document).ready(function () {
-						if($('#front-page-header-outside').length>0) {
-							$('#content').css({'margin-top':'0'});
-						}
-						if($('#front-page-header-image-outside').length>0) {
-							$('#content').css({'margin-top':'0'});
-						}
-					});
-				}(jQuery, document, window))
-			</script>
-		<?php endif; ?>
+	</div>
+</div>
 
 		<?php wp_footer(); ?>
 <!--              ▲              -->

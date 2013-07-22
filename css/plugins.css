@@ -15,21 +15,7 @@
 .widget_mailchimpsf_widget {}
 #mc_signup {}
 #mc_signup_form {}
-.mc_form_inside {
-	background: #fff;
-	padding: 10px;
-	margin: 3px;
-	
-	border: 1px solid #d1d1d1;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}		
+.mc_form_inside {}		
 #mc_message {}
 .mc_merge_var {
 	overflow: auto;
@@ -38,6 +24,7 @@
 }
 .mc_merge_var .mc_var_label {
 	display: block;
+	margin: 1em 0 0.5em;
 }
 .mc_merge_var .mc_var_label .mc_required {
 	color: #1483a8;
@@ -52,7 +39,7 @@
 }			
 .mc_signup_submit {
 	text-align: inherit !important;
-	margin: 0 0 10px;
+	margin: 1em 0;
 }
 .mc_signup_submit .button {}
 	

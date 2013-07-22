@@ -1,6 +1,19 @@
 (function ($, document, window) {
 	$(document).ready(function () {
 
+	function openNav() {
+		$('#main-inside').animate({ left: '87.5%' }, 100);
+		$('#main-inside').addClass('aside');
+		return false;
+	}
+	function closeNav() {
+		$('#main-inside').animate({ left: '0' }, 100);
+		$('#main-inside').removeClass('aside');
+		return false;
+	}
+	$('#menu-open').click(openNav);
+	$('#menu-close').click(closeNav);
+
 	function SameHeight() {
 		var maxHeight1 = -1;
 		$('.footer-sidebar-inside').each(function() {
@@ -54,16 +67,6 @@
 	/* Dynamic equal width for Featured Links */
 	var m = 100 / ($('#featured-links li').length);
 	$('#featured-links li').css('width', m + '%');
-
-		/* Main Navigation Font Size */
-		function navFontSize() {
-			var fontSize;
-			var nav = $('#main-nav')
-			fontSize = 0.5 + (nav.width() / 1500);
-			nav.css({'font-size': fontSize + 'em'});
-		}
-		navFontSize();
-		$(window).resize(navFontSize);
 	
 		/* Cut the first image of the category description and set it as a featured image */
 		/* This method is realy crappy, I guess */
@@ -73,11 +76,6 @@
 			catDes.find('img').first().appendTo('#category-image');
 			catDes.find('.meta-thumbnail-caption').appendTo('#category-image');
 		}
-
-		/* Toggle Menu */
-		$('.menu-toggle').smoothScroll().click(function () {
-			$('#main-nav div').slideToggle('200');
-		});
 
 		/* Responsive Youtube/Vimeo Videos */
 		$('.article').fitVids();
