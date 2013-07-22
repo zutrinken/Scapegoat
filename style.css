@@ -430,45 +430,29 @@ img[align="right"] {
 	/* ------------------------------ Searchform */
 
 .searchform {
-	background: #fff;
-	margin: 4px;
-	padding: 1px;
-	overflow: auto;
-
-	-webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
-	-moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
-	box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+	position: relative;
 }
 .searchform .searchinput {
-	float: left;
-	width: 60%;
-	color: #808080;
-	border: 0;
-	background: transparent;
-	padding: 4px 0 4px 4px;
-	margin: 0 10% 0 0;
-
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	width: 98%;
+	float: right;
+	clear: right;
 }
 .searchform .searchinput:hover,
-.searchform .searchinput:focus {
-	color: #404040;
-	border: 0;
-	background: transparent;
-}
+.searchform .searchinput:focus {}
 .searchform .searchsubmit,
 .searchform .searchsubmit:hover,
 .searchform .searchsubmit:focus {
-	float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
 	border: 0;
-	font-size: 1.5em;
+	font-size: 1em;
 	display: block;
 	padding: 0;
-	margin: 0 4px 0 0;
+	margin: 0.25em;
 	color: transparent !important;
-	min-width: 14px;
+	width: 2.25em;
+	height: 2.25em;
 	background: url('images/icon-search.png') center center scroll no-repeat;
 	background-size: 14px 14px;
 
@@ -625,28 +609,30 @@ pre code {
 
 input,
 textarea {
-	background: #eee;
-	padding: 2px 4px;
-	border: 1px solid #ccc;
-	
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	background: #fff;
+	padding: 0.4em;
+	margin: 4px;
+	border: 2px solid #f4f4f4;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	-webkit-box-shadow: 0 0 0 4px #f4f4f4;
+	-moz-box-shadow: 0 0 0 4px #f4f4f4;
+	box-shadow: 0 0 0 4px #f4f4f4;
 }
 input:hover,
 textarea:hover {
-	border: 1px solid #c8c8c8;
-	background: #f4f4f4;
+	border: 2px solid #e3e3e3;
 }
 input:focus,
 textarea:focus {
 	color: #404040;
-	border: 1px solid #c2c2c2;
-	background: #fff;
+	border: 2px solid #e3e3e3;
+	-webkit-box-shadow: 0 0 0 4px #e3e3e3;
+	-moz-box-shadow: 0 0 0 4px #e3e3e3;
+	box-shadow: 0 0 0 4px #e3e3e3;
 }
 
 input[type="submit"],
@@ -655,16 +641,16 @@ input[type="reset"],
 .button {
 	background: #f80;
 	color: #fff !important;
-	
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	padding: 4px 8px;
-	border: 0;
+	padding: 0.4em;
+	border: 0;	
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus,
