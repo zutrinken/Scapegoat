@@ -805,9 +805,7 @@ audio {
 	background: #005580;
 }
 
-.header {
-	overflow: hidden;
-}
+.header {}
 
 .type-post,
 .type-page {
@@ -845,7 +843,7 @@ audio {
 	position: relative;
 	display: block;
 	overflow: hidden;
-	margin: 0;
+	margin: 0 -1em;
 	
 	background: #404040;
 	height: 0;
@@ -869,7 +867,9 @@ audio {
 	
 	padding: 0.1em 0.4em;
 }
-.post-video {}
+.post-video {
+	margin: 0 -1em;
+}
 .no-js .post-video {
 	display: none;
 }
@@ -1447,6 +1447,28 @@ body {
 	line-height: 1.2em;
 	width: 60%;
 }
+#title-images-wrapper {
+	position: relative;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+#title-images-wrapper #title-outside {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: #0077B3;
+	background: rgba(0,119,179,0.9);
+}
+.title-image {
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding: 0 0 33.75%;
+}
+.title-image img {
+	width: 100%;
+}
 
 	/* ------------------------------ Wrapper */
 
@@ -1552,49 +1574,6 @@ body {
 	color: #fff !important;
 }
 
-
-
-	/* ------------------------------ Archives */
-
-.heading {
-	padding: 0;
-	margin: 0 0 40px;
-	overflow: auto;
-
-	font-size: 0.9em;
-	line-height: 1.3em;
-	color: #808080;
-}
-.heading a {
-	color: #61B39D;
-}
-.heading .avatar {
-	float: left;
-	margin: 0 20px 0 0;
-	display: inline;
-	
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-}
-.heading .sub-title-links {
-	overflow: auto;
-	margin: 0 0 10px;
-	padding: 0 0 10px;
-	border-bottom: 1px solid #404040;
-}
-.heading .sub-title-links .sub-title-link {
-	margin: 0 20px 0 0;
-	float: left;
-}
-.heading .sub-title-links .sub-title-link .label {
-	font-size: 0.813em;
-	line-height: 1.125em;
-	color: #404040;
-}
-.heading .sub-title-description {
-	display: block;
-}
 
 	/* ------------------------------ Social Icons */
 
@@ -2696,9 +2675,6 @@ body {
 	#header-inside {}
 	#logo {}
 	#main-nav {}
-	#main-nav div {
-		display: block;
-	}
 	#main-nav ul {}
 	#main-nav ul > li {}
 	#main-nav ul ul > li {
@@ -3058,13 +3034,6 @@ body {
 	#footer_navigation ul ul li {
 		max-width: auto;
 		margin: 0;
-	}
-	.post-image {
-		margin: -20px -20px 20px;
-		max-height: 180px;
-	}
-	.front-post:after {
-		margin: 0 0 0 -120px;
 	}
 
 	.front-post.format-status {

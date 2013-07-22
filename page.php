@@ -1,15 +1,38 @@
 		<?php get_header(); ?>
 
-		<div id="title-outside">
-			<div id="title-inside" class="inside">
-				<header class="title-header">
-					<h2 class="post-title">
-						<?php the_title(); ?>
-						<?php edit_post_link(__('Edit','farewell'),'<span class="edit-link">','</span>'); ?>
-					</h2>
-				</header>
-			</div>			
-		</div>
+		<?php if(has_post_thumbnail()) : ?>
+			<div id="title-images-wrapper">
+				<div id="title-outside">
+					<div id="title-inside" class="inside">
+						<header class="title-header">
+							<h2 class="post-title">
+								<?php the_title(); ?>
+								<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
+							</h2>
+						</header>
+					</div>
+				</div>
+				<figure class="title-image">
+					<?php the_post_thumbnail('featured'); ?>
+					<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+						<span class="meta-thumbnail-caption">
+							<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+						</span>
+					<?php endif; ?>
+				</figure><!-- slide-image -->
+			</div>
+		<?php else : ?>
+			<div id="title-outside">
+				<div id="title-inside" class="inside">
+					<header class="title-header">
+						<h2 class="post-title">
+							<?php the_title(); ?>
+							<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
+						</h2>
+					</header>
+				</div>
+			</div>
+		<?php endif; ?>
 
 		<div id="wrapper-outside">
 			<div id="wrapper-inside" class="inside">
