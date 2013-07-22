@@ -96,13 +96,13 @@
 		<div id="main-nav-outside">
 			<div id="main-nav-inside" class="inside">
 				<nav id="main-nav" role="navigation">
+					<div id ="nav-search">
+						<?php get_search_form(); ?>
+					</div>
 					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
 					<a href="#header-inside" id="menu-close"><?php _e('Navigation','scapegoat'); ?></a>
 					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
-					<div id ="nav-search">
-						<?php get_search_form(); ?>
-					</div>
 				</nav><!-- main-nav -->
 			</div><!-- main-nav-inside -->
 		</div><!-- main-nav-outside -->
