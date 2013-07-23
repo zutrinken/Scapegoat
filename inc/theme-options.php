@@ -224,6 +224,10 @@ function scapegoat_theme_options_page() {
 					<td><input id="scapegoat_theme_options[twitter]" class="regular-text" type="text" name="scapegoat_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
+					<th scope="row"><span class="social-icon appdotnet"></span> Twitter</th>
+					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
 					<th scope="row"><span class="social-icon facebook"></span> Facebook</th>
 					<td><input id="scapegoat_theme_options[facebook]" class="regular-text" type="text" name="scapegoat_theme_options[facebook]" value="<?php esc_attr_e( $options['facebook'] ); ?>" /></td>
 				</tr>

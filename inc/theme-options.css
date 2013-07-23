@@ -54,6 +54,10 @@
 	background-image: url('../images/icon-social-twitter.png');
 	background-color: #3ea9dd;
 }
+.social-icon.appdotnet {
+	background-image: url('../images/icon-social-appdotnet.png');
+	background-color: #cbccce;
+}
 .social-icon.facebook {
 	background-image: url('../images/icon-social-facebook.png');
 	background-color: #3c5a98;
@@ -85,6 +89,9 @@
 	}
 	.social-icon.twitter {
 		background-image: url('../images/icon-social-twitter@2x.png');
+	}
+	.social-icon.appdotnet {
+		background-image: url('../images/icon-social-appdotnet@2x.png');
 	}
 	.social-icon.facebook {
 		background-image: url('../images/icon-social-facebook@2x.png');

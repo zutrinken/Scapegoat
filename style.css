@@ -1362,24 +1362,17 @@ body {
 }
 
 #logo {
+	height: 2.5em;
 	float: left;
-	clear: left;
-	width: 480px;
-	max-width: 50%;
-	padding: 0;
-	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
-	font-size: 2.8em;
-	line-height: 100%;
+	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-size: 3em;
+	line-height: 1em;
 	vertical-align: bottom;
 	text-transform: uppercase;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	-o-hyphens: none;
-	hyphens: none;
+	text-align: left;
 	
-	z-index: 9999;
+	padding: 0;
+	margin: auto;
 }
 #logo a,
 #logo a:active,
@@ -1390,17 +1383,19 @@ body {
 }
 #logo img {
 	display: block;
+	width: auto;
+	max-width: none;
+	height: 100%;
 }
 #logo-text {
 	display: block;
-	padding: 55px 0;
-	line-height: 75%;
+	margin: 2em auto 0;
 }
 #description-outer {
 	float: right;
 	clear: right;
 	width: 25%;
-	margin: 60px 0;
+	margin: 2em 0;
 	padding: 0;
 	line-height: 100%;
 	display: table;
@@ -1423,8 +1418,13 @@ body {
 	max-width: 1440px;
 	margin: 0 auto;
 
-	border-top: 2px solid #f80;
+	border-top: 1px solid #d1d1d1;
+	border-left: 1px solid #d1d1d1;
+	border-right: 1px solid #d1d1d1;
 	background: #fff;
+	-webkit-box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
 }
 #main-nav-inside {}
 
@@ -1506,9 +1506,13 @@ body {
 
 
 #footer-top-outside {
-	border-top: 2px solid #f80;
+	border-top: 1px solid #d1d1d1;
 	background: #fff;
 	padding: 1em 0;
+	
+	-webkit-box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
 }
 #footer-top-inside {}
 #footer-search {
@@ -1581,7 +1585,7 @@ body {
 	display: inline-block;
 	width: 2em;
 	height: 2em;
-	margin: 0 0.125 0 0;
+	margin: 0 0 0.25em 0;
 	text-indent: -10000px;
 	text-align: center;
 	background-color: #f80;
@@ -1604,6 +1608,10 @@ body {
 .social-icon.twitter {
 	background-image: url('images/icon-social-twitter.png');
 /* 	background-color: #3ea9dd; */
+}
+.social-icon.appdotnet {
+	background-image: url('images/icon-social-appdotnet.png');
+/* 	background-color: #cbccce; */
 }
 .social-icon.facebook {
 	background-image: url('images/icon-social-facebook.png');
