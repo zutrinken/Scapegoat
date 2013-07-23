@@ -1,56 +1,65 @@
 		<?php get_header(); ?>
 
-		<div id="container">
-			
-			<div id="content" role="main">
-
-				<?php if(function_exists('breadcrumb')) : ?>
-					<?php breadcrumb(); ?> 
-				<?php endif; ?>
-				
-				<header class="heading">
-					<p><?php get_search_form(); ?></p>
+		<div id="title-outside">
+			<div id="title-inside" class="inside">
+				<header class="title-header">
+					<h1 class="post-title">
+						<?php _e('Search','farewell'); ?> "<?php the_search_query(); ?>"		
+					</h1>
 				</header>
+			</div>			
+		</div>
 
+		<div id="wrapper-outside">
+			<div id="wrapper-inside" class="inside">
 
+		<div id="container">
+
+			<div id="content" class="content" role="main">
+			
+			<?php breadcrumb(); ?>
+			
 			<?php if (have_posts()) : ?>
 
-			<div id="archive">			
-
 			<?php while (have_posts()) : the_post(); ?>
-						<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<?php if(has_post_thumbnail()) : ?>
-								<figure class="post-archiv-image">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail('medium'); ?>
-									</a>
-									<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-										<span class="meta-thumbnail-caption">
-											<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-										</span>
-									<?php endif; ?>
-								</figure>
-							<?php endif; ?>
-							<header class="header">
-								<h2 class="post-title">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<aside class="meta">
-									<span class="post-date"><?php the_time('j.m.y'); ?></span>
-									<span class="post-author"><?php the_author_posts_link(); ?></span>
-								</aside>
-							</header>
-							<article class="article">
-								<?php the_excerpt(); ?>
-							</article>
-						</section><!-- .post -->
-			<?php endwhile; ?>
+			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
-			</div>
+				<header class="header">
+					<h2 class="post-title">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+						<?php edit_post_link(__('Edit','farewell'),'<span class="edit-link">','</span>'); ?>
+					</h2>
+				</header>
+				
+				<?php if(has_post_thumbnail()) : ?>
+					<figure class="post-image">
+						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail('thumbnail-gray'); ?>
+						</a>
+						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+							<span class="post-image-caption">
+								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+							</span>
+						<?php endif; ?>
+					</figure>
+				<?php else : ?>
+					<?php echo catch_post_image(); ?>
+				<?php endif; ?>
+
+				<article class="article">
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','farewell'); ?> &#x9b;</a>
+				</article>
+				
+				<div class="clear"></div>
+				
+			</section>
 			
-				<nav id="pagination" role="navigation">
+			<?php endwhile; ?>
+			
+				<nav id="pagination">
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>
@@ -59,14 +68,14 @@
 					<?php endif; ?>
 				</nav>
 
-			<?php else : ?>
-
 			<?php endif; ?>
-			</div><!-- content -->
+			</div>
 			
 			<?php get_sidebar(); ?>
-
 			<div class="clear"></div>
-		</div><!-- container -->
+		</div>
+		
+			</div><!-- wrapper-inside -->
+		</div><!-- wrapper-outside -->
 
 		<?php get_footer(); ?>

@@ -456,8 +456,9 @@ function custom_wp_trim_excerpt($text) {
 		$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
  
  		// MODIFY THIS. change the excerpt endind to something else
-		$excerpt_end = '[...] <a href="'. get_permalink($post->ID) . '">' . __("more","scapegoat") .' &rarr;</a>';
+		//$excerpt_end = '[...] <a href="'. get_permalink($post->ID) . '">' . __("more","scapegoat") .' &rarr;</a>';
 		//$excerpt_end = '[...]';
+		$excerpt_end = '<a href="'. get_permalink($post->ID) . '">[...]</a>';
 		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
  
 		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
@@ -492,7 +493,7 @@ function custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
 	$text = str_replace(']]>', ']]&gt;', $text);
 	$text = strip_tags($text);
 	
-	$excerpt_more = ' ' . '[...]';
+	$excerpt_more = ' ' . '<a href="'. get_permalink($post->ID) . '">[...]</a>';
 	$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
 	if ( count($words) > $excerpt_length ) {
 		array_pop($words);

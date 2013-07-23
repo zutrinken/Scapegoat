@@ -11,6 +11,8 @@
 
 ## HOW TO
 
+*Slider Image Size ```1440x486```
+*Post Image Size ```720x243```
 * first of all, you have to insert some informations about yourself in your profile-section
 * use custom menues and insert the start-page to the main-menu, if you want to display the home icon in your header menu
 * use widgets for the sidebar and footer. The footer looks best with 4 Widgets with approximately equal heights. Don't use menu widgets in the footer, there is a separate footer-menu
