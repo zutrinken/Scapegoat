@@ -12,6 +12,9 @@
 		<div id="front-page-header-inside" class="inside">
 			<div id="toggling" class="toggling">
 				<div id="slideshow">
+					<div id="front-page-slider-control">
+						<div id="front-page-slider-control-inside" class="inside"></div>
+					</div>
 					<div id="front-page-slider">
 						<ul class="slides">
 							<?php while (have_posts()) : the_post(); ?>
@@ -26,7 +29,7 @@
 											</h2>
 											<article class="slide-text-article">
 												<?php echo custom_excerpt(30); ?>
-												<a href="<?php the_permalink(); ?>" class="slide-text-more"><?php _e('more','farewell'); ?> &#x9b;</a>
+												<a href="<?php the_permalink(); ?>" class="slide-text-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
 											</article>
 										</header><!-- slide-text -->
 									</div>

@@ -49,11 +49,12 @@ html[xmlns] .slides {display: block;}
 /* Play Pause */
 .flex-pauseplay {
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	bottom: 1em;
+	right: 3em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: #0077b3;
+	background: rgba(0,119,179,0.9);
 }
 .flex-pauseplay .flex-play,
 .flex-pauseplay .flex-pause {
@@ -84,12 +85,13 @@ html[xmlns] .slides {display: block;}
 /* Direction Nav */
 .flex-direction-nav {
 	position: absolute;
-	top: 1em;
-	right: 4em;
+	bottom: 1em;
+	right: 6em;
 	padding: 0 0.25em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: #0077b3;
+	background: rgba(0,119,179,0.9);
 }
 .flex-direction-nav li {
 	display: block;
@@ -122,22 +124,23 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav .disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
 
 
-/* Control Nav */
+/* Pager */
 .flex-control-nav {
 	position: absolute;
 	overflow: hidden;
-	top: 1em;
-	right: 8.5em;
+	bottom: 1em;
+	right: 10.5em;
 	padding: 0 0.25em;
 	text-align: center;
 	z-index: 2000;
-	background: rgba(0,0,0,0.75);
+	background: #0077b3;
+	background: rgba(0,119,179,0.9);
 }
 .flex-control-nav li {
 	display: block;
 	float: left;
 	zoom: 1;
-	padding: 0.5em 0.25em;
+	padding: 0.5em 0.5em;
 	margin: 0;
 	height: 1em;
 	line-height: 1em;
@@ -145,20 +148,29 @@ html[xmlns] .slides {display: block;}
 .flex-control-paging li a {
 	cursor: pointer;
 	display: inline-block;
-	height: 1em;
-	line-height: 1em;
-	width: 1em;
-	background: #fff;
+	height: 0.75em;
+	line-height: 0.75em;
+	width: 0.75em;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,0.5);
+	margin: -2px;
 	color: transparent;
 	text-indent: -10000px;
 	
 	-webkit-border-radius: 2em;
 	-moz-border-radius: 2em;
 	border-radius: 2em;
+
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
 }
-.flex-control-paging li a:hover,
+.flex-control-paging li a:hover {
+	border: 2px solid #fff;
+}
 .flex-control-paging li a.flex-active {
-	background: #f80;
+	border: 2px solid #fff;
+	background: rgba(255,255,255,0.5);
 }
 
 .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
@@ -166,12 +178,6 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .active {opacity: 1; cursor: default;}
-
-@media only screen and (max-width: 860px) {
-	.flex-direction-nav a {
-		bottom: 64px;
-	}
-}
 
 @media	only screen and (-webkit-min-device-pixel-ratio: 2), 
 		only screen and (-moz-min-device-pixel-ratio: 2), 

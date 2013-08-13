@@ -1,17 +1,5 @@
 (function ($, document, window) {
 	$(document).ready(function () {
-		function openNav() {
-			$('#main-inside').animate({ left: '87.5%' }, 100);
-			$('#main-inside').addClass('aside');
-			return false;
-		}
-		function closeNav() {
-			$('#main-inside').animate({ left: '0' }, 100);
-			$('#main-inside').removeClass('aside');
-			return false;
-		}
-		$('#menu-open').click(openNav);
-		$('#menu-close').click(closeNav);
 		
 		/* Parallax for header and slider images*/
 		$(window).scroll(parallaxScroll);
@@ -20,7 +8,7 @@
 			/* Get scrolled distance */
 			var scrolled = $(window).scrollTop();
 			scrolled = Math.round(scrolled);
-			
+
 			/* Manipulate the header and slider images */
 			var prlx = $('.parallax')
 			var parallaxOffset = prlx.offset().top;
@@ -35,7 +23,7 @@
 					'top' : 0
 				});
 			}
-			
+
 			/* Manipulate the slider bakcground images */
 			var frPaSl = $('.front-page-slide');
 			var frPaSlOffset = frPaSl.offset().top;
@@ -99,31 +87,36 @@
 		SameHeight();
 		$(window).resize(SameHeight);
 
-
 		/* Dynamic equal width for Featured Links */
-		var m = 100 / ($('#featured-links li').length);
-		$('#featured-links li').css('width', m + '%');
+		var feLi = $('#featured-links li');
+		var feLiCn = 100 / (feLi.length);
+		feLi.css('width', feLiCn + '%');
 
 		/* Responsive Youtube/Vimeo Videos */
 		$('.article').fitVids();
 		$('.post-video').fitVids();
-	
+
 		/* Check if Slider exists */
-		if($('#front-page-slider').length>0) {
+		var frPaSl = $('#front-page-slider')
+		if(frPaSl.length>0) {
 			/* Slider on Frontpage */
-			$('#front-page-slider').flexslider({
-				slideshow:		true,
-				useCSS:			false,
-				animation:		'slide',
-				direction:		'horizontal',
-				reverse:		false,
-				touch:			true,
-				pauseOnAction:	false,
-				pauseOnHover:	false,
-				pausePlay:		true,
-				start:			function(slider) {
-									$('body').removeClass('loading');
-								}
+			frPaSl.flexslider({
+				slideshow:			true,
+				useCSS:				false,
+				animation:			'slide',
+				direction:			'horizontal',
+				animationSpeed:		750,
+				easing:				'easeOutExpo',
+				reverse:			false,
+				touch:				true,
+				keyboard:			true,
+				pauseOnAction:		false,
+				pauseOnHover:		false,
+				pausePlay:			true,
+				controlsContainer:	'#front-page-slider-control-inside', 
+				start:				function(slider) {
+										$('body').removeClass('loading');	
+									}
 			});
 		}
 	});

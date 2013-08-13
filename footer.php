@@ -80,6 +80,25 @@
 </div>
 
 		<?php wp_footer(); ?>
+		
+		<script type="text/javascript">
+			(function ($, document, window) {
+				$(document).ready(function () {
+					function openNav() {
+						$('#main-inside').animate({ left: '87.5%' }, 100);
+						$('#main-inside').addClass('aside');
+						return false;
+					}
+					function closeNav() {
+						$('#main-inside').animate({ left: '0' }, 100);
+						$('#main-inside').removeClass('aside');
+						return false;
+					}
+					$('#menu-open').click(openNav);
+					$('#menu-close').click(closeNav);
+				});
+			}(jQuery, document, window))
+		</script>
 <!--              ▲              -->
 <!--             ▲ ▲             -->
 	</body>
