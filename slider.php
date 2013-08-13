@@ -31,7 +31,7 @@
 										</header><!-- slide-text -->
 									</div>
 									<?php if(has_post_thumbnail()) : ?>
-										<figure class="slide-image">
+										<figure class="slide-image parallax">
 											<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 												<?php the_post_thumbnail('featured'); ?>
 											</a>

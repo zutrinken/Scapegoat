@@ -1467,6 +1467,7 @@ body {
 	left: 0;
 	background: #0077B3;
 	background: rgba(0,119,179,0.9);
+	z-index: 1000;
 }
 .title-image {
 	width: 100%;
@@ -1476,6 +1477,8 @@ body {
 }
 .title-image img {
 	width: 100%;
+	position: relative;
+	z-index: 500;
 }
 
 	/* ------------------------------ Wrapper */
@@ -1727,7 +1730,9 @@ body {
 	z-index: 2;
 	overflow: hidden;
 }
-#front-page-slider .front-page-slide .slide-image img {}
+#front-page-slider .front-page-slide .slide-image img {
+	position: relative;
+}
 #front-page-slider .front-page-slide .slide-content {
 	position: relative;
 	padding-bottom: 33.75%;
