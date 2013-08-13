@@ -1891,12 +1891,20 @@ body {
 }
 #pagination .pagination-info {
 	float: left;
-	line-height: 2em;
+	font-size: 0.8em;
+	line-height: 2.5em;
 	display: block;
 	padding: 0 0.5em;
+	color: #bfbfbf;
 }
 #pagination .pagination {
 	float: right;
+
+	background: #fff;
+	border: 1px solid #d1d1d1;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 #pagination .pagination a,
@@ -1908,7 +1916,6 @@ body {
 	height: 2em;
 	line-height: 2em;
 	margin: 0;
-	background: #f4f4f4;
 }
 #pagination .pagination span {
 	color: #005580;
@@ -2707,18 +2714,11 @@ body {
 		width: auto;
 		float: none;
 	}
-	#sidebar {
+	.sidebar {
 		width: auto;
 		float: none;
 		margin: 100px 0 0;
 		padding: 0;
-		
-		-moz-column-count: 2;
-		-moz-column-gap: 40px;
-		-webkit-column-count: 2;
-		-webkit-column-gap: 40px;
-		column-count: 2;
-		column-gap: 40px;
 	}
 	#front-page-header-inside {
 		width: auto;
