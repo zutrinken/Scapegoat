@@ -304,7 +304,7 @@ add_shortcode( 'three_columns_one_last', 'scapegoat_shortcode_three_columns_one_
 function scapegoat_shortcode_three_columns_two($atts, $content = null) {
    return '<div class="three-columns-two">' . scapegoat_remove_wpautop($content) . '</div>';
 }
-add_shortcode( 'three_columns_two', 'scapegoat_shortcode_three_columns' );
+add_shortcode( 'three_columns_two', 'scapegoat_shortcode_three_columns_two' );
 
 function scapegoat_shortcode_three_columns_two_last($atts, $content = null) {
    return '<div class="three-columns-two last">' . scapegoat_remove_wpautop($content) . '</div>';
