@@ -7,6 +7,9 @@
 	<!-- load the Theme Options -->
 	<?php $options = get_option('scapegoat_theme_options'); ?>
 
+	<!-- Template Path -->
+	<?php $template_url = get_bloginfo('template_url'); ?>
+
 	<head profile="http://gmpg.org/xfn/11">
 
 		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
@@ -19,21 +22,21 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
 		<!-- Stylesheet -->
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" media="screen" />
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/plugins.css" media="screen" />
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/style.css" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/plugins.css" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/print.css" media="print" />
 		<!--[if IE]>
-			<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/ie.css" media="screen" />
+			<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/ie.css" media="screen" />
 		<![endif]-->
 
 		<!-- Favicon -->
-		<link rel="Shortcut Icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo $template_url; ?>/favicon.ico" />
 
 		<!-- Touch Icon -->
 		<?php if($options['icon']) : ?>
 			<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
 		<?php else : ?>
-			<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_directory'); ?>/images/touch-icon.png"/>
+			<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
 		<?php endif; ?>
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">

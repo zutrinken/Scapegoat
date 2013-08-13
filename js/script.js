@@ -1,6 +1,5 @@
 (function ($, document, window) {
 	$(document).ready(function () {
-
 		function openNav() {
 			$('#main-inside').animate({ left: '87.5%' }, 100);
 			$('#main-inside').addClass('aside');
@@ -13,39 +12,45 @@
 		}
 		$('#menu-open').click(openNav);
 		$('#menu-close').click(closeNav);
-
+		
+		/* Parallax for header and slider images*/
 		$(window).scroll(parallaxScroll);
 		function parallaxScroll() {
+
+			/* Get scrolled distance */
 			var scrolled = $(window).scrollTop();
 			scrolled = Math.round(scrolled);
-
-			var parallaxOffset = $('.parallax').offset().top;
+			
+			/* Manipulate the header and slider images */
+			var prlx = $('.parallax')
+			var parallaxOffset = prlx.offset().top;
 			parallaxOffset = Math.round(parallaxOffset);
+
 			if(scrolled >= parallaxOffset) {
-				$('.parallax img').css({
+				prlx.find('img').css({
 					'top' : (0+((scrolled - parallaxOffset) * 0.75))+'px'
 				});
 			} else {
-				$('.parallax img').css({		
+				prlx.find('img').css({		
 					'top' : 0
 				});
 			}
 			
-			var parallaxBgOffset = $('.front-page-slide').offset().top;
-			parallaxBgOffset = Math.round(parallaxBgOffset);
+			/* Manipulate the slider bakcground images */
+			var frPaSl = $('.front-page-slide');
+			var frPaSlOffset = frPaSl.offset().top;
+			frPaSlOffset = Math.round(frPaSlOffset);
 			
-			if(scrolled >= parallaxBgOffset) {
-				$('.front-page-slide').css({
-					'background-position' : 'center ' + (0+((scrolled - parallaxBgOffset) * 0.75))+'px'
+			if(scrolled >= frPaSlOffset) {
+				frPaSl.css({
+					'background-position' : 'center ' + (0+((scrolled - frPaSlOffset) * 0.75))+'px'
 				});
 			} else {
-				$('.front-page-slide').css({
+				frPaSl.css({
 					'background-position' : 'center ' + 0
 				});
 			}
 		}
-
-
 		function SameHeight() {
 			var maxHeight1 = -1;
 			$('.footer-sidebar-inside').each(function() {
@@ -98,15 +103,6 @@
 		/* Dynamic equal width for Featured Links */
 		var m = 100 / ($('#featured-links li').length);
 		$('#featured-links li').css('width', m + '%');
-	
-		/* Cut the first image of the category description and set it as a featured image */
-		/* This method is realy crappy, I guess */
-		var catDes = $('.category-description');
-		if (catDes.find('img') && catDes.length > 0) {
-			$('#content').prepend('<figure class="post-image" id="category-image"></figure>');
-			catDes.find('img').first().appendTo('#category-image');
-			catDes.find('.meta-thumbnail-caption').appendTo('#category-image');
-		}
 
 		/* Responsive Youtube/Vimeo Videos */
 		$('.article').fitVids();

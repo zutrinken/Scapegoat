@@ -60,19 +60,6 @@ function add_twitter_contactmethod( $contactmethods ) {
 }
 add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
 
-/* Allowing Html in user-description */
-remove_filter('pre_user_description', 'wp_filter_kses');
-add_filter( 'pre_user_description', 'wp_filter_post_kses' );
-
-/* Block WordPress Filters */
-$filters = array('pre_term_description', 'pre_link_description', 'pre_link_notes', 'pre_user_description');
-foreach ( $filters as $filter ) {
-	remove_filter($filter, 'wp_filter_kses');
-}
-foreach ( array( 'term_description' ) as $filter ) {
-	remove_filter( $filter, 'wp_kses_data' );
-}
-
 /* register post formats */
 add_theme_support (
 	'post-formats',
