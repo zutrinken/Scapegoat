@@ -3164,6 +3164,21 @@ body {
 }
 
 @media only screen and (max-width: 480px)  {
+	.alignleft,
+	.alignright {
+		float: none;
+	}
+	figure.alignleft,
+	img.alignleft,
+	img[align="left"],
+	figure.alignright,
+	img.alignright,
+	img[align="right"] {
+		float: none;
+		display: block;
+		margin: 1em auto 1.5em;
+	}
+
 	#sidebar {
 		-webkit-column-count: 1;
 		-moz-column-count: 1;
