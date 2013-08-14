@@ -57,12 +57,6 @@
 /*-----------------------------------------------------------------------------------*/
 
 @font-face {
-	font-family: 'DejaWeb';
-	font-style: normal;
-	font-weight: normal;
-	src: local('☺'), local('DejaWeb'), url('fonts/DejaWeb.woff') format('woff');
-}
-@font-face {
 	font-family: 'PoliticsHeadBold';
 	font-style: normal;
 	font-weight: normal;
@@ -471,7 +465,7 @@ body,
 input,
 select,
 textarea {
-	font-family: 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 400;
@@ -484,7 +478,7 @@ textarea {
 	/* ------------------------------ Headlines */
 
 h1, h2, h3, h4, h5, h6, h7 {
-	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-weight: 400;
 	margin: 1em 0;
 	color: #181818;
@@ -1364,7 +1358,7 @@ body {
 #logo {
 	height: 2.5em;
 	float: left;
-	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 3em;
 	line-height: 1em;
 	vertical-align: bottom;
@@ -1392,25 +1386,24 @@ body {
 	margin: 2em auto 0;
 }
 #description-outer {
+	position: relative;
 	float: right;
 	clear: right;
 	width: 25%;
-	margin: 2em 0;
-	padding: 0;
-	line-height: 100%;
-	display: table;
+	margin: 0;
+	padding: 2em 0;
 }
 #description-inner {
-	display: table-cell;
-	vertical-align: middle;
+	position: relative;
 }
 #description {
 	display: block;
-
-	color: #808080;
+	color: #bfbfbf;
+	
+	line-height: 1em;
 }
 #header-social-links {
-	margin: 0 auto 10px;
+	margin: 0 auto 0.5em;
 }
 
 #main-nav-outside {
@@ -1772,7 +1765,7 @@ body {
 }
 
 #front-page-slider .front-page-slide .slide-text .slide-text-title {
-	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 2em;
 	line-height: 1em;
 	color: #fff;

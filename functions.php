@@ -29,6 +29,14 @@ function enqueue_scripts() {
 	wp_enqueue_script('custom-script', $template.'/js/script.js', array(), null, true);
 }
 
+/* Load Google Web Fonts */
+function load_fonts() {
+	wp_register_style('opensans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic');
+	wp_enqueue_style( 'opensans');
+}
+add_action('admin_enqueue_scripts', 'load_fonts');
+add_action('wp_enqueue_scripts', 'load_fonts');
+
 /* localization */
 load_theme_textdomain('scapegoat', TEMPLATEPATH .'/languages');
 

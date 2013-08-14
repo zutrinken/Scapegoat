@@ -2,12 +2,8 @@
 	 /* === FONTS === */
 	/* ============= */
 
-@font-face {
-	font-family: 'DejaWeb';
-	font-style: normal;
-	font-weight: normal;
-	src: local('☺'), local('DejaWeb'), url('../fonts/DejaWeb.woff') format('woff');
-}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
 @font-face {
 	font-family: 'PoliticsHeadBold';
 	font-style: normal;
@@ -113,7 +109,7 @@ img[align="right"] {
 
 body#tinymce {padding: 10px 20px;}
 * {
-	font-family: 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 400;
@@ -126,7 +122,7 @@ body#tinymce {padding: 10px 20px;}
 	/* ------------------------------ Headlines */
 
 h1, h2, h3, h4, h5, h6, h7 {
-	font-family: 'PoliticsHeadBold', 'DejaWeb', 'Helvetica Neue', 'Arial', Sans-Serif;
+	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
 	font-weight: 400;
 	margin: 1em 0;
 	color: #181818;
