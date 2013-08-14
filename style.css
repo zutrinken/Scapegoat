@@ -1356,34 +1356,33 @@ body {
 }
 
 #logo {
-	height: 2.5em;
 	float: left;
 	font-family: 'PoliticsHeadBold', 'Helvetica Neue', 'Arial', Sans-Serif;
-	font-size: 3em;
-	line-height: 1em;
-	vertical-align: bottom;
-	text-transform: uppercase;
-	text-align: left;
-	
+	max-width: 75%;
+	max-height: 10em;
+
 	padding: 0;
-	margin: auto;
+	margin: 0;
 }
 #logo a,
 #logo a:active,
 #logo a:visited,
 #logo a:hover,
 #logo a:focus {
-	color: #303d40;
+	color: #404040;
 }
 #logo img {
 	display: block;
 	width: auto;
 	max-width: none;
-	height: 100%;
+	height: 10em;
 }
 #logo-text {
 	display: block;
-	margin: 2em auto 0;
+	padding: 2em auto 0;
+
+	font-size: 3em;
+	line-height: 1em;
 }
 #description-outer {
 	position: relative;

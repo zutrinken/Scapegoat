@@ -41,17 +41,18 @@
 		}
 		function SameHeight() {
 			var maxHeight1 = -1;
-			$('.footer-sidebar-inside').each(function() {
+			var footerWidget = $('.footer-sidebar-inside');
+			maxHeight1 = maxHeight1 > footerWidget.height() ? maxHeight1 : footerWidget.height();
+			footerWidget.each(function() {
 				$(this).height('auto');
-				maxHeight1 = maxHeight1 > $(this).height() ? maxHeight1 : $(this).height();
 				$(this).height(maxHeight1);
 			});
 			
 			var maxHeight2 = -1;
 			var footerList = $('#footer_navigation li').not('#footer_navigation li li');
+			maxHeight2 = maxHeight2 > footerList.height() ? maxHeight2 : footerList.height();
 			footerList.each(function() {
 				$(this).height('auto');
-				maxHeight2 = maxHeight2 > $(this).height() ? maxHeight2 : $(this).height();
 				$(this).height(maxHeight2);
 			});
 			/* Dynamic equal width in Footer-Menu */
