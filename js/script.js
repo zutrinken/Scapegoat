@@ -1,8 +1,32 @@
 (function ($, document, window) {
 	$(document).ready(function () {
+
+		/* Small OS Detection Function */
+		var isMobile = {
+		    Android: function() {
+		        return navigator.userAgent.match(/Android/i);
+		    },
+		    BlackBerry: function() {
+		        return navigator.userAgent.match(/BlackBerry/i);
+		    },
+		    iOS: function() {
+		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		    },
+		    Opera: function() {
+		        return navigator.userAgent.match(/Opera Mini/i);
+		    },
+		    Windows: function() {
+		        return navigator.userAgent.match(/IEMobile/i);
+		    },
+		    any: function() {
+		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		    }
+		};
 		
 		/* Parallax for header and slider images*/
-		$(window).scroll(parallaxScroll);
+		if(!isMobile.any()) {
+			$(window).scroll(parallaxScroll);
+		}
 		function parallaxScroll() {
 
 			/* Get scrolled distance */
