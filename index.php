@@ -1,4 +1,19 @@
 		<?php get_header(); ?>
+
+		<?php if(!($options['header-option'] == 'show-slider') && is_home() && !is_paged()) : ?>
+		<div id="title-outside">
+			<div id="title-inside" class="inside">
+				<header class="title-header">
+					<h2 class="post-title">
+						<?php _e('Blog','scapegoat'); ?>
+					</h2>
+					<aside class="post-description">
+						<p><?php bloginfo('description'); ?></p>
+					</aside>
+				</header>
+			</div>			
+		</div>
+		<?php endif; ?>
 		
 		<div id="wrapper-outside">
 			<div id="wrapper-inside" class="inside">

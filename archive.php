@@ -30,7 +30,7 @@
 							
 						<?php endif; ?>
 					</h2>
-					<?php if ((is_category()) && (category_description())) : ?>
+					<?php if (is_category() && category_description()) : ?>
 						<aside class="post-description">
 							<?php echo category_description(); ?>
 						</aside>
