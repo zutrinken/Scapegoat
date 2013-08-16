@@ -1706,21 +1706,24 @@ body {
 	background-size: 100% auto;
 }
 #front-page-slider li:nth-child(1n) .front-page-slide {
-	background-image: url('images/bg-featured-1.jpg');
+	/* First SLide is a Clone of the Last */
 }
 #front-page-slider li:nth-child(2n) .front-page-slide {
-	background-image: url('images/bg-featured-2.jpg');
+	background-image: url('images/bg-featured-1.jpg');
 }
 #front-page-slider li:nth-child(3n) .front-page-slide {
-	background-image: url('images/bg-featured-3.jpg');
+	background-image: url('images/bg-featured-2.jpg');
 }
 #front-page-slider li:nth-child(4n) .front-page-slide {
-	background-image: url('images/bg-featured-4.jpg');
+	background-image: url('images/bg-featured-3.jpg');
 }
 #front-page-slider li:nth-child(5n) .front-page-slide {
-	background-image: url('images/bg-featured-5.jpg');
+	background-image: url('images/bg-featured-4.jpg');
 }
 #front-page-slider li:nth-child(6n) .front-page-slide {
+	background-image: url('images/bg-featured-5.jpg');
+}
+#front-page-slider li:nth-child(7n) .front-page-slide {
 	background-image: url('images/bg-featured-6.jpg');
 }
 

@@ -1,6 +1,6 @@
 <?php if($options['header-option'] == 'show-slider') : ?>
 	<!-- customize slider by theme-options -->
-	<?php if($options['slider-num']) : $num=$options['slider-num']; else : $num=5; endif; ?>
+	<?php if($options['slider-num']) : $num=$options['slider-num']; else : $num=6; endif; ?>
 	<?php if($options['slider-cat']) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
 	<!-- filter post formats from slider query -->
 	<?php $no_formats = array(array('taxonomy' => 'post_format', 'field' => 'slug', 'terms' => array('post-format-status'), 'operator' => 'NOT IN')); ?>
