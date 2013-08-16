@@ -1,5 +1,8 @@
 		<?php get_header(); ?>
 
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
+
 		<?php if(!($options['header-option'] == 'show-slider') && is_home() && !is_paged()) : ?>
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
@@ -48,16 +51,29 @@
 							<?php echo get_post_meta($post->ID, 'video', true); ?>
 						</figure>
 					<?php elseif(has_post_thumbnail()) : ?>
-						<figure class="post-image">
-							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail('featured-medium'); ?>
-							</a>
-							<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-								<span class="post-image-caption">
-									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-								</span>
-							<?php endif; ?>
-						</figure>
+						<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+							<figure class="post-image">
+								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
+									<?php the_post_thumbnail('featured-medium'); ?>
+								</a>
+								<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+									<span class="post-image-caption">
+										<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+									</span>
+								<?php endif; ?>
+							</figure>
+						<?php else : ?>
+							<figure class="post-image post-image-mobile">
+								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
+									<?php the_post_thumbnail('featured-small'); ?>
+								</a>
+								<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+									<span class="post-image-caption">
+										<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+									</span>
+								<?php endif; ?>
+							</figure>
+						<?php endif; ?>
 					<?php endif; ?>
 				</header>
 		

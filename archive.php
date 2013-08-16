@@ -118,13 +118,8 @@
 				<?php if(has_post_thumbnail()) : ?>
 					<figure class="post-image">
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('thumbnail'); ?>
+							<?php the_post_thumbnail('featured-small'); ?>
 						</a>
-						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-							<span class="post-image-caption">
-								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-							</span>
-						<?php endif; ?>
 					</figure>
 				<?php else : ?>
 					<?php echo catch_post_image(); ?>

@@ -81,6 +81,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support('post-thumbnails');
 	add_image_size('featured', 1440, 486, true);
 	add_image_size('featured-medium', 720, 243, true);
+	add_image_size('featured-small', 480, 320, true);
 }
 
 

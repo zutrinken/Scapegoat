@@ -834,7 +834,7 @@ audio {
 	
 	background: #404040;
 	height: 0;
-	padding: 0 0 33.75%;
+	padding: 0 0 36%;
 }
 .post-image img {
 	display: block;
@@ -941,11 +941,11 @@ audio {
 }
 .archive .post-image,
 .search .post-image {
-	width: 24.333%;
+	width: 30%;
 	height: auto;
 	float: left;
 	padding: 0;
-	margin: 1.5em 9.111% 1em 0;
+	margin: 1.5em 2em 1em 0;
 }
 
 
@@ -1443,8 +1443,8 @@ body {
 }
 .title-header .post-description {
 	color: #fff;
-	font-size: 0.8em;
-	line-height: 1.2em;
+	font-size: 0.75em;
+	line-height: 1.5em;
 	width: 60%;
 }
 #title-images-wrapper {
@@ -2738,6 +2738,9 @@ body {
 		margin: 100px 0 0;
 		padding: 0;
 	}
+	.title-header .post-description {
+		width: auto;
+	}
 	#front-page-header-inside {
 		width: auto;
 	}
@@ -2772,16 +2775,6 @@ body {
 	#front-page-slider .front-page-slide .slide-text .slide-text-article {
 		display: block;
 		font-size: 0.75em;
-	}
-	.custom-header {
-		height: 240px;
-	}
-	.widget-sidebar {
-		padding: 0 0 50px;
-		border: 0;
-	}
-	.widget-sidebar .widget-inner {
-		padding: 0;
 	}
 }
 
@@ -3029,15 +3022,6 @@ body {
 	#end {
 		text-align: center;
 	}
-	.heading .sub-title .avatar {
-		float: none;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.heading .sub-title .sub-title-links .sub-title-link {
-		display: block;
-		float: none;
-	}
 	#footer-social-links {
 		float: none;
 		text-align: center;
@@ -3077,8 +3061,6 @@ body {
 	}
 
 
-
-
 	.type-post,
 	.type-page {
 		padding: 1em;
@@ -3086,6 +3068,9 @@ body {
 	.post-image,
 	.post-video {
 		margin: 0 -1em;
+	}
+	.post-image-mobile {
+		padding: 0 0 66%;
 	}
 	#respond-wrapper {
 		padding: 0.25em 1em;
@@ -3106,9 +3091,15 @@ body {
 	.sticky .info {
 		padding: 0 10px 10px;
 	}
-	.archive .post-image {
-		display: none;
+	.archive .post-image,
+	.search .post-image {
+		width: auto;
+		float: none;
+		height: 0;
+		padding: 0 0 66%;
+		margin: 1em -1em;
 	}
+
 	#author-meta {
 		padding-top: 2.5em;
 	}
