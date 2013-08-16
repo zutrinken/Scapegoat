@@ -53,9 +53,7 @@
 			<header id="header-inside" class="inside">
 				<div id="header-mobile">
 					<h1 id ="logo-mobile">
-						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
-							<?php bloginfo('name'); ?>
-						</a>
+						<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 					</h1>
 					<a href="#main-nav-inside" id="menu-open"><?php _e('Navigation','scapegoat'); ?></a>
 				</div>
@@ -66,9 +64,7 @@
 						</a>
 					<?php else : ?>
 						<span id="logo-text">
-							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
-								<?php bloginfo('name'); ?>
-							</a>
+							<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 						</span>
 					<?php endif; ?>
 				</figure><!-- logo -->
