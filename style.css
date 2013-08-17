@@ -2191,13 +2191,13 @@ body {
 	display: block;
 	width: 0;
 	height: 0;
-	border-right: 0.5em solid #808080;
+	border-right: 0.5em solid #262626;
 	border-top: 0.5em solid transparent;
 	border-bottom: 0.5em solid transparent;
 }
 #main-nav li li li {
-	background: #808080;
-	border-top: 1px solid #4d4d4d;
+	background: #262626;
+	border-top: 1px solid #000;
 }
 #main-nav ul ul ul a { 
 	width: 10em;
@@ -2206,10 +2206,11 @@ body {
 #main-nav ul ul ul a:active,
 #main-nav ul ul ul a:visited {
 	background: transparent;
-	color: #e3e3e3;
+	color: #bfbfbf;
 }
 #main-nav ul ul ul li:hover > a,
 #main-nav ul ul ul li:focus > a {
+	color: #e3e3e3;
 	background: rgba(0,0,0,0.2);
 }
 
