@@ -1,4 +1,7 @@
 		<?php get_header(); ?>
+		
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
 
 			<div id="title-images-wrapper">
 				<div id="title-outside">
@@ -11,7 +14,11 @@
 					</div>
 				</div>
 				<figure class="title-image parallax">
-					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404.jpg" alt="" /></a>
+					<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+						<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404-large.jpg" alt="" /></a>
+					<?php else : ?>
+						<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404-small.jpg" alt="" /></a>
+					<?php endif; ?>
 				</figure><!-- slide-image -->
 			</div>
 			
