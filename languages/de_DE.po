@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: scapegoat v1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-08-16 12:54:23+0000\n"
+"PO-Revision-Date: 2013-08-17 22:40:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,20 +20,20 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: 404.php:10
-#: functions.php:703
+#: 404.php:8
+#: functions.php:704
 #@ scapegoat
 msgid "404"
 msgstr "404"
 
 #: archive.php:11
-#: functions.php:695
+#: functions.php:696
 #@ scapegoat
 msgid "Tag"
 msgstr "Tag"
 
 #: archive.php:14
-#: functions.php:700
+#: functions.php:701
 #@ scapegoat
 msgid "Author"
 msgstr "Autor"
@@ -122,66 +122,64 @@ msgstr ""
 msgid "Abschicken"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:97
 #: inc/theme-options.php:206
 #@ scapegoat
 msgid "Header"
 msgstr "Kopfzeile"
 
-#: functions.php:97
+#: functions.php:98
 #@ scapegoat
 msgid "Footer"
 msgstr "Fußzeile"
 
-#: functions.php:105
-#: functions.php:620
+#: functions.php:106
+#: functions.php:621
 #@ scapegoat
 msgid "Start"
 msgstr "Start"
 
-#: archive.php:135
-#: index.php:69
-#: search.php:53
+#: archive.php:130
+#: index.php:85
+#: search.php:48
 #: slider.php:32
 #@ scapegoat
-#@ farewell
 msgid "more"
 msgstr "weiterlesen"
 
-#: functions.php:692
+#: functions.php:693
 #: search.php:7
 #@ scapegoat
-#@ farewell
 msgid "Search"
 msgstr "Suche"
 
-#: functions.php:708
+#: functions.php:709
 #@ scapegoat
 msgid "Page"
 msgstr "Seite"
 
-#: functions.php:758
+#: functions.php:759
 #@ scapegoat
 msgid "Title:"
 msgstr "Titel:"
 
-#: functions.php:763
+#: functions.php:764
 #@ scapegoat
 msgid "Image url:"
 msgstr "Bild url:"
 
-#: functions.php:768
+#: functions.php:769
 #@ scapegoat
 msgid "Link url:"
 msgstr "Link url:"
 
-#: functions.php:791
+#: functions.php:792
 #, php-format
 #@ scapegoat
 msgid "%s"
 msgstr "%s"
 
-#: functions.php:806
+#: functions.php:807
 #@ scapegoat
 msgid "Your comment will be public soon."
 msgstr "Dein Kommentar wird bald veröffentlicht."
@@ -271,7 +269,7 @@ msgstr ""
 msgid "icon"
 msgstr ""
 
-#: functions.php:607
+#: functions.php:608
 #: inc/theme-options.php:83
 #@ scapegoat
 msgid "Submenu"
@@ -293,12 +291,12 @@ msgstr ""
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:723
+#: functions.php:724
 #@ scapegoat
 msgid "Banner"
 msgstr "Banner"
 
-#: functions.php:725
+#: functions.php:726
 #@ scapegoat
 msgid "A simple Widget for Images."
 msgstr "Ein einfaches Widget für Bilder."
@@ -325,20 +323,20 @@ msgstr "Ältere Kommentare"
 msgid "Newer Comments"
 msgstr "Neuere Kommentare"
 
-#: functions.php:165
+#: functions.php:166
 #@ scapegoat
 msgid "Main-Sidebar"
 msgstr "Haupt-Sidebar"
 
-#: functions.php:166
+#: functions.php:167
 #@ scapegoat
 msgid "The default sidebar."
 msgstr "Die Standard Sidebar"
 
-#: functions.php:177
-#: functions.php:188
-#: functions.php:199
-#: functions.php:210
+#: functions.php:178
+#: functions.php:189
+#: functions.php:200
+#: functions.php:211
 #@ scapegoat
 msgid "Widgets for the Footer-section."
 msgstr "Widgets für die Fußzeile-Sidebar"
@@ -365,7 +363,7 @@ msgid "Next"
 msgstr "Nächste"
 
 #: archive.php:114
-#: index.php:34
+#: index.php:37
 #: page-full.php:12
 #: page-full.php:32
 #: page-full.php:52
@@ -381,7 +379,7 @@ msgstr "Nächste"
 msgid "Edit"
 msgstr "bearbeiten"
 
-#: functions.php:230
+#: functions.php:231
 #: inc/theme-options.php:98
 #: inc/theme-options.php:120
 #: inc/theme-options.php:144
@@ -419,9 +417,9 @@ msgstr "automatische Auszüge"
 msgid "if this is checked, you don't need more-tags"
 msgstr "bei Aktivierung benötigst du keine more-tags"
 
-#: header.php:60
-#: header.php:106
-#: header.php:107
+#: header.php:58
+#: header.php:102
+#: header.php:103
 #: inc/theme-options.php:80
 #@ scapegoat
 msgid "Navigation"
@@ -486,24 +484,24 @@ msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/uploa
 msgid "at the top of the sidebar"
 msgstr "am Anfang der Sidebar"
 
-#: index.php:41
+#: index.php:44
 #@ scapegoat
 msgid "Posted in: "
 msgstr "Abgelegt in: "
 
-#: functions.php:532
-#: functions.php:551
+#: functions.php:533
+#: functions.php:552
 #@ scapegoat
 msgid "Page "
 msgstr "Seite "
 
-#: functions.php:532
-#: functions.php:553
+#: functions.php:533
+#: functions.php:554
 #@ scapegoat
 msgid " of "
 msgstr " von "
 
-#: functions.php:796
+#: functions.php:797
 #, php-format
 #@ default
 msgid "%1$s"
@@ -668,29 +666,29 @@ msgstr "Website: "
 msgid "Biography: "
 msgstr "Biografie: "
 
-#: archive.php:145
-#: index.php:85
+#: archive.php:140
+#: index.php:101
 #: single.php:75
 #@ scapegoat
 msgid "Article Navigation"
 msgstr "Artikelnavigation"
 
-#: functions.php:176
+#: functions.php:177
 #@ scapegoat
 msgid "Footer-Sidebar-1"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:188
 #@ scapegoat
 msgid "Footer-Sidebar-2"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:199
 #@ scapegoat
 msgid "Footer-Sidebar-3"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:210
 #@ scapegoat
 msgid "Footer-Sidebar-4"
 msgstr ""
@@ -700,12 +698,12 @@ msgstr ""
 msgid "appdotnet"
 msgstr ""
 
-#: index.php:8
+#: index.php:11
 #@ scapegoat
 msgid "Blog"
 msgstr "Blog"
 
-#: index.php:76
+#: index.php:92
 #@ scapegoat
 msgid "<span class=\"post-tags\">Tagged with: "
 msgstr "<span class=\"post-tags\">Getaggt mit: "
@@ -774,4 +772,14 @@ msgstr "%"
 #@ scapegoat
 msgid "closed"
 msgstr "geschlossen"
+
+#: 404.php:31
+#@ scapegoat
+msgid "All that glittered was not gold. But it was still nice."
+msgstr "Nicht alles, was glänzte, war Gold. Aber es war trotzdem schön."
+
+#: 404.php:32
+#@ scapegoat
+msgid "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"https://twitter.com/kc__dc\" rel=\"nofollow\">Katja Dathe</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
+msgstr "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"https://twitter.com/kc__dc\" rel=\"nofollow\">Katja Dathe</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
 

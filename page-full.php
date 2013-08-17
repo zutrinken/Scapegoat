@@ -14,7 +14,7 @@
 						</header>
 					</div>
 				</div>
-				<figure class="title-image">
+				<figure class="title-image parallax">
 					<?php the_post_thumbnail('featured'); ?>
 					<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
 						<span class="meta-thumbnail-caption">
