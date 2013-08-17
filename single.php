@@ -1,6 +1,9 @@
 		<?php get_header(); ?>
 		
-		<?php if(has_post_thumbnail()) : ?>
+		<!-- Mobiel Detect -->
+		<?php $detect = new Mobile_Detect(); ?>
+		
+		<?php if(has_post_thumbnail() && (!$detect->isMobile() || $detect->isTablet())) : ?>
 			<div id="title-images-wrapper">
 				<div id="title-outside">
 					<div id="title-inside" class="inside">
