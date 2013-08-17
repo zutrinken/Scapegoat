@@ -3029,6 +3029,8 @@ body {
 		width: auto;
 		max-width: none;
 		height: 100%;
+		left: 50%;
+		margin-left: -24em;
 	}
 	.type-post,
 	.type-page {
