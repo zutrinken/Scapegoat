@@ -1581,9 +1581,10 @@ body {
 	display: inline-block;
 	width: 2em;
 	height: 2em;
+	line-height: 2em;
 	margin: 0 0 0.25em 0;
-	text-indent: -10000px;
 	text-align: center;
+	color: #fff !important;
 	background-color: #f80;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -1598,35 +1599,27 @@ body {
 	background-color: #f50;
 }
 .social-icon.rss {
-	background-image: url('images/icon-social-rss.png');
 /* 	background-color: #ee9900; */
 }
 .social-icon.twitter {
-	background-image: url('images/icon-social-twitter.png');
 /* 	background-color: #3ea9dd; */
 }
 .social-icon.appdotnet {
-	background-image: url('images/icon-social-appdotnet.png');
 /* 	background-color: #cbccce; */
 }
 .social-icon.facebook {
-	background-image: url('images/icon-social-facebook.png');
 /* 	background-color: #3c5a98; */
 }
 .social-icon.google {
-	background-image: url('images/icon-social-plus.png');
 /* 	background-color: #d14836; */
 }
 .social-icon.youtube {
-	background-image: url('images/icon-social-youtube.png');
 /* 	background-color: #c6312b; */
 }
 .social-icon.mail {
-	background-image: url('images/icon-social-mail.png');
 /* 	background-color: #efbf00; */
 }
 .social-icon.podcast {
-	background-image: url('images/icon-social-podcast.png');
 /* 	background-color: #408ad2; */
 }
 
@@ -3175,26 +3168,5 @@ body {
 	}
 	.post-nav .post-nav-next {
 		background-image: url('images/arrow-bold-right@2x.png');
-	}
-	.social-icon.rss {
-		background-image: url('images/icon-social-rss@2x.png');
-	}
-	.social-icon.twitter {
-		background-image: url('images/icon-social-twitter@2x.png');
-	}
-	.social-icon.facebook {
-		background-image: url('images/icon-social-facebook@2x.png');
-	}
-	.social-icon.google {
-		background-image: url('images/icon-social-plus@2x.png');
-	}
-	.social-icon.youtube {
-		background-image: url('images/icon-social-youtube@2x.png');
-	}
-	.social-icon.mail {
-		background-image: url('images/icon-social-mail@2x.png');
-	}
-	.social-icon.podcast {
-		background-image: url('images/icon-social-podcast@2x.png');
 	}
 }
