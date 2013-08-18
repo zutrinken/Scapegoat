@@ -5,9 +5,10 @@
 
 ## ABOUT SCAPEGOAT
 
-* the theme is made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
-* the default slider images and the 404 image are taken by [Ben de Biel](http://www.bendebiel.com/)
-* the font "PoliticsHeadBold" is made by [Fred Bordfeld](http://kaklotter.de/)
+* Made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
+* Slider and 404 image by [Ben de Biel](http://www.bendebiel.com/)
+* Font "PoliticsHeadBold" by [Fred Bordfeld](http://kaklotter.de/)
+* Font "Awesome" by [Dave Gandy](http://fontawesome.io/)
 
 ## HOW TO
 
