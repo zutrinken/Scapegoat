@@ -2472,9 +2472,7 @@ body {
 
 	/* ------------------------------ Widget Text */
 
-.widget_text {
-	text-align: left;
-}
+.widget_text {}
 
 	/* ------------------------------ Widget Calendar */
 
@@ -2596,28 +2594,20 @@ body {
 	font-weight: 700;
 	margin: 1em 0;
 
-	font-size: 1em;
-	line-height: 1.5em;
+	font-size: 1.666em;
+	line-height: 1.25em;
 }
 .widget_rss ul li span.rss-date {
 	display: block;
 	margin: 0 0 2em;
 
 	font-weight: 700;
-	font-size: 0.75em;
-	line-height: 1.5em;
 }
-.widget_rss ul li .rssSummary {
-	font-size: 0.8em;
-	line-height: 1.3em;
-}
+.widget_rss ul li .rssSummary {}
 .widget_rss ul li cite {
 	display: block;
 	margin: 1em 0;
-
 	font-weight: 700;
-	font-size: 0.75em;
-	line-height: 1.5em;
 }
 
 	/* ------------------------------ Widget Meta */
