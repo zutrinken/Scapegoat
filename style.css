@@ -797,7 +797,6 @@ audio {
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-
 }
 .type-post:after {
 	position: absolute;
@@ -952,11 +951,13 @@ audio {
 	/* ------------------------------ Sticky Posts */
 
 .sticky {
-	background: #f4f4f4;
-	margin-left: -1em;
-	margin-right: -1em;
-	padding: 1em;
+	background: #e5f6ff;
+	border: 1px solid #acd2e5;
+	-webkit-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
+	box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 }
+
 
 	/* ------------------------------ Format Status */
 
@@ -966,9 +967,6 @@ audio {
 	margin-right: -1em;
 	padding: 0.75em;
 	border: 0.25em solid #e3e3e3;
-}
-.sticky.front-post.format-status {
-	background: #f4f4f4;
 }
 
 
@@ -3061,9 +3059,6 @@ body {
 	}
 	.article {
 		font-size: 1em;
-	}
-	.sticky .info {
-		padding: 0 10px 10px;
 	}
 	.archive .post-image,
 	.search .post-image {
