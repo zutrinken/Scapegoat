@@ -34,7 +34,7 @@
 			scrolled = Math.round(scrolled);
 
 			/* Manipulate the header and slider images */
-			var prlx = $('.parallax')
+			var prlx = $('.parallax');
 			var parallaxOffset = prlx.offset().top;
 			parallaxOffset = Math.round(parallaxOffset);
 

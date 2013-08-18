@@ -3,7 +3,7 @@
 		<!-- Mobiel Detect -->
 		<?php $detect = new Mobile_Detect(); ?>
 
-		<?php if(!($options['header-option'] == 'show-slider') && is_home() && !is_paged()) : ?>
+		<?php if(!($options['header-option'] == 'show-slider') && !($options['header-option'] == 'show-header') && is_home() && !is_paged()) : ?>
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
 				<header class="title-header">

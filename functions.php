@@ -221,8 +221,8 @@ function my_register_sidebars() {
 
 define('NO_HEADER_TEXT', true );
 define('HEADER_IMAGE', '%s/images/default_header.jpg');
-define('HEADER_IMAGE_WIDTH', 1140);
-define('HEADER_IMAGE_HEIGHT', 320);
+define('HEADER_IMAGE_WIDTH', 1440);
+define('HEADER_IMAGE_HEIGHT', 486);
 
 register_default_headers(array(
 	'ruins' => array(
@@ -235,8 +235,8 @@ register_default_headers(array(
 function header_style() {
 	?><style type="text/css">
 		.custom-header {
-			background: url(<?php header_image(); ?>) center top;
-			background-size: auto 100%;
+			background: url('<?php header_image(); ?>') scroll no-repeat;
+			background-size: 100% auto;
 		}
 	</style><?php
 }

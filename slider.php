@@ -98,7 +98,7 @@
 	<?php $header_image = get_header_image(); if($header_image) : ?>
 		<section id="front-page-header-image-outside">
 			<div id="front-page-header-image-inside" class="inside">
-				<figure class="custom-header"></figure>
+				<figure class="custom-header front-page-slide"></figure>
 			</div><!-- front-page-header-image-inside -->
 		</section><!-- front-page-header-image-outside --> 
 	<?php endif; ?>
