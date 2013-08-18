@@ -433,9 +433,8 @@ img[align="right"] {
 }
 .searchform .searchinput:hover,
 .searchform .searchinput:focus {}
-.searchform .searchsubmit,
-.searchform .searchsubmit:hover,
-.searchform .searchsubmit:focus {
+
+.searchform .searchsubmit {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -444,15 +443,18 @@ img[align="right"] {
 	display: block;
 	padding: 0;
 	margin: 0.25em;
-	color: transparent !important;
+	color: #0077b3;
+	background: transparent;
 	width: 2.25em;
 	height: 2.25em;
-	background: url('images/icon-search.png') center center scroll no-repeat;
-	background-size: 14px 14px;
 
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+.searchform .searchsubmit:hover,
+.searchform .searchsubmit:focus {
+	color: #005580;	
 }
 
 
@@ -3146,19 +3148,8 @@ body {
 	.article ul li:before {
 		background-image: url('images/icon-list@2x.png');
 	}
-	.searchform .searchsubmit,
-	.searchform .searchsubmit:hover,
-	.searchform .searchsubmit:focus {
-		background-image: url('images/icon-search@2x.png');
-	}
 	#front-page-slider-toggle {
 		background-image: url('images/icon-slideshow@2x.png');
-	}
-	#slideshow #prev {
-		background-image: url('images/arrow-left@2x.png');
-	}
-	#slideshow #next {
-		background-image: url('images/arrow-right@2x.png');
 	}
 	.front-post:after {
 		background-image: url('images/bg-front-post@2x.png');
