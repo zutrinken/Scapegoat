@@ -38,10 +38,12 @@
 					</h2>
 					<aside class="info post-meta">
 						<span class="post-date">
+							<i class="icon-calendar"></i>
 							<?php the_time('j.m.y'); ?>
 						</span>
 						<span class="post-categories">
-							<?php _e('Posted in: ','scapegoat'); ?>
+							<i class="icon-folder-open"></i>
+							<?php _e('Category: ','scapegoat'); ?>
 							<?php the_category(', '); ?>
 						</span>
 					</aside>
@@ -89,7 +91,7 @@
 				
 				<?php if(!has_post_format('status')) : ?>
 					<footer class="footer post-meta">
-						<?php the_tags(__('<span class="post-tags">Tagged with: ','scapegoat'),', ','</span>'); ?>
+						<?php the_tags(__('<span class="post-tags"><i class="icon-tag"></i> Tags: ','scapegoat'),', ','</span>'); ?>
 					</footer>
 				<?php endif; ?>
 				

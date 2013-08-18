@@ -861,13 +861,14 @@ audio {
 }
 .article {}
 .post-more {
-	float: right;
-	clear: both;
-
+	position: absolute;
+	right: 3em;
+	bottom: 3em;
 	display: block;
 	margin: auto;
-	padding: 0.25em 0.75em;
+	padding: 0.5em 1em;
 	
+	font-size: 1em !important;
 	color: #fff !important;
 	background: #f80;
 }
@@ -875,10 +876,6 @@ audio {
 .post-more:focus {
 	background: #f50;
 }
-
-.info {}
-.footer {}
-
 .post-meta {
 	color: #808080;
 	padding: 1em 0;
@@ -929,6 +926,13 @@ audio {
 }
 .post-tags {
 	background-image: url('images/icon-meta-tag.png');
+}
+
+.info {}
+.footer {
+	clear: both;
+	float: none;
+	padding: 0.45em 0;
 }
 
 	/* ------------------------------ Archive Posts */
@@ -2414,8 +2418,6 @@ body {
 .widget-footer a:focus {
 	color: #fff;
 }
-
-
 
 	/* ------------------------------ Widget Banner */
 

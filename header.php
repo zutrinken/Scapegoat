@@ -23,10 +23,14 @@
 
 		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/style.css" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/font-awesome.min.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/plugins.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/print.css" media="print" />
 		<!--[if IE]>
 			<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/ie.css" media="screen" />
+		<![endif]-->
+		<!--[if IE 7]>
+			<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/font-awesome-ie7.min.css" media="screen" />
 		<![endif]-->
 
 		<!-- Favicon -->

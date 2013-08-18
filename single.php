@@ -100,6 +100,7 @@
 			<section id="post-meta" class="post-meta sidebar" role="complementary">
 				<span class="post-date">
 					<span class="label">
+						<i class="icon-calendar"></i>
 						<?php _e('Date: ','scapegoat'); ?>
 					</span>
 					<span class="value">
@@ -112,6 +113,7 @@
 				</span>
 				<span class="post-author">
 					<span class="label">
+						<i class="icon-user"></i>
 						<?php _e('Author: ','scapegoat'); ?>
 					</span>
 					<span class="value">
@@ -120,15 +122,17 @@
 				</span>
 				<span class="post-categories">
 					<span class="label">
+						<i class="icon-folder-open"></i>
 						<?php _e('Category: ','scapegoat'); ?>
 					</span>
 					<span class="value">
 						<?php the_category(', '); ?>
 					</span>
 				</span>
-				<?php the_tags(__('<span class="post-tags"><span class="label">Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
+				<?php the_tags(__('<span class="post-tags"><span class="label"><i class="icon-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
 				<span class="post-comments">
 					<span class="label">
+						<i class="icon-comments"></i>
 						<?php _e('Comments: ','scapegoat'); ?>
 					</span>
 					<span class="value">
