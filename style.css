@@ -901,7 +901,7 @@ audio {
 .post-comments,
 .post-categories,
 .post-tags {
-	padding: 0.4em 1.4em 0.3em 2.8em;
+	padding: 0.4em 1.4em;
 	display: inline-block;
 	min-height: 1.5em;
 	line-height: 1.5em;
@@ -911,21 +911,6 @@ audio {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 24px 24px;
-}
-.post-date {
-	background-image: url('images/icon-meta-calendar.png');
-}
-.post-author {
-	background-image: url('images/icon-meta-pencil.png');
-}
-.post-comments {
-	background-image: url('images/icon-meta-speech.png');
-}
-.post-categories {
-	background-image: url('images/icon-meta-folder.png');
-}
-.post-tags {
-	background-image: url('images/icon-meta-tag.png');
 }
 
 .info {}
@@ -3190,21 +3175,6 @@ body {
 	}
 	.post-nav .post-nav-next {
 		background-image: url('images/arrow-bold-right@2x.png');
-	}
-	.post-date {
-		background-image: url('images/icon-meta-calendar@2x.png');
-	}
-	.post-author {
-		background-image: url('images/icon-meta-pencil@2x.png');
-	}
-	.replys {
-		background-image: url('images/icon-meta-speech@2x.png');
-	}
-	.categories {
-		background-image: url('images/icon-meta-folder@2x.png');
-	}
-	.tags {
-		background-image: url('images/icon-meta-tag@2x.png');
 	}
 	.social-icon.rss {
 		background-image: url('images/icon-social-rss@2x.png');
