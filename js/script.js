@@ -138,6 +138,10 @@
 				pauseOnAction:		false,
 				pauseOnHover:		false,
 				pausePlay:			true,
+				pauseText:			'<i class="icon-pause"></i>',
+				playText:			'<i class="icon-play"></i>',
+				prevText:			'<i class="icon-chevron-left"></i>',
+				nextText:			'<i class="icon-chevron-right"></i>',
 				controlsContainer:	'#front-page-slider-control-inside', 
 				start:				function(slider) {
 										$('body').removeClass('loading');	

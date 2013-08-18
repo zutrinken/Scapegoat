@@ -65,20 +65,10 @@ html[xmlns] .slides {display: block;}
 	padding: 0.5em;
 	cursor: pointer;
 
-	color: transparent;
-	text-indent: -10000px;
-
-	background-position: center center;
-	background-attachment: scroll;
-	background-repeat: no-repeat;
-	background-size: 18px 18px;
+	color: #fff;
 }
-.flex-pauseplay .flex-play {
-	background-image: url('../images/icon-control-play.png');
-}
-.flex-pauseplay .flex-pause {
-	background-image: url('../images/icon-control-pause.png');
-}
+.flex-pauseplay .flex-play {}
+.flex-pauseplay .flex-pause {}
 
 
 
@@ -107,20 +97,13 @@ html[xmlns] .slides {display: block;}
 	width: 1em;
 	height: 1em;
 	line-height: 1em;
-	color: #bfbfbf;
+	color: #fff;
 	cursor: pointer;
 	text-align: center;
 	z-index: 2000;
-	text-indent: -999em;
 }
-.flex-direction-nav .flex-next {
-	background: url('../images/arrow-bold-right.png') center center no-repeat scroll;
-	background-size: 18px 18px;
-}
-.flex-direction-nav .flex-prev {
-	background: url('../images/arrow-bold-left.png') center center no-repeat scroll;
-	background-size: 18px 18px;
-}
+.flex-direction-nav .flex-next {}
+.flex-direction-nav .flex-prev {}
 .flex-direction-nav .disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
 
 
@@ -183,16 +166,4 @@ html[xmlns] .slides {display: block;}
 		only screen and (-moz-min-device-pixel-ratio: 2), 
 		only screen and (-o-min-device-pixel-ratio: 2/1), 
 		only screen and (min-device-pixel-ratio: 2) {
-	.flex-direction-nav .flex-next {
-		background-image: url('../images/arrow-bold-right@2x.png');
-	}
-	.flex-direction-nav .flex-prev {
-		background-image: url('../images/arrow-bold-left@2x.png');
-	}
-	.flex-pauseplay .flex-play {
-		background-image: url('../images/icon-control-play@2x.png');
-	}
-	.flex-pauseplay .flex-pause {
-		background-image: url('../images/icon-control-pause@2x.png');
-	}
 }
