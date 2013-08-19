@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: scapegoat v1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-08-17 22:40:52+0000\n"
+"PO-Revision-Date: 2013-08-19 21:10:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: 404.php:8
+#: 404.php:11
 #: functions.php:704
 #@ scapegoat
 msgid "404"
@@ -140,7 +140,7 @@ msgid "Start"
 msgstr "Start"
 
 #: archive.php:130
-#: index.php:85
+#: index.php:87
 #: search.php:48
 #: slider.php:32
 #@ scapegoat
@@ -280,12 +280,12 @@ msgstr "Unterseiten"
 msgid "google"
 msgstr ""
 
-#: page-full.php:56
-#: page-full.php:58
-#: page.php:55
-#: page.php:57
-#: single.php:57
-#: single.php:59
+#: page-full.php:59
+#: page-full.php:61
+#: page.php:58
+#: page.php:60
+#: single.php:60
+#: single.php:62
 #@ farewell
 #@ scapegoat
 msgid "Pages:"
@@ -357,23 +357,23 @@ msgstr "Das ist nicht der Inhalt, den du suchst."
 msgid "*"
 msgstr "*"
 
-#: single.php:92
+#: single.php:95
 #@ scapegoat
 msgid "Next"
 msgstr "Nächste"
 
 #: archive.php:114
 #: index.php:37
-#: page-full.php:12
-#: page-full.php:32
-#: page-full.php:52
-#: page.php:10
-#: page.php:30
-#: page.php:50
+#: page-full.php:15
+#: page-full.php:35
+#: page-full.php:55
+#: page.php:13
+#: page.php:33
+#: page.php:53
 #: search.php:32
-#: single.php:10
-#: single.php:30
-#: single.php:52
+#: single.php:13
+#: single.php:33
+#: single.php:55
 #@ scapegoat
 #@ farewell
 msgid "Edit"
@@ -417,9 +417,9 @@ msgstr "automatische Auszüge"
 msgid "if this is checked, you don't need more-tags"
 msgstr "bei Aktivierung benötigst du keine more-tags"
 
-#: header.php:58
-#: header.php:102
-#: header.php:103
+#: header.php:62
+#: header.php:106
+#: header.php:107
 #: inc/theme-options.php:80
 #@ scapegoat
 msgid "Navigation"
@@ -483,11 +483,6 @@ msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/uploa
 #@ scapegoat
 msgid "at the top of the sidebar"
 msgstr "am Anfang der Sidebar"
-
-#: index.php:44
-#@ scapegoat
-msgid "Posted in: "
-msgstr "Abgelegt in: "
 
 #: functions.php:533
 #: functions.php:552
@@ -643,32 +638,32 @@ msgid "Archive"
 msgstr "Archiv"
 
 #: archive.php:56
-#: single.php:150
+#: single.php:158
 #@ scapegoat
 msgid "Twitter: "
 msgstr "Twitter: "
 
 #: archive.php:67
-#: single.php:161
+#: single.php:170
 #@ scapegoat
 msgid "Wiki: "
 msgstr "Wiki: "
 
 #: archive.php:78
-#: single.php:172
+#: single.php:182
 #@ scapegoat
 msgid "Website: "
 msgstr "Website: "
 
 #: archive.php:89
-#: single.php:183
+#: single.php:193
 #@ scapegoat
 msgid "Biography: "
 msgstr "Biografie: "
 
 #: archive.php:140
-#: index.php:101
-#: single.php:75
+#: index.php:103
+#: single.php:78
 #@ scapegoat
 msgid "Article Navigation"
 msgstr "Artikelnavigation"
@@ -703,83 +698,84 @@ msgstr ""
 msgid "Blog"
 msgstr "Blog"
 
-#: index.php:92
-#@ scapegoat
-msgid "<span class=\"post-tags\">Tagged with: "
-msgstr "<span class=\"post-tags\">Getaggt mit: "
-
 #: sidebar.php:3
 #@ scapegoat
 msgid "Sidebar"
 msgstr ""
 
-#: single.php:78
+#: single.php:81
 #@ scapegoat
 msgid "Prev"
 msgstr "Vorherige"
 
-#: single.php:84
+#: single.php:87
 #@ scapegoat
 msgid "Back"
 msgstr "Nächste"
 
-#: single.php:85
+#: single.php:88
 #@ goat
 msgid "All Projects"
 msgstr ""
 
-#: single.php:100
+#: single.php:104
 #@ scapegoat
 msgid "Date: "
 msgstr "Datum: "
 
-#: single.php:112
+#: single.php:117
 #@ scapegoat
 msgid "Author: "
 msgstr "Autor: "
 
-#: single.php:120
+#: index.php:46
+#: single.php:126
 #@ scapegoat
 msgid "Category: "
 msgstr "Kategorie: "
 
-#: single.php:126
-#@ scapegoat
-msgid "<span class=\"post-tags\"><span class=\"label\">Tags:</span> <span class=\"value\">"
-msgstr "<span class=\"post-tags\"><span class=\"label\">Tags:</span> <span class=\"value\">"
-
-#: single.php:129
+#: single.php:136
 #@ scapegoat
 msgid "Comments: "
 msgstr "Kommentare: "
 
-#: single.php:133
+#: single.php:140
 #@ scapegoat
 msgid "0"
 msgstr "0"
 
-#: single.php:134
+#: single.php:141
 #@ scapegoat
 msgid "1"
 msgstr "1"
 
-#: single.php:135
+#: single.php:142
 #@ scapegoat
 msgid "%"
 msgstr "%"
 
-#: single.php:137
+#: single.php:144
 #@ scapegoat
 msgid "closed"
 msgstr "geschlossen"
 
-#: 404.php:31
+#: 404.php:38
 #@ scapegoat
 msgid "All that glittered was not gold. But it was still nice."
 msgstr "Nicht alles, was glänzte, war Gold. Aber es war trotzdem schön."
 
-#: 404.php:32
+#: 404.php:39
 #@ scapegoat
-msgid "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"https://twitter.com/kc__dc\" rel=\"nofollow\">Katja Dathe</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
-msgstr "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"https://twitter.com/kc__dc\" rel=\"nofollow\">Katja Dathe</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
+msgid "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
+msgstr "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
+
+#: index.php:94
+#@ scapegoat
+msgid "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
+msgstr "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
+
+#: single.php:132
+#@ scapegoat
+msgid "<span class=\"post-tags\"><span class=\"label\"><i class=\"icon-tag\"></i> Tags:</span> <span class=\"value\">"
+msgstr "<span class=\"post-tags\"><span class=\"label\"><i class=\"icon-tag\"></i> Tags:</span> <span class=\"value\">"
 

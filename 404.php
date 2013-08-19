@@ -36,7 +36,7 @@
 	
 					<article class="article">
 						<p><?php _e('All that glittered was not gold. But it was still nice.','scapegoat'); ?></p>
-						<p><?php _e('<strong>Krasse Herde</strong> – <a target="_blank" href="http://kaklotter.de/" rel="nofollow">Fred Bordfeld</a>, <a target="_blank" href="http://zombietetris.de/" rel="nofollow">Lotte Steenbrink</a>, <a target="_blank" href="https://twitter.com/kc__dc" rel="nofollow">Katja Dathe</a>, <a target="_blank" href="http://bendebiel.com/" rel="nofollow">Ben de Biel</a>, <a target="_blank" href="http://zutrinken.com/" rel="nofollow">Peter Amende</a>.','scapegoat'); ?></p>
+						<p><?php _e('<strong>Krasse Herde</strong> – <a target="_blank" href="http://kaklotter.de/" rel="nofollow">Fred Bordfeld</a>, <a target="_blank" href="http://zombietetris.de/" rel="nofollow">Lotte Steenbrink</a>, <a target="_blank" href="http://bendebiel.com/" rel="nofollow">Ben de Biel</a>, <a target="_blank" href="http://zutrinken.com/" rel="nofollow">Peter Amende</a>.','scapegoat'); ?></p>
 					</article>
 					
 				</section>
