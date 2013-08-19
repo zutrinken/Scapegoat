@@ -439,14 +439,14 @@ img[align="right"] {
 	right: 0;
 	top: 0;
 	border: 0;
-	font-size: 1em;
+	font-size: 1.25em;
 	display: block;
 	padding: 0;
-	margin: 0.25em;
+	margin: 3px;
 	color: #0077b3;
 	background: transparent;
-	width: 2.25em;
-	height: 2.25em;
+	width: 2em;
+	height: 2em;
 
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -887,6 +887,13 @@ audio {
 	font-size: 0.75em;
 	line-height: 1.25em;
 }
+.post-meta i {
+	font-size: 1.25em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+	width: 1em;
+	display: inline-block;
+}
 .post-meta a,
 .post-meta a:active,
 .post-meta a:visited {
@@ -983,9 +990,11 @@ audio {
 .sidebar.post-meta > span {
 	display: block;
 	float: none;
-	margin: 2em;
+	margin: 1em 0;
+	padding: 0;
 }
 .sidebar.post-meta .label {}
+.sidebar.post-meta .label i {}
 .sidebar.post-meta .value {}
 
 #post-meta {
@@ -1029,6 +1038,12 @@ audio {
 .post-nav {
 	overflow: auto;
 	text-align: center;
+
+	background: #fff;
+	border: 1px solid #d1d1d1;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 .post-nav-link {
 	display: block;
@@ -1038,11 +1053,10 @@ audio {
 .post-nav-link .post-nav-inner {
 	display: block;
 	overflow: hidden;
-	background-color: #f80;
 }
 .post-nav-link:hover .post-nav-inner,
 .post-nav-link:focus .post-nav-inner {
-	background-color: #f50;
+	background-color: #f4f4f4;
 }
 .post-nav-link .post-nav-inner a {
 	display: block;
@@ -2361,12 +2375,9 @@ body {
 
 .widget-sidebar {
 	color: #808080;
-	padding: 1em;
 	margin: 3.75em auto;
 }
 .widget-sidebar .widget-title {
-	padding: 0.666em;
-	margin: -0.666em -0.666em 0.666em;
 	border-bottom: 2px solid #f80;
 }
 .widget-sidebar a,

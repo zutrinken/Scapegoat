@@ -154,6 +154,7 @@
 				<?php if(get_the_author_meta('twitter')) : ?>
 				<span class="author-twitter">
 					<span class="label">
+						<i class="icon-twitter"></i>
 						<?php _e('Twitter: ','scapegoat') ?>
 					</span>
 					<span class="value">
@@ -165,6 +166,7 @@
 				<?php if(get_the_author_meta('wiki')) : ?>
 				<span class="author-wiki">
 					<span class="label">
+						<i class="icon-book"></i>
 						<?php _e('Wiki: ','scapegoat') ?>
 					</span>
 					<span class="value">
@@ -176,6 +178,7 @@
 				<?php if(get_the_author_meta('user_url')) : ?>
 				<span class="author-website">
 					<span class="label">
+						<i class="icon-globe"></i>
 						<?php _e('Website: ','scapegoat') ?>
 					</span>
 					<span class="value">
