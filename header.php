@@ -1,15 +1,8 @@
 <!DOCTYPE HTML>
 <html class="no-js" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-
-	<!-- Mobiel Detect -->
-	<?php $detect = new Mobile_Detect(); ?>
-
-	<!-- load the Theme Options -->
-	<?php $options = get_option('scapegoat_theme_options'); ?>
-
-	<!-- Template Path -->
-	<?php $template_url = get_bloginfo('template_url'); ?>
-
+	<?php $detect = new Mobile_Detect(); /* Mobiel Detect */ ?>	
+	<?php $options = get_option('scapegoat_theme_options'); /* load the Theme Options */ ?>
+	<?php $template_url = get_bloginfo('template_url'); /* Template Path */ ?>
 	<head profile="http://gmpg.org/xfn/11">
 
 		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
@@ -21,26 +14,22 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
-		<!-- Stylesheet -->
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/style.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/font-awesome.min.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/plugins.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/print.css" media="print" />
 		<!--[if IE]>
-			<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/ie.css" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/ie.css" media="screen" />
 		<![endif]-->
 		<!--[if IE 7]>
-			<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/font-awesome-ie7.min.css" media="screen" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/font-awesome-ie7.min.css" media="screen" />
 		<![endif]-->
 
-		<!-- Favicon -->
 		<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo $template_url; ?>/favicon.ico" />
-
-		<!-- Touch Icon -->
 		<?php if($options['icon']) : ?>
-			<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
+		<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
 		<?php else : ?>
-			<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
+		<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
 		<?php endif; ?>
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
