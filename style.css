@@ -1350,7 +1350,7 @@ body {
 	position: relative;
 }
 #logo-mobile {
-	padding: 0.5em 1em 0.5em 17.5%;
+	padding: 0.5em 1em 0.5em 25%;
 	font-size: 2em;
 	margin: 0;
 }
@@ -2233,10 +2233,10 @@ body {
 	margin: 0;
 	
 	position: absolute;
-	right: -14.5%;
+	right: -25%;
 	top: 0;
 	height: 100%;
-	width: 14.5%;
+	width: 25%;
 	z-index: 200;
 
 	-webkit-transition: all 0.2s ease-out;
@@ -2254,7 +2254,7 @@ body {
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 14.5%;
+	width: 20%;
 	
 	padding: 0;
 	margin: 0;
@@ -2728,11 +2728,11 @@ body {
 
 @media only screen and (max-width: 640px)  {
 	#main-nav {
-		left: -87.5%;
+		left: -80%;
 		position: absolute;
 		top: 0;
 		height: 100%;
-		width: 87.5%;
+		width: 80%;
 		
 		background: #fff;
 	}

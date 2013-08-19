@@ -85,7 +85,7 @@
 			(function ($, document, window) {
 				$(document).ready(function () {
 					function openNav() {
-						$('#main-inside').animate({ left: '87.5%' }, 100);
+						$('#main-inside').animate({ left: '80%' }, 100);
 						$('#main-inside').addClass('aside');
 						return false;
 					}
