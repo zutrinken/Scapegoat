@@ -910,16 +910,11 @@ audio {
 .post-comments,
 .post-categories,
 .post-tags {
-	padding: 0.4em 1.4em;
+	padding: 0.5em 1em 0.5em 0;
 	display: inline-block;
 	min-height: 1.5em;
 	line-height: 1.5em;
 	margin: 0;
-	
-	background-attachment: scroll;
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 24px 24px;
 }
 
 .info {}
@@ -927,6 +922,7 @@ audio {
 	clear: both;
 	float: none;
 	padding: 0.45em 0;
+	min-height: 1.5em;
 }
 
 	/* ------------------------------ Archive Posts */
@@ -1443,6 +1439,26 @@ body {
 .title-header .post-title {
 	color: #fff;
 	margin: 0.5em 0;
+}
+.title-header .post-title i {
+	font-size: 0.75em;
+	line-height: 1.25em;
+	vertical-align: bottom;
+	width: 1em;
+	margin: 0 0.25em 0 0;
+	color: #fff;
+}
+.title-header .post-title .label {
+	color: rgba(255,255,255,0.5);
+}
+.title-header .post-title .value {}
+.title-header .post-title .value:before {
+	content: '[';
+	color: rgba(255,255,255,0.5);
+}
+.title-header .post-title .value:after {
+	content: ']';
+	color: rgba(255,255,255,0.5);
 }
 .title-header .post-description {
 	color: #fff;
@@ -3005,6 +3021,15 @@ body {
 		margin: 0;
 	}
 
+	.title-header .post-title i {
+		color: rgba(255,255,255,0.5);
+	}
+	.title-header .post-title .label,
+	.title-header .post-title .value:before,
+	.title-header .post-title .value:after {
+		display: none;
+	}
+
 	.title-image {
 		height: 16em;
 		padding: 0;
@@ -3027,11 +3052,10 @@ body {
 	.post-image-mobile {
 		padding: 0 0 66%;
 	}
-	#respond-wrapper {
-		padding: 0.25em 1em;
+	.post-more {
+		right: 1em;
+		bottom: 1em;
 	}
-
-
 	.type-post:after {
 		width: 240px;
 		margin: 0 0 0 -120px;
@@ -3051,7 +3075,9 @@ body {
 		padding: 0 0 66%;
 		margin: 1em -1em;
 	}
-
+	#respond-wrapper {
+		padding: 0.25em 1em;
+	}
 	#author-meta {
 		padding-top: 2.5em;
 	}

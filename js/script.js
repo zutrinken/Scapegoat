@@ -22,7 +22,7 @@
 		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		    }
 		};
-		
+
 		/* Parallax for header and slider images*/
 		if(!isMobile.any()) {
 			$(window).scroll(parallaxScroll);
