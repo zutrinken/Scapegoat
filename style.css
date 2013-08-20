@@ -582,26 +582,32 @@ em,
 i {
 	font-style: italic;
 }
-
+q {
+	font-style: italic;
+	color: #808080;
+}
 q:before,
 q:after {
+	font-weight: 700;
 	color: #0077b3;
 }
 q:before {
-	content: '„';
+	content: '"';
 }
 q:after {
-	content: '“';
+	content: '"';
 }
 
 blockquote:before {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
     color: #0077b3;
-    content: '”';
-    font-size: 3em;
+    content: '\f10e';
+    font-size: 2em;
     line-height: 100%;
-	font-weight: 700;
     position: absolute;
-    top: 0;
+    top: 1em;
     left: 0.25em;
     height: auto;
     margin: 0;
@@ -611,7 +617,8 @@ blockquote {
 	font-style: italic;
 	color: #808080;
 	padding: 0 0 0 4em;
-	margin: 1.5em 0;	
+	margin: -1.5em 0;
+	overflow: auto;
 	position: relative;
 }
 cite,
