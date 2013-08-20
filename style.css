@@ -1080,6 +1080,7 @@ audio {
 .post-nav-link {
 	display: block;
 	width: 33.333%;
+	min-height: 1em;
 	float: left;
 }
 .post-nav-link .post-nav-inner {
