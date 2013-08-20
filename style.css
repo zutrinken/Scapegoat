@@ -1903,6 +1903,7 @@ body {
 	list-style: none;
 }
 #front-page-adverts #featured-links ul li {
+	width: 20%;
 	display: table;
 	position: relative;
 	float: left;
@@ -1944,9 +1945,6 @@ body {
 #front-page-adverts #featured-links ul li:hover .featured-link,
 #front-page-adverts #featured-links ul li:focus .featured-link {
 	padding: 0.25em 0 0.75em;
-}
-#front-page-adverts #featured-links ul li:hover .featured-link,
-#front-page-adverts #featured-links ul li:focus .featured-link {
 	color: #fff;
 }
 

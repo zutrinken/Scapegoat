@@ -37,6 +37,9 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
+		<?php if($options['style-option'] == 'show-btw-special') : ?>
+		<?php endif; ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

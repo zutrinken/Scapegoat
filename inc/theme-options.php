@@ -97,58 +97,10 @@ function scapegoat_theme_options_page() {
 						<label for="show-default">
 							<input id="show-default" type="radio" name="scapegoat_theme_options[style-option]" value="show-default" <?php checked( 'show-default' == $options['style-option'] ); ?> /> <?php _e('Default','scapegoat'); ?>
 						</label>
-						
 						<br />
-					
-						<label for="show-special-1">
-							<input id="show-special-1" type="radio" name="scapegoat_theme_options[style-option]" value="show-special-1" <?php checked( 'show-special-1' == $options['style-option'] ); ?> /> <?php _e('#BTW13 - Personal Blog','scapegoat'); ?> <span class="description"><?php _e('If activated the frontpage settings are useless','scapegoat'); ?></span>
+						<label for="show-btw-special">
+							<input id="show-btw-special" type="radio" name="scapegoat_theme_options[style-option]" value="show-btw-special" <?php checked( 'show-btw-special' == $options['style-option'] ); ?> /> <?php _e('#BTW13','scapegoat'); ?>
 						</label>
-						
-						<table class="widefat special-1">
-							<tr valign="top">
-								<th scope="row"><?php _e('Logo','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[special-1-logo]" class="regular-text" type="text" name="scapegoat_theme_options[special-1-logo]" value="<?php esc_attr_e( $options['special-1-logo'] ); ?>" /> <span class="description"><?php _e("Optimal Pixel Size: 720x240",'scapegoat'); ?></span></td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e('Portrait','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[special-1-portrait]" class="regular-text" type="text" name="scapegoat_theme_options[special-1-portrait]" value="<?php esc_attr_e( $options['special-1-portrait'] ); ?>" /> <span class="description"><?php _e("Optimal Pixel Size: 640x960",'scapegoat'); ?></span></td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e('Background','scapegoat'); ?></th>
-								<td>
-									<label for="special-1-bg-1">
-										<input id="special-1-bg-1" type="radio" name="scapegoat_theme_options[special-1-bg-option]" value="special-1-bg-1" <?php checked( 'special-1-bg-1' == $options['special-1-bg-option'] ); ?> /> <?php _e('Blue','scapegoat'); ?> <span class="description"> <?php _e('Default','scapegoat'); ?></span>
-									</label>
-									<br />
-									<label for="special-1-bg-2">
-										<input id="special-1-bg-2" type="radio" name="scapegoat_theme_options[special-1-bg-option]" value="special-1-bg-2" <?php checked( 'special-1-bg-2' == $options['special-1-bg-option'] ); ?> /> <?php _e('Orange','scapegoat'); ?>
-									</label>
-							</tr>
-						</table>
-						
-						<br />
-						
-						<label for="show-special-2">
-							<input id="show-special-2" type="radio" name="scapegoat_theme_options[style-option]" value="show-special-2" <?php checked( 'show-special-2' == $options['style-option'] ); ?> /> <?php _e('#BTW13 - Organisation Blog','scapegoat'); ?>
-						</label>
-						
-						<table class="widefat special-2">
-							<tr valign="top">
-								<th scope="row"><?php _e('Logo','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[special-1-logo]" class="regular-text" type="text" name="scapegoat_theme_options[special-2-logo]" value="<?php esc_attr_e( $options['special-2-logo'] ); ?>" /> <span class="description"><?php _e("Optimal Pixel Size: 720x240",'scapegoat'); ?></span></td>
-							</tr>
-							<tr valign="top">
-								<th scope="row"><?php _e('Background','scapegoat'); ?></th>
-								<td>
-									<label for="special-2-bg-1">
-										<input id="special-2-bg-1" type="radio" name="scapegoat_theme_options[special-2-bg-option]" value="special-2-bg-1" <?php checked( 'special-2-bg-1' == $options['special-2-bg-option'] ); ?> /> <?php _e('Blue','scapegoat'); ?> <span class="description"> <?php _e('Default','scapegoat'); ?></span>
-									</label>
-									<br />
-									<label for="special-2-bg-2">
-										<input id="special-2-bg-2" type="radio" name="scapegoat_theme_options[special-2-bg-option]" value="special-2-bg-2" <?php checked( 'special-2-bg-2' == $options['special-2-bg-option'] ); ?> /> <?php _e('Orange','scapegoat'); ?>
-									</label>
-							</tr>
-						</table>
 						
 					</td>
 				</tr>
@@ -162,11 +114,11 @@ function scapegoat_theme_options_page() {
 						<table class="widefat slider">
 							<tr valign="top">
 								<th scope="row"><?php _e('Category (ID)','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[slider-cat]" class="small-text" type="text" name="scapegoat_theme_options[slider-cat]" value="<?php esc_attr_e( $options['slider-cat'] ); ?>" /> <span class="description"><?php _e('If empty all categories will shown','scapegoat'); ?></span></td>
+								<td><input id="scapegoat_theme_options[slider-cat]" class="small-text" type="text" name="scapegoat_theme_options[slider-cat]" value="<?php esc_attr_e( $options['slider-cat'] ); ?>" /> <span class="description"><?php _e('Default: All','scapegoat'); ?></span></td>
 							</tr>
 							<tr valign="top">
 								<th scope="row"><?php _e('Amount of slides','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[slider-num]" class="small-text" type="text" name="scapegoat_theme_options[slider-num]" value="<?php esc_attr_e( $options['slider-num'] ); ?>" /> <span class="description"><?php _e('If empty 5 Slides will shown','scapegoat'); ?></span></td>
+								<td><input id="scapegoat_theme_options[slider-num]" class="small-text" type="text" name="scapegoat_theme_options[slider-num]" value="<?php esc_attr_e( $options['slider-num'] ); ?>" /> <span class="description"><?php _e('Default: 6','scapegoat'); ?></span></td>
 							</tr>
 						</table>
 
@@ -193,10 +145,17 @@ function scapegoat_theme_options_page() {
 								</td>
 							</tr>
 							<tr valign="top">
-								<th scope="row">Link 3</th>
+								<th scope="row">Link 4</th>
 								<td>
 									<input id="scapegoat_theme_options[featured-link-4]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-4]" value="<?php esc_attr_e( $options['featured-link-4'] ); ?>" /> <span class="description">URL</span>
 									<input id="scapegoat_theme_options[featured-link-title-4]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-4]" value="<?php esc_attr_e( $options['featured-link-title-4'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
+								</td>
+							</tr>
+							<tr valign="top">
+								<th scope="row">Link 5</th>
+								<td>
+									<input id="scapegoat_theme_options[featured-link-5]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-5]" value="<?php esc_attr_e( $options['featured-link-5'] ); ?>" /> <span class="description">URL</span>
+									<input id="scapegoat_theme_options[featured-link-title-4]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-5]" value="<?php esc_attr_e( $options['featured-link-title-5'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
 								</td>
 							</tr>
 						</table>
