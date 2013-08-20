@@ -2,6 +2,8 @@
 /* theme options css */
 /* ----------------- */
 
+@import url('../css/font-awesome.min.css');
+
 .column-description img {
 	max-width: 100%; /* Bug Fix, while enabling <img /> in category description. Independend from Theme-Options here. */
 	height: auto;
@@ -15,47 +17,40 @@
 	float: left;
 	width: 24px;
 	height: 24px;
+	line-height: 24px;
+	text-align: center;
 	margin: -4px 8px 0 0;
-	text-indent: -10000px;
+
+	color: #fff;
+	text-shadow: none;
 	background-color: #ea2178;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 16px 16px;
 	
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
 .social-icon.rss {
-	background-image: url('../images/icon-social-rss.png');
 	background-color: #ee9900;
 }
 .social-icon.twitter {
-	background-image: url('../images/icon-social-twitter.png');
 	background-color: #3ea9dd;
 }
 .social-icon.appdotnet {
-	background-image: url('../images/icon-social-appdotnet.png');
 	background-color: #cbccce;
 }
 .social-icon.facebook {
-	background-image: url('../images/icon-social-facebook.png');
 	background-color: #3c5a98;
 }
 .social-icon.google {
-	background-image: url('../images/icon-social-plus.png');
 	background-color: #d14836;
 }
 .social-icon.youtube {
-	background-image: url('../images/icon-social-youtube.png');
 	background-color: #c6312b;
 }
 .social-icon.mail {
-	background-image: url('../images/icon-social-mail.png');
 	background-color: #efbf00;
 }
 .social-icon.podcast {
-	background-image: url('../images/icon-social-podcast.png');
 	background-color: #408ad2;
 }
 

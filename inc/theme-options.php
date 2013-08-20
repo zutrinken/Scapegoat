@@ -216,35 +216,35 @@ function scapegoat_theme_options_page() {
 			<h3><?php _e('Social Networks','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row"><span class="social-icon rss"></span> Feed</th>
+					<th scope="row"><span class="social-icon rss"><i class="icon-rss"></i></span> Feed</th>
 					<td><input id="scapegoat_theme_options[rss]" class="regular-text" type="text" name="scapegoat_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" /> <span class="description"> <?php _e('if this is empty, the default Wordpress-feed will set','scapegoat'); ?></span></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon twitter"></span> Twitter</th>
+					<th scope="row"><span class="social-icon twitter"><i class="icon-twitter"></i></span> Twitter</th>
 					<td><input id="scapegoat_theme_options[twitter]" class="regular-text" type="text" name="scapegoat_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon appdotnet"></span> APP.net</th>
+					<th scope="row"><span class="social-icon appdotnet"><i class="icon-adn"></i></span> APP.net</th>
 					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon facebook"></span> Facebook</th>
+					<th scope="row"><span class="social-icon facebook"><i class="icon-facebook"></i></span> Facebook</th>
 					<td><input id="scapegoat_theme_options[facebook]" class="regular-text" type="text" name="scapegoat_theme_options[facebook]" value="<?php esc_attr_e( $options['facebook'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon google"></span> Google +</th>
+					<th scope="row"><span class="social-icon google"><i class="icon-google-plus"></i></span> Google +</th>
 					<td><input id="scapegoat_theme_options[google]" class="regular-text" type="text" name="scapegoat_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon youtube"></span> Youtube</th>
+					<th scope="row"><span class="social-icon youtube"><i class="icon-youtube-play"></i></span> Youtube</th>
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon mail"></span> Newsletter</th>
+					<th scope="row"><span class="social-icon mail"><i class="icon-envelope"></i></span> Newsletter</th>
 					<td><input id="scapegoat_theme_options[mail]" class="regular-text" type="text" name="scapegoat_theme_options[mail]" value="<?php esc_attr_e( $options['mail'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon podcast"></span> Podcast</th>
+					<th scope="row"><span class="social-icon podcast"><i class="icon-microphone"></i></span> Podcast</th>
 					<td><input id="scapegoat_theme_options[podcast]" class="regular-text" type="text" name="scapegoat_theme_options[podcast]" value="<?php esc_attr_e( $options['podcast'] ); ?>" /></td>
 				</tr>
 			</table>
