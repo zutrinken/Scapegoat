@@ -523,6 +523,42 @@ a:focus {
 	color: #f50;
 }
 
+
+
+.article [href*="youtube.com/"]:before,
+.article [href*="twitter.com/"]:before,
+.article [href*="facebook.com/"]:before,
+.article [href*="wikipedia.org/"]:before,
+.article [href*="plus.google.com/"]:before {
+	font-family: 'FontAwesome';
+	display: inline-block;
+	margin: 0 0.5em 0 0.25em;
+	color: #bfbfbf;
+}
+
+.article [href*="youtube.com/"]:before {
+	content: '\f16a';
+	color: #c6312b;
+}
+.article [href*="twitter.com/"]:before {
+	content: '\f099';
+	color: #3ea9dd;
+}
+.article [href*="facebook.com/"]:before {
+	content: '\f09a';
+	color: #3c5a98;
+}
+.article [href*="plus.google.com/"]:before {
+	content: '\f0d5';
+	color: #d14836;
+}
+.article [href*="wikipedia.org/"]:before {
+	content: '\f02d';
+}
+
+
+
+
 p {
 	margin: 1.5em 0;
 }
