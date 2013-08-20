@@ -1401,7 +1401,8 @@ body {
 	line-height: 1em;
 }
 #header-social-links {
-	margin: 0 auto 0.5em;
+	margin: 0 auto 0.25em;
+	overflow: auto;
 }
 
 #main-nav-outside {
@@ -1548,6 +1549,7 @@ body {
 	width: 23%;
 }
 #footer-social-links {
+	overflow: auto;
 	float: left;
 }
 #footer-outside {
@@ -1610,49 +1612,55 @@ body {
 	/* ------------------------------ Social Icons */
 
 .social-icon {
-	display: inline-block;
+	display: block;
+	float: left;
 	width: 2em;
 	height: 2em;
 	line-height: 2em;
-	margin: 0 0 0.25em 0;
+	padding: 0;
+	margin: 0;
 	text-align: center;
 	color: #fff !important;
 	background-color: #f80;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 1em 1em;
-	
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
+}
+.social-icon i {
+	font-size: 1.25em;
+	color: rgba(255,255,255,0.5);
 }
 .social-icon:hover,
 .social-icon:focus {
 	background-color: #f50;
 }
+.social-icon:hover i,
+.social-icon:focus i {
+	color: #fff;
+}
 .social-icon.rss {
-/* 	background-color: #ee9900; */
+	background-color: #ee9900;
 }
 .social-icon.twitter {
-/* 	background-color: #3ea9dd; */
+	background-color: #3ea9dd;
 }
 .social-icon.appdotnet {
-/* 	background-color: #cbccce; */
+	background-color: #cbccce;
 }
 .social-icon.facebook {
-/* 	background-color: #3c5a98; */
+	background-color: #3c5a98;
 }
 .social-icon.google {
-/* 	background-color: #d14836; */
+	background-color: #d14836;
 }
 .social-icon.youtube {
-/* 	background-color: #c6312b; */
+	background-color: #c6312b;
 }
 .social-icon.mail {
-/* 	background-color: #efbf00; */
+	background-color: #efbf00;
 }
 .social-icon.podcast {
-/* 	background-color: #408ad2; */
+	background-color: #408ad2;
 }
 
 
