@@ -525,34 +525,42 @@ a:focus {
 
 
 
-.article [href*="youtube.com/"]:before,
-.article [href*="twitter.com/"]:before,
-.article [href*="facebook.com/"]:before,
-.article [href*="wikipedia.org/"]:before,
-.article [href*="plus.google.com/"]:before {
+.article a[href*="youtube.com"],
+.article a[href*="twitter.com"],
+.article a[href*="facebook.com"],
+.article a[href*="wikipedia.org"],
+.article a[href*="plus.google.com"] {
+	display: inline-block;
+}
+
+.article a[href*="youtube.com"]:before,
+.article a[href*="twitter.com"]:before,
+.article a[href*="facebook.com"]:before,
+.article a[href*="wikipedia.org"]:before,
+.article a[href*="plus.google.com"]:before {
 	font-family: 'FontAwesome';
 	display: inline-block;
 	margin: 0 0.5em 0 0.25em;
 	color: #bfbfbf;
 }
 
-.article [href*="youtube.com/"]:before {
+.article a[href*="youtube.com"]:before {
 	content: '\f16a';
 	color: #c6312b;
 }
-.article [href*="twitter.com/"]:before {
+.article a[href*="twitter.com"]:before {
 	content: '\f099';
 	color: #3ea9dd;
 }
-.article [href*="facebook.com/"]:before {
+.article a[href*="facebook.com"]:before {
 	content: '\f09a';
 	color: #3c5a98;
 }
-.article [href*="plus.google.com/"]:before {
+.article a[href*="plus.google.com"]:before {
 	content: '\f0d5';
 	color: #d14836;
 }
-.article [href*="wikipedia.org/"]:before {
+.article a[href*="wikipedia.org"]:before {
 	content: '\f02d';
 }
 
@@ -1420,26 +1428,13 @@ body {
 	font-size: 3em;
 	line-height: 1em;
 }
-#description-outer {
+#search {
 	position: relative;
 	float: right;
 	clear: right;
 	width: 25%;
 	margin: 0;
-	padding: 2em 0;
-}
-#description-inner {
-	position: relative;
-}
-#description {
-	display: block;
-	color: #bfbfbf;
-	
-	line-height: 1em;
-}
-#header-social-links {
-	margin: 0 auto 0.25em;
-	overflow: auto;
+	padding: 4em 0 2em;
 }
 
 #main-nav-outside {
@@ -1651,9 +1646,9 @@ body {
 .social-icon {
 	display: block;
 	float: left;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
+	width: 3em;
+	height: 3em;
+	line-height: 3em;
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -1877,10 +1872,10 @@ body {
 
 #front-page-adverts {
 	width: 100%;
-	height: 60px;
+	height: 4em;
 
 	background: #bfbfbf;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 100%;
 
 	-webkit-hyphens: none;
@@ -1891,7 +1886,7 @@ body {
 
 	overflow: hidden;
 
-	background: #fff;
+	background: #f80;
 }
 #front-page-adverts #featured-links {
 	text-transform: uppercase;
@@ -1924,16 +1919,13 @@ body {
 #front-page-adverts #featured-links ul li:nth-child(5n) {
 	background: #e65c17;
 }
-#front-page-adverts #featured-links ul li:hover,
-#front-page-adverts #featured-links ul li:focus {
-	font-size: 1.25em;
-}
 #front-page-adverts #featured-links ul li .featured-link {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 	width: 100%;
-	height: 59px;
+	height: 3em;
+	padding: 0.5em 0;
 
 	color: #fff;
 	font-weight: 400;
@@ -1942,8 +1934,9 @@ body {
 	-moz-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
 }
-#front-page-adverts #featured-links ul li:first-child .featured-link {
-	border-left: 1px solid #bfbfbf;
+#front-page-adverts #featured-links ul li:hover .featured-link,
+#front-page-adverts #featured-links ul li:focus .featured-link {
+	padding: 0.25em 0 0.75em;
 }
 #front-page-adverts #featured-links ul li:hover .featured-link,
 #front-page-adverts #featured-links ul li:focus .featured-link {
@@ -3045,7 +3038,7 @@ body {
 		display: block;
 	}
 	#logo,
-	#description-outer {
+	#search {
 		display: none;
 	}
 	#front-page-header-outside,
