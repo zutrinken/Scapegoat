@@ -2386,6 +2386,11 @@ body {
 	font-weight: 400;
 	font-size: 1.5em;
 }
+.widget-title:before {
+	font-family: 'FontAwesome';
+	display: inline-block;
+	margin: 0 0.75em 0 0.25em;
+}
 .widget ul {
 	margin: 0;
 	list-style: none;
@@ -2403,6 +2408,9 @@ body {
 }
 .widget-sidebar .widget-title {
 	border-bottom: 2px solid #f80;
+}
+.widget-sidebar .widget-title:before {
+	color: #f80;
 }
 .widget-sidebar a,
 .widget-sidebar a:active,
@@ -2422,6 +2430,9 @@ body {
 .widget-footer .widget-inner {}
 .widget-footer .widget-title {
 	color: #e3e3e3;
+}
+.widget-footer .widget-title:before {
+	color: #808080;
 }
 
 .widget-footer a,
@@ -2453,6 +2464,11 @@ body {
 
 .widget_nav_menu .widget-title,
 .widget_pages .widget-title {}
+
+.widget_nav_menu .widget-title:before,
+.widget_pages .widget-title:before {
+	content: '\f03a';
+}
 
 .widget_nav_menu ul,
 .widget_pages ul {
@@ -2490,11 +2506,17 @@ body {
 	/* ------------------------------ Widget Text */
 
 .widget_text {}
+.widget_text .widget-title:before {
+	content: '\f05a';
+}
 
 	/* ------------------------------ Widget Calendar */
 
 
 .widget_calendar {}
+.widget_calendar .widget-title:before {
+	content: '\f073';
+}
 .widget_calendar .widget-inner {} 
 
 #wp-calendar {
@@ -2578,6 +2600,9 @@ body {
 	/* ------------------------------ Widget Tagcloud */
 
 .widget_tag_cloud {}
+.widget_tag_cloud .widget-title:before {
+	content: '\f02b';
+}
 .widget_tag_cloud .tagcloud {
 	padding: 0.5em 0;
 }
@@ -2604,6 +2629,9 @@ body {
 	/* ------------------------------ Widget RSS */
 
 .widget_rss {}
+.widget_rss .widget-title:before {
+	content: '\f143';
+}
 .widget_rss ul {}
 .widget_rss ul li {}
 .widget_rss ul li a.rsswidget {
@@ -2627,9 +2655,19 @@ body {
 	font-weight: 700;
 }
 
+	/* ------------------------------ Widget Comments */
+
+.widget_recent_comments {}
+.widget_recent_comments .widget-title:before {
+	content: '\f086';
+}
+
 	/* ------------------------------ Widget Meta */
 
 .widget_meta {}
+.widget_meta .widget-title:before {
+	content: '\f023';
+}
 .widget_meta ul {}
 .widget_meta ul li {}
 .widget_meta ul li a {}
@@ -2637,27 +2675,37 @@ body {
 	/* ------------------------------ Widget Archive */
 
 .widget_archive {}
-.widget_archive ul {}
-.widget_archive ul li {}
-.widget_archive ul li a {}
+.widget_archive .widget-title:before {
+	content: '\f07c';
+}
+
+	/* ------------------------------ Widget Category */
+
+.widget_categories {}
+.widget_categories .widget-title:before {
+	content: '\f07c';
+}
 
 	/* ------------------------------ Widget Links */
 
 .widget_links {}
-.widget_links ul {}
-.widget_links ul li {}
-.widget_links ul li a {}
+.widget_links .widget-title:before {
+	content: '\f005';
+}
 
 	/* ------------------------------ Widget Recent Entries */
 
 .widget_recent_entries {}
-.widget_recent_entries ul {}
-.widget_recent_entries ul li {}
-.widget_recent_entries ul li a {}
+.widget_recent_entries .widget-title:before {
+	content: '\f08d';
+}
 
 	/* ------------------------------ Widget Search */
 
 .widget_search {}
+.widget_search .widget-title:before {
+	content: '\f002';
+}
 .widget_search .searchform {}
 
 
