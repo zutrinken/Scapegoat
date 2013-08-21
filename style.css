@@ -851,7 +851,8 @@ audio {
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.type-post:after {
+.type-post:after,
+.type-page:after {
 	position: absolute;
 	display: block;
 	content: '';
@@ -3144,7 +3145,8 @@ body {
 		right: 1em;
 		bottom: 1em;
 	}
-	.type-post:after {
+	.type-post:after,
+	.type-page:after {
 		width: 240px;
 		margin: 0 0 0 -120px;
 		background-size: 100% auto;
