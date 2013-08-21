@@ -2,11 +2,14 @@
 
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
-				<header class="title-header">
-					<h2 class="post-title">
-						<?php _e('Search','scapegoat'); ?> "<?php the_search_query(); ?>"		
-					</h2>
-				</header>
+				<div class="content">
+					<header class="title-header">
+						<h2 class="post-title">
+							<?php _e('Search','scapegoat'); ?> "<?php the_search_query(); ?>"		
+						</h2>
+					</header>
+				</div>
+				<div class="clear"></div>
 			</div>			
 		</div>
 

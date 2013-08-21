@@ -7,12 +7,15 @@
 			<div id="title-images-wrapper">
 				<div id="title-outside">
 					<div id="title-inside" class="inside">
-						<header class="title-header">
-							<h2 class="post-title">
-								<?php the_title(); ?>
-								<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
-							</h2>
-						</header>
+						<div class="content">
+							<header class="title-header">
+								<h2 class="post-title">
+									<?php the_title(); ?>
+									<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
+								</h2>
+							</header>
+						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
 				<figure class="title-image parallax">
@@ -27,12 +30,15 @@
 		<?php else : ?>
 			<div id="title-outside">
 				<div id="title-inside" class="inside">
-					<header class="title-header">
-						<h2 class="post-title">
-							<?php the_title(); ?>
-							<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
-						</h2>
-					</header>
+					<div class="content">
+						<header class="title-header">
+							<h2 class="post-title">
+								<?php the_title(); ?>
+								<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
+							</h2>
+						</header>
+					</div>
+					<div class="clear"></div>
 				</div>
 			</div>
 		<?php endif; ?>

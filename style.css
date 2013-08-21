@@ -1474,7 +1474,7 @@ body {
 #title-inside {}
 
 .title-header {
-	padding: 1em 0;
+	padding: 1em 2em;
 }
 .title-header .post-title {
 	color: #fff;
@@ -1504,7 +1504,6 @@ body {
 	color: #fff;
 	font-size: 0.75em;
 	line-height: 1.5em;
-	width: 60%;
 }
 #title-images-wrapper {
 	position: relative;
@@ -1810,6 +1809,7 @@ body {
 }
 #front-page-slider .front-page-slide .slide-image img {
 	position: relative;
+	width: 100%;
 }
 #front-page-slider .front-page-slide .slide-content {
 	position: relative;
@@ -2780,18 +2780,15 @@ body {
 	#footer-sidebar-4 {
 		border-top: 1px solid #404040;
 	}
-	#content {
+	.content {
 		width: auto;
-		float: none;
+		float: none !important;
 	}
 	.sidebar {
 		width: auto;
-		float: none;
+		float: none !important;
 		margin: 100px 0 0;
 		padding: 0;
-	}
-	.title-header .post-description {
-		width: auto;
 	}
 	#front-page-header-inside {
 		width: auto;

@@ -92,6 +92,19 @@ function scapegoat_theme_options_page() {
 			<h3><?php _e('Appearance','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
+					<th scope="row"><?php _e('Sidebar alignment','scapegoat'); ?></th>
+					<td>
+						<label for="sidebar-right">
+							<input id="sidebar-right" type="radio" name="scapegoat_theme_options[alignment-option]" value="sidebar-right" <?php checked( 'sidebar-right' == $options['alignment-option'] ); ?> /> <?php _e('Right','scapegoat'); ?> <span class="description"><?php _e('Default','scapegoat'); ?></span>
+						</label>
+						<br />
+						<label for="sidebar-left">
+							<input id="sidebar-left" type="radio" name="scapegoat_theme_options[alignment-option]" value="sidebar-left" <?php checked( 'sidebar-left' == $options['alignment-option'] ); ?> /> <?php _e('Left','scapegoat'); ?>
+						</label>
+						
+					</td>
+				</tr>
+				<tr valign="top">
 					<th scope="row"><?php _e('Style','scapegoat'); ?></th>
 					<td>
 						<label for="show-default">

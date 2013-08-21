@@ -2,46 +2,49 @@
 
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
-				<header class="title-header">
-					<h2 class="post-title">
-						<?php if (is_category()) : ?>
-							<i class="icon-folder-open"></i>
-							<span class="label"><?php _e('Category','scapegoat'); ?></span>
-							<span class="value"><?php single_cat_title(); ?></span>
-						<?php elseif (is_tag()) : ?>
-							<i class="icon-tag"></i>
-							<span class="label"><?php _e('Tag','scapegoat'); ?></span>
-							<span class="value"><?php single_tag_title(); ?></span>
-						<?php elseif (is_author()) : ?>
-							<i class="icon-user"></i>
-							<span class="label"><?php _e('Author','scapegoat'); ?></span>
-							<span class="value"><?php
-								$userInfo = get_user_by('slug', get_query_var('author_name'));
-								echo $userInfo->display_name;
-							?></span>
-						<?php elseif (is_day()) : ?>
-							<i class="icon-calendar"></i>
-							<span class="label"><?php _e('Day','scapegoat'); ?></span>
-							<span class="value"><?php the_time('j. F Y'); ?></span>
-						<?php elseif (is_month()) : ?>
-							<i class="icon-calendar"></i>
-							<span class="label"><?php _e('Month','scapegoat'); ?></span>
-							<span class="value"><?php the_time('F Y'); ?></span>
-						<?php elseif (is_year()) : ?>
-							<i class="icon-calendar"></i>
-							<span class="label"><?php _e('Year','scapegoat'); ?></span>
-							<span class="value"><?php the_time('Y'); ?></span>
-						<?php else : ?>
-							<span class="value"><?php _e('Archive','scapegoat'); ?></span>
+				<div class="content">
+					<header class="title-header">
+						<h2 class="post-title">
+							<?php if (is_category()) : ?>
+								<i class="icon-folder-open"></i>
+								<span class="label"><?php _e('Category','scapegoat'); ?></span>
+								<span class="value"><?php single_cat_title(); ?></span>
+							<?php elseif (is_tag()) : ?>
+								<i class="icon-tag"></i>
+								<span class="label"><?php _e('Tag','scapegoat'); ?></span>
+								<span class="value"><?php single_tag_title(); ?></span>
+							<?php elseif (is_author()) : ?>
+								<i class="icon-user"></i>
+								<span class="label"><?php _e('Author','scapegoat'); ?></span>
+								<span class="value"><?php
+									$userInfo = get_user_by('slug', get_query_var('author_name'));
+									echo $userInfo->display_name;
+								?></span>
+							<?php elseif (is_day()) : ?>
+								<i class="icon-calendar"></i>
+								<span class="label"><?php _e('Day','scapegoat'); ?></span>
+								<span class="value"><?php the_time('j. F Y'); ?></span>
+							<?php elseif (is_month()) : ?>
+								<i class="icon-calendar"></i>
+								<span class="label"><?php _e('Month','scapegoat'); ?></span>
+								<span class="value"><?php the_time('F Y'); ?></span>
+							<?php elseif (is_year()) : ?>
+								<i class="icon-calendar"></i>
+								<span class="label"><?php _e('Year','scapegoat'); ?></span>
+								<span class="value"><?php the_time('Y'); ?></span>
+							<?php else : ?>
+								<span class="value"><?php _e('Archive','scapegoat'); ?></span>
+							<?php endif; ?>
+						</h2>
+						<?php if (is_category() && category_description()) : ?>
+							<aside class="post-description">
+								<?php echo category_description(); ?>
+							</aside>
 						<?php endif; ?>
-					</h2>
-					<?php if (is_category() && category_description()) : ?>
-						<aside class="post-description">
-							<?php echo category_description(); ?>
-						</aside>
-					<?php endif; ?>
-				</header>
-			</div>			
+					</header>
+				</div>
+				<div class="clear"></div>
+			</div>
 		</div>
 		
 		<div id="wrapper-outside">

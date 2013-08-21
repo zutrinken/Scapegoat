@@ -37,6 +37,13 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
+		<?php if($options['alignment-option'] == 'sidebar-left') : ?>
+			<style>
+				.sidebar {float: left;}
+				.content {float: right;}
+			</style>
+		<?php endif; ?>
+
 		<?php if($options['style-option'] == 'show-btw-special') : ?>
 		<?php endif; ?>
 
@@ -104,11 +111,14 @@
 		<?php if(is_paged() && is_front_page()) : ?>
 			<div id="title-outside">
 				<div id="title-inside" class="inside">
-					<header class="title-header">
-						<h3 class="post-title">
-							<?php current_paged(); ?>
-						</h3>
-					</header>
+					<div class="content">
+						<header class="title-header">
+							<h2 class="post-title">
+								<?php current_paged(); ?>
+							</h2>
+						</header>
+					</div>
+					<div class="clear"></div>
 				</div>			
 			</div>
 		<?php endif; ?>
