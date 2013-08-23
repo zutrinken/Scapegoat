@@ -2450,7 +2450,7 @@ body {
 
 .widget-sidebar {
 	color: #808080;
-	margin: 3.75em auto;
+	margin: 3.75em auto 7.5em;
 }
 .widget-sidebar .widget-title {
 	border-bottom: 2px solid #f80;
