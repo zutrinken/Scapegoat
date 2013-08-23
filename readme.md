@@ -20,6 +20,7 @@
 * use widgets for the sidebar and footer. The footer looks best with 4 Widgets with approximately equal heights. Don't use menu widgets in the footer, there is a separate footer-menu
 * Firefox on Windows don't load the fonts of the theme. To fix that, you have to insert this on top of your **.htaccess**:
 ```<FilesMatch "\.(ttf|otf|eot|woff|svg)$">Header set Access-Control-Allow-Origin "*"</FilesMatch>```
+* If custom excerpts are active you can also show a video above it. You have to use the custom field "video" with the value of your iframe-code.
 
 ## Shortcodes
 
@@ -40,19 +41,24 @@ It's possible to create two, thre or four columned blocks. Colums are alway clos
 
 As the example above you can build other columned blocks with the following paramenters:
 
-* 2 Columns
-* 1|1 Columns:		````[two_columns_one][two_columns_one_last]````
-* 3 Columns
-* 1|1|1 Columns:	````[three_columns_one][three_columns_one][three_columns_one_last]````
-* 1|2 Columns:		````[three_columns_one][three_columns_two_last]````
-* 2|1 Columns:		````[three_columns_two][three_columns_one_last]````
-* 4 Columns
-* 1|1|1|1 Columns:	````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
-* 1|1|2 Columns:	````[four_columns_one][four_columns_one][four_columns_two_last]````
-* 1|2|1 Columns:	````[four_columns_one][four_columns_two][four_columns_one_last]````
-* 2|1|1 Columns:	````[four_columns_two][four_columns_one][four_columns_one_last]````
-* 1|3 Columns:		````[four_columns_one][four_columns_three_last]````
-* 3|1 Columns:		````[four_columns_three][four_columns_one_last]````
+#### 2 Columns
+
+1|1 Columns:		````[two_columns_one][two_columns_one_last]````
+
+#### 3 Columns
+
+1|1|1 Columns:	````[three_columns_one][three_columns_one][three_columns_one_last]````
+1|2 Columns:		````[three_columns_one][three_columns_two_last]````
+2|1 Columns:		````[three_columns_two][three_columns_one_last]````
+
+#### 4 Columns
+
+1|1|1|1 Columns:	````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
+1|1|2 Columns:	````[four_columns_one][four_columns_one][four_columns_two_last]````
+1|2|1 Columns:	````[four_columns_one][four_columns_two][four_columns_one_last]````
+2|1|1 Columns:	````[four_columns_two][four_columns_one][four_columns_one_last]````
+1|3 Columns:		````[four_columns_one][four_columns_three_last]````
+3|1 Columns:		````[four_columns_three][four_columns_one_last]````
 
 ### Buttons
 
