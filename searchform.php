@@ -3,4 +3,5 @@
 	<button type="submit" name="submit" class="searchsubmit">
 		<i class="icon-search"></i>
 	</button>
+	<div class="clear"></div>
 </form>
