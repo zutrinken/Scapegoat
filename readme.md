@@ -25,7 +25,7 @@
 
 ### Columns
 
-It's possible to create two, thre or four columned blocks. Colums are alway closed by a ````[divider]```` which clears the floating. The basic syntax of a three clolumned block is like:
+It's possible to create two, thre or four columned blocks. Colums are alway closed by a ````[divider]```` which clears the floating. Also the last column needs the attribute ````_last````. The basic syntax of a three clolumned block is like:
 
 	[three_columns_one]
 	 first column content here...
@@ -40,18 +40,19 @@ It's possible to create two, thre or four columned blocks. Colums are alway clos
 
 As the example above you can build other columned blocks with the following paramenters:
 
-* 1|1 Columns: ````[two_columns_one][two_columns_one_last]````
-
-* 1|1|1 Columns: ````[three_columns_one][three_columns_one][three_columns_one_last]````
-* 1|2 Columns: ````[three_columns_one][three_columns_two_last]````
-* 2|1 Columns: ````[three_columns_two][three_columns_one_last]````
-
-* 1|1|1|1 Columns: ````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
-* 1|1|2 Columns: ````[four_columns_one][four_columns_one][four_columns_two_last]````
-* 1|2|1 Columns: ````[four_columns_one][four_columns_two][four_columns_one_last]````
-* 2|1|1 Columns: ````[four_columns_two][four_columns_one][four_columns_one_last]````
-* 1|3 Columns: ````[four_columns_one][four_columns_three_last]````
-* 3|1 Columns: ````[four_columns_three][four_columns_one_last]````
+* 2 Columns
+* 1|1 Columns:		````[two_columns_one][two_columns_one_last]````
+* 3 Columns
+* 1|1|1 Columns:	````[three_columns_one][three_columns_one][three_columns_one_last]````
+* 1|2 Columns:		````[three_columns_one][three_columns_two_last]````
+* 2|1 Columns:		````[three_columns_two][three_columns_one_last]````
+* 4 Columns
+* 1|1|1|1 Columns:	````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
+* 1|1|2 Columns:	````[four_columns_one][four_columns_one][four_columns_two_last]````
+* 1|2|1 Columns:	````[four_columns_one][four_columns_two][four_columns_one_last]````
+* 2|1|1 Columns:	````[four_columns_two][four_columns_one][four_columns_one_last]````
+* 1|3 Columns:		````[four_columns_one][four_columns_three_last]````
+* 3|1 Columns:		````[four_columns_three][four_columns_one_last]````
 
 ### Buttons
 
