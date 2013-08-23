@@ -15,9 +15,9 @@
 
 * Slider Image Size ```1440x486```
 * Post Image Size ```720x243```
-* first of all, you have to insert some informations about yourself in your profile-section
-* use custom menues and insert the start-page to the main-menu, if you want to display the home icon in your header menu
-* use widgets for the sidebar and footer. The footer looks best with 4 Widgets with approximately equal heights. Don't use menu widgets in the footer, there is a separate footer-menu
+* First of all, you have to insert some informations about yourself in your profile-section
+* Use custom menues and insert the start-page to the main-menu, if you want to display the home icon in your header menu
+* Use widgets for the sidebar and footer. The footer looks best with 4 Widgets with approximately equal heights. Don't use menu widgets in the footer, there is a separate footer-menu
 * Firefox on Windows don't load the fonts of the theme. To fix that, you have to insert this on top of your **.htaccess**:
 ```<FilesMatch "\.(ttf|otf|eot|woff|svg)$">Header set Access-Control-Allow-Origin "*"</FilesMatch>```
 * If custom excerpts are active you can also show a video above it. You have to use the custom field "video" with the value of your iframe-code.
@@ -26,7 +26,7 @@
 
 ### Columns
 
-It's possible to create two, thre or four columned blocks. Colums are alway closed by a ````[divider]```` which clears the floating. Also the last column needs the attribute ````_last````. The basic syntax of a three clolumned block is like:
+It's possible to create **two**, **three** or **four** columned blocks. Colums are alway closed by a ````[divider]```` which clears the floating. Also the last column needs the attribute ````_last````. The basic syntax of a three clolumned block is like:
 
 	[three_columns_one]
 	 first column content here...

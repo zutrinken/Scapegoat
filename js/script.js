@@ -35,32 +35,36 @@
 
 			/* Manipulate the header and slider images */
 			var prlx = $('.parallax');
-			var parallaxOffset = prlx.offset().top;
-			parallaxOffset = Math.round(parallaxOffset);
-
-			if(scrolled >= parallaxOffset) {
-				prlx.find('img').css({
-					'top' : (0+((scrolled - parallaxOffset) * 0.75))+'px'
-				});
-			} else {
-				prlx.find('img').css({		
-					'top' : 0
-				});
+			if(prlx.length>0) {
+				var parallaxOffset = prlx.offset().top;
+				parallaxOffset = Math.round(parallaxOffset);
+	
+				if(scrolled >= parallaxOffset) {
+					prlx.find('img').css({
+						'top' : (0+((scrolled - parallaxOffset) * 0.75))+'px'
+					});
+				} else {
+					prlx.find('img').css({		
+						'top' : 0
+					});
+				}
 			}
 
 			/* Manipulate the slider bakcground images */
 			var frPaSl = $('.front-page-slide');
-			var frPaSlOffset = frPaSl.offset().top;
-			frPaSlOffset = Math.round(frPaSlOffset);
-			
-			if(scrolled >= frPaSlOffset) {
-				frPaSl.css({
-					'background-position' : 'center ' + (0+((scrolled - frPaSlOffset) * 0.75))+'px'
-				});
-			} else {
-				frPaSl.css({
-					'background-position' : 'center ' + 0
-				});
+			if(frPaSl.length>0) {
+				var frPaSlOffset = frPaSl.offset().top;
+				frPaSlOffset = Math.round(frPaSlOffset);
+				
+				if(scrolled >= frPaSlOffset) {
+					frPaSl.css({
+						'background-position' : 'center ' + (0+((scrolled - frPaSlOffset) * 0.75))+'px'
+					});
+				} else {
+					frPaSl.css({
+						'background-position' : 'center ' + 0
+					});
+				}
 			}
 		}
 		function SameHeight() {
