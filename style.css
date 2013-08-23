@@ -2842,6 +2842,16 @@ body {
 
 
 @media only screen and (max-width: 640px)  {
+	blockquote:before {
+		font-size: 1.5em;
+		top: 1.25em;
+		left: 0;
+	}
+	blockquote {
+		padding: 0 0 0 2em;
+	}
+	
+
 	#main-nav {
 		left: -80%;
 		position: absolute;
