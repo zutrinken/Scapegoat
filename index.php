@@ -1,7 +1,7 @@
 		<?php get_header(); ?>
 
-		<!-- Mobiel Detect -->
-		<?php $detect = new Mobile_Detect(); ?>
+		<?php $detect = new Mobile_Detect(); /* Mobiel Detect */ ?>	
+		<?php $options = get_option('scapegoat_theme_options'); /* load the Theme Options */ ?>
 
 		<?php if(!($options['header-option'] == 'show-slider') && !($options['header-option'] == 'show-header') && is_home() && !is_paged()) : ?>
 		<div id="title-outside">
@@ -84,6 +84,8 @@
 		
 				<article class="article">
 					<?php if(has_post_format('status')) : ?>
+						<?php the_content(); ?>
+					<?php elseif(!$options['custom-excerpt']) : ?>
 						<?php the_content(); ?>
 					<?php else : ?>
 						<?php the_excerpt(); ?>

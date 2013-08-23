@@ -85,12 +85,12 @@
 			(function ($, document, window) {
 				$(document).ready(function () {
 					function openNav() {
-						$('#main-inside').animate({ left: '80%' }, 100);
+						$('#main-inside').animate({ left: '80%' }, 250);
 						$('#main-inside').addClass('aside');
 						return false;
 					}
 					function closeNav() {
-						$('#main-inside').animate({ left: '0' }, 100);
+						$('#main-inside').animate({ left: '0' }, 250);
 						$('#main-inside').removeClass('aside');
 						return false;
 					}

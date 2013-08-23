@@ -1008,11 +1008,7 @@ audio {
 	/* ------------------------------ Format Status */
 
 .front-post.format-status {
-	background: transparent;
-	margin-left: -1em;
-	margin-right: -1em;
-	padding: 0.75em;
-	border: 0.25em solid #e3e3e3;
+
 }
 
 
