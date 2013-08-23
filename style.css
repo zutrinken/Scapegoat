@@ -1525,6 +1525,10 @@ body {
 	background-image: url('images/icon-social-plus.png');
 	background-color: #d14836;
 }
+.social-icon.appdotnet {
+	background-image: url('images/icon-social-appdotnet.png');
+	background-color: #333333;
+}
 .social-icon.youtube {
 	background-image: url('images/icon-social-youtube.png');
 	background-color: #c6312b;
@@ -3021,4 +3025,8 @@ body {
 	.social-icon.podcast {
 		background-image: url('images/icon-social-podcast@2x.png');
 	}
+}
+
+timely li {
+	list-style-type:none !important;
 }

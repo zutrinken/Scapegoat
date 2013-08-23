@@ -232,6 +232,10 @@ function scapegoat_theme_options_page() {
 					<td><input id="scapegoat_theme_options[google]" class="regular-text" type="text" name="scapegoat_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
+					<th scope="row"><span class="social-icon appdotnet"></span> App.net</th>
+					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
 					<th scope="row"><span class="social-icon youtube"></span> Youtube</th>
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
