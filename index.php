@@ -51,11 +51,11 @@
 						</span>
 					</aside>
 					
-					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt']) : ?>
+					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt'] && !has_post_format('status')) : ?>
 						<figure class="post-video">
 							<?php echo get_post_meta($post->ID, 'video', true); ?>
 						</figure>
-					<?php elseif(has_post_thumbnail()) : ?>
+					<?php elseif(has_post_thumbnail() && !has_post_format('status')) : ?>
 						<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
 							<figure class="post-image">
 								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
