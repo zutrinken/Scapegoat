@@ -649,7 +649,7 @@ msgstr "Wenn unausgefüllt werden alle Kategorien angezeigt"
 #: inc/theme-options.php:169
 #@ scapegoat
 msgid "If empty 5 Slides will shown"
-msgstr "Wenn unasugefüllt werden 5 Slides angezeigt"
+msgstr "Wenn unausgefüllt werden 5 Slides angezeigt"
 
 #: inc/theme-options.php:206
 #@ scapegoat
