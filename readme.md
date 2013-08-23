@@ -25,21 +25,39 @@
 
 ### Columns
 
-		[three_columns_one]
-		 first column content here...
-		[/three_columns_one]
-		[three_columns_one]
-		 second column content here...
-		[/three_columns_one]
-		[three_columns_one_last]
-		 third column content here...
-		[/three_columns_one_last]
-		[divider]
+It's possible to create two, thre or four columned blocks. Colums are alway closed by a ````[divider]````` which clears the floating. The basic syntax of a three clolumned block is like:
+
+	[three_columns_one]
+	 first column content here...
+	[/three_columns_one]
+	[three_columns_one]
+	 second column content here...
+	[/three_columns_one]
+	[three_columns_one_last]
+	 third column content here...
+	[/three_columns_one_last]
+	[divider]
+
+As the example above you can build other columned blocks with the following paramenters:
+
+* ````[two_columns_one][two_columns_one_last]````
+
+* ````[three_columns_one][three_columns_one][three_columns_one_last]````
+* ````[three_columns_one][three_columns_two_last]````
+* ````[three_columns_two][three_columns_one_last]````
+
+* ````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
+* ````[four_columns_one][four_columns_one][four_columns_two_last]````
+* ````[four_columns_one][four_columns_two][four_columns_one_last]````
+* ````[four_columns_two][four_columns_one][four_columns_one_last]````
+* ````[four_columns_one][four_columns_three_last]````
+* ````[four_columns_three][four_columns_one_last]````
 
 ### Buttons
 
-* The default orange rectangle normal size button only contains a "link-attribute" ````[button link="http://yourdomain.com"]Text[/button]````
-* For rounded buttons you have to add add the "form-attribute" ````[button link="http://yourdomain.com" form="round"]Text[/button]````
-* For other Clolours as the default orange you have to add the "color-attribute" ````[button link="http://yourdomain.com" color="blue"]Text[/button]````. Possible colours are "blue, lightgrey, grey, darkgrey, red, green"
-* For smaller oder larger buttons you can add the "size attribute" ````[button link="http://yourdomain.com" size="large"]Text[/button]````. Possible sizes are "xsmall, small, large, xlarge"
+A default button is rectangled, orange and has a normal size. It only contains an attribute for your url "link-attribute" ````[button link="http://yourdomain.com"]Text[/button]````. You can extend this shortcode by the following attributes:
+
+* Rounded button ````[button link="http://yourdomain.com" form="round"]Text[/button]````
+* Cloloured button ````[button link="http://yourdomain.com" color="blue"]Text[/button]````. Possible colours: "blue, lightgrey, grey, darkgrey, red, green"
+* Small or large button ````[button link="http://yourdomain.com" size="large"]Text[/button]````. Possible sizes: "xsmall, small, large, xlarge"
 
