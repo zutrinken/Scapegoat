@@ -52,49 +52,6 @@
 						</ul>
 					</div><!-- front-page-slider -->
 				</div><!-- slideshow -->
-				<?php if($options['featured-link-1'] && $options['featured-link-2'] && $options['featured-link-3']) : ?>
-					<div id="front-page-adverts">
-						<aside id="featured-links">
-							<ul>
-								<?php if($options['featured-link-title-1']) : ?>
-								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
-											<?php echo $options['featured-link-title-1']; ?>
-									</a>
-								</li>
-								<?php endif; ?>
-								<?php if($options['featured-link-title-2']) : ?>
-								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
-											<?php echo $options['featured-link-title-2']; ?>
-									</a>
-								</li>
-								<?php endif; ?>
-								<?php if($options['featured-link-title-3']) : ?>
-								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">										
-											<?php echo $options['featured-link-title-3']; ?>
-									</a>
-								</li>
-								<?php endif; ?>
-								<?php if($options['featured-link-title-4']) : ?>
-								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
-										<?php echo $options['featured-link-title-4']; ?>
-									</a>
-								</li>
-								<?php endif; ?>
-								<?php if($options['featured-link-title-5']) : ?>
-								<li>
-									<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-5']; ?>" title="<?php echo $options['featured-link-title-5']; ?>">
-										<?php echo $options['featured-link-title-5']; ?>
-									</a>
-								</li>
-								<?php endif; ?>
-							</ul>
-						</aside><!-- featured-links -->
-					</div><!-- front-page-adverts -->
-				<?php endif; ?>
 				<div class="clear"></div>
 			</div><!-- toggling -->
 			<div class="clear"></div>
@@ -108,5 +65,54 @@
 				<figure class="custom-header front-page-slide"></figure>
 			</div><!-- front-page-header-image-inside -->
 		</section><!-- front-page-header-image-outside --> 
+	<?php endif; ?>
+<?php endif; ?>
+<?php if(($options['header-option'] == 'show-slider') || ($options['header-option'] == 'show-header')) : ?>
+	<?php if($options['featured-link-1'] && $options['featured-link-2'] && $options['featured-link-3']) : ?>
+		<div id="front-page-adverts-outside">
+			<div id="front-page-adverts-inside">
+				<div id="front-page-adverts">
+					<aside id="featured-links">
+						<ul>
+							<?php if($options['featured-link-title-1']) : ?>
+							<li>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
+										<?php echo $options['featured-link-title-1']; ?>
+								</a>
+							</li>
+							<?php endif; ?>
+							<?php if($options['featured-link-title-2']) : ?>
+							<li>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
+										<?php echo $options['featured-link-title-2']; ?>
+								</a>
+							</li>
+							<?php endif; ?>
+							<?php if($options['featured-link-title-3']) : ?>
+							<li>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">										
+										<?php echo $options['featured-link-title-3']; ?>
+								</a>
+							</li>
+							<?php endif; ?>
+							<?php if($options['featured-link-title-4']) : ?>
+							<li>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
+									<?php echo $options['featured-link-title-4']; ?>
+								</a>
+							</li>
+							<?php endif; ?>
+							<?php if($options['featured-link-title-5']) : ?>
+							<li>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-5']; ?>" title="<?php echo $options['featured-link-title-5']; ?>">
+									<?php echo $options['featured-link-title-5']; ?>
+								</a>
+							</li>
+							<?php endif; ?>
+						</ul>
+					</aside><!-- featured-links -->
+				</div><!-- front-page-adverts -->
+			</div>
+		</div>
 	<?php endif; ?>
 <?php endif; ?>

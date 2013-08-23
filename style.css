@@ -1716,7 +1716,7 @@ body {
 	position: relative;
 	padding: 0;
 	max-width: 1440px;
-	margin: 0 auto 2em;
+	margin: 0 auto 4em;
 }
 #toggling {}
 #front-page-slider-toggle {
@@ -1874,6 +1874,16 @@ body {
 
 	/* ------------------------------ Featured Links */
 
+#front-page-adverts-outside {
+	position: relative;
+}
+#front-page-adverts-inside {
+	position: relative;
+	padding: 0;
+	max-width: 1440px;
+	margin: -4em auto 4em;
+}
+
 #front-page-adverts {
 	width: 100%;
 	height: 4em;
@@ -1952,11 +1962,15 @@ body {
 	position: relative;
 	padding: 0;
 	max-width: 1440px;
-	margin: 0 auto;
+	margin: 0 auto 4em;
 }
 .custom-header {
 	height: 0;
 	padding-bottom: 33.75%;
+	
+	-webkit-box-shadow: 0 -0.25em 0.5em rgba(0,0,0,0.5) inset;
+	-moz-box-shadow: 0 -0.25em 0.5em rgba(0,0,0,0.5) inset;
+	box-shadow: 0 -0.25em 0.5em rgba(0,0,0,0.5) inset;
 }
 
 
