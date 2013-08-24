@@ -1035,6 +1035,13 @@ audio {
 	-moz-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 	box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 }
+.post-title,
+.post-title a,
+.post-title a:active,
+.post-title a:visited,
+.sticky .article {
+	color: #004466;
+}
 
 
 	/* ------------------------------ Format Status */
@@ -1241,6 +1248,7 @@ li .comment-body .comment-text {
 	width: 70%;
 	padding: 0 2.5%;
 	float: right;
+	color: #004466;
 	background: #e5f6ff;
 	border: 0.0625em solid #acd2e5;
 
@@ -1279,23 +1287,34 @@ li .comment-body .comment-text:after {
 
 li li .comment-body .comment-text {
 	float: left;
+
+	background: #d7eefa;
+	border: 0.0625em solid #9fcbe0;
 }
 li li .comment-body .comment-text:before {
 	left: auto;
 	right: -2em;
 
 	border-right: 0;
-	border-left: 2em solid #acd2e5;
+	border-left: 2em solid #9fcbe0;
 }
 li li .comment-body .comment-text:after {
 	left: auto;
 	right: -1.75em;
 	
 	border-right: 0;
-	border-left: 2em solid #e5f6ff;
+	border-left: 2em solid #d7eefa;
 }
-li li li .comment-body .comment-text {}
-li li li .comment-body .comment-text:before {}
+li li li .comment-body .comment-text {
+	background: #c9e6f5;
+	border: 0.0625em solid #93c4db;
+}
+li li li .comment-body .comment-text:before {
+	border-left: 2em solid #93c4db;
+}
+li li li .comment-body .comment-text:after {
+	border-left: 2em solid #c9e6f5;
+}
 
 .comment-body .unlock {
 	font-weight: 700;
