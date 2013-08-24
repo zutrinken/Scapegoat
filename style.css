@@ -693,34 +693,30 @@ input,
 textarea {
 	background: #fff;
 	padding: 0.4em;
-	margin: 4px;
-	border: 2px solid #f4f4f4;
+	margin: 0;
+	border: 2px solid #e3e3e3;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	-webkit-box-shadow: 0 0 0 4px #f4f4f4;
-	-moz-box-shadow: 0 0 0 4px #f4f4f4;
-	box-shadow: 0 0 0 4px #f4f4f4;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
 }
 input:hover,
 textarea:hover {
-	border: 2px solid #e3e3e3;
+	border: 2px solid #bfbfbf;
 }
 input:focus,
 textarea:focus {
 	color: #404040;
-	border: 2px solid #e3e3e3;
-	-webkit-box-shadow: 0 0 0 4px #e3e3e3;
-	-moz-box-shadow: 0 0 0 4px #e3e3e3;
-	box-shadow: 0 0 0 4px #e3e3e3;
+	border: 2px solid #0077b3;
 }
 
 input[type="submit"],
 input[type="button"],
-input[type="reset"],
-.button {
+input[type="reset"] {
 	background: #f80;
 	color: #fff !important;
 	padding: 0.4em;
@@ -733,15 +729,17 @@ input[type="reset"],
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus,
 input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="reset"]:hover,
-input[type="reset"]:focus,
-.button:hover,
-.button:focus {
+input[type="reset"]:focus {
 	background: #f50;
 }
 input[type="radio"],
@@ -3116,6 +3114,13 @@ body {
 		width: auto;
 		float: none;
 		margin: 0 0 20px;
+	}
+	#front-page-adverts-outside {
+		display: none;
+	}
+	#front-page-adverts-inside {
+		border-top: 0.25em solid #404040;
+		margin: 0 auto 4em;
 	}
 	#wrapper-outside {}
 	#wrapper-inside {
