@@ -189,15 +189,19 @@ function scapegoat_theme_options_page() {
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row"><span class="social-icon rss"><i class="icon-rss"></i></span> Feed</th>
-					<td><input id="scapegoat_theme_options[rss]" class="regular-text" type="text" name="scapegoat_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" /> <span class="description"> <?php _e('if this is empty, the default Wordpress-feed will set','scapegoat'); ?></span></td>
+					<td><input id="scapegoat_theme_options[rss]" class="regular-text" type="text" name="scapegoat_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" /> <span class="description"> <?php _e('Default: http://yoururl.com/feed/','scapegoat'); ?></span></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon mail"><i class="icon-envelope"></i></span> Newsletter</th>
+					<td><input id="scapegoat_theme_options[mail]" class="regular-text" type="text" name="scapegoat_theme_options[mail]" value="<?php esc_attr_e( $options['mail'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon podcast"><i class="icon-microphone"></i></span> Podcast</th>
+					<td><input id="scapegoat_theme_options[podcast]" class="regular-text" type="text" name="scapegoat_theme_options[podcast]" value="<?php esc_attr_e( $options['podcast'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><span class="social-icon twitter"><i class="icon-twitter"></i></span> Twitter</th>
 					<td><input id="scapegoat_theme_options[twitter]" class="regular-text" type="text" name="scapegoat_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
-				</tr>
-				<tr valign="top">
-					<th scope="row"><span class="social-icon appdotnet"><i class="icon-adn"></i></span> APP.net</th>
-					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><span class="social-icon facebook"><i class="icon-facebook"></i></span> Facebook</th>
@@ -212,12 +216,20 @@ function scapegoat_theme_options_page() {
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon mail"><i class="icon-envelope"></i></span> Newsletter</th>
-					<td><input id="scapegoat_theme_options[mail]" class="regular-text" type="text" name="scapegoat_theme_options[mail]" value="<?php esc_attr_e( $options['mail'] ); ?>" /></td>
+					<th scope="row"><span class="social-icon flickr"><i class="icon-flickr"></i></span> Flickr</th>
+					<td><input id="scapegoat_theme_options[flickr]" class="regular-text" type="text" name="scapegoat_theme_options[flickr]" value="<?php esc_attr_e( $options['flickr'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon podcast"><i class="icon-microphone"></i></span> Podcast</th>
-					<td><input id="scapegoat_theme_options[podcast]" class="regular-text" type="text" name="scapegoat_theme_options[podcast]" value="<?php esc_attr_e( $options['podcast'] ); ?>" /></td>
+					<th scope="row"><span class="social-icon github"><i class="icon-github"></i></span> Github</th>
+					<td><input id="scapegoat_theme_options[github]" class="regular-text" type="text" name="scapegoat_theme_options[github]" value="<?php esc_attr_e( $options['github'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon tumblr"><i class="icon-tumblr"></i></span> Tumblr</th>
+					<td><input id="scapegoat_theme_options[tumblr]" class="regular-text" type="text" name="scapegoat_theme_options[tumblr]" value="<?php esc_attr_e( $options['tumblr'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon appdotnet"><i class="icon-adn"></i></span> APP.net</th>
+					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
 				</tr>
 			</table>
 			<!-- Submit -->

@@ -4,11 +4,6 @@
 
 @import url('../css/font-awesome.min.css');
 
-.column-description img {
-	max-width: 100%; /* Bug Fix, while enabling <img /> in category description. Independend from Theme-Options here. */
-	height: auto;
-}
-
 .widefat {
 	margin: 8px auto 12px;
 }
@@ -23,7 +18,7 @@
 
 	color: #fff;
 	text-shadow: none;
-	background-color: #ea2178;
+	background-color: #f80;
 	
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -31,6 +26,9 @@
 }
 .social-icon.rss {
 	background-color: #ee9900;
+}
+.social-icon.mail {
+	background-color: #efbf00;
 }
 .social-icon.twitter {
 	background-color: #3ea9dd;
@@ -47,11 +45,17 @@
 .social-icon.youtube {
 	background-color: #c6312b;
 }
-.social-icon.mail {
-	background-color: #efbf00;
-}
 .social-icon.podcast {
 	background-color: #408ad2;
+}
+.social-icon.flickr {
+	background-color: #ff0084;
+}
+.social-icon.tumblr {
+	background-color: #4f6e84;
+}
+.social-icon.github {
+	background-color: #4183c4;
 }
 
 

@@ -1676,11 +1676,14 @@ body {
 .social-icon.rss {
 	background-color: #ee9900;
 }
+.social-icon.mail {
+	background-color: #efbf00;
+}
+.social-icon.podcast {
+	background-color: #408ad2;
+}
 .social-icon.twitter {
 	background-color: #3ea9dd;
-}
-.social-icon.appdotnet {
-	background-color: #cbccce;
 }
 .social-icon.facebook {
 	background-color: #3c5a98;
@@ -1691,13 +1694,18 @@ body {
 .social-icon.youtube {
 	background-color: #c6312b;
 }
-.social-icon.mail {
-	background-color: #efbf00;
+.social-icon.flickr {
+	background-color: #ff0084;
 }
-.social-icon.podcast {
-	background-color: #408ad2;
+.social-icon.github {
+	background-color: #4183c4;
 }
-
+.social-icon.tumblr {
+	background-color: #4f6e84;
+}
+.social-icon.appdotnet {
+	background-color: #cbccce;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* Frontpage

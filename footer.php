@@ -13,6 +13,9 @@
 					<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook"><i class="icon-facebook"></i></a><?php endif; ?>
 					<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +"><i class="icon-google-plus"></i></a><?php endif; ?>
 					<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube"><i class="icon-youtube-play"></i></a><?php endif; ?>
+					<?php if($options['flickr']) : ?><a target="_blank" class="social-icon flickr" href="<?php echo $options['flickr']; ?>" title="Flickr"><i class="icon-flickr"></i></a><?php endif; ?>
+					<?php if($options['github']) : ?><a target="_blank" class="social-icon github" href="<?php echo $options['github']; ?>" title="Github"><i class="icon-github"></i></a><?php endif; ?>
+					<?php if($options['tumblr']) : ?><a target="_blank" class="social-icon tumblr" href="<?php echo $options['tumblr']; ?>" title="Tumblr"><i class="icon-tumblr"></i></a><?php endif; ?>						
 					<?php if($options['appdotnet']) : ?><a target="_blank" class="social-icon appdotnet" href="<?php echo $options['appdotnet']; ?>" title="App.net"><i class="icon-adn"></i></a><?php endif; ?>
 				</div><!-- footer-top-social -->
 				<div id="footer-search">
