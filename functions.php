@@ -24,7 +24,6 @@ function enqueue_scripts() {
 		wp_enqueue_style('jquery.flexslider', $template.'/css/style-flexslider.css', array(), null, false);
 		wp_enqueue_script('jquery.flexslider', $template.'/js/libs/jquery.flexslider-min.js', array(), null, false);
 		wp_enqueue_script('jquery.easing', $template.'/js/libs/jquery.easing.min.js', array(), null, false);
-		wp_enqueue_script('jquery.cookie', $template.'/js/libs/jquery.cookie.js', array(), null, false);
 	}
 	wp_enqueue_script('custom-script', $template.'/js/script.js', array(), null, true);
 }
@@ -534,7 +533,9 @@ function current_paged( $var = '' ) {
 }
 
 
-/* pagination */
+/*-----------------------------------------------------------------------------------*/
+/* Pagination
+/*-----------------------------------------------------------------------------------*/
 function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
 	global $wp_query;
 	/* Do not show paging on single pages */
@@ -589,7 +590,9 @@ function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
 	}
 }
 
-/* submenu */
+/*-----------------------------------------------------------------------------------*/
+/* Submenu
+/*-----------------------------------------------------------------------------------*/
 function submenu() {
 	global $post;
 	if(!is_home()) { 
@@ -615,7 +618,9 @@ function submenu() {
 	}
 }
 
-/* breadcrumb */
+/*-----------------------------------------------------------------------------------*/
+/* Breadcrumb
+/*-----------------------------------------------------------------------------------*/
 function breadcrumb() {
 	$delimiter = '<span class="breadcrumb-seperator">&raquo;</span>';
 	$home = __('Start','scapegoat');
@@ -715,7 +720,9 @@ function breadcrumb() {
 }
 
 
-/* widget specially for images */
+/*-----------------------------------------------------------------------------------*/
+/* Image Widget
+/*-----------------------------------------------------------------------------------*/
 class banner extends WP_Widget {
 
 	function banner() {
@@ -774,7 +781,9 @@ class banner extends WP_Widget {
 }
 add_action('widgets_init', create_function('', 'return register_widget("banner");'));
 
-/* custom comment-list */
+/*-----------------------------------------------------------------------------------*/
+/* Custom Comments
+/*-----------------------------------------------------------------------------------*/
 function custom_comment($comment, $args, $depth) {
 	global $comment_counter;
 	if ($comment->comment_parent < 1) {
