@@ -59,24 +59,27 @@
 							<?php printf(__('Logged in as <a href="%1$s">%2$s</a>.','scapegoat'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account'); ?>"><?php _e('Log out','scapegoat'); ?> &raquo;</a>
 						</p>
 					<?php else : ?>
-						<p>
+						<p class="input-col input-col-1">
+							<label for="author"><?php _e('Name','scapegoat'); ?> <?php if ($req) { ?><span class="req"><?php _e('required','scapegoat'); ?></span><?php } ?></label>
 							<input class="input" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-							<label for="author"><?php _e('Name','scapegoat'); ?> <small><?php if ($req) _e('*','scapegoat'); ?></small></label>
+
 						</p>
 			
-						<p>
+						<p class="input-col input-col-2">
+							<label for="email"><?php _e('Email','scapegoat'); ?> <?php if ($req) { ?><span class="req"><?php _e('required','scapegoat'); ?></span><?php } ?></label>
 							<input class="input" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-							<label for="email"><?php _e('eMail','scapegoat'); ?> <small><?php if ($req) _e('*','scapegoat'); ?></small></label>
+
 						</p>
 			
-						<p>
-							<input class="input" type="text" name="url" id="url" value="<?php echo  esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+						<p class="input-col input-col-3">
 							<label for="url"><?php _e('Website','scapegoat'); ?></label>
+							<input class="input" type="text" name="url" id="url" value="<?php echo  esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 						</p>
 					<?php endif; ?>
 		
 					<!--<p><small><?php printf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>'), allowed_tags()); ?></small></p>-->
 					<p>
+						<label for="comment"><?php _e('Comment','scapegoat'); ?> <?php if ($req) { ?><span class="req"><?php _e('required','scapegoat'); ?></span><?php } ?></label>
 						<textarea class="input" name="comment" id="comment" cols="58" rows="10" tabindex="5"></textarea>
 					</p>
 					<p>
