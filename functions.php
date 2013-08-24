@@ -80,14 +80,6 @@ function add_twitter_contactmethod( $contactmethods ) {
 }
 add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
 
-/* register post formats */
-add_theme_support (
-	'post-formats',
-	array (
-		'status'
-	)
-);
-
 /* add custom image-sizes */
 if ( function_exists( 'add_theme_support' ) ) { 
 	add_theme_support('post-thumbnails');

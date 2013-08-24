@@ -51,11 +51,11 @@
 						</span>
 					</aside>
 					
-					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt'] && !has_post_format('status')) : ?>
+					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt']) : ?>
 						<figure class="post-video">
 							<?php echo get_post_meta($post->ID, 'video', true); ?>
 						</figure>
-					<?php elseif(has_post_thumbnail() && !has_post_format('status')) : ?>
+					<?php elseif(has_post_thumbnail()) : ?>
 						<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
 							<figure class="post-image">
 								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
@@ -81,25 +81,20 @@
 						<?php endif; ?>
 					<?php endif; ?>
 				</header>
-		
+
 				<article class="article">
-					<?php if(has_post_format('status')) : ?>
-						<?php the_content(); ?>
-					<?php elseif(!$options['custom-excerpt']) : ?>
+					<?php if(!$options['custom-excerpt']) : ?>
 						<?php the_content(); ?>
 					<?php else : ?>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
 					<?php endif; ?>
 					<div class="clear"></div>
-				</article>
-				
-				
-				<?php if(!has_post_format('status')) : ?>
-					<footer class="footer post-meta">
-						<?php the_tags(__('<span class="post-tags"><i class="icon-tag"></i> Tags: ','scapegoat'),', ','</span>'); ?>
-					</footer>
-				<?php endif; ?>
+				</article>				
+
+				<footer class="footer post-meta">
+					<?php the_tags(__('<span class="post-tags"><i class="icon-tag"></i> Tags: ','scapegoat'),', ','</span>'); ?>
+				</footer>
 				
 			</section>
 			
