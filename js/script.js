@@ -70,15 +70,21 @@
 		function SameHeight() {
 			var maxHeight1 = -1;
 			var footerWidget = $('.footer-sidebar-inside');
-			maxHeight1 = maxHeight1 > footerWidget.height() ? maxHeight1 : footerWidget.height();
+			var heights1 = footerWidget.map(function () {
+				return $(this).height();
+			}).get(),
+			maxHeight1 = Math.max.apply(null, heights1);
 			footerWidget.each(function() {
 				$(this).height('auto');
 				$(this).height(maxHeight1);
 			});
-			
+
 			var maxHeight2 = -1;
 			var footerList = $('#footer_navigation li').not('#footer_navigation li li');
-			maxHeight2 = maxHeight2 > footerList.height() ? maxHeight2 : footerList.height();
+			var heights2 = footerList.map(function () {
+				return $(this).height();
+			}).get(),
+			maxHeight2 = Math.max.apply(null, heights2);
 			footerList.each(function() {
 				$(this).height('auto');
 				$(this).height(maxHeight2);

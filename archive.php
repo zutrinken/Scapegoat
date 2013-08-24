@@ -139,6 +139,7 @@
 				<article class="article">
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
+					<div class="clear"></div>
 				</article>
 				
 				<?php if(!has_post_format('status')) : ?>

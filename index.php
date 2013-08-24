@@ -91,6 +91,7 @@
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
 					<?php endif; ?>
+					<div class="clear"></div>
 				</article>
 				
 				

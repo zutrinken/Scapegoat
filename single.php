@@ -66,6 +66,7 @@
 						<?php wp_link_pages('before=<nav class="pagination_post">'. __("Pages:","scapegoat") .'&after=</nav>'); ?>
 						<?php the_content(); ?>
 						<?php wp_link_pages('before=<nav class="pagination_post">'. __("Pages:","scapegoat") .'&after=</nav>'); ?>
+						<div class="clear"></div>
 					</article>
 	
 				</section>

@@ -48,16 +48,23 @@ As the example above you can build other columned blocks with the following para
 #### 3 Columns
 
 1|1|1 Columns:	````[three_columns_one][three_columns_one][three_columns_one_last]````
+
 1|2 Columns:		````[three_columns_one][three_columns_two_last]````
+
 2|1 Columns:		````[three_columns_two][three_columns_one_last]````
 
 #### 4 Columns
 
 1|1|1|1 Columns:	````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
+
 1|1|2 Columns:	````[four_columns_one][four_columns_one][four_columns_two_last]````
+
 1|2|1 Columns:	````[four_columns_one][four_columns_two][four_columns_one_last]````
+
 2|1|1 Columns:	````[four_columns_two][four_columns_one][four_columns_one_last]````
+
 1|3 Columns:		````[four_columns_one][four_columns_three_last]````
+
 3|1 Columns:		````[four_columns_three][four_columns_one_last]````
 
 ### Buttons
