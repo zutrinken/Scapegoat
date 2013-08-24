@@ -1562,6 +1562,15 @@ body {
 	font-size: 0.75em;
 	line-height: 1.5em;
 }
+.title-header .post-description a {
+	color: inherit;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.title-header .post-description a:hover,
+.title-header .post-description a:focus {
+	color: inherit;
+	border-bottom: 1px solid rgba(255,255,255,1);
+}
 #title-images-wrapper {
 	position: relative;
 	max-width: 1440px;
