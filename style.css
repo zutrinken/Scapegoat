@@ -524,7 +524,13 @@ a:focus {
 }
 
 
-
+.article a[href*="/feed"],
+.article a[href*="mailto:"],
+.article a[href*="app.net"],
+.article a[href*="tumblr.com"],
+.article a[href*="flickr.com"],
+.article a[href*="github.com"],
+.article a[href*="tumblr.com"],
 .article a[href*="youtube.com"],
 .article a[href*="twitter.com"],
 .article a[href*="facebook.com"],
@@ -533,6 +539,12 @@ a:focus {
 	display: inline-block;
 }
 
+.article a[href*="/feed"]:before,
+.article a[href*="mailto:"]:before,
+.article a[href*="app.net"]:before,
+.article a[href*="tumblr.com"]:before,
+.article a[href*="flickr.com"]:before,
+.article a[href*="github.com"]:before,
 .article a[href*="youtube.com"]:before,
 .article a[href*="twitter.com"]:before,
 .article a[href*="facebook.com"]:before,
@@ -544,6 +556,30 @@ a:focus {
 	color: #bfbfbf;
 }
 
+.article a[href*="/feed"]:before {
+	content: '\f09e';
+	color: #ee9900;
+}
+.article a[href*="mailto:"]:before {
+	content: '\f0e0';
+/* 	color: #efbf00; */
+}
+.article a[href*="app.net"]:before {
+	content: '\f170';
+	color: #cbccce;
+}
+.article a[href*="tumblr.com"]:before {
+	content: '\f173';
+	color: #4f6e84;
+}
+.article a[href*="flickr.com"]:before {
+	content: '\f16e';
+	color: #ff0084;
+}
+.article a[href*="github.com"]:before {
+	content: '\f09b';
+	color: #4183c4;
+}
 .article a[href*="youtube.com"]:before {
 	content: '\f16a';
 	color: #c6312b;
@@ -563,7 +599,6 @@ a:focus {
 .article a[href*="wikipedia.org"]:before {
 	content: '\f02d';
 }
-
 
 
 
