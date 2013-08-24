@@ -26,7 +26,7 @@
 
 ### Columns
 
-It's possible to create **two**, **three** or **four** columned blocks. Colums are alway closed by a ````[divider]```` which clears the floating. Also the last column needs the attribute ````_last````. The basic syntax of a three clolumned block is like:
+It's possible to create ````[two_````, ````[three_```` or ````[four_```` columns. The last column of an column group needs the attribute ````_last]````. Every column group has to be completed with a ````[divider]```` to clear the floating. Also The basic syntax for three columns is:
 
 	[three_columns_one]
 	 first column content here...
@@ -39,33 +39,33 @@ It's possible to create **two**, **three** or **four** columned blocks. Colums a
 	[/three_columns_one_last]
 	[divider]
 
-As the example above you can build other columned blocks with the following paramenters:
+The first number ````[three_```` defines the grid and the second numer ````_one]```` the column width. Mind that every column also need its close tag. As the example above you can build other columns with the following paramenters:
 
 #### 2 Columns
 
-1|1 Columns:		````[two_columns_one][two_columns_one_last]````
+1-1 Columns: ````[two_columns_one][two_columns_one_last]````
 
 #### 3 Columns
 
-1|1|1 Columns:	````[three_columns_one][three_columns_one][three_columns_one_last]````
+1-1-1 Columns: ````[three_columns_one][three_columns_one][three_columns_one_last]````
 
-1|2 Columns:		````[three_columns_one][three_columns_two_last]````
+1-2 Columns: ````[three_columns_one][three_columns_two_last]````
 
-2|1 Columns:		````[three_columns_two][three_columns_one_last]````
+2-1 Columns: ````[three_columns_two][three_columns_one_last]````
 
 #### 4 Columns
 
-1|1|1|1 Columns:	````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
+1-1-1-1 Columns: ````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
 
-1|1|2 Columns:	````[four_columns_one][four_columns_one][four_columns_two_last]````
+1-1-2 Columns: ````[four_columns_one][four_columns_one][four_columns_two_last]````
 
-1|2|1 Columns:	````[four_columns_one][four_columns_two][four_columns_one_last]````
+1-2-1 Columns: ````[four_columns_one][four_columns_two][four_columns_one_last]````
 
-2|1|1 Columns:	````[four_columns_two][four_columns_one][four_columns_one_last]````
+2-1-1 Columns: ````[four_columns_two][four_columns_one][four_columns_one_last]````
 
-1|3 Columns:		````[four_columns_one][four_columns_three_last]````
+1-3 Columns: ````[four_columns_one][four_columns_three_last]````
 
-3|1 Columns:		````[four_columns_three][four_columns_one_last]````
+3-1 Columns: ````[four_columns_three][four_columns_one_last]````
 
 ### Buttons
 
