@@ -7,6 +7,14 @@
 		
 		<?php if(has_post_thumbnail() && (!$detect->isMobile() || $detect->isTablet())) : ?>
 			<div id="title-images-wrapper">
+				<figure class="title-image parallax">
+					<?php the_post_thumbnail('featured'); ?>
+					<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+						<span class="meta-thumbnail-caption">
+							<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+						</span>
+					<?php endif; ?>
+				</figure><!-- slide-image -->
 				<div id="title-outside">
 					<div id="title-inside" class="inside">
 						<header class="title-header">
@@ -17,14 +25,6 @@
 						</header>
 					</div>
 				</div>
-				<figure class="title-image parallax">
-					<?php the_post_thumbnail('featured'); ?>
-					<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-						<span class="meta-thumbnail-caption">
-							<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-						</span>
-					<?php endif; ?>
-				</figure><!-- slide-image -->
 			</div>
 		<?php else : ?>
 			<div id="title-outside">

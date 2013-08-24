@@ -1594,16 +1594,16 @@ body {
 .title-image img {
 	width: 100%;
 	position: relative;
-	z-index: 500;
 }
 .title-image .meta-thumbnail-caption {
 	position: absolute;
+	max-width: 75%;
 	bottom: 0;
 	right: 0;
 	z-index: 2000;
 	
 	display: block;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.25);
 	color: #fff;
 	font-size: 0.75em;
 	line-height: 1.5em;
@@ -3212,6 +3212,11 @@ body {
 	#footer_navigation ul ul li {
 		max-width: auto;
 		margin: 0;
+	}
+
+	#title-images-wrapper #title-outside {
+		position: relative;
+		background: #0077B3;
 	}
 
 	.title-header .post-title i {
