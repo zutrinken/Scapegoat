@@ -1027,6 +1027,7 @@ audio {
 	color: #004466;
 }
 
+
 	/* ------------------------------ Meta Infos - Single-View */
 
 .sidebar.post-meta {
@@ -3234,9 +3235,16 @@ body {
 	.post-image-mobile {
 		padding: 0 0 66%;
 	}
+	.footer {
+		display: none;
+	}
 	.post-more {
-		right: 1em;
-		bottom: 1em;
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin: 2em -1em -1em;
+		padding: 1em;
+		text-align: center;		
 	}
 	.type-post:after,
 	.type-page:after {
