@@ -1030,53 +1030,47 @@ audio {
 
 	/* ------------------------------ Meta Infos - Single-View */
 
-.sidebar.post-meta {
+#post-meta {
+	margin: 0;
+}
+.sidebar .post-meta {
 	position: relative;
 	overflow: visible;
 	color: #404040;
 }
-.sidebar.post-meta a,
-.sidebar.post-meta a:active,
-.sidebar.post-meta a:visited {
+.sidebar .post-meta > *{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+.sidebar .post-meta a,
+.sidebar .post-meta a:active,
+.sidebar .post-meta a:visited {
 	color: #0077B3;
 	border: 0;
 }
-.sidebar.post-meta a:hover,
-.sidebar.post-meta a:focus {
+.sidebar .post-meta a:hover,
+.sidebar .post-meta a:focus {
 	color: #005580;
 	border: 0;
 }
-.sidebar.post-meta > span {
+.sidebar .post-meta > span {
 	display: block;
 	float: none;
 	margin: 1em 0;
 	padding: 0;
 }
-.sidebar.post-meta .label {}
-.sidebar.post-meta .label i {}
-.sidebar.post-meta .value {}
+.sidebar .post-meta .label {}
+.sidebar .post-meta .label i {}
+.sidebar .post-meta .value {}
 
-#post-meta {
-	margin-top: 2em;
-}
-#author-meta {
-	padding-top: 3em;
-}
-#author-meta-archive {
-	margin-top: 3em;
-	padding-top: 3em;
-}
+.sidebar .post-meta .author-avatar {
+	float: right;
 
-.sidebar.post-meta .author-avatar {
-	width: 7em;
-	height: 7em;
-	
-	position: absolute;
-	top: -4em;
-	left: 50%;
+	width: 4em;
+	height: 4em;
 
 	padding: 0;
-	margin: 0 0 0 -4em;
+	margin: -0.5em 0 0.5em 1em;
 	
 	background: #000;
 	border: 0.5em solid #fff;
@@ -1564,6 +1558,24 @@ body {
 	color: inherit;
 	border-bottom: 1px solid rgba(255,255,255,1);
 }
+.title-header .post-description .label {
+	color: rgba(255,255,255,0.5);;
+}
+.title-header .post-description .label i {
+	color: #fff;
+	margin: 0 0.25em 0 0;
+}
+.title-header .post-description .author-twitter,
+.title-header .post-description .author-wiki,
+.title-header .post-description .author-website {
+	display: inline-block;
+	margin: 1em 2em 1em 0;
+}
+.title-header .post-description .author-biography {
+	display: block;
+	margin: 1em 0;
+}
+
 #title-images-wrapper {
 	position: relative;
 	max-width: 1440px;

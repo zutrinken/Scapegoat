@@ -104,7 +104,8 @@
 				</span>
 			</nav>
 
-			<section id="post-meta" class="post-meta sidebar" role="complementary">
+			<section id="post-meta" class="sidebar" role="complementary">
+				<aside class="widget widget-sidebar post-meta">
 				<span class="post-date">
 					<span class="label">
 						<i class="icon-calendar"></i>
@@ -152,9 +153,9 @@
 						); ?>
 					</span>
 				</span>
-			</section>
+				</aside>
 
-			<section id="author-meta" class="post-meta sidebar" role="complementary">
+				<aside class="widget widget-sidebar post-meta">
 				<figure class="author-avatar">
 					<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 96); }?>
 				</figure>
@@ -193,7 +194,6 @@
 					</span>
 				</span>
 				<?php endif; ?>
-				
 				<?php if(get_the_author_meta('description')) : ?>
 				<span class="author-biography">
 					<!--<span class="label">
@@ -205,6 +205,7 @@
 				</span>
 				<?php endif; ?>
 				<div class="clear"></div>
+				</aside>
 			</section>
 			
 			<?php get_sidebar(); ?>

@@ -43,6 +43,56 @@
 							<aside class="post-description">
 								<?php echo category_description(); ?>
 							</aside>
+						<?php elseif (is_author()) : ?>
+							<aside class="post-description">
+								<?php $userInfo = get_user_by('slug', get_query_var('author_name')); ?>
+								<?php if($userInfo->twitter) : ?>
+								<span class="author-twitter">
+									<span class="label">
+										<i class="icon-twitter"></i>
+										<?php _e('Twitter: ','scapegoat') ?>
+									</span>
+									<span class="value">
+										<a target="_blank" href="https://twitter.com/<?php echo $userInfo->twitter; ?>">@<?php echo $userInfo->twitter; ?></a>
+									</span>
+								</span>
+								<?php endif; ?>
+				
+								<?php if($userInfo->wiki) : ?>
+								<span class="author-wiki">
+									<span class="label">
+										<i class="icon-book"></i>
+										<?php _e('Wiki: ','scapegoat') ?>
+									</span>
+									<span class="value">
+										<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php echo $userInfo->wiki; ?>"><?php echo $userInfo->wiki; ?></a>
+									</span>
+								</span>
+								<?php endif; ?>
+								
+								<?php if($userInfo->user_url) : ?>
+								<span class="author-website">
+									<span class="label">
+										<i class="icon-globe"></i>
+										<?php _e('Website: ','scapegoat') ?>
+									</span>
+									<span class="value">
+										<a target="_blank" href="<?php echo $userInfo->user_url; ?>"><?php echo $userInfo->user_url; ?></a>
+									</span>
+								</span>
+								<?php endif; ?>
+								<?php if($userInfo->description) : ?>
+								<span class="author-biography">
+									<!--<span class="label">
+										<?php _e('Biography: ','scapegoat') ?>
+									</span>-->
+									<span class="value">
+										<?php echo $userInfo->description; ?>
+									</span>
+								</span>
+								<?php endif; ?>
+								<div class="clear"></div>
+							</aside>		
 						<?php endif; ?>
 					</header>
 				</div>
@@ -54,62 +104,6 @@
 			<div id="wrapper-inside" class="inside">
 
 		<div id="container">
-			<?php if (is_author()) : ?>
-				
-				<section id="author-meta-archive" class="post-meta sidebar" role="complementary">
-					<?php $userInfo = get_user_by('slug', get_query_var('author_name')); ?>
-					<figure class="author-avatar">
-						<?php if (function_exists('get_avatar')) { echo get_avatar($userInfo->user_email, 96); } ?>
-					</figure>
-					<?php if($userInfo->twitter) : ?>
-					<span class="author-twitter">
-						<span class="label">
-							<i class="icon-twitter"></i>
-							<?php _e('Twitter: ','scapegoat') ?>
-						</span>
-						<span class="value">
-							<a target="_blank" href="https://twitter.com/<?php echo $userInfo->twitter; ?>">@<?php echo $userInfo->twitter; ?></a>
-						</span>
-					</span>
-					<?php endif; ?>
-
-					<?php if($userInfo->wiki) : ?>
-					<span class="author-wiki">
-						<span class="label">
-							<i class="icon-book"></i>
-							<?php _e('Wiki: ','scapegoat') ?>
-						</span>
-						<span class="value">
-							<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php echo $userInfo->wiki; ?>"><?php echo $userInfo->wiki; ?></a>
-						</span>
-					</span>
-					<?php endif; ?>
-					
-					<?php if($userInfo->user_url) : ?>
-					<span class="author-website">
-						<span class="label">
-							<i class="icon-globe"></i>
-							<?php _e('Website: ','scapegoat') ?>
-						</span>
-						<span class="value">
-							<a target="_blank" href="<?php echo $userInfo->user_url; ?>"><?php echo $userInfo->user_url; ?></a>
-						</span>
-					</span>
-					<?php endif; ?>
-
-					<?php if($userInfo->description) : ?>
-					<span class="author-biography">
-						<!--<span class="label">
-							<?php _e('Biography: ','scapegoat') ?>
-						</span>-->
-						<span class="value">
-							<?php echo $userInfo->description; ?>
-						</span>
-					</span>
-					<?php endif; ?>
-					<div class="clear"></div>
-				</section>				
-			<?php endif; ?>
 
 			<div id="content" class="content" role="main">
 			
