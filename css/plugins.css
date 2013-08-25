@@ -32,7 +32,7 @@
 	margin: 0 2px;
 }
 .mc_merge_var .mc_input {
-	width: 95%;
+	width: 100%;
 }
 #mc-indicates-required {
 	display: none !important;
@@ -40,14 +40,20 @@
 .mc_signup_submit {
 	text-align: inherit !important;
 	margin: 1em 0;
+	width: 37.5%;
+	float: left;
 }
 .mc_signup_submit .button {}
 	
-	
 #mc_unsub_link {
-	text-align: inherit !important;
+	text-align: right !important;
+	margin: 1em 0;
+	width: 60%;
+	float: right;
 }
-#mc_unsub_link a {}
+#mc_unsub_link a {
+	color: #808080;
+}
 
 
 
