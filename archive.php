@@ -1,4 +1,7 @@
 		<?php get_header(); ?>
+		
+		<?php $detect = new Mobile_Detect(); /* Mobiel Detect */ ?>	
+		<?php $options = get_option('scapegoat_theme_options'); /* load the Theme Options */ ?>
 
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
@@ -112,11 +115,8 @@
 			
 			<?php breadcrumb(); ?>
 			
-			<?php if (have_posts()) : ?>
-
-			<?php while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
-
 				<header class="header">
 					<h2 class="post-title">
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
@@ -124,26 +124,7 @@
 						</a>
 						<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
 					</h2>
-				</header>
-				
-				<?php if(has_post_thumbnail()) : ?>
-					<figure class="post-image">
-						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('featured-small'); ?>
-						</a>
-					</figure>
-				<?php else : ?>
-					<?php echo catch_post_image(); ?>
-				<?php endif; ?>
-
-				<article class="article">
-					<?php the_excerpt(); ?>
-					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
-					<div class="clear"></div>
-				</article>
-				
-				<?php if(!has_post_format('status')) : ?>
-					<footer class="footer post-meta">
+					<aside class="info post-meta">
 						<span class="post-date">
 							<i class="icon-calendar"></i>
 							<?php the_time('j.m.y'); ?>
@@ -153,10 +134,52 @@
 							<?php _e('Category: ','scapegoat'); ?>
 							<?php the_category(', '); ?>
 						</span>
-					</footer>
-				<?php endif; ?>
-				
-				<div class="clear"></div>
+					</aside>
+					
+					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt']) : ?>
+						<figure class="post-video">
+							<?php echo get_post_meta($post->ID, 'video', true); ?>
+						</figure>
+					<?php elseif(has_post_thumbnail()) : ?>
+						<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+							<figure class="post-image">
+								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
+									<?php the_post_thumbnail('featured-medium'); ?>
+								</a>
+								<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+									<span class="post-image-caption">
+										<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+									</span>
+								<?php endif; ?>
+							</figure>
+						<?php else : ?>
+							<figure class="post-image post-image-mobile">
+								<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
+									<?php the_post_thumbnail('featured-small'); ?>
+								</a>
+								<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+									<span class="post-image-caption">
+										<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+									</span>
+								<?php endif; ?>
+							</figure>
+						<?php endif; ?>
+					<?php endif; ?>
+				</header>
+
+				<article class="article">
+					<?php if(!$options['custom-excerpt']) : ?>
+						<?php the_content(); ?>
+					<?php else : ?>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</article>				
+
+				<footer class="footer post-meta">
+					<?php the_tags(__('<span class="post-tags"><i class="icon-tag"></i> Tags: ','scapegoat'),', ','</span>'); ?>
+				</footer>
 				
 			</section>
 			

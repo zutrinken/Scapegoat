@@ -1010,23 +1010,6 @@ audio {
 	min-height: 1.5em;
 }
 
-	/* ------------------------------ Archive Posts */
-
-.archive .header,
-.search .header {
-	clear: both;
-	float: none;
-}
-.archive .post-image,
-.search .post-image {
-	width: 30%;
-	height: auto;
-	float: left;
-	padding: 0;
-	margin: 1.5em 2em 1em 0;
-}
-
-
 	/* ------------------------------ Sticky Posts */
 
 .sticky {
@@ -3269,14 +3252,6 @@ body {
 	}
 	.article {
 		font-size: 1em;
-	}
-	.archive .post-image,
-	.search .post-image {
-		width: auto;
-		float: none;
-		height: 0;
-		padding: 0 0 66%;
-		margin: 1em -1em;
 	}
 	#respond-wrapper {
 		padding: 0.25em 1em;

@@ -31,7 +31,7 @@
 			<?php breadcrumb(); ?>
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<section id="post-<?php the_ID(); ?>" <?php if (is_front_page()) { post_class('front-post'); } else { post_class(); } ?> role="article">
+			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 				<header class="header">
 					<h2 class="post-title">
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
