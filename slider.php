@@ -2,10 +2,8 @@
 	<!-- customize slider by theme-options -->
 	<?php if($options['slider-num']) : $num=$options['slider-num']; else : $num=6; endif; ?>
 	<?php if($options['slider-cat']) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
-	<!-- filter post formats from slider query -->
-	<?php $no_formats = array(array('taxonomy' => 'post_format', 'field' => 'slug', 'terms' => array('post-format-status'), 'operator' => 'NOT IN')); ?>
 	<!-- all parameters for the query -->
-	<?php $args = array('posts_per_page'=>$num,'cat'=>$cat,'tax_query'=>$no_formats,'post__not_in'=>get_option('sticky_posts')); ?>
+	<?php $args = array('posts_per_page'=>$num,'cat'=>$cat, 'post__not_in'=>get_option('sticky_posts')); ?>
 	<?php query_posts($args); ?>
 	<?php if(have_posts()) : ?>
 	<section id="front-page-header-outside" role="complementary">
@@ -76,37 +74,27 @@
 						<ul>
 							<?php if($options['featured-link-title-1']) : ?>
 							<li>
-								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>">
-										<?php echo $options['featured-link-title-1']; ?>
-								</a>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-1']; ?>" title="<?php echo $options['featured-link-title-1']; ?>"><?php echo $options['featured-link-title-1']; ?></a>
 							</li>
 							<?php endif; ?>
 							<?php if($options['featured-link-title-2']) : ?>
 							<li>
-								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>">
-										<?php echo $options['featured-link-title-2']; ?>
-								</a>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-2']; ?>" title="<?php echo $options['featured-link-title-2']; ?>"><?php echo $options['featured-link-title-2']; ?></a>
 							</li>
 							<?php endif; ?>
 							<?php if($options['featured-link-title-3']) : ?>
 							<li>
-								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>">										
-										<?php echo $options['featured-link-title-3']; ?>
-								</a>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-3']; ?>" title="<?php echo $options['featured-link-title-3']; ?>"><?php echo $options['featured-link-title-3']; ?></a>
 							</li>
 							<?php endif; ?>
 							<?php if($options['featured-link-title-4']) : ?>
 							<li>
-								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>">
-									<?php echo $options['featured-link-title-4']; ?>
-								</a>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-4']; ?>" title="<?php echo $options['featured-link-title-4']; ?>"><?php echo $options['featured-link-title-4']; ?></a>
 							</li>
 							<?php endif; ?>
 							<?php if($options['featured-link-title-5']) : ?>
 							<li>
-								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-5']; ?>" title="<?php echo $options['featured-link-title-5']; ?>">
-									<?php echo $options['featured-link-title-5']; ?>
-								</a>
+								<a target="_blank" class="featured-link" href="<?php echo $options['featured-link-5']; ?>" title="<?php echo $options['featured-link-title-5']; ?>"><?php echo $options['featured-link-title-5']; ?></a>
 							</li>
 							<?php endif; ?>
 						</ul>
