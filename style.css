@@ -1036,10 +1036,10 @@ audio {
 	-moz-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 	box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 }
-.post-title,
-.post-title a,
-.post-title a:active,
-.post-title a:visited,
+.sticky .post-title,
+.sticky .post-title a,
+.sticky .post-title a:active,
+.sticky .post-title a:visited,
 .sticky .article {
 	color: #004466;
 }
@@ -3391,7 +3391,8 @@ body {
 	#front-page-slider-toggle {
 		background-image: url('images/icon-slideshow@2x.png');
 	}
-	.front-post:after {
+	.type-post:after,
+	.type-page:after  {
 		background-image: url('images/bg-front-post@2x.png');
 	}
 	.post-nav .post-nav-prev {
