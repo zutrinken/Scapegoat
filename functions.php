@@ -823,6 +823,7 @@ function custom_comment($comment, $args, $depth) {
 				<?php endif; ?>
 				<?php comment_text() ?>
 			</div><!--comment-text-->
+			<div class="clear"></div>
 		</div><!--comment-body-->
 		<?php
 }

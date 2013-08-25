@@ -1165,24 +1165,24 @@ audio {
 }
 .commentlist {
 	margin: 0;
+	padding: 1em 0 4em;
 	list-style: none;
 }
 .commentlist li {
 	position: relative;
-	padding: 1.5em 0 0;
-	margin: 0 0 1.5em;
-	border-top: 1px solid #bfbfbf;
+	padding: 0;
+	margin: 0;
 }
 .commentlist li .comment-number {
 	position: absolute;
 	display: block;
-	right: -2.5em;
-	top: -0.75em;
+	left: -1.25em;
+	top: 1.5em;
 	width: 2em;
 	padding: 0;
 	height: 1.5em;
 	line-height: 1.5em;
-	color: #808080;
+	color: #bfbfbf;
 	z-index: 100;
 	font-weight: 400;
 }
@@ -1192,7 +1192,7 @@ audio {
 .commentlist li li {
 	overflow: auto;
 	margin: 0;
-	padding: 0 0 0 10%;
+	padding: 0 0 0 25%;
 	border: 0;
 }
 .commentlist ul ul {
@@ -1206,13 +1206,13 @@ audio {
 	/* ------------------------------ Comment Content */
 
 .comment-body {
-	margin: 0;
-	padding: 0 0 2em;
+	margin: 1em 0;
+	padding: 0;
 	position: relative;
-	overflow: auto;
+	overflow: visible;
 }
 li .comment-body .comment-info {
-	width: 25%;
+	width: 20%;
 	float: left;
 }
 li li .comment-body .comment-info {
@@ -1221,16 +1221,15 @@ li li .comment-body .comment-info {
 }
 li .comment-body .comment-text {
 	position: relative;
-	width: 70%;
+	width: 75%;
 	padding: 0 2.5%;
 	float: right;
-	color: #004466;
-	background: #e5f6ff;
-	border: 0.0625em solid #acd2e5;
+	background: #fff;
+	border: 0.0625em solid #d1d1d1;
 
-	-webkit-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
-	-moz-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
-	box-shadow: 0 1px 3px rgba(0,85,128,0.1);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1242,10 +1241,10 @@ li .comment-body .comment-text:before {
 	width: 0;
 	height: 0;
 	
-	top: -0.125em;
+	top: -0.0625em;
 	left: -2em;
 	
-	border-right: 2em solid #acd2e5;
+	border-right: 2em solid #d1d1d1;
 	border-bottom: 2em solid transparent;
 }
 li .comment-body .comment-text:after {
@@ -1255,41 +1254,46 @@ li .comment-body .comment-text:after {
 	height: 0;
 	
 	top: 0;
-	left: -1.75em;
+	left: -1.8125em;
 	
-	border-right: 2em solid #e5f6ff;
+	border-right: 2em solid #fff;
 	border-bottom: 2em solid transparent;
 }
 
 li li .comment-body .comment-text {
 	float: left;
 
-	background: #d7eefa;
-	border: 0.0625em solid #9fcbe0;
+	color: #004466;
+	background: #e5f6ff;
+	border: 0.0625em solid #acd2e5;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,85,128,0.1);
+	box-shadow: 0 1px 3px rgba(0,85,128,0.1);
 }
 li li .comment-body .comment-text:before {
 	left: auto;
 	right: -2em;
 
 	border-right: 0;
-	border-left: 2em solid #9fcbe0;
+	border-left: 2em solid #acd2e5;
 }
 li li .comment-body .comment-text:after {
 	left: auto;
-	right: -1.75em;
+	right: -1.8125em;
 	
 	border-right: 0;
-	border-left: 2em solid #d7eefa;
+	border-left: 2em solid #e5f6ff;
 }
 li li li .comment-body .comment-text {
-	background: #c9e6f5;
-	border: 0.0625em solid #93c4db;
+	background: #d7eefa;
+	border: 0.0625em solid #9fcbe0;
 }
 li li li .comment-body .comment-text:before {
-	border-left: 2em solid #93c4db;
+	border-left: 2em solid #9fcbe0;
 }
 li li li .comment-body .comment-text:after {
-	border-left: 2em solid #c9e6f5;
+	border-left: 2em solid #d7eefa;
 }
 
 .comment-body .unlock {
@@ -1319,12 +1323,12 @@ li li li .comment-body .comment-text:after {
 .comment-body .comment-author .fn  a:visited,
 .comment-body .comment-author .fn  a:hover,
 .comment-body .comment-author .fn  a:focus {
-	color: inherit;
+	color: #404040;
 }
 .comment-body .comment-meta {
 	margin: 0 0 1.5em;
 	clear: both;
-	font-size: 0.8em;
+	font-size: 0.75em;
 }
 .comment-body .comment-meta a, 
 .comment-body .comment-meta a:active,
@@ -1343,7 +1347,11 @@ li li li .comment-body .comment-text:after {
 .comment-body .reply a:visited {
 	color: #fff;
 	background: #0077b3;
-	padding: 0 0.3em;
+	padding: 0.25em 0.5em;
+	
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
 }
 .comment-body .reply a:hover,
 .comment-body .reply a:focus {
