@@ -1,11 +1,29 @@
 <?php if($options['header-option'] == 'show-slider') : ?>
-	<!-- customize slider by theme-options -->
-	<?php if($options['slider-num']) : $num=$options['slider-num']; else : $num=6; endif; ?>
-	<?php if($options['slider-cat']) : $cat=$options['slider-cat']; else : $cat=''; endif; ?>
-	<!-- all parameters for the query -->
-	<?php $args = array('posts_per_page'=>$num,'cat'=>$cat, 'post__not_in'=>get_option('sticky_posts')); ?>
-	<?php query_posts($args); ?>
-	<?php if(have_posts()) : ?>
+	<?php
+		if($options['slider-num']) {
+			$num = $options['slider-num'];
+		} else {
+			$num = 6;
+		}
+		if($options['slider-cat']) {
+			$cat = $options['slider-cat'];
+		} else {
+			$cat = '';
+		}
+		if($options['slider-order']) {
+			$order = 'rand';
+		} else {
+			$order = 'DESC';
+		}
+		$args = array(
+			'posts_per_page' => $num,
+			'cat' => $cat,
+			'post__not_in' => get_option('sticky_posts'),
+			'orderby' => $order
+		);
+		query_posts($args);
+	
+		if(have_posts()) : ?>
 	<section id="front-page-header-outside" role="complementary">
 		<div id="front-page-header-inside" class="inside">
 			<div id="toggling" class="toggling">
