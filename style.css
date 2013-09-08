@@ -2506,7 +2506,7 @@ body {
 	column-break-inside: avoid;
 }
 .widget-title {
-	color: #0077B3;
+	color: #404040;
 	padding: 0 0 0.5em;
 	margin: 0.5em 0;
 
@@ -2514,9 +2514,11 @@ body {
 	font-size: 1.5em;
 }
 .widget-title:before {
+/*
 	font-family: 'FontAwesome';
 	display: inline-block;
 	margin: 0 0.75em 0 0.25em;
+*/
 }
 .widget ul {
 	margin: 0;
@@ -2603,7 +2605,7 @@ body {
 
 .widget_nav_menu .widget-title:before,
 .widget_pages .widget-title:before {
-	content: '\f03a';
+/* 	content: '\f03a'; */
 }
 
 .widget_nav_menu ul,
@@ -2643,7 +2645,7 @@ body {
 
 .widget_text {}
 .widget_text .widget-title:before {
-	content: '\f05a';
+/* 	content: '\f05a'; */
 }
 
 	/* ------------------------------ Widget Calendar */
@@ -2651,7 +2653,7 @@ body {
 
 .widget_calendar {}
 .widget_calendar .widget-title:before {
-	content: '\f073';
+/* 	content: '\f073'; */
 }
 .widget_calendar .widget-inner {} 
 
@@ -2737,7 +2739,7 @@ body {
 
 .widget_tag_cloud {}
 .widget_tag_cloud .widget-title:before {
-	content: '\f02b';
+/* 	content: '\f02b'; */
 }
 .widget_tag_cloud .tagcloud {
 	padding: 0.25em 0;
@@ -2766,7 +2768,7 @@ body {
 
 .widget_rss {}
 .widget_rss .widget-title:before {
-	content: '\f143';
+/* 	content: '\f143'; */
 }
 .widget_rss ul {}
 .widget_rss ul li {}
@@ -2795,14 +2797,14 @@ body {
 
 .widget_recent_comments {}
 .widget_recent_comments .widget-title:before {
-	content: '\f086';
+/* 	content: '\f086'; */
 }
 
 	/* ------------------------------ Widget Meta */
 
 .widget_meta {}
 .widget_meta .widget-title:before {
-	content: '\f023';
+/* 	content: '\f023'; */
 }
 .widget_meta ul {}
 .widget_meta ul li {}
@@ -2812,35 +2814,35 @@ body {
 
 .widget_archive {}
 .widget_archive .widget-title:before {
-	content: '\f07c';
+/* 	content: '\f07c'; */
 }
 
 	/* ------------------------------ Widget Category */
 
 .widget_categories {}
 .widget_categories .widget-title:before {
-	content: '\f07c';
+/* 	content: '\f07c'; */
 }
 
 	/* ------------------------------ Widget Links */
 
 .widget_links {}
 .widget_links .widget-title:before {
-	content: '\f005';
+/* 	content: '\f005'; */
 }
 
 	/* ------------------------------ Widget Recent Entries */
 
 .widget_recent_entries {}
 .widget_recent_entries .widget-title:before {
-	content: '\f08d';
+/* 	content: '\f08d'; */
 }
 
 	/* ------------------------------ Widget Search */
 
 .widget_search {}
 .widget_search .widget-title:before {
-	content: '\f002';
+/* 	content: '\f002'; */
 }
 .widget_search .searchform {}
 

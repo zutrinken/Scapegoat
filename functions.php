@@ -29,7 +29,7 @@ function enqueue_scripts() {
 }
 
 
-function twentythirteen_fonts_url() {
+function scapegoat_fonts_url() {
 	$fonts_url = '';
 	$open_sans = _x( 'on', 'Open Sans: on or off', 'scapegoat' );
 
