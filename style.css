@@ -954,10 +954,10 @@ audio {
 .post-more {
 	position: absolute;
 	right: 3em;
-	bottom: 3em;
+	bottom: 2em;
 	display: block;
-	margin: auto;
-	padding: 0.5em 1em;
+	margin: -0.25em;
+	padding: 0.5em 0.75em;
 	
 	font-size: 1em !important;
 	color: #fff !important;
@@ -1005,13 +1005,18 @@ audio {
 	line-height: 1.5em;
 	margin: 0;
 }
-
+.footer .post-tags {
+	padding-right: 10em;
+}
 .info {}
 .footer {
 	clear: both;
 	float: none;
-	padding: 0.45em 0;
+	padding: 2em 3em;
 	min-height: 1.5em;
+	margin: 3em -3em -3em;
+	background: #f7f9fa;
+	border-top: 1px solid #e3e3e3;
 }
 
 	/* ------------------------------ Sticky Posts */
