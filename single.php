@@ -1,6 +1,4 @@
 		<?php get_header(); ?>
-		
-		<!-- Mobiel Detect -->
 		<?php $detect = new Mobile_Detect(); ?>
 		
 		<?php if(has_post_thumbnail() && (!$detect->isMobile() || $detect->isTablet())) : ?>
@@ -53,15 +51,6 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
 				<section id="post-<?php the_ID(); ?>" <?php post_class('single-post-view'); ?> role="article">
-	
-					<header class="header">
-						<?php breadcrumb(); ?>
-						<!--<h1 class="post-title">
-							<?php the_title(); ?>
-							<?php edit_post_link(__('Edit','scapegoat'),'<span class="edit-link">','</span>'); ?>
-						</h1>-->
-					</header>
-	
 					<article class="article">
 						<?php wp_link_pages('before=<nav class="pagination_post">'. __("Pages:","scapegoat") .'&after=</nav>'); ?>
 						<?php the_content(); ?>

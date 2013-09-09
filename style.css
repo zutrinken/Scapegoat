@@ -873,8 +873,6 @@ audio {
 	background: #005580;
 }
 
-.header {}
-
 .type-post,
 .type-page {
 	position: relative;
@@ -898,6 +896,7 @@ audio {
 	bottom: -5em;
 	height: 2em;
 	background: url('images/bg-front-post.png') no-repeat center center scroll;
+	background-size: 240px 16px
 }
 .post-title {
 	color: #000;
@@ -2128,7 +2127,6 @@ body {
 	/* ------------------------------ Breadcrumb */
 
 #breadcrumb {
-	display: none;
 	font-size: 0.875em;
 	line-height: 1em;
 	color: #f80;
