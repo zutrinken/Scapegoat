@@ -95,105 +95,102 @@
 
 			<section id="post-meta" class="sidebar" role="complementary">
 				<aside class="widget widget-sidebar post-meta">
-				<span class="post-date">
-					<span class="label">
-						<i class="icon-calendar"></i>
-						<?php _e('Date: ','scapegoat'); ?>
+					<span class="post-date">
+						<span class="label">
+							<i class="icon-calendar"></i>
+							<?php _e('Date: ','scapegoat'); ?>
+						</span>
+						<span class="value">
+							<?php $archive_year  = get_the_time('Y'); ?>
+							<?php $archive_month = get_the_time('m'); ?>
+							<a href="<?php echo get_month_link($archive_year, $archive_month); ?>">
+								<?php the_time('j.m.y'); ?>
+							</a>
+						</span>
 					</span>
-					<span class="value">
-						<?php $archive_year  = get_the_time('Y'); ?>
-						<?php $archive_month = get_the_time('m'); ?>
-						<a href="<?php echo get_month_link($archive_year, $archive_month); ?>">
-							<?php the_time('j.m.y'); ?>
-						</a>
+					<span class="post-categories">
+						<span class="label">
+							<i class="icon-folder-open"></i>
+							<?php _e('Category: ','scapegoat'); ?>
+						</span>
+						<span class="value">
+							<?php the_category(', '); ?>
+						</span>
 					</span>
-				</span>
-				<span class="post-author">
-					<span class="label">
-						<i class="icon-user"></i>
-						<?php _e('Author: ','scapegoat'); ?>
+					<?php the_tags(__('<span class="post-tags"><span class="label"><i class="icon-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
+					<span class="post-comments">
+						<span class="label">
+							<i class="icon-comments"></i>
+							<?php _e('Comments: ','scapegoat'); ?>
+						</span>
+						<span class="value">
+							<?php comments_popup_link(
+								__('0','scapegoat'),
+								__('1','scapegoat'),
+								__('%','scapegoat'),
+								'comments-link',
+								__('closed','scapegoat')
+							); ?>
+						</span>
 					</span>
-					<span class="value">
-						<?php the_author_posts_link(); ?>
+					<span class="post-author">
+						<span class="label">
+							<i class="icon-user"></i>
+							<?php _e('Author: ','scapegoat'); ?>
+						</span>
+						<span class="value">
+							<?php the_author_posts_link(); ?>
+						</span>
 					</span>
-				</span>
-				<span class="post-categories">
-					<span class="label">
-						<i class="icon-folder-open"></i>
-						<?php _e('Category: ','scapegoat'); ?>
+					<?php if(get_the_author_meta('twitter')) : ?>
+					<span class="author-twitter">
+						<span class="label">
+							<i class="icon-twitter"></i>
+							<?php _e('Twitter: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="https://twitter.com/<?php the_author_meta('twitter');?>">@<?php the_author_meta('twitter');?></a>
+						</span>
 					</span>
-					<span class="value">
-						<?php the_category(', '); ?>
+					<?php endif; ?>
+					
+					<?php if(get_the_author_meta('wiki')) : ?>
+					<span class="author-wiki">
+						<span class="label">
+							<i class="icon-book"></i>
+							<?php _e('Wiki: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php the_author_meta('wiki');?>"><?php the_author_meta('wiki');?></a>
+						</span>
 					</span>
-				</span>
-				<?php the_tags(__('<span class="post-tags"><span class="label"><i class="icon-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
-				<span class="post-comments">
-					<span class="label">
-						<i class="icon-comments"></i>
-						<?php _e('Comments: ','scapegoat'); ?>
+					<?php endif; ?>
+					
+					<?php if(get_the_author_meta('user_url')) : ?>
+					<span class="author-website">
+						<span class="label">
+							<i class="icon-globe"></i>
+							<?php _e('Website: ','scapegoat') ?>
+						</span>
+						<span class="value">
+							<a target="_blank" href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('user_url'); ?></a>
+						</span>
 					</span>
-					<span class="value">
-						<?php comments_popup_link(
-							__('0','scapegoat'),
-							__('1','scapegoat'),
-							__('%','scapegoat'),
-							'comments-link',
-							__('closed','scapegoat')
-						); ?>
+					<?php endif; ?>
+					<figure class="author-avatar">
+						<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 96); }?>
+					</figure>
+					<?php if(get_the_author_meta('description')) : ?>
+					<span class="author-biography">
+						<!--<span class="label">
+							<?php _e('Biography: ','scapegoat') ?>
+						</span>-->
+						<span class="value">
+							<?php the_author_meta('description'); ?>
+						</span>
 					</span>
-				</span>
-				</aside>
-
-				<aside class="widget widget-sidebar post-meta">
-				<figure class="author-avatar">
-					<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 96); }?>
-				</figure>
-				<?php if(get_the_author_meta('twitter')) : ?>
-				<span class="author-twitter">
-					<span class="label">
-						<i class="icon-twitter"></i>
-						<?php _e('Twitter: ','scapegoat') ?>
-					</span>
-					<span class="value">
-						<a target="_blank" href="https://twitter.com/<?php the_author_meta('twitter');?>">@<?php the_author_meta('twitter');?></a>
-					</span>
-				</span>
-				<?php endif; ?>
-				
-				<?php if(get_the_author_meta('wiki')) : ?>
-				<span class="author-wiki">
-					<span class="label">
-						<i class="icon-book"></i>
-						<?php _e('Wiki: ','scapegoat') ?>
-					</span>
-					<span class="value">
-						<a target="_blank" href="https://wiki.piratenpartei.de/Benutzer:<?php the_author_meta('wiki');?>"><?php the_author_meta('wiki');?></a>
-					</span>
-				</span>
-				<?php endif; ?>
-				
-				<?php if(get_the_author_meta('user_url')) : ?>
-				<span class="author-website">
-					<span class="label">
-						<i class="icon-globe"></i>
-						<?php _e('Website: ','scapegoat') ?>
-					</span>
-					<span class="value">
-						<a target="_blank" href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('user_url'); ?></a>
-					</span>
-				</span>
-				<?php endif; ?>
-				<?php if(get_the_author_meta('description')) : ?>
-				<span class="author-biography">
-					<!--<span class="label">
-						<?php _e('Biography: ','scapegoat') ?>
-					</span>-->
-					<span class="value">
-						<?php the_author_meta('description'); ?>
-					</span>
-				</span>
-				<?php endif; ?>
-				<div class="clear"></div>
+					<?php endif; ?>
+					<div class="clear"></div>
 				</aside>
 			</section>
 			
