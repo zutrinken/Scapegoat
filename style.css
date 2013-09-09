@@ -874,7 +874,8 @@ audio {
 }
 
 .type-post,
-.type-page {
+.type-page,
+.type-attachment  {
 	position: relative;
 	margin: 0 -1em 7.5em;
 	padding: 3em;
@@ -3181,7 +3182,8 @@ body {
 		margin-left: -24em;
 	}
 	.type-post,
-	.type-page {
+	.type-page,
+	.type-attachment {
 		padding: 1em;
 	}
 	.post-image,
