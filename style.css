@@ -475,6 +475,8 @@ textarea {
 	color: #404040;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 }
 
 	/* ------------------------------ Headlines */
@@ -946,7 +948,10 @@ audio {
 .no-js .post-video {
 	display: none;
 }
-.article {}
+.article {
+	font-size: 1em;
+	line-height: 1.5em;
+}
 .post-more {
 	position: absolute;
 	right: 3em;
