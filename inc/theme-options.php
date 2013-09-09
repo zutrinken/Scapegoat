@@ -138,46 +138,6 @@ function scapegoat_theme_options_page() {
 								<td><input id="scapegoat_theme_options[slider-order]" type="checkbox" name="scapegoat_theme_options[slider-order]" value="1" <?php checked( '1', $options['slider-order'] ); ?> /></td>
 							</tr>
 						</table>
-
-						<table class="widefat slider">
-							<tr valign="top">
-								<th scope="row">Link 1</th>
-								<td>
-									<input id="scapegoat_theme_options[featured-link-1]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-1]" value="<?php esc_attr_e( $options['featured-link-1'] ); ?>" /> <span class="description">URL</span>
-									<input id="scapegoat_theme_options[featured-link-title-1]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-1]" value="<?php esc_attr_e( $options['featured-link-title-1'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row">Link 2</th>
-								<td>
-									<input id="scapegoat_theme_options[featured-link-2]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-2]" value="<?php esc_attr_e( $options['featured-link-2'] ); ?>" /> <span class="description">URL</span>
-									<input id="scapegoat_theme_options[featured-link-title-2]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-2]" value="<?php esc_attr_e( $options['featured-link-title-2'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row">Link 3</th>
-								<td>
-									<input id="scapegoat_theme_options[featured-link-3]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-3]" value="<?php esc_attr_e( $options['featured-link-3'] ); ?>" /> <span class="description">URL</span>
-									<input id="scapegoat_theme_options[featured-link-title-3]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-3]" value="<?php esc_attr_e( $options['featured-link-title-3'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row">Link 4</th>
-								<td>
-									<input id="scapegoat_theme_options[featured-link-4]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-4]" value="<?php esc_attr_e( $options['featured-link-4'] ); ?>" /> <span class="description">URL</span>
-									<input id="scapegoat_theme_options[featured-link-title-4]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-4]" value="<?php esc_attr_e( $options['featured-link-title-4'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
-								</td>
-							</tr>
-							<tr valign="top">
-								<th scope="row">Link 5</th>
-								<td>
-									<input id="scapegoat_theme_options[featured-link-5]" class="regular-text" type="text" name="scapegoat_theme_options[featured-link-5]" value="<?php esc_attr_e( $options['featured-link-5'] ); ?>" /> <span class="description">URL</span>
-									<input id="scapegoat_theme_options[featured-link-title-4]" class="medium-text" type="text" name="scapegoat_theme_options[featured-link-title-5]" value="<?php esc_attr_e( $options['featured-link-title-5'] ); ?>" /> <span class="description"><?php _e('Title','scapegoat'); ?></span>
-								</td>
-							</tr>
-						</table>
-
-						<br />
 						<label for="show-header">
 							<input id="show-header" type="radio" name="scapegoat_theme_options[header-option]" value="show-header" <?php checked( 'show-header' == $options['header-option'] ); ?> /> <?php _e('Header','scapegoat'); ?> <span class="description"><?php _e('Default Wordpress Header Function','scapegoat'); ?></span>
 						</label>

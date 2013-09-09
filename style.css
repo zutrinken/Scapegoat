@@ -1803,6 +1803,7 @@ body {
 	padding: 0;
 	max-width: 1440px;
 	margin: 0 auto 4em;
+	border-bottom: 0.25em solid #f80;
 }
 #toggling {}
 #front-page-slider-toggle {
@@ -1956,89 +1957,6 @@ body {
 #front-page-slider .front-page-slide .slide-text .slide-text-more:hover,
 #front-page-slider .front-page-slide .slide-text .slide-text-more:focus {
 	border: 1px solid #fff;
-}
-
-	/* ------------------------------ Featured Links */
-
-#front-page-adverts-outside {
-	position: relative;
-}
-#front-page-adverts-inside {
-	position: relative;
-	padding: 0;
-	max-width: 1440px;
-	margin: -4em auto 4em;
-}
-
-#front-page-adverts {
-	width: 100%;
-	height: 4em;
-
-	background: #bfbfbf;
-	font-size: 1em;
-	line-height: 100%;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-o-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-
-	overflow: hidden;
-
-	background: #f80;
-}
-#front-page-adverts #featured-links {
-	text-transform: uppercase;
-}
-#front-page-adverts #featured-links ul {
-	margin: 0;
-	list-style: none;
-}
-#front-page-adverts #featured-links ul li {
-	width: 20%;
-	display: table;
-	position: relative;
-	float: left;
-
-	-webkit-transition: all 0.25s ease-out;
-	-moz-transition: all 0.25s ease-out;
-	transition: all 0.25s ease-out;
-}
-#front-page-adverts #featured-links ul li:nth-child(1n) {
-	background: #e6a117;
-}
-#front-page-adverts #featured-links ul li:nth-child(2n) {
-	background: #e69017;
-}
-#front-page-adverts #featured-links ul li:nth-child(3n) {
-	background: #e67e17;
-}
-#front-page-adverts #featured-links ul li:nth-child(4n) {
-	background: #e66d17;
-}
-#front-page-adverts #featured-links ul li:nth-child(5n) {
-	background: #e65c17;
-}
-#front-page-adverts #featured-links ul li .featured-link {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	width: 100%;
-	height: 3em;
-	padding: 0.5em 0;
-
-	color: #fff;
-	font-weight: 400;
-
-	-webkit-transition: all 0.1s ease-out;
-	-moz-transition: all 0.1s ease-out;
-	transition: all 0.1s ease-out;
-}
-#front-page-adverts #featured-links ul li:hover .featured-link,
-#front-page-adverts #featured-links ul li:focus .featured-link {
-	padding: 0.25em 0 0.75em;
-	color: #fff;
 }
 
 #front-page-header-image-outside {
