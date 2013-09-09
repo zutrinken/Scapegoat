@@ -784,15 +784,15 @@ input[type="checkbox"] {
 	padding: 0.1em;
 }
 .article ul li:before {
-	content: '';
+	font-family: 'FontAwesome';
+	content: '\f0da';
+    color: #0077b3;
 	display: block;
 	position: absolute;
-	width: 1.5em;
-	height: 1.5em;
-	margin: 0 0 0 -1.8em;
-	padding: 0.1em;
-	background: transparent url('images/icon-list.png') no-repeat scroll center center;
-	background-size: 15px 15px;
+	width: 1em;
+	height: 1em;
+	margin: 0 0 0 -1.25em;
+	padding: 0;
 }
 .article dt {
 	font-weight: 700;
@@ -3325,9 +3325,6 @@ body {
 		only screen and (min-device-pixel-ratio: 2) {
 	body {
 		background-image: url('images/bg-main@2x.png');
-	}
-	.article ul li:before {
-		background-image: url('images/icon-list@2x.png');
 	}
 	.type-post:after,
 	.type-page:after  {

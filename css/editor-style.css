@@ -1,9 +1,5 @@
-	  /* ============= */
-	 /* === FONTS === */
-	/* ============= */
-
+@import url('font-awesome.min.css');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic');
-
 @font-face {
 	font-family: 'PoliticsHeadBold';
 	src: url('fonts/PoliticsHeadv1_9.eot');
@@ -159,12 +155,12 @@ h6 {
 a,
 a:active,
 a:visited {
-	color: #ff9f40;
+	color: #f80;
 }
-a:hover {
-	color: #ff7f00;
+a:hover,
+a:focus {
+	color: #f50;
 }
-
 p {
 	margin: 1.5em 0;
 }
@@ -173,33 +169,39 @@ strong {
 }
 hr {
 	height: 1px;
-	margin: 1.5em 0;
+	margin: 3em 0;
 	background: #808080;
 }
 em,
 i {
 	font-style: italic;
 }
-
+q {
+	font-style: italic;
+	color: #808080;
+}
 q:before,
 q:after {
-	color: #1483a8;
+	font-weight: 700;
+	color: #0077b3;
 }
 q:before {
-	content: '„';
+	content: '"';
 }
 q:after {
-	content: '“';
+	content: '"';
 }
 
 blockquote:before {
-    color: #1483a8;
-    content: '”';
-    font-size: 3em;
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+    color: #0077b3;
+    content: '\f10e';
+    font-size: 2em;
     line-height: 100%;
-	font-weight: 700;
     position: absolute;
-    top: 0;
+    top: 1em;
     left: 0.25em;
     height: auto;
     margin: 0;
@@ -209,7 +211,8 @@ blockquote {
 	font-style: italic;
 	color: #808080;
 	padding: 0 0 0 4em;
-	margin: 1.5em 0;	
+	margin: -1.5em 0;
+	overflow: auto;
 	position: relative;
 }
 cite,
@@ -275,14 +278,15 @@ li {
 	padding: 0.1em;
 }
 ul li:before {
-	content: '';
+	font-family: 'FontAwesome';
+	content: '\f0da';
+    color: #0077b3;
 	display: block;
 	position: absolute;
-	width: 1.5em;
-	height: 1.5em;
-	margin: 0 0 0 -1.8em;
-	padding: 0.1em;
-	background: transparent url('../images/icon-list.png') no-repeat scroll center center;
+	width: 1em;
+	height: 1em;
+	margin: 0 0 0 -1.25em;
+	padding: 0;
 }
 dt {
 	font-weight: 700;
@@ -327,8 +331,4 @@ audio {
 		only screen and (-moz-min-device-pixel-ratio: 2), 
 		only screen and (-o-min-device-pixel-ratio: 2/1), 
 		only screen and (min-device-pixel-ratio: 2) {
-	.article ul li:before {
-		background: transparent url('../images/icon-list@2x.png') no-repeat scroll center center;
-		background-size: 15px 15px;
-	}
 }
