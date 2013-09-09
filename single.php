@@ -74,21 +74,21 @@
 				<h2 id="pagination-title" class="visuallyhidden"><?php _e('Article Navigation','scapegoat'); ?></h2>
 				<span class="post-nav-link post-nav-prev">
 					<span class="post-nav-inner">
-						<?php previous_post_link('%link', __('Prev','scapegoat')); ?>
+						<?php previous_post_link('%link', '<i class="icon-arrow-left"></i><span>'.__('Prev','scapegoat')); ?>
 					</span>
 				</span>
 
 				<span class="post-nav-link post-nav-back">
 					<span class="post-nav-inner">
 						<a href="<?php bloginfo('url') ?>" rel="<?php _e('Back','scapegoat'); ?>">
-							<?php _e('All Projects','goat'); ?>
+							<i class="icon-arrow-up"></i><span><?php _e('All Projects','goat'); ?></span>
 						</a>
 					</span>
 				</span>
 
 				<span class="post-nav-link post-nav-next">
 					<span class="post-nav-inner">
-						<?php next_post_link('%link', __('Next','scapegoat')); ?>
+						<?php next_post_link('%link', '<i class="icon-arrow-right"></i><span>'.__('Next','scapegoat').'</span>'); ?>
 					</span>
 				</span>
 			</nav>
