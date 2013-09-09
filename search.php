@@ -23,8 +23,6 @@
 
 			<div id="content" class="content" role="main">
 			
-			<?php breadcrumb(); ?>
-			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 				<header class="header">
