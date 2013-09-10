@@ -77,18 +77,6 @@ function scapegoat_theme_options_page() {
 					</td>
 				</tr>
 			</table>
-			<h3><?php _e('Navigation','scapegoat'); ?></h3>
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row"><?php _e('Submenu','scapegoat'); ?></th>
-					<td>
-						<label for="scapegoat_theme_options[submenu-show]">
-							<input id="scapegoat_theme_options[submenu-show]" type="checkbox" name="scapegoat_theme_options[submenu-show]" value="1" <?php checked( '1', $options['submenu-show'] ); ?> /> <?php _e('show','scapegoat'); ?> <span class="description"><?php _e('at the top of the sidebar','scapegoat'); ?></span></td>
-						</label>
-					</td>
-				</tr>
-			</table>
-
 			<h3><?php _e('Appearance','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
