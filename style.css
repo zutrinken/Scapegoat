@@ -977,7 +977,7 @@ audio {
 	font-size: 0.75em;
 	line-height: 1.25em;
 }
-.post-meta i {
+.post-meta .label i {
 	font-size: 1.25em;
 	margin-right: 0.5em;
 	vertical-align: middle;
