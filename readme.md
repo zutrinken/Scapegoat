@@ -15,7 +15,7 @@
 
 * Slider Image Size ```1440x486```
 * Post Image Size ```720x243```
-* You can display Videos as post images on the frontpage by using the customfield called ```video``` with your embeded ```<iframe>```` code as the value.
+* You can display videos like post images on the frontpage by using the custom field called ```video``` with your embedded ```<iframe>```` code as the value.
 * First of all, you have to insert some informations about yourself in your profile-section
 * Use custom menues and insert the start-page to the main-menu, if you want to display the home icon in your header menu
 * Use widgets for the sidebar and footer. The footer looks best with 4 Widgets with approximately equal heights. Don't use menu widgets in the footer, there is a separate footer-menu
