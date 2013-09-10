@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: scapegoat v1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-08-31 12:54:31+0000\n"
+"PO-Revision-Date: 2013-09-10 23:33:19+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: 404.php:11
+#: 404.php:10
 #: functions.php:714
 #@ scapegoat
 msgid "404"
@@ -118,7 +118,7 @@ msgid "Abschicken"
 msgstr ""
 
 #: functions.php:101
-#: inc/theme-options.php:182
+#: inc/theme-options.php:117
 #@ scapegoat
 msgid "Header"
 msgstr "Kopfzeile"
@@ -134,16 +134,16 @@ msgstr "Fußzeile"
 msgid "Start"
 msgstr "Start"
 
-#: archive.php:169
+#: archive.php:167
 #: index.php:90
-#: search.php:85
+#: search.php:83
 #: slider.php:48
 #@ scapegoat
 msgid "more"
 msgstr "weiterlesen"
 
 #: functions.php:703
-#: header.php:76
+#: header.php:73
 #: search.php:11
 #@ scapegoat
 msgid "Search"
@@ -190,67 +190,37 @@ msgstr "Suche ..."
 msgid "Settings saved!"
 msgstr "Einstellungen gespeichert!"
 
-#: inc/theme-options.php:130
+#: inc/theme-options.php:105
 #@ default
 msgid "slider-cat"
 msgstr ""
 
-#: inc/theme-options.php:134
+#: inc/theme-options.php:109
 #@ default
 msgid "slider-num"
 msgstr ""
 
-#: inc/theme-options.php:146
-#@ default
-msgid "featured-link-1"
-msgstr ""
-
-#: inc/theme-options.php:147
-#@ default
-msgid "featured-link-title-1"
-msgstr ""
-
-#: inc/theme-options.php:153
-#@ default
-msgid "featured-link-2"
-msgstr ""
-
-#: inc/theme-options.php:154
-#@ default
-msgid "featured-link-title-2"
-msgstr ""
-
-#: inc/theme-options.php:160
-#@ default
-msgid "featured-link-3"
-msgstr ""
-
-#: inc/theme-options.php:161
-#@ default
-msgid "featured-link-title-3"
-msgstr ""
-
-#: inc/theme-options.php:196
+#: inc/theme-options.php:131
 #@ default
 msgid "rss"
 msgstr ""
 
-#: inc/theme-options.php:208
+#: inc/theme-options.php:143
 #@ default
 msgid "twitter"
 msgstr ""
 
-#: inc/theme-options.php:212
+#: inc/theme-options.php:147
 #@ default
 msgid "facebook"
 msgstr ""
 
-#: inc/theme-options.php:220
+#: inc/theme-options.php:155
 #@ default
 msgid "youtube"
 msgstr ""
 
-#: inc/theme-options.php:200
+#: inc/theme-options.php:135
 #@ default
 msgid "mail"
 msgstr ""
@@ -266,22 +236,21 @@ msgid "icon"
 msgstr ""
 
 #: functions.php:616
-#: inc/theme-options.php:83
 #@ scapegoat
 msgid "Submenu"
 msgstr "Unterseiten"
 
-#: inc/theme-options.php:216
+#: inc/theme-options.php:151
 #@ default
 msgid "google"
 msgstr ""
 
-#: page-full.php:59
-#: page-full.php:61
-#: page.php:64
-#: page.php:66
-#: single.php:66
-#: single.php:68
+#: page-full.php:50
+#: page-full.php:52
+#: page.php:55
+#: page.php:57
+#: single.php:55
+#: single.php:57
 #@ farewell
 #@ scapegoat
 msgid "Pages:"
@@ -337,7 +306,7 @@ msgstr "Die Standard Sidebar"
 msgid "Widgets for the Footer-section."
 msgstr "Widgets für die Fußzeile-Sidebar"
 
-#: inc/theme-options.php:204
+#: inc/theme-options.php:139
 #@ default
 msgid "podcast"
 msgstr ""
@@ -347,31 +316,27 @@ msgstr ""
 msgid "This is not the content you are looking for."
 msgstr "Das ist nicht der Inhalt, den du suchst."
 
-#: single.php:102
+#: single.php:91
 #@ scapegoat
 msgid "Next"
 msgstr "Nächste"
 
-#: archive.php:119
+#: archive.php:117
+#: attachment.php:11
 #: index.php:40
-#: page-full.php:23
-#: page-full.php:35
-#: page-full.php:55
-#: page.php:22
-#: page.php:37
-#: page.php:59
-#: search.php:35
-#: single.php:22
-#: single.php:37
-#: single.php:61
+#: page-full.php:21
+#: page-full.php:33
+#: page.php:20
+#: page.php:35
+#: search.php:33
+#: single.php:20
+#: single.php:35
 #@ scapegoat
-#@ farewell
 msgid "Edit"
 msgstr "bearbeiten"
 
 #: functions.php:235
-#: inc/theme-options.php:98
-#: inc/theme-options.php:111
+#: inc/theme-options.php:86
 #@ scapegoat
 msgid "Default"
 msgstr "Standard"
@@ -406,54 +371,39 @@ msgstr "automatische Auszüge"
 msgid "if this is checked, you don't need more-tags"
 msgstr "bei Aktivierung benötigst du keine more-tags"
 
-#: header.php:61
-#: header.php:90
-#: header.php:91
-#: inc/theme-options.php:80
+#: header.php:58
+#: header.php:87
+#: header.php:88
 #@ scapegoat
 msgid "Navigation"
 msgstr "Navigation"
 
-#: inc/theme-options.php:86
-#@ scapegoat
-msgid "show"
-msgstr "anzeigen"
-
-#: inc/theme-options.php:124
+#: inc/theme-options.php:99
 #@ scapegoat
 msgid "Slider"
 msgstr "Slider"
 
-#: inc/theme-options.php:186
+#: inc/theme-options.php:121
 #@ scapegoat
 msgid "Nothing"
 msgstr "Nichts"
 
-#: inc/theme-options.php:129
+#: inc/theme-options.php:104
 #@ scapegoat
 msgid "Category (ID)"
 msgstr "Kategorie (ID)"
 
-#: inc/theme-options.php:133
+#: inc/theme-options.php:108
 #@ scapegoat
 msgid "Amount of slides"
 msgstr "Anzahl der Slides"
 
-#: inc/theme-options.php:147
-#: inc/theme-options.php:154
-#: inc/theme-options.php:161
-#: inc/theme-options.php:168
-#: inc/theme-options.php:175
-#@ scapegoat
-msgid "Title"
-msgstr "Titel"
-
-#: inc/theme-options.php:192
+#: inc/theme-options.php:127
 #@ scapegoat
 msgid "Social Networks"
 msgstr "Soziale Netzwerke"
 
-#: inc/theme-options.php:240
+#: inc/theme-options.php:175
 #@ scapegoat
 msgid "Save"
 msgstr "Speichern"
@@ -463,11 +413,6 @@ msgstr "Speichern"
 #@ scapegoat
 msgid "Choose an Image from your <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Library</a> or <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">upload</a> a new one."
 msgstr "Wähle ein Bild aus deiner <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Mediathek</a> oder <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">lade</a> ein neues hoch."
-
-#: inc/theme-options.php:86
-#@ scapegoat
-msgid "at the top of the sidebar"
-msgstr "am Anfang der Sidebar"
 
 #: functions.php:537
 #: functions.php:558
@@ -487,32 +432,17 @@ msgstr " von "
 msgid "%1$s"
 msgstr ""
 
-#: inc/theme-options.php:121
+#: inc/theme-options.php:96
 #@ scapegoat
 msgid "Frontpage"
 msgstr "Startseite"
 
-#: inc/theme-options.php:167
-#@ default
-msgid "featured-link-4"
-msgstr ""
-
-#: inc/theme-options.php:168
-#@ default
-msgid "featured-link-title-4"
-msgstr ""
-
-#: inc/theme-options.php:92
+#: inc/theme-options.php:80
 #@ scapegoat
 msgid "Appearance"
 msgstr "Darstellung"
 
-#: inc/theme-options.php:108
-#@ scapegoat
-msgid "Style"
-msgstr "Stil"
-
-#: inc/theme-options.php:182
+#: inc/theme-options.php:117
 #@ scapegoat
 msgid "Default Wordpress Header Function"
 msgstr "Standard Wordpress Kopfzeile Funktion"
@@ -543,32 +473,32 @@ msgid "Archive"
 msgstr "Archiv"
 
 #: archive.php:53
-#: single.php:166
+#: single.php:149
 #@ scapegoat
 msgid "Twitter: "
 msgstr "Twitter: "
 
 #: archive.php:65
-#: single.php:178
+#: single.php:161
 #@ scapegoat
 msgid "Wiki: "
 msgstr "Wiki: "
 
 #: archive.php:77
-#: single.php:190
+#: single.php:173
 #@ scapegoat
 msgid "Website: "
 msgstr "Website: "
 
 #: archive.php:87
-#: single.php:200
+#: single.php:186
 #@ scapegoat
 msgid "Biography: "
 msgstr "Biografie: "
 
-#: archive.php:183
+#: archive.php:181
 #: index.php:104
-#: single.php:85
+#: single.php:74
 #@ scapegoat
 msgid "Article Navigation"
 msgstr "Artikelnavigation"
@@ -593,7 +523,7 @@ msgstr ""
 msgid "Footer-Sidebar-4"
 msgstr ""
 
-#: inc/theme-options.php:236
+#: inc/theme-options.php:171
 #@ default
 msgid "appdotnet"
 msgstr ""
@@ -608,82 +538,82 @@ msgstr "Blog"
 msgid "Sidebar"
 msgstr ""
 
-#: single.php:88
+#: single.php:77
 #@ scapegoat
 msgid "Prev"
 msgstr "Vorherige"
 
-#: single.php:94
+#: single.php:83
 #@ scapegoat
 msgid "Back"
 msgstr "Nächste"
 
-#: single.php:95
+#: single.php:84
 #@ goat
 msgid "All Projects"
 msgstr ""
 
-#: single.php:112
+#: single.php:101
 #@ scapegoat
 msgid "Date: "
 msgstr "Datum: "
 
-#: single.php:125
+#: single.php:139
 #@ scapegoat
 msgid "Author: "
 msgstr "Autor: "
 
-#: archive.php:128
+#: archive.php:126
 #: index.php:49
-#: search.php:44
-#: single.php:134
+#: search.php:42
+#: single.php:114
 #@ scapegoat
 msgid "Category: "
 msgstr "Kategorie: "
 
-#: single.php:144
+#: single.php:124
 #@ scapegoat
 msgid "Comments: "
 msgstr "Kommentare: "
 
-#: single.php:148
+#: single.php:128
 #@ scapegoat
 msgid "0"
 msgstr "0"
 
-#: single.php:149
+#: single.php:129
 #@ scapegoat
 msgid "1"
 msgstr "1"
 
-#: single.php:150
+#: single.php:130
 #@ scapegoat
 msgid "%"
 msgstr "%"
 
-#: single.php:152
+#: single.php:132
 #@ scapegoat
 msgid "closed"
 msgstr "geschlossen"
 
-#: 404.php:38
+#: 404.php:34
 #@ scapegoat
 msgid "All that glittered was not gold. But it was still nice."
 msgstr "Nicht alles, was glänzte, war Gold. Aber es war trotzdem schön."
 
-#: 404.php:39
+#: 404.php:35
 #@ scapegoat
 msgid "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
 msgstr "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
 
-#: archive.php:175
+#: archive.php:173
 #: index.php:96
-#: search.php:91
+#: search.php:89
 #@ scapegoat
 msgid "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
 msgstr "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
 
-#: single.php:140
+#: single.php:120
 #@ scapegoat
 msgid "<span class=\"post-tags\"><span class=\"label\"><i class=\"icon-tag\"></i> Tags:</span> <span class=\"value\">"
 msgstr "<span class=\"post-tags\"><span class=\"label\"><i class=\"icon-tag\"></i> Tags:</span> <span class=\"value\">"
@@ -705,79 +635,59 @@ msgstr "Email"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: inc/theme-options.php:95
+#: inc/theme-options.php:83
 #@ scapegoat
 msgid "Sidebar alignment"
 msgstr "Sidebar Ausrichtung"
 
-#: inc/theme-options.php:98
+#: inc/theme-options.php:86
 #@ scapegoat
 msgid "Right"
 msgstr "Rechts"
 
-#: inc/theme-options.php:102
+#: inc/theme-options.php:90
 #@ scapegoat
 msgid "Left"
 msgstr "Links"
 
-#: inc/theme-options.php:115
-#@ scapegoat
-msgid "#BTW13"
-msgstr "#BTW13"
-
-#: inc/theme-options.php:130
+#: inc/theme-options.php:105
 #@ scapegoat
 msgid "Default: All"
 msgstr "Standard: Alle"
 
-#: inc/theme-options.php:134
+#: inc/theme-options.php:109
 #@ scapegoat
 msgid "Default: 6"
 msgstr "Standard: 6"
 
-#: inc/theme-options.php:174
-#@ default
-msgid "featured-link-5"
-msgstr ""
-
-#: inc/theme-options.php:175
-#@ default
-msgid "featured-link-title-5"
-msgstr ""
-
-#: inc/theme-options.php:196
+#: inc/theme-options.php:131
 #@ scapegoat
 msgid "Default: http://yoururl.com/feed/"
 msgstr "Standard: http://yoururl.com/feed/"
 
-#: inc/theme-options.php:224
+#: inc/theme-options.php:159
 #@ default
 msgid "flickr"
 msgstr ""
 
-#: inc/theme-options.php:228
+#: inc/theme-options.php:163
 #@ default
 msgid "github"
 msgstr ""
 
-#: inc/theme-options.php:232
+#: inc/theme-options.php:167
 #@ default
 msgid "tumblr"
 msgstr ""
 
-#: functions.php:34
-#@ scapegoat
-<<<<<<< HEAD
-msgctxt "Open Sans: on or off"
-msgid "on"
-msgstr ""
-=======
-msgid "If empty 5 Slides will shown"
-msgstr "Wenn unausgefüllt werden 5 Slides angezeigt"
->>>>>>> master
-
-#: inc/theme-options.php:137
+#: inc/theme-options.php:112
 #@ scapegoat
 msgid "Random Order"
 msgstr "Zufällige Reihenfolge"
+
+#: functions.php:34
+#@ scapegoat
+msgctxt "Open Sans: on or off"
+msgid "on"
+msgstr "ein"
 
