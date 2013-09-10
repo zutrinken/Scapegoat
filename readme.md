@@ -74,4 +74,3 @@ A default button is rectangled, orange and has a normal size. It only contains a
 * Rounded button ````[button link="http://yourdomain.com" form="round"]Text[/button]````
 * Cloloured button ````[button link="http://yourdomain.com" color="blue"]Text[/button]````. Possible colours: "blue, lightgrey, grey, darkgrey, red, green"
 * Small or large button ````[button link="http://yourdomain.com" size="large"]Text[/button]````. Possible sizes: "xsmall, small, large, xlarge"
-
