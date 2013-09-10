@@ -105,19 +105,6 @@ function scapegoat_theme_options_page() {
 					</td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><?php _e('Style','scapegoat'); ?></th>
-					<td>
-						<label for="show-default">
-							<input id="show-default" type="radio" name="scapegoat_theme_options[style-option]" value="show-default" <?php checked( 'show-default' == $options['style-option'] ); ?> /> <?php _e('Default','scapegoat'); ?>
-						</label>
-						<br />
-						<label for="show-btw-special">
-							<input id="show-btw-special" type="radio" name="scapegoat_theme_options[style-option]" value="show-btw-special" <?php checked( 'show-btw-special' == $options['style-option'] ); ?> /> <?php _e('#BTW13','scapegoat'); ?>
-						</label>
-						
-					</td>
-				</tr>
-				<tr valign="top">
 					<th scope="row"><?php _e('Frontpage','scapegoat'); ?></th>
 					<td>
 						<label for="show-slider">
