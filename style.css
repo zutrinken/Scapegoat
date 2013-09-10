@@ -99,7 +99,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 html { overflow-y: scroll; }
 a:hover, a:active { outline: none; }
-a:focus { outline: thin dotted; }
+a:focus { outline: thin dotted; }
 ul, ol { margin-left: 0; }
 ol { list-style-type: decimal; }
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }

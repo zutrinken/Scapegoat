@@ -767,9 +767,14 @@ msgstr ""
 
 #: functions.php:34
 #@ scapegoat
+<<<<<<< HEAD
 msgctxt "Open Sans: on or off"
 msgid "on"
 msgstr ""
+=======
+msgid "If empty 5 Slides will shown"
+msgstr "Wenn unausgefüllt werden 5 Slides angezeigt"
+>>>>>>> master
 
 #: inc/theme-options.php:137
 #@ scapegoat
