@@ -696,7 +696,7 @@ textarea {
 	background: #fff;
 	padding: 0.5em;
 	margin: 0;
-	border: 2px solid #e3e3e3;
+	border: 0.125em solid #e3e3e3;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -705,43 +705,47 @@ textarea {
 	-webkit-transition: all 0.1s ease-out;
 	-moz-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
+	
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
 }
 input:hover,
 textarea:hover {
-	border: 2px solid #bfbfbf;
+	border: 0.125em solid #bfbfbf;
 }
 input:focus,
 textarea:focus {
 	color: #404040;
-	border: 2px solid #0077b3;
+	border: 0.125em solid #0077b3;
+	
+	-webkit-box-shadow: 0 0.0625em 0.5em rgba(0,119,179,0.25) inset;
+	-moz-box-shadow: 0 0.0625em 0.5em rgba(0,119,179,0.25) inset;
+	box-shadow: 0 0.0625em 0.5em rgba(0,119,179,0.25) inset;
 }
 
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-	background: #f80;
 	color: #fff !important;
 	padding: 0.75em 1.5em;
-	border: 0;	
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	background: #f80;
+	border: 0.125em solid #f56a00;
 
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
 }
 input[type="submit"]:hover,
-input[type="submit"]:focus,
 input[type="button"]:hover,
+input[type="reset"]:hover {
+	border: 0.125em solid #f55200;
+	background: #ff6f00;
+}
+input[type="submit"]:focus,
 input[type="button"]:focus,
-input[type="reset"]:hover,
 input[type="reset"]:focus {
+	border: 0.125em solid #f53900;
 	background: #f50;
 }
 input[type="radio"],
@@ -860,6 +864,10 @@ audio {
 	-o-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
 }
 .edit-link a,
 .edit-link a:active,
@@ -963,11 +971,22 @@ audio {
 	font-size: 1em !important;
 	color: #fff !important;
 	background: #f80;
+	border: 0.125em solid #f56a00;
+
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
 }
-.post-more:hover,
+.post-more:hover {
+	border: 0.125em solid #f55200;
+	background: #ff6f00;
+}
 .post-more:focus {
+	border: 0.125em solid #f53900;
 	background: #f50;
 }
+
+
 .post-meta {
 	color: #808080;
 	padding: 1em 0;
@@ -1958,11 +1977,15 @@ body {
 	clear: right;
 	
 	padding: 0.25em 0.5em;
-	border: 1px solid rgba(255,255,255,0.5);
+	border: 0.125em solid rgba(255,255,255,0.333);
+
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
 }
 #front-page-slider .front-page-slide .slide-text .slide-text-more:hover,
 #front-page-slider .front-page-slide .slide-text .slide-text-more:focus {
-	border: 1px solid #fff;
+	border: 0.125em solid rgba(255,255,255,0.666);
 }
 
 #front-page-header-image-outside {
