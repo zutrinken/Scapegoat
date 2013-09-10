@@ -709,9 +709,9 @@ textarea {
 	-moz-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
 	
-	-webkit-border-radius: 0.25em;
-	-moz-border-radius: 0.25em;
-	border-radius: 0.25em;
+	-webkit-border-radius: 0.125em;
+	-moz-border-radius: 0.125em;
+	border-radius: 0.125em;
 }
 input:hover,
 textarea:hover {
@@ -976,9 +976,9 @@ audio {
 	background: #f80;
 	border: 0.125em solid #f56a00;
 
-	-webkit-border-radius: 0.25em;
-	-moz-border-radius: 0.25em;
-	border-radius: 0.25em;
+	-webkit-border-radius: 0.125em;
+	-moz-border-radius: 0.125em;
+	border-radius: 0.125em;
 }
 .post-more:hover {
 	border: 0.125em solid #f55200;
@@ -1759,13 +1759,22 @@ body {
 	height: 3em;
 	line-height: 3em;
 	padding: 0;
-	margin: 0;
+	margin: 0 0.25em 0.25em 0;
 	text-align: center;
 	color: #fff !important;
 	background-color: #f80;
+
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
+	
+	-webkit-border-radius: 0.125em;
+	-moz-border-radius: 0.125em;
+	border-radius: 0.125em;
+	
+	-webkit-box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.05) inset;
+	-moz-box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.05) inset;
+	box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.05) inset;
 }
 .social-icon i {
 	font-size: 1.25em;
@@ -2707,12 +2716,16 @@ body {
 	display: inline-block;
 	background: #0077b3;
 	color: #fff;
-	padding: 0.5em 1em;
+	padding: 0.25em 0.75em;
 	margin: 0.15em 0;
 	
 	-webkit-border-radius: 2em;
 	-moz-border-radius: 2em;
 	border-radius: 2em;
+
+	-webkit-box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.1) inset;
+	-moz-box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.1) inset;
+	box-shadow: 0 0 0 0.0625em rgba(0,0,0,0.1) inset;
 }
 .widget_tag_cloud .tagcloud a:hover,
 .widget_tag_cloud .tagcloud a:focus {
