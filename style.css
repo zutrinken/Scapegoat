@@ -2495,12 +2495,15 @@ body {
 	margin: 0;
 }
 .widget ul li:before {
-	position: absolute;
+	font-family: 'FontAwesome';
+	content: '\f0da';
+    color: #808080;
 	display: block;
-	content: '›';
-	color: #808080;
-	padding: 0 0.25em;
-	left: 0;
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	margin: 0 0 0 -1.25em;
+	padding: 0;
 }
 
 	/* ------------------------------ Widget Sidebar */
