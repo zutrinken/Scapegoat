@@ -43,7 +43,10 @@
 			#232323
 			#181818
 
+	Grey:	#f7f9fa
+
 	Orange:	#f80
+			#ff6f00
 			#f50
 
 	Blue:	#0077b3
@@ -2152,6 +2155,7 @@ body {
 #main-nav ul > li:hover > a,
 #main-nav ul > li:focus > a {
 	color: #404040;
+	background-color: #f7f9fa;
 }
 #main-nav ul > li.current-menu-item > a,
 #main-nav ul > li.current_page_item > a {
@@ -2161,17 +2165,19 @@ body {
 #main-nav ul > li.menu-item-home > a {
 	text-indent: -10000px;
 	min-width: 2em;
-	background: transparent url('images/bg-menu-home.png') no-repeat scroll center center;
+	background-image: url('images/bg-menu-home.png');
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 #main-nav ul > li.menu-item-home > a:after {
 	text-indent: 0;
 }
 #main-nav ul > li.menu-item-home:hover a,
 #main-nav ul > li.menu-item-home:focus a {
-	background: transparent url('images/bg-menu-home-hover.png') no-repeat scroll center center;
+	background-image: url('images/bg-menu-home-hover.png');
 }
 #main-nav ul > li.menu-item-home.current-menu-item a {
-	background: transparent url('images/bg-menu-home-active.png') no-repeat scroll center center;
+	background-image: url('images/bg-menu-home-active.png');
 }
 #main-nav ul > li.current-menu-item:after,
 #main-nav ul > li.current_page_item:after {
