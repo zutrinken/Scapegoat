@@ -1630,6 +1630,7 @@ body {
 	height: 0;
 	overflow: hidden;
 	padding: 0 0 33.75%;
+	background: #000;
 }
 .title-image img {
 	width: 100%;
@@ -1886,7 +1887,7 @@ body {
 #front-page-slider {
 	width: 100%;
 	z-index: 1000;
-	background: #0077b3;
+	background: #000;
 	position: relative;
 }
 #front-page-slider .front-page-slide {
@@ -1930,6 +1931,7 @@ body {
 	padding-bottom: 33.75%;
 	z-index: 2;
 	overflow: hidden;
+	background: #000;
 }
 #front-page-slider .front-page-slide .slide-image img {
 	position: relative;

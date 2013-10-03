@@ -53,10 +53,17 @@
 				if(scrolled >= parallaxOffset) {
 					parallaxOffset = Math.round(0+((scrolled - parallaxOffset) * 0.75));
 					var value = 'translate3d(0px, ' + parallaxOffset + 'px, 0px)';
-					prlx.find('img').css(transformProperty, value);
+					var opacity = 1 - parallaxOffset / 500;
+					prlx.find('img').css({
+						transformProperty : value,
+						'opacity' : opacity
+					});
 				} else {
 					var value = 'translate3d(0px, 0px, 0px)';
-					prlx.find('img').css(transformProperty, value);
+					prlx.find('img').css({
+						transformProperty : value,
+						'opacity' : '1'
+					});
 				}
 			}
 
@@ -70,10 +77,17 @@
 				if(scrolled >= frPaSlOffset) {
 					frPaSlOffset = Math.round(0+((scrolled - frPaSlOffset) * 0.75));
 					var value = 'translate3d(0px, ' + frPaSlOffset + 'px, 0px)';
-					frPaSl.css(transformProperty, value);
+					var opacity = 1 - parallaxOffset / 500;
+					frPaSl.css({
+						transformProperty : value,
+						'opacity' : opacity
+					});
 				} else {
 					var value = 'translate3d(0px, 0px, 0px)';
-					frPaSl.css(transformProperty, value);
+					frPaSl.css({
+						transformProperty : value,
+						'opacity' : '1'
+					});
 				}
 			}
 
