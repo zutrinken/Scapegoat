@@ -325,7 +325,7 @@ img[align="right"] {
 	-moz-transition:.2s background ease;
 	transition:.2s background ease;
 
-	color: #fff;
+	color: #fff !important;
 	background: #f80;
 }
 .standard-btn:hover,
