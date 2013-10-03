@@ -2897,7 +2897,7 @@ body {
 		border-top: 1px solid #404040;
 	}
 	.content {
-		width: auto;
+		width: auto !important;
 		float: none !important;
 	}
 	.sidebar {
