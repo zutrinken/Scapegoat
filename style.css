@@ -959,6 +959,9 @@ audio {
 .no-js .post-video {
 	display: none;
 }
+.post-image-mobile {
+	padding: 0 0 66%;
+}
 .article {
 	font-size: 1em;
 	line-height: 1.5em;
@@ -3234,9 +3237,6 @@ body {
 	.post-image,
 	.post-video {
 		margin: 0 -1em;
-	}
-	.post-image-mobile {
-		padding: 0 0 66%;
 	}
 	.footer {
 		display: none;

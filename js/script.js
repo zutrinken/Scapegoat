@@ -28,45 +28,57 @@
 			$(window).scroll(parallaxScroll);
 		}
 		function parallaxScroll() {
-
 			/* Get scrolled distance */
 			var scrolled = $(window).scrollTop();
 			scrolled = Math.round(scrolled);
+			
+			var transforms = ["transform","msTransform","webkitTransform","mozTransform","oTransform"];
+			var transformProperty = getSupportedPropertyName(transforms);
+			function getSupportedPropertyName(properties) {
+				for (var i = 0; i < properties.length; i++) {
+					if (typeof document.body.style[properties[i]] != "undefined") {
+						return properties[i];
+					}
+				}
+				return null;
+			}
 
 			/* Manipulate the header and slider images */
+
 			var prlx = $('.parallax');
 			if(prlx.length>0) {
 				var parallaxOffset = prlx.offset().top;
-				parallaxOffset = Math.round(parallaxOffset);
-	
+				parallaxOffset = Math.round(parallaxOffset) +10;
+
 				if(scrolled >= parallaxOffset) {
-					prlx.find('img').css({
-						'top' : (0+((scrolled - parallaxOffset) * 0.75))+'px'
-					});
+					parallaxOffset = Math.round(0+((scrolled - parallaxOffset) * 0.75));
+					var value = 'translate3d(0px, ' + parallaxOffset + 'px, 0px)';
+					prlx.find('img').css(transformProperty, value);
 				} else {
-					prlx.find('img').css({		
-						'top' : 0
-					});
+					var value = 'translate3d(0px, 0px, 0px)';
+					prlx.find('img').css(transformProperty, value);
 				}
 			}
 
 			/* Manipulate the slider bakcground images */
+
 			var frPaSl = $('.front-page-slide');
 			if(frPaSl.length>0) {
 				var frPaSlOffset = frPaSl.offset().top;
-				frPaSlOffset = Math.round(frPaSlOffset);
+				frPaSlOffset = Math.round(frPaSlOffset) +10;
 				
 				if(scrolled >= frPaSlOffset) {
-					frPaSl.css({
-						'background-position' : 'center ' + (0+((scrolled - frPaSlOffset) * 0.75))+'px'
-					});
+					frPaSlOffset = Math.round(0+((scrolled - frPaSlOffset) * 0.75));
+					var value = 'translate3d(0px, ' + frPaSlOffset + 'px, 0px)';
+					frPaSl.css(transformProperty, value);
 				} else {
-					frPaSl.css({
-						'background-position' : 'center ' + 0
-					});
+					var value = 'translate3d(0px, 0px, 0px)';
+					frPaSl.css(transformProperty, value);
 				}
 			}
+
 		}
+
 		function SameHeight() {
 			var maxHeight1 = -1;
 			var footerWidget = $('.footer-sidebar-inside');

@@ -70,7 +70,7 @@
 				<div class="clear"></div>
 			</div>
 
-			<nav id="post-nav" class="post-nav sidebar">
+			<nav id="post-nav" class="post-nav sidebar" role="navigation">
 				<h2 id="pagination-title" class="visuallyhidden"><?php _e('Article Navigation','scapegoat'); ?></h2>
 				<span class="post-nav-link post-nav-prev">
 					<span class="post-nav-inner">
