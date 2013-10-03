@@ -327,13 +327,22 @@ img[align="right"] {
 
 	color: #fff !important;
 	background: #f80;
+	border: 0.125em solid #f56a00;
 }
-.standard-btn:hover,
+.standard-btn:hover {
+	border: 0.125em solid #f55200;
+	background: #ff6f00;
+}
 .standard-btn:focus {
+	border: 0.125em solid #f53900;
 	background: #f50;
-	color:#fff !important;
 }
+
+
+
+
 .round-btn {
+	-webkit-border-radius: 10em;
 	-moz-border-radius: 10em;
 	border-radius: 10em;
 }
@@ -374,6 +383,17 @@ img[align="right"] {
 	margin: 1em 1em 0;
 	padding: 1.25em 1.5em;
 	font-size: 1.25em;
+}
+
+
+.blue-btn,
+.red-btn,
+.green-btn,
+.grey-btn,
+.lightgrey-btn,
+.darkgrey-btn {
+	border-color: transparent !important;
+	border-color: rgba(0,0,0,0.1) !important;
 }
 
 .blue-btn {
