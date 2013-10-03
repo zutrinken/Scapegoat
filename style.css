@@ -827,16 +827,16 @@ input[type="checkbox"] {
 	text-align: left;
  	color: #0077b3;
 	font-weight: 700;
-	font-size: 0.8em;
+	font-size: 0.75em;
+	vertical-align: middle;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	border-bottom: 1px solid #bfbfbf;
+	padding: 0.5em 1em 0.5em 0.25em;
 }
 .article td {
 	border-bottom: 1px solid #bfbfbf;
-	padding: 6px 10px 6px 0;
-	font-size: 0.9em;
-	line-height: 1.5em;
+	padding: 0.5em 1em 0.5em 0.25em;
 }
 
 	/* ------------------------------ Figures */
