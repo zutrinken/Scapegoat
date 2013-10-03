@@ -930,8 +930,6 @@ audio {
 	display: block;
 	overflow: hidden;
 	margin: 1em -3em 2em;
-	
-	background: #404040;
 	height: 0;
 	padding: 0 0 36%;
 }
