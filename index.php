@@ -25,8 +25,8 @@
 			<div id="wrapper-inside" class="inside">
 
 		<div id="container">
-			
-			<div id="content" class="content" role="main">
+
+			<div id="content" class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>" role="main">
 			
 			<?php breadcrumb(); ?>
 			

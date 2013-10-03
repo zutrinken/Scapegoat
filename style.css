@@ -1697,6 +1697,11 @@ body {
 	width: 70%;
 	float: left;
 }
+.content.nosidebar {
+	width: 80%;
+	float: none;
+	margin: auto;
+}
 .sidebar {
 	width: 25%;
 	float: right;

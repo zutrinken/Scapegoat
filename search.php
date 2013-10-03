@@ -5,7 +5,7 @@
 
 		<div id="title-outside">
 			<div id="title-inside" class="inside">
-				<div class="content">
+				<div class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>">
 					<header class="title-header">
 						<h2 class="post-title">
 							<?php _e('Search','scapegoat'); ?> "<?php the_search_query(); ?>"		
@@ -21,7 +21,7 @@
 
 		<div id="container">
 
-			<div id="content" class="content" role="main">
+			<div id="content" class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>" role="main">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
