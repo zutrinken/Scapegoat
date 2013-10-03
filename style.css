@@ -478,8 +478,6 @@ textarea {
 	color: #404040;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px;
-	-webkit-appearance: none;
-	-webkit-border-radius: 0;
 }
 
 	/* ------------------------------ Headlines */
@@ -701,6 +699,8 @@ textarea {
 	margin: 0;
 	border: 0.125em solid #e3e3e3;
 
+	-webkit-appearance: none;
+
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -734,6 +734,7 @@ input[type="reset"] {
 	padding: 0.75em 1.5em;
 	background: #f80;
 	border: 0.125em solid #f56a00;
+	cursor: pointer;
 
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -756,6 +757,13 @@ input[type="checkbox"] {
 	background: transparent;
 	padding: 0;
 	border: 0;
+	border: 0.125em solid #e3e3e3;
+}
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+input[type="checkbox"] {
+	-webkit-appearance: checkbox;
 }
 
 	/* ------------------------------ Lists */
