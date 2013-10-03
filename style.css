@@ -1156,7 +1156,7 @@ audio {
 }
 .post-nav-link:hover .post-nav-inner,
 .post-nav-link:focus .post-nav-inner {
-	background-color: #f4f4f4;
+	background-color: #f7f9fa;
 }
 .post-nav-link .post-nav-inner a {
 	position: relative;
