@@ -321,9 +321,14 @@ img[align="right"] {
 	text-align: center;
 	font-weight: 400;
 	text-decoration: none !important;
+
 	-webkit-transition:.2s background ease;
 	-moz-transition:.2s background ease;
 	transition:.2s background ease;
+
+	-webkit-border-radius: 0.125em;
+	-moz-border-radius: 0.125em;
+	border-radius: 0.125em;
 
 	color: #fff !important;
 	background: #f80;
