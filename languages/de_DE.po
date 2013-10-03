@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: scapegoat v1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-09-10 23:33:19+0000\n"
+"PO-Revision-Date: 2013-10-03 14:58:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -496,8 +496,8 @@ msgstr "Website: "
 msgid "Biography: "
 msgstr "Biografie: "
 
-#: archive.php:181
-#: index.php:104
+#: archive.php:183
+#: index.php:106
 #: single.php:74
 #@ scapegoat
 msgid "Article Navigation"
@@ -533,7 +533,7 @@ msgstr ""
 msgid "Blog"
 msgstr "Blog"
 
-#: sidebar.php:3
+#: sidebar.php:4
 #@ scapegoat
 msgid "Sidebar"
 msgstr ""
@@ -605,13 +605,6 @@ msgstr "Nicht alles, was glänzte, war Gold. Aber es war trotzdem schön."
 #@ scapegoat
 msgid "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
 msgstr "<strong>Krasse Herde</strong> – <a target=\"_blank\" href=\"http://kaklotter.de/\" rel=\"nofollow\">Fred Bordfeld</a>, <a target=\"_blank\" href=\"http://zombietetris.de/\" rel=\"nofollow\">Lotte Steenbrink</a>, <a target=\"_blank\" href=\"http://bendebiel.com/\" rel=\"nofollow\">Ben de Biel</a>, <a target=\"_blank\" href=\"http://zutrinken.com/\" rel=\"nofollow\">Peter Amende</a>."
-
-#: archive.php:173
-#: index.php:96
-#: search.php:89
-#@ scapegoat
-msgid "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
-msgstr "<span class=\"post-tags\"><i class=\"icon-tag\"></i> Tags: "
 
 #: single.php:120
 #@ scapegoat
@@ -690,4 +683,11 @@ msgstr "Zufällige Reihenfolge"
 msgctxt "Open Sans: on or off"
 msgid "on"
 msgstr "ein"
+
+#: archive.php:174
+#: index.php:97
+#: search.php:90
+#@ scapegoat
+msgid "<i class=\"icon-tag\"></i> Tags: "
+msgstr "<i class=\"icon-tag\"></i> Tags: "
 

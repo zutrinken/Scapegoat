@@ -170,7 +170,9 @@
 				</article>				
 
 				<footer class="footer post-meta">
-					<?php the_tags(__('<span class="post-tags"><i class="icon-tag"></i> Tags: ','scapegoat'),', ','</span>'); ?>
+					<span class="post-tags">
+						<?php the_tags(__('<i class="icon-tag"></i> Tags: ','scapegoat'),', ',''); ?>
+					</span>
 				</footer>
 				
 			</section>
