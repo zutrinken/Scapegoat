@@ -3,9 +3,6 @@
 * Author: [Peter Amende](http://zutrinken.com/)
 * License: GNU General Public License v2 or later
 
-
-Feel free to flattr this project [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
-
 ## About
 
 * Made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
@@ -13,6 +10,10 @@ Feel free to flattr this project [![Flattr this git repo](http://api.flattr.com/
 * Font "PoliticsHeadBold" by [Fred Bordfeld](http://kaklotter.de/)
 * Font "Awesome" by [Dave Gandy](http://fontawesome.io/)
 
+# Support
+
+* Flattr [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
+* Paypal [![Donate to this git repo](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WHN7573VTUQQY)
 
 ## How to
 
