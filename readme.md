@@ -3,6 +3,9 @@
 * Author: [Peter Amende](http://zutrinken.com/)
 * License: GNU General Public License v2 or later
 
+
+Feel free to flattr this project [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
+
 ## About
 
 * Made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
