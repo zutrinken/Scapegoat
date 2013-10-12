@@ -18,8 +18,10 @@
 
 ## Support
 
-* Flattr [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
-* Paypal [![Donate to this git repo](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WHN7573VTUQQY)
+Feel free to support this project.
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
+[![Donate to this git repo](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WHN7573VTUQQY)
 
 ## How to
 

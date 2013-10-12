@@ -25,6 +25,7 @@
 
 		/* Parallax for header and slider images*/
 		if(!isMobile.any()) {
+			parallaxScroll();
 			$(window).scroll(parallaxScroll);
 		}
 		function parallaxScroll() {
@@ -32,36 +33,25 @@
 			var scrolled = $(window).scrollTop();
 			scrolled = Math.round(scrolled);
 			
-			var transforms = ["transform","msTransform","webkitTransform","mozTransform","oTransform"];
-			var transformProperty = getSupportedPropertyName(transforms);
-			function getSupportedPropertyName(properties) {
-				for (var i = 0; i < properties.length; i++) {
-					if (typeof document.body.style[properties[i]] != "undefined") {
-						return properties[i];
-					}
-				}
-				return null;
-			}
-
 			/* Manipulate the header and slider images */
-
 			var prlx = $('.parallax');
 			if(prlx.length>0) {
 				var parallaxOffset = prlx.offset().top;
-				parallaxOffset = Math.round(parallaxOffset) +10;
+				parallaxOffset = Math.round(parallaxOffset) + 10;
 
 				if(scrolled >= parallaxOffset) {
 					parallaxOffset = Math.round(0+((scrolled - parallaxOffset) * 0.75));
-					var value = 'translate3d(0px, ' + parallaxOffset + 'px, 0px)';
 					var opacity = 1 - parallaxOffset / 500;
+
 					prlx.find('img').css({
-						transformProperty : value,
+						'-webkit-transform' : 'translate3d(0px, ' + parallaxOffset + 'px, 0px)',
+						'transform' : 'translate3d(0px, ' + parallaxOffset + 'px, 0px)',
 						'opacity' : opacity
 					});
 				} else {
-					var value = 'translate3d(0px, 0px, 0px)';
 					prlx.find('img').css({
-						transformProperty : value,
+						'-webkit-transform' : 'translate3d(0px, 0px, 0px)',
+						'transform' : 'translate3d(0px, 0px, 0px)',
 						'opacity' : '1'
 					});
 				}
@@ -72,23 +62,23 @@
 			var frPaSl = $('.front-page-slide');
 			if(frPaSl.length>0) {
 				var frPaSlOffset = frPaSl.offset().top;
-				frPaSlOffset = Math.round(frPaSlOffset) +10;
+				frPaSlOffset = Math.round(frPaSlOffset) + 10;
 				
 				if(scrolled >= frPaSlOffset) {
 					frPaSlOffset = Math.round(0+((scrolled - frPaSlOffset) * 0.75));
-					var value = 'translate3d(0px, ' + frPaSlOffset + 'px, 0px)';
-					var opacity = 1 - parallaxOffset / 500;
+					var opacity = 1 - frPaSlOffset / 500;
+
 					frPaSl.css({
-						transformProperty : value,
+						'background-position' : 'center ' + frPaSlOffset + 'px',
 						'opacity' : opacity
 					});
 				} else {
-					var value = 'translate3d(0px, 0px, 0px)';
 					frPaSl.css({
-						transformProperty : value,
+						'background-position' : 'center 0',
 						'opacity' : '1'
 					});
 				}
+				
 			}
 
 		}
