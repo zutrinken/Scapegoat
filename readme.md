@@ -38,7 +38,7 @@ Feel free to support this project.
 
 | Result | Option | Shortcode |
 | --- | --- | --- |
-| 2 Columns | 1-1 | ```
+| 2 Columns | 1-1 | ````
 [two_columns_one]
  first
 [/two_columns_one]
@@ -46,7 +46,7 @@ Feel free to support this project.
  second
 [/two_columns_one_last]
 [divider]
-``` |
+```` |
 
 ### Columns
 
