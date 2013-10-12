@@ -36,6 +36,10 @@ Feel free to support this project.
 
 ## Shortcodes
 
+| Option | Shortcode |
+| --- | --- |
+| Tada | ````code```` |
+
 ### Columns
 
 It's possible to create ````[two_````, ````[three_```` or ````[four_```` columns. The last column of an column group needs the attribute ````_last]````. Every column group has to be completed with a ````[divider]```` to clear the floating. Also The basic syntax for three columns is:
