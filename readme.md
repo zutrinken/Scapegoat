@@ -36,18 +36,6 @@ Feel free to support this project.
 
 ## Shortcodes
 
-| Result | Option | Shortcode |
-| --- | --- | --- |
-| 2 Columns | 1-1 | ````
-[two_columns_one]
- first
-[/two_columns_one]
-[two_columns_one_last]
- second
-[/two_columns_one_last]
-[divider]
-```` |
-
 ### Columns
 
 It's possible to create ````[two_````, ````[three_```` or ````[four_```` columns. The last column of an column group needs the attribute ````_last]````. Every column group has to be completed with a ````[divider]```` to clear the floating. Also The basic syntax for three columns is:
@@ -93,8 +81,11 @@ The first number ````[three_```` defines the grid and the second numer ````_one]
 
 ### Buttons
 
-A default button is rectangled, orange and has a normal size. It only contains an attribute for your url "link-attribute" ````[button link="http://yourdomain.com"]Text[/button]````. You can extend this shortcode by the following attributes:
+A default button is rectangled, orange and has a normal size. It only contains an attribute for your url and can be extended by the following attributes:
 
-* Rounded button ````[button link="http://yourdomain.com" form="round"]Text[/button]````
-* Cloloured button ````[button link="http://yourdomain.com" color="blue"]Text[/button]````. Possible colours: "blue, lightgrey, grey, darkgrey, red, green"
-* Small or large button ````[button link="http://yourdomain.com" size="large"]Text[/button]````. Possible sizes: "xsmall, small, large, xlarge"
+| Attribute | Shortcode |
+| --- | --- |
+| Default | ````[button link="http://yourdomain.com"]Text[/button]```` |
+| Rounded | ````[button link="http://yourdomain.com" form="round"]Text[/button]```` |
+| Colour | ````[button link="http://yourdomain.com" color="blue"]Text[/button]````<br />"blue, lightgrey, grey, darkgrey, red, green" |
+| Size | ````[button link="http://yourdomain.com" size="large"]Text[/button]````<br />"xsmall, small, large, xlarge" |
