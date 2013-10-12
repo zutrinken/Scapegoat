@@ -93,29 +93,36 @@
 		</div><!-- main-nav-outside -->
 
 		
-		<?php if($options['style-option'] != 'show-special-1') : ?>
-			<!-- Mobile Query -->
-			<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
-				<!-- Featured Container for Frontpage Slider and "Sidebar" -->
-				<?php if (is_home() && !is_paged() &&  is_front_page()) : ?>
-					<?php include('slider.php'); ?>
-				<?php endif; ?>
-				<!-- Featured Container End -->
+		<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
+			<?php if (!is_paged() && is_home()) : ?>
+				<?php include('slider.php'); ?>
 			<?php endif; ?>
-			<!-- Mobile Query -->
 		<?php endif; ?>
 		
-		<?php if(is_paged() && is_front_page()) : ?>
+		<?php if(is_paged()) : ?>
 			<div id="title-outside">
 				<div id="title-inside" class="inside">
-					<div class="content">
+					<div class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>">
 						<header class="title-header">
-							<h2 class="post-title">
-								<?php current_paged(); ?>
-							</h2>
+							<h2 class="post-title"><?php current_paged(); ?></h2>
+						</header>
+					</div>
+					<div class="clear"></div>
+				</div>			
+			</div>
+		<?php elseif((!($options['header-option'] == 'show-slider') && !($options['header-option'] == 'show-header')) && is_home()) : ?>
+			<div id="title-outside">
+				<div id="title-inside" class="inside">
+					<div class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>">
+						<header class="title-header">
+							<h2 class="post-title"><?php _e('Blog','scapegoat'); ?></h2>
+							<aside class="post-description">
+								<p><?php bloginfo('description'); ?></p>
+							</aside>
 						</header>
 					</div>
 					<div class="clear"></div>
 				</div>			
 			</div>
 		<?php endif; ?>
+		
