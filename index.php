@@ -28,8 +28,6 @@
 
 			<div id="content" class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>" role="main">
 			
-			<?php breadcrumb(); ?>
-			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 				<header class="header">
