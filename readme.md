@@ -36,9 +36,17 @@ Feel free to support this project.
 
 ## Shortcodes
 
-| Option | Shortcode |
-| --- | --- |
-| Tada | ````code```` |
+| Result | Option | Shortcode |
+| --- | --- | --- |
+| 2 Columns | 1-1 | ```
+[two_columns_one]
+ first
+[/two_columns_one]
+[two_columns_one_last]
+ second
+[/two_columns_one_last]
+[divider]
+``` |
 
 ### Columns
 
