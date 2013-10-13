@@ -37,6 +37,38 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="index" title="<?php bloginfo('description'); ?>" href="<?php bloginfo('url'); ?>" />
 
+		<?php if(is_single()) : ?>
+			<?php
+				$image_id = get_post_thumbnail_id();
+				$image_url = wp_get_attachment_image_src($image_id,'thumbnail', true);
+			?>
+			<meta property="og:title" content="<?php the_title(); ?>" />
+			<meta property="og:type" content="article" />
+			<meta property="og:url" content="<?php the_permalink(); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:description" content="" />
+			<?php if($image_url) : ?>
+			<meta property="og:image" content="<?php echo $image_url[0]; ?>" />
+			<meta property="og:image:width" content="150" />
+			<meta property="og:image:height" content="150" />
+			<?php endif; ?>
+			<meta property="twitter:card" content="summary" />
+			<meta property="twitter:title" content="<?php the_title(); ?>" />
+			<meta property="twitter:description" content="" />
+			<?php if($image_url) : ?>
+			<meta property="twitter:image" content="<?php echo $image_url[0]; ?>" />
+			<?php endif; ?>
+		<?php else : ?>
+			<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="<?php bloginfo('url'); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+			<meta property="twitter:card" content="summary" />
+			<meta property="twitter:title" content="<?php the_title(); ?>" />
+			<meta property="twitter:description" content="<?php bloginfo('description'); ?>" />
+		<?php endif; ?>
+
 		<?php if($options['alignment-option'] == 'sidebar-left') : ?>
 			<style>
 				.sidebar {float: left;}
