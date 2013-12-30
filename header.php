@@ -4,6 +4,57 @@
 	<?php $options = get_option('scapegoat_theme_options'); /* load the Theme Options */ ?>
 	<?php $template_url = get_bloginfo('template_url'); /* Template Path */ ?>
 	<head profile="http://gmpg.org/xfn/11">
+	
+		<!--
+                                                                                
+                                 :MMMMMMMMMMO=                                  
+                             .MMDIIIIIIIIIII?I?$MMMZ                            
+                           8M8IIIIIIIIIIIIIIIIIIIIIIIMM~                        
+                         MMIIIIIIIIIIIIIIIIIIIIIIIIIIIIIM,                      
+                       MMNIIIIIIIIIIIIIIIIIIMMMMM7IIIIII?N8                     
+                    .OM   MIIIIIIIIIIIIIIOM~.    .MDIIIIIIDM                    
+                    M~.    MIIIIIIIIIIIIMI.         M?IIIII8M                   
+                  ,M.      .MIIIIIIIIIIM=           .DDIIIIIMZ                  
+                 :M.        IMIIIIIII$M.              ,NIIIIIM+                 
+                .M.   8MD   .MDIIIII$M.      ,M7.       NIIIIIM                 
+                M~   ?MMM,    MII7IIM:      MMMMMZ.     ,NIIIIIM                
+                M   .MMMM.  +MMMMMMMM.     MMMMMMM.      ODIIIIM7               
+               IO    .MM,  $MMMMMMMMMM.    MMMMMMM.      .MIIIIIM               
+               OO           MMMMMMMMMM.     7MMMM.        MIIIIIZN.             
+               M$=           IMMMMMMM.                   .MIIIII?M.             
+              .MII~              .                       ?MIIIIII7M.            
+              M,,,,,:                                    MIIIIIIIIM~            
+             $M,,,,,,,,,. .                            .MMIIIIIIIIIM            
+             M,,,,,,,,,,,,,,,,,,.......              .7MM8+===~~::,M,           
+             M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8MM,,,,,,,,,,:M           
+            =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM?,,,,,,,,,,,M           
+            NZ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMM~,,,,,,,,,,,,+M          
+            M:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMM+,,,,,,,,,,,,,,,M.         
+            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7MM=,,,,,,,,,,,,,,,,,M$         
+            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+MM+:,,,,,,,,,,,,,,,,,,,M         
+            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+MM+,,,,,,,,,,,,,,,,,,,,,,M         
+           =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:MMZ,,,,,,,,,,,,,,,,,,,,,,,,M+        
+           88,,,,,,,,,,,,,,,,,,,,,,,,,,,,8MM,,,,,,,,,,,,,,,,,,,,,,,,,,IM        
+           M+,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMD,,,,,,,,,,,,,,,,,,,,,,,,,,,M        
+           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMM=,,,,,,,,,,,,,,,,,,,,,,,,,M        
+           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,IMMM?,,,,,,,,,,,,,,,,,,,,,,,M        
+           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMM$,,,,,,,,,,,,,,,,,,,,,M        
+       .MMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM=,,,,,,,,,,,,,,,,,,M        
+       MMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7MMMMMMMMMM,,,,,,,,,,M        
+      MMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.~,,,,,,,,,,,,,,,~M        
+      ~MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMD       
+       MMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,      
+        DMMMMMMMMM:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$MMM,      
+         7MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM       
+          .MMMMMMMMI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMD       
+            .MMMMMMO,,,,,,,,,,,,,,:8MMMMMMM=:,,,,,,,,,,,,,,,,,,,,,?MMMMM~       
+                    =MMMMMMMMMMMM~          .OMMM$,,,,,,,,,,,,~MMMMMMMMM        
+                                                   IMMMMMMMMD:  =MMMMMM,        
+                                                                 MMMMMD         
+                                                                 ~MMM:           
+                                                                         
+			
+		-->
 
 		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
 
