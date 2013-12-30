@@ -14,8 +14,7 @@ function enqueue_scripts() {
 	$template = get_template_directory_uri();
 	wp_enqueue_script('modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
 
-	wp_register_script('jquery-custom', $template.'/js/libs/jquery.1.7.1.min.js', array(), null, false);
-	wp_enqueue_script('jquery-custom');
+	wp_enqueue_script('jquery');
 
 	wp_enqueue_script('jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false);
 	wp_enqueue_script('jquery.smoothscroll', $template.'/js/libs/jquery.smoothscroll.js', array(), null, false);
