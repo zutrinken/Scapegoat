@@ -17,6 +17,7 @@
 					<?php if($options['github']) : ?><a target="_blank" class="social-icon github" href="<?php echo $options['github']; ?>" title="Github"><i class="fa fa-github"></i></a><?php endif; ?>
 					<?php if($options['tumblr']) : ?><a target="_blank" class="social-icon tumblr" href="<?php echo $options['tumblr']; ?>" title="Tumblr"><i class="fa fa-tumblr"></i></a><?php endif; ?>						
 					<?php if($options['appdotnet']) : ?><a target="_blank" class="social-icon appdotnet" href="<?php echo $options['appdotnet']; ?>" title="App.net"><i class="fa fa-adn"></i></a><?php endif; ?>
+					<?php if($options['instagram']) : ?><a target="_blank" class="social-icon instagram" href="<?php echo $options['instagram']; ?>" title="Instagram"><i class="fa fa-instagram"></i></a><?php endif; ?>
 				</div><!-- footer-top-social -->
 				<div id="footer-search">
 					<?php get_search_form(); ?>

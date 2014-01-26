@@ -170,6 +170,10 @@ function scapegoat_theme_options_page() {
 					<th scope="row"><span class="social-icon appdotnet"><i class="fa fa-adn"></i></span> APP.net</th>
 					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
 				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon instagram"><i class="fa fa-instagram"></i></span> Instagram</th>
+					<td><input id="scapegoat_theme_options[instagram]" class="regular-text" type="text" name="scapegoat_theme_options[instagram]" value="<?php esc_attr_e( $options['instagram'] ); ?>" /></td>
+				</tr>
 			</table>
 			<!-- Submit -->
 			<p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save','scapegoat'); ?>" /></p>
