@@ -97,7 +97,7 @@
 				<aside class="widget widget-sidebar post-meta">
 					<span class="post-date">
 						<span class="label">
-							<i class="icon-calendar"></i>
+							<i class="fa fa-calendar"></i>
 							<?php _e('Date: ','scapegoat'); ?>
 						</span>
 						<span class="value">
@@ -110,7 +110,7 @@
 					</span>
 					<span class="post-categories">
 						<span class="label">
-							<i class="icon-folder-open"></i>
+							<i class="fa fa-folder-open"></i>
 							<?php _e('Category: ','scapegoat'); ?>
 						</span>
 						<span class="value">
@@ -120,7 +120,7 @@
 					<?php the_tags(__('<span class="post-tags"><span class="label"><i class="icon-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
 					<span class="post-comments">
 						<span class="label">
-							<i class="icon-comments"></i>
+							<i class="fa fa-comments"></i>
 							<?php _e('Comments: ','scapegoat'); ?>
 						</span>
 						<span class="value">
@@ -135,7 +135,7 @@
 					</span>
 					<span class="post-author">
 						<span class="label">
-							<i class="icon-user"></i>
+							<i class="fa fa-user"></i>
 							<?php _e('Author: ','scapegoat'); ?>
 						</span>
 						<span class="value">
@@ -145,7 +145,7 @@
 					<?php if(get_the_author_meta('twitter')) : ?>
 					<span class="author-twitter">
 						<span class="label">
-							<i class="icon-twitter"></i>
+							<i class="fa fa-twitter"></i>
 							<?php _e('Twitter: ','scapegoat') ?>
 						</span>
 						<span class="value">
@@ -157,7 +157,7 @@
 					<?php if(get_the_author_meta('wiki')) : ?>
 					<span class="author-wiki">
 						<span class="label">
-							<i class="icon-book"></i>
+							<i class="fa fa-book"></i>
 							<?php _e('Wiki: ','scapegoat') ?>
 						</span>
 						<span class="value">
@@ -169,7 +169,7 @@
 					<?php if(get_the_author_meta('user_url')) : ?>
 					<span class="author-website">
 						<span class="label">
-							<i class="icon-globe"></i>
+							<i class="fa fa-globe"></i>
 							<?php _e('Website: ','scapegoat') ?>
 						</span>
 						<span class="value">

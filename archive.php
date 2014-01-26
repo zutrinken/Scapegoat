@@ -9,30 +9,30 @@
 					<header class="title-header">
 						<h2 class="post-title">
 							<?php if (is_category()) : ?>
-								<i class="icon-folder-open"></i>
+								<i class="fa fa-folder-open"></i>
 								<span class="label"><?php _e('Category','scapegoat'); ?></span>
 								<span class="value"><?php single_cat_title(); ?></span>
 							<?php elseif (is_tag()) : ?>
-								<i class="icon-tag"></i>
+								<i class="fa fa-tag"></i>
 								<span class="label"><?php _e('Tag','scapegoat'); ?></span>
 								<span class="value"><?php single_tag_title(); ?></span>
 							<?php elseif (is_author()) : ?>
-								<i class="icon-user"></i>
+								<i class="fa fa-user"></i>
 								<span class="label"><?php _e('Author','scapegoat'); ?></span>
 								<span class="value"><?php
 									$userInfo = get_user_by('slug', get_query_var('author_name'));
 									echo $userInfo->display_name;
 								?></span>
 							<?php elseif (is_day()) : ?>
-								<i class="icon-calendar"></i>
+								<i class="fa fa-calendar"></i>
 								<span class="label"><?php _e('Day','scapegoat'); ?></span>
 								<span class="value"><?php the_time('j. F Y'); ?></span>
 							<?php elseif (is_month()) : ?>
-								<i class="icon-calendar"></i>
+								<i class="fa fa-calendar"></i>
 								<span class="label"><?php _e('Month','scapegoat'); ?></span>
 								<span class="value"><?php the_time('F Y'); ?></span>
 							<?php elseif (is_year()) : ?>
-								<i class="icon-calendar"></i>
+								<i class="fa fa-calendar"></i>
 								<span class="label"><?php _e('Year','scapegoat'); ?></span>
 								<span class="value"><?php the_time('Y'); ?></span>
 							<?php else : ?>
@@ -49,7 +49,7 @@
 								<?php if($userInfo->twitter) : ?>
 								<span class="author-twitter">
 									<span class="label">
-										<i class="icon-twitter"></i>
+										<i class="fa fa-twitter"></i>
 										<?php _e('Twitter: ','scapegoat') ?>
 									</span>
 									<span class="value">
@@ -61,7 +61,7 @@
 								<?php if($userInfo->wiki) : ?>
 								<span class="author-wiki">
 									<span class="label">
-										<i class="icon-book"></i>
+										<i class="fa fa-book"></i>
 										<?php _e('Wiki: ','scapegoat') ?>
 									</span>
 									<span class="value">
@@ -73,7 +73,7 @@
 								<?php if($userInfo->user_url) : ?>
 								<span class="author-website">
 									<span class="label">
-										<i class="icon-globe"></i>
+										<i class="fa fa-globe"></i>
 										<?php _e('Website: ','scapegoat') ?>
 									</span>
 									<span class="value">
@@ -118,11 +118,11 @@
 					</h2>
 					<aside class="info post-meta">
 						<span class="post-date">
-							<i class="icon-calendar"></i>
+							<i class="fa fa-calendar"></i>
 							<?php the_time('j.m.y'); ?>
 						</span>
 						<span class="post-categories">
-							<i class="icon-folder-open"></i>
+							<i class="fa fa-folder-open"></i>
 							<?php _e('Category: ','scapegoat'); ?>
 							<?php the_category(', '); ?>
 						</span>
@@ -171,7 +171,7 @@
 
 				<footer class="footer post-meta">
 					<span class="post-tags">
-						<?php the_tags(__('<i class="icon-tag"></i> Tags: ','scapegoat'),', ',''); ?>
+						<?php the_tags(__('<i class="fa fa-tag"></i> Tags: ','scapegoat'),', ',''); ?>
 					</span>
 				</footer>
 				

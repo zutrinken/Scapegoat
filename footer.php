@@ -3,20 +3,20 @@
 			<aside id="footer-top-inside" class="inside">
 				<div id="footer-social-links">
 					<?php if($options['rss']) : ?>
-						<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed"><i class="icon-rss"></i></a>
+						<a target="_blank" class="social-icon rss" href="<?php echo $options['rss']; ?>" title="Feed"><i class="fa fa-rss"></i></a>
 					<?php else : ?>
-						<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed"><i class="icon-rss"></i></a>
+						<a target="_blank" class="social-icon rss" href="<?php bloginfo('rss2_url'); ?>" title="Feed"><i class="fa fa-rss"></i></a>
 					<?php endif; ?>
-					<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail"><i class="icon-envelope"></i></a><?php endif; ?>
-					<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast"><i class="icon-microphone"></i></a><?php endif; ?>
-					<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter"><i class="icon-twitter"></i></a><?php endif; ?>
-					<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook"><i class="icon-facebook"></i></a><?php endif; ?>
-					<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +"><i class="icon-google-plus"></i></a><?php endif; ?>
-					<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube"><i class="icon-youtube-play"></i></a><?php endif; ?>
-					<?php if($options['flickr']) : ?><a target="_blank" class="social-icon flickr" href="<?php echo $options['flickr']; ?>" title="Flickr"><i class="icon-flickr"></i></a><?php endif; ?>
-					<?php if($options['github']) : ?><a target="_blank" class="social-icon github" href="<?php echo $options['github']; ?>" title="Github"><i class="icon-github"></i></a><?php endif; ?>
-					<?php if($options['tumblr']) : ?><a target="_blank" class="social-icon tumblr" href="<?php echo $options['tumblr']; ?>" title="Tumblr"><i class="icon-tumblr"></i></a><?php endif; ?>						
-					<?php if($options['appdotnet']) : ?><a target="_blank" class="social-icon appdotnet" href="<?php echo $options['appdotnet']; ?>" title="App.net"><i class="icon-adn"></i></a><?php endif; ?>
+					<?php if($options['mail']) : ?><a target="_blank" class="social-icon mail" href="<?php echo $options['mail']; ?>" title="Mail"><i class="fa fa-envelope"></i></a><?php endif; ?>
+					<?php if($options['podcast']) : ?><a target="_blank" class="social-icon podcast" href="<?php echo $options['podcast']; ?>" title="Podcast"><i class="fa fa-microphone"></i></a><?php endif; ?>
+					<?php if($options['twitter']) : ?><a target="_blank" class="social-icon twitter" href="<?php echo $options['twitter']; ?>" title="Twitter"><i class="fa fa-twitter"></i></a><?php endif; ?>
+					<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook"><i class="fa fa-facebook"></i></a><?php endif; ?>
+					<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +"><i class="fa fa-google-plus"></i></a><?php endif; ?>
+					<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube"><i class="fa fa-youtube-play"></i></a><?php endif; ?>
+					<?php if($options['flickr']) : ?><a target="_blank" class="social-icon flickr" href="<?php echo $options['flickr']; ?>" title="Flickr"><i class="fa fa-flickr"></i></a><?php endif; ?>
+					<?php if($options['github']) : ?><a target="_blank" class="social-icon github" href="<?php echo $options['github']; ?>" title="Github"><i class="fa fa-github"></i></a><?php endif; ?>
+					<?php if($options['tumblr']) : ?><a target="_blank" class="social-icon tumblr" href="<?php echo $options['tumblr']; ?>" title="Tumblr"><i class="fa fa-tumblr"></i></a><?php endif; ?>						
+					<?php if($options['appdotnet']) : ?><a target="_blank" class="social-icon appdotnet" href="<?php echo $options['appdotnet']; ?>" title="App.net"><i class="fa fa-adn"></i></a><?php endif; ?>
 				</div><!-- footer-top-social -->
 				<div id="footer-search">
 					<?php get_search_form(); ?>
