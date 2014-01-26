@@ -3,12 +3,6 @@
 * Author: [Peter Amende](http://zutrinken.com/)
 * License: GNU General Public License v2 or later
 
-## Version
-
-* v1.6.2 [latest](https://github.com/zutrinken/scapegoat/archive/v1.6.2.zip)
-* v1.5.3 [#BTW13](https://github.com/zutrinken/scapegoat/archive/v1.5.3.zip)
-* Check all versions [here](https://github.com/zutrinken/scapegoat/releases).
-
 ## About
 
 * Made for the [Piratenpartei Berlin](http://berlin.piratenpartei.de/)
