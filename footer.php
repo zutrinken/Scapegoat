@@ -13,6 +13,7 @@
 					<?php if($options['facebook']) : ?><a target="_blank" class="social-icon facebook" href="<?php echo $options['facebook']; ?>" title="Facebook"><i class="fa fa-facebook"></i></a><?php endif; ?>
 					<?php if($options['google']) : ?><a target="_blank" class="social-icon google" href="<?php echo $options['google']; ?>" title="Google +"><i class="fa fa-google-plus"></i></a><?php endif; ?>
 					<?php if($options['youtube']) : ?><a target="_blank" class="social-icon youtube" href="<?php echo $options['youtube']; ?>" title="Youtube"><i class="fa fa-youtube-play"></i></a><?php endif; ?>
+					<?php if($options['vimeo']) : ?><a target="_blank" class="social-icon vimeo" href="<?php echo $options['vimeo']; ?>" title="Vimeo"><i class="fa fa-vimeo-square"></i></a><?php endif; ?>
 					<?php if($options['flickr']) : ?><a target="_blank" class="social-icon flickr" href="<?php echo $options['flickr']; ?>" title="Flickr"><i class="fa fa-flickr"></i></a><?php endif; ?>
 					<?php if($options['github']) : ?><a target="_blank" class="social-icon github" href="<?php echo $options['github']; ?>" title="Github"><i class="fa fa-github"></i></a><?php endif; ?>
 					<?php if($options['tumblr']) : ?><a target="_blank" class="social-icon tumblr" href="<?php echo $options['tumblr']; ?>" title="Tumblr"><i class="fa fa-tumblr"></i></a><?php endif; ?>						

@@ -155,6 +155,10 @@ function scapegoat_theme_options_page() {
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
+					<th scope="row"><span class="social-icon vimeo"><i class="fa fa-vimeo-square"></i></span> Vimeo</th>
+					<td><input id="scapegoat_theme_options[vimeo]" class="regular-text" type="text" name="scapegoat_theme_options[vimeo]" value="<?php esc_attr_e( $options['vimeo'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
 					<th scope="row"><span class="social-icon flickr"><i class="fa fa-flickr"></i></span> Flickr</th>
 					<td><input id="scapegoat_theme_options[flickr]" class="regular-text" type="text" name="scapegoat_theme_options[flickr]" value="<?php esc_attr_e( $options['flickr'] ); ?>" /></td>
 				</tr>
