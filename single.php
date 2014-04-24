@@ -117,7 +117,7 @@
 							<?php the_category(', '); ?>
 						</span>
 					</span>
-					<?php the_tags(__('<span class="post-tags"><span class="label"><i class="icon-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
+					<?php the_tags(__('<span class="post-tags"><span class="label"><i class="fa fa-tag"></i> Tags:</span> <span class="value">','scapegoat'),', ','</span></span>'); ?>
 					<span class="post-comments">
 						<span class="label">
 							<i class="fa fa-comments"></i>
