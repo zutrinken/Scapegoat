@@ -917,9 +917,8 @@ audio {
 	background: #005580;
 }
 
-.type-post,
-.type-page,
-.type-attachment  {
+.hentry,
+.type-attachment {
 	position: relative;
 	margin: 0 -1em 7.5em;
 	padding: 3em;
@@ -929,8 +928,7 @@ audio {
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.type-post:after,
-.type-page:after {
+.hentry:after {
 	position: absolute;
 	display: block;
 	content: '';
@@ -3275,8 +3273,7 @@ body {
 		left: 50%;
 		margin-left: -24em;
 	}
-	.type-post,
-	.type-page,
+	.hentry,
 	.type-attachment {
 		padding: 1em;
 	}
@@ -3295,8 +3292,7 @@ body {
 		padding: 1em;
 		text-align: center;		
 	}
-	.type-post:after,
-	.type-page:after {
+	.hentry:after {
 		width: 240px;
 		margin: 0 0 0 -120px;
 		background-size: 100% auto;
