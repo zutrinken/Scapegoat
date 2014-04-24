@@ -73,14 +73,6 @@
 			</div><!-- main-nav-inside -->
 		</div><!-- main-nav-outside -->
 
-		<div id="end-outside" role="contentinfo">
-			<div idend-inside class="inside">
-				<aside id="end">
-					<a target="_blank" href="http://zutrinken.com/">Amende</a>
-				</aside><!-- end -->
-			</div><!-- end-inside -->
-		</div><!-- end-outside -->
-
 	</div>
 </div>
 
