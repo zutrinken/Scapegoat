@@ -199,9 +199,6 @@
 					<div class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>">
 						<header class="title-header">
 							<h2 class="post-title"><?php _e('Blog','scapegoat'); ?></h2>
-							<aside class="post-description">
-								<p><?php bloginfo('description'); ?></p>
-							</aside>
 						</header>
 					</div>
 					<div class="clear"></div>
