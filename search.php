@@ -96,6 +96,7 @@
 			<?php endwhile; ?>
 			
 				<nav id="pagination">
+					<h2 id="pagination-title" class="visuallyhidden"><?php _e('Article Navigation','scapegoat'); ?></h2>
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>
