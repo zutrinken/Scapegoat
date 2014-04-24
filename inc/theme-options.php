@@ -66,17 +66,6 @@ function scapegoat_theme_options_page() {
 					</td>
 				</tr>
 			</table>
-			<h3><?php _e('Articles','scapegoat'); ?></h3>
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row"><?php _e('Excerpt','scapegoat'); ?></th>
-					<td>
-						<label for="scapegoat_theme_options[custom-excerpt]">
-							<input id="scapegoat_theme_options[custom-excerpt]" type="checkbox" name="scapegoat_theme_options[custom-excerpt]" value="1" <?php checked( '1', $options['custom-excerpt'] ); ?> /> <?php _e('automatic excerpts','scapegoat'); ?> <span class="description"><?php _e("if this is checked, you don't need more-tags",'scapegoat'); ?></span>
-						</label>
-					</td>
-				</tr>
-			</table>
 			<h3><?php _e('Appearance','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">

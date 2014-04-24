@@ -160,12 +160,8 @@
 				</header>
 
 				<article class="article">
-					<?php if(!$options['custom-excerpt']) : ?>
-						<?php the_content(); ?>
-					<?php else : ?>
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
-					<?php endif; ?>
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
 					<div class="clear"></div>
 				</article>				
 
