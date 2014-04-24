@@ -78,11 +78,6 @@
 		<![endif]-->
 
 		<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo $template_url; ?>/favicon.ico" />
-		<?php if($options['icon']) : ?>
-		<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
-		<?php else : ?>
-		<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
-		<?php endif; ?>
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
 		<link rel="canonical" href="<?php bloginfo('url'); ?>" />

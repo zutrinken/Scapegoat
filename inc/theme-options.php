@@ -59,12 +59,6 @@ function scapegoat_theme_options_page() {
 						<input id="scapegoat_theme_options[logo]" class="regular-text" type="text" name="scapegoat_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
 					</td>
 				</tr>
-				<tr valign="top">
-					<th scope="row">Touch Icon (URL)</th>
-					<td>
-						<input id="scapegoat_theme_options[icon]" class="regular-text" type="text" name="scapegoat_theme_options[icon]" value="<?php esc_attr_e( $options['icon'] ); ?>" />
-					</td>
-				</tr>
 			</table>
 			<h3><?php _e('Appearance','scapegoat'); ?></h3>
 			<table class="form-table">
