@@ -545,10 +545,12 @@ a,
 a:active,
 a:visited {
 	color: #f80;
+	outline: none;
 }
 a:hover,
 a:focus {
 	color: #f50;
+	outline: none;
 }
 
 
@@ -874,6 +876,8 @@ input[type="checkbox"] {
 img {
 	max-width: 100%;
 	height: auto;
+	border: none;
+	outline: none;
 }
 
 object,
