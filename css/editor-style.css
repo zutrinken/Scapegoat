@@ -1,5 +1,5 @@
 @import url('font-awesome.min.css');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic');
+/* @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic'); */
 @font-face {
 	font-family: 'PoliticsHeadBold';
 	src: url('../fonts/PoliticsHeadv1_9.eot');
@@ -314,21 +314,16 @@ td {
 	border-bottom: 1px solid #bfbfbf;
 	padding: 6px 10px 6px 0;
 	font-size: 0.9em;
-	line-hei
 
 	/* ------------------------------ Figures */
-
+}
 img {
 	max-width: 100%;
 	height: auto;
 }
-object,
-audio {
+
+object, audio {
 	max-width: 100%;
 }
 
-@media	only screen and (-webkit-min-device-pixel-ratio: 2), 
-		only screen and (-moz-min-device-pixel-ratio: 2), 
-		only screen and (-o-min-device-pixel-ratio: 2/1), 
-		only screen and (min-device-pixel-ratio: 2) {
-}
+
