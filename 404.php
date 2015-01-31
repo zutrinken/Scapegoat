@@ -2,23 +2,16 @@
 
 		<?php $detect = new Mobile_Detect(); ?>
 
-				<div id="title-images-wrapper">
-					<div id="title-outside">
-						<div id="title-inside" class="inside">
+				<div id="title-outside">
+					<div id="title-inside" class="inside">
+						<div class="content nosidebar">
 							<header class="title-header">
 								<h2 class="post-title">
-									<?php _e('404','scapegoat'); ?>
-								</h2>
+									<?php _e('404','scapegoat'); ?></h2>
 							</header>
 						</div>
+						<div class="clear"></div>
 					</div>
-					<figure class="title-image parallax">
-						<?php if(!$detect->isMobile() || $detect->isTablet()) : ?>
-							<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404-large.jpg" alt="" /></a>
-						<?php else : ?>
-							<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/404-small.jpg" alt="" /></a>
-						<?php endif; ?>
-					</figure>
 				</div>
 			
 				<div id="wrapper-outside">
@@ -28,11 +21,10 @@
 				
 							<div id="content" class="full" role="main">
 								
-								<section id="post-404" class="post-404 post type-post status-publish format-standard" role="article">
+								<section id="post-404" class="post-404 post type-post status-publish format-standard hentry" role="article">
 
 									<article class="article">
-										<p><?php _e('All that glittered was not gold. But it was still nice.','scapegoat'); ?></p>
-										<p><?php _e('<strong>Krasse Herde</strong> – <a target="_blank" href="http://kaklotter.de/" rel="nofollow">Fred Bordfeld</a>, <a target="_blank" href="http://zombietetris.de/" rel="nofollow">Lotte Steenbrink</a>, <a target="_blank" href="http://bendebiel.com/" rel="nofollow">Ben de Biel</a>, <a target="_blank" href="http://zutrinken.com/" rel="nofollow">Peter Amende</a>.','scapegoat'); ?></p>
+										<p><?php _e('This is not the page you’re looking for!','scapegoat'); ?></p>
 									</article>
 									
 								</section>

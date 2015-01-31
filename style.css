@@ -5,7 +5,7 @@
 	Author: Peter Amende
 	Author URI: http://www.zutrinken.com
 
-	Version: 1.6.2
+	Version: 1.6.3
 
 	Description: This Theme is made by <a target="_blank" href="http://zutrinken.com">Peter Amende</a> for the <a target="_blank" href="http://berlin.piratenpartei.de">Piratenpartei Berlin</a>, Germany.
 	Tags: light, white, grey, two-columns, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, sticky-post, theme-options, translation-ready
@@ -917,9 +917,8 @@ audio {
 	background: #005580;
 }
 
-.type-post,
-.type-page,
-.type-attachment  {
+.hentry,
+.type-attachment {
 	position: relative;
 	margin: 0 -1em 7.5em;
 	padding: 3em;
@@ -929,8 +928,7 @@ audio {
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.type-post:after,
-.type-page:after {
+.hentry:after {
 	position: absolute;
 	display: block;
 	content: '';
@@ -1767,28 +1765,6 @@ body {
 }
 #footer-nav-inside {}
 
-#end-outside {
-	background: #000;
-	padding: 0.5em 0;
-	border-top: 1px solid #232323;
-}
-#end-inside {}
-#end {
-	font-size: 1em;
-	padding: 0.5em 0;
-	text-align: center;
-	font-family: 'Arial Black',Arial,sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-#end a {
-	color: #b2b2b2 !important;
-}
-#end a:hover,
-#end a:focus {
-	color: #fff !important;
-}
-
 
 	/* ------------------------------ Social Icons */
 
@@ -1849,6 +1825,9 @@ body {
 .social-icon.youtube {
 	background-color: #c6312b;
 }
+.social-icon.vimeo {
+	background-color: #0ec3ee;
+}
 .social-icon.flickr {
 	background-color: #ff0084;
 }
@@ -1861,6 +1840,10 @@ body {
 .social-icon.appdotnet {
 	background-color: #cbccce;
 }
+.social-icon.instagram {
+	background-color: #517FA4;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Frontpage
@@ -3201,10 +3184,6 @@ body {
 	    width: auto;
 	    padding: 0;
 	}
-	
-	#end {
-		text-align: center;
-	}
 	#footer-social-links {
 		float: none;
 		text-align: center;
@@ -3268,8 +3247,7 @@ body {
 		left: 50%;
 		margin-left: -24em;
 	}
-	.type-post,
-	.type-page,
+	.hentry,
 	.type-attachment {
 		padding: 1em;
 	}
@@ -3288,8 +3266,7 @@ body {
 		padding: 1em;
 		text-align: center;		
 	}
-	.type-post:after,
-	.type-page:after {
+	.hentry:after {
 		width: 240px;
 		margin: 0 0 0 -120px;
 		background-size: 100% auto;

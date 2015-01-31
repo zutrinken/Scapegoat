@@ -45,6 +45,9 @@
 .social-icon.youtube {
 	background-color: #c6312b;
 }
+.social-icon.vimeo {
+	background-color: #0ec3ee;
+}
 .social-icon.podcast {
 	background-color: #408ad2;
 }
@@ -56,6 +59,9 @@
 }
 .social-icon.github {
 	background-color: #4183c4;
+}
+.social-icon.instagram {
+	background-color: #517FA4;
 }
 
 

@@ -164,10 +164,10 @@
 				pauseOnAction:		false,
 				pauseOnHover:		false,
 				pausePlay:			true,
-				pauseText:			'<i class="icon-pause"></i>',
-				playText:			'<i class="icon-play"></i>',
-				prevText:			'<i class="icon-chevron-left"></i>',
-				nextText:			'<i class="icon-chevron-right"></i>',
+				pauseText:			'<i class="fa fa-pause"></i>',
+				playText:			'<i class="fa fa-play"></i>',
+				prevText:			'<i class="fa fa-chevron-left"></i>',
+				nextText:			'<i class="fa fa-chevron-right"></i>',
 				controlsContainer:	'#front-page-slider-control-inside', 
 				start:				function(slider) {
 										$('body').removeClass('loading');	

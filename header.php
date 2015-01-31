@@ -6,52 +6,53 @@
 	<head profile="http://gmpg.org/xfn/11">
 	
 		<!--
-                                                                                
-                                 :MMMMMMMMMMO=                                  
-                             .MMDIIIIIIIIIII?I?$MMMZ                            
-                           8M8IIIIIIIIIIIIIIIIIIIIIIIMM~                        
-                         MMIIIIIIIIIIIIIIIIIIIIIIIIIIIIIM,                      
-                       MMNIIIIIIIIIIIIIIIIIIMMMMM7IIIIII?N8                     
-                    .OM   MIIIIIIIIIIIIIIOM~.    .MDIIIIIIDM                    
-                    M~.    MIIIIIIIIIIIIMI.         M?IIIII8M                   
-                  ,M.      .MIIIIIIIIIIM=           .DDIIIIIMZ                  
-                 :M.        IMIIIIIII$M.              ,NIIIIIM+                 
-                .M.   8MD   .MDIIIII$M.      ,M7.       NIIIIIM                 
-                M~   ?MMM,    MII7IIM:      MMMMMZ.     ,NIIIIIM                
-                M   .MMMM.  +MMMMMMMM.     MMMMMMM.      ODIIIIM7               
-               IO    .MM,  $MMMMMMMMMM.    MMMMMMM.      .MIIIIIM               
-               OO           MMMMMMMMMM.     7MMMM.        MIIIIIZN.             
-               M$=           IMMMMMMM.                   .MIIIII?M.             
-              .MII~              .                       ?MIIIIII7M.            
-              M,,,,,:                                    MIIIIIIIIM~            
-             $M,,,,,,,,,. .                            .MMIIIIIIIIIM            
-             M,,,,,,,,,,,,,,,,,,.......              .7MM8+===~~::,M,           
-             M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8MM,,,,,,,,,,:M           
-            =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM?,,,,,,,,,,,M           
-            NZ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMM~,,,,,,,,,,,,+M          
-            M:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMM+,,,,,,,,,,,,,,,M.         
-            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7MM=,,,,,,,,,,,,,,,,,M$         
-            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+MM+:,,,,,,,,,,,,,,,,,,,M         
-            M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+MM+,,,,,,,,,,,,,,,,,,,,,,M         
-           =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:MMZ,,,,,,,,,,,,,,,,,,,,,,,,M+        
-           88,,,,,,,,,,,,,,,,,,,,,,,,,,,,8MM,,,,,,,,,,,,,,,,,,,,,,,,,,IM        
-           M+,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMD,,,,,,,,,,,,,,,,,,,,,,,,,,,M        
-           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMM=,,,,,,,,,,,,,,,,,,,,,,,,,M        
-           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,IMMM?,,,,,,,,,,,,,,,,,,,,,,,M        
-           M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~MMM$,,,,,,,,,,,,,,,,,,,,,M        
-       .MMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM=,,,,,,,,,,,,,,,,,,M        
-       MMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7MMMMMMMMMM,,,,,,,,,,M        
-      MMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.~,,,,,,,,,,,,,,,~M        
-      ~MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMD       
-       MMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,      
-        DMMMMMMMMM:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,$MMM,      
-         7MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM       
-          .MMMMMMMMI,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMD       
-            .MMMMMMO,,,,,,,,,,,,,,:8MMMMMMM=:,,,,,,,,,,,,,,,,,,,,,?MMMMM~       
-                    =MMMMMMMMMMMM~          .OMMM$,,,,,,,,,,,,~MMMMMMMMM        
-                                                   IMMMMMMMMD:  =MMMMMM,        
-                                                                 MMMMMD         
-                                                                 ~MMM:           
+                    
+                                  ..:MMMMMMM8::..                                
+                               MMMMMMMMMMMMMMMMMMO                              
+                           .MMMMMMMMMMMMMMMMMMMMMMMM..                          
+                         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:                        
+                      .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        
+                    ..MM MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO:                    
+                   .MM.  .MMMMMMMMMMMMMMMMMM.   .MMMMMMMMMM.                    
+                   MM     .MMMMMMMMMMMMMM.         MMMMMMMMM                    
+                  MM.       MMMMMMMMMMM.            .MMMMMMMM                   
+                 MM.  MM   .MMMMMMMMMM.              .MMMMMMM.                  
+                MM.  MMMM.  .MMMMMMMM     .MMMM.       MMMMMMM.                 
+               MM   .MMMM   .MMMMMMM:     MMMMMM.      MMMMMMMM                 
+              :MM   .MMM$   MMMMMMMM     .MMMMMM.       MMMMMMMM                
+              MM           MMMMMMMMMM     MMMMMM.       MMMMMMMM.               
+             .MM..         MMMMMMMMMM     .MMMM        .MMMMMMMMM               
+             MMMM..         .MMMMMMM.                   MMMMMMMMM.              
+             MMMMM..                                   .MMMMMMMMM.              
+            MMMMMMMM..                                 MMMMMMMMMMM.             
+            MMMMMMMMMMM:.                            .MMMMMMMMMMMM.             
+           .MMM,,,,,,.:MMMMMM:..                ..MMMMMMMMMMMMMMMMM.            
+           MMM,,,,,,,,,,,,,,,MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,:MMM.            
+           MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM,,,,,,,,,,,MMM.           
+          .M8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,=MMM:,,,,,,,,,,,,,,MM.           
+          =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,,,,,,,,MM.          
+          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,MM.          
+          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,M:          
+          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,MM          
+          MO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,MM.         
+          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,NM.         
+          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,,M.         
+          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,,M.         
+          M=,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,:,,,,,,,,,,,,,,,,,,,,,,M          
+          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,M.         
+          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,MM,,,,,,,M.         
+        MMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMMMMMMM,,,,,,,,IM:        
+      MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM         
+      MMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMZ        
+       MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM        
+       MMMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM        
+       .8MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMMMMMM        
+          MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM.        
+           .MMMMMMMMMMMN,,,DMMMMMMMMMMMMMMMMMMM:,,,,,,,,,,,,,,,MMMMMMMM         
+              .MMMMM ..,MMM~.                ..MMMMMMMN,,,,+MMMMMMMMMM         
+                                                      ,MMMMZ.MMMMMMMM.          
+                                                             .MMMMMM.           
+                                                              .MMM.             
                                                                          
 			
 		-->
@@ -77,11 +78,6 @@
 		<![endif]-->
 
 		<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo $template_url; ?>/favicon.ico" />
-		<?php if($options['icon']) : ?>
-		<link rel="apple-touch-icon-precomposed" href="<?php echo $options['icon']; ?>"/>
-		<?php else : ?>
-		<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
-		<?php endif; ?>
 
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
 		<link rel="canonical" href="<?php bloginfo('url'); ?>" />
@@ -199,9 +195,6 @@
 					<div class="content<?php if (!is_active_sidebar('Main-Sidebar')) : ?> nosidebar<?php endif; ?>">
 						<header class="title-header">
 							<h2 class="post-title"><?php _e('Blog','scapegoat'); ?></h2>
-							<aside class="post-description">
-								<p><?php bloginfo('description'); ?></p>
-							</aside>
 						</header>
 					</div>
 					<div class="clear"></div>

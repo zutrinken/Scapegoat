@@ -34,11 +34,11 @@
 					</h2>
 					<aside class="info post-meta">
 						<span class="post-date">
-							<i class="icon-calendar"></i>
+							<i class="fa fa-calendar"></i>
 							<?php the_time('j.m.y'); ?>
 						</span>
 						<span class="post-categories">
-							<i class="icon-folder-open"></i>
+							<i class="fa fa-folder-open"></i>
 							<?php _e('Category: ','scapegoat'); ?>
 							<?php the_category(', '); ?>
 						</span>
@@ -76,18 +76,14 @@
 				</header>
 
 				<article class="article">
-					<?php if(!$options['custom-excerpt']) : ?>
-						<?php the_content(); ?>
-					<?php else : ?>
-						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
-					<?php endif; ?>
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>" class="post-more"><?php _e('more','scapegoat'); ?> &#x9b;</a>
 					<div class="clear"></div>
 				</article>				
 
 				<footer class="footer post-meta">
 					<span class="post-tags">
-						<?php the_tags(__('<i class="icon-tag"></i> Tags: ','scapegoat'),', ',''); ?>
+						<?php the_tags(__('<i class="fa fa-tag"></i> Tags: ','scapegoat'),', ',''); ?>
 					</span>
 				</footer>
 				
@@ -96,6 +92,7 @@
 			<?php endwhile; ?>
 			
 				<nav id="pagination">
+					<h2 id="pagination-title" class="visuallyhidden"><?php _e('Article Navigation','scapegoat'); ?></h2>
 					<?php if( function_exists('wp_pagination_navi') ) : ?>
 						<?php wp_pagination_navi(); ?>
 					<?php else : ?>

@@ -59,23 +59,6 @@ function scapegoat_theme_options_page() {
 						<input id="scapegoat_theme_options[logo]" class="regular-text" type="text" name="scapegoat_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
 					</td>
 				</tr>
-				<tr valign="top">
-					<th scope="row">Touch Icon (URL)</th>
-					<td>
-						<input id="scapegoat_theme_options[icon]" class="regular-text" type="text" name="scapegoat_theme_options[icon]" value="<?php esc_attr_e( $options['icon'] ); ?>" />
-					</td>
-				</tr>
-			</table>
-			<h3><?php _e('Articles','scapegoat'); ?></h3>
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row"><?php _e('Excerpt','scapegoat'); ?></th>
-					<td>
-						<label for="scapegoat_theme_options[custom-excerpt]">
-							<input id="scapegoat_theme_options[custom-excerpt]" type="checkbox" name="scapegoat_theme_options[custom-excerpt]" value="1" <?php checked( '1', $options['custom-excerpt'] ); ?> /> <?php _e('automatic excerpts','scapegoat'); ?> <span class="description"><?php _e("if this is checked, you don't need more-tags",'scapegoat'); ?></span>
-						</label>
-					</td>
-				</tr>
 			</table>
 			<h3><?php _e('Appearance','scapegoat'); ?></h3>
 			<table class="form-table">
@@ -127,48 +110,56 @@ function scapegoat_theme_options_page() {
 			<h3><?php _e('Social Networks','scapegoat'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row"><span class="social-icon rss"><i class="icon-rss"></i></span> Feed</th>
+					<th scope="row"><span class="social-icon rss"><i class="fa fa-rss"></i></span> Feed</th>
 					<td><input id="scapegoat_theme_options[rss]" class="regular-text" type="text" name="scapegoat_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" /> <span class="description"> <?php _e('Default: http://yoururl.com/feed/','scapegoat'); ?></span></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon mail"><i class="icon-envelope"></i></span> Newsletter</th>
+					<th scope="row"><span class="social-icon mail"><i class="fa fa-envelope"></i></span> Newsletter</th>
 					<td><input id="scapegoat_theme_options[mail]" class="regular-text" type="text" name="scapegoat_theme_options[mail]" value="<?php esc_attr_e( $options['mail'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon podcast"><i class="icon-microphone"></i></span> Podcast</th>
+					<th scope="row"><span class="social-icon podcast"><i class="fa fa-microphone"></i></span> Podcast</th>
 					<td><input id="scapegoat_theme_options[podcast]" class="regular-text" type="text" name="scapegoat_theme_options[podcast]" value="<?php esc_attr_e( $options['podcast'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon twitter"><i class="icon-twitter"></i></span> Twitter</th>
+					<th scope="row"><span class="social-icon twitter"><i class="fa fa-twitter"></i></span> Twitter</th>
 					<td><input id="scapegoat_theme_options[twitter]" class="regular-text" type="text" name="scapegoat_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon facebook"><i class="icon-facebook"></i></span> Facebook</th>
+					<th scope="row"><span class="social-icon facebook"><i class="fa fa-facebook"></i></span> Facebook</th>
 					<td><input id="scapegoat_theme_options[facebook]" class="regular-text" type="text" name="scapegoat_theme_options[facebook]" value="<?php esc_attr_e( $options['facebook'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon google"><i class="icon-google-plus"></i></span> Google +</th>
+					<th scope="row"><span class="social-icon google"><i class="fa fa-google-plus"></i></span> Google +</th>
 					<td><input id="scapegoat_theme_options[google]" class="regular-text" type="text" name="scapegoat_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon youtube"><i class="icon-youtube-play"></i></span> Youtube</th>
+					<th scope="row"><span class="social-icon youtube"><i class="fa fa-youtube-play"></i></span> Youtube</th>
 					<td><input id="scapegoat_theme_options[youtube]" class="regular-text" type="text" name="scapegoat_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon flickr"><i class="icon-flickr"></i></span> Flickr</th>
+					<th scope="row"><span class="social-icon vimeo"><i class="fa fa-vimeo-square"></i></span> Vimeo</th>
+					<td><input id="scapegoat_theme_options[vimeo]" class="regular-text" type="text" name="scapegoat_theme_options[vimeo]" value="<?php esc_attr_e( $options['vimeo'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon flickr"><i class="fa fa-flickr"></i></span> Flickr</th>
 					<td><input id="scapegoat_theme_options[flickr]" class="regular-text" type="text" name="scapegoat_theme_options[flickr]" value="<?php esc_attr_e( $options['flickr'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon github"><i class="icon-github"></i></span> Github</th>
+					<th scope="row"><span class="social-icon github"><i class="fa fa-github"></i></span> Github</th>
 					<td><input id="scapegoat_theme_options[github]" class="regular-text" type="text" name="scapegoat_theme_options[github]" value="<?php esc_attr_e( $options['github'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon tumblr"><i class="icon-tumblr"></i></span> Tumblr</th>
+					<th scope="row"><span class="social-icon tumblr"><i class="fa fa-tumblr"></i></span> Tumblr</th>
 					<td><input id="scapegoat_theme_options[tumblr]" class="regular-text" type="text" name="scapegoat_theme_options[tumblr]" value="<?php esc_attr_e( $options['tumblr'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row"><span class="social-icon appdotnet"><i class="icon-adn"></i></span> APP.net</th>
+					<th scope="row"><span class="social-icon appdotnet"><i class="fa fa-adn"></i></span> APP.net</th>
 					<td><input id="scapegoat_theme_options[appdotnet]" class="regular-text" type="text" name="scapegoat_theme_options[appdotnet]" value="<?php esc_attr_e( $options['appdotnet'] ); ?>" /></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><span class="social-icon instagram"><i class="fa fa-instagram"></i></span> Instagram</th>
+					<td><input id="scapegoat_theme_options[instagram]" class="regular-text" type="text" name="scapegoat_theme_options[instagram]" value="<?php esc_attr_e( $options['instagram'] ); ?>" /></td>
 				</tr>
 			</table>
 			<!-- Submit -->
