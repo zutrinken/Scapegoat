@@ -853,7 +853,9 @@ function rw_relative_urls() {
         return;
     }
     $filters = array(
-        'post_link',
+  //      'post_link',
+        /* we leave this shit absolute, die to stupid social media plugins, that
+        which expect an absolute link here :/ */
         'post_type_link',
         'page_link',
         'attachment_link',
