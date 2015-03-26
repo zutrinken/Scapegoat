@@ -31,7 +31,7 @@ a[href^="#"]:after {
 	content: "";
 }  
 pre, blockquote {
-	border: 1px solid color: rgb(128,128,128);
+	border: 1px solid rgb(128,128,128);
 	page-break-inside: avoid;
 }
 
