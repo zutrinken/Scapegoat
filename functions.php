@@ -19,8 +19,8 @@ function scapegoat_font_url() {
 /* Load Scripts
 /*-----------------------------------------------------------------------------------*/
 
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
-function enqueue_scripts() {
+add_action('wp_enqueue_scripts', 'scapegoat_enqueue_scripts');
+function scapegoat_enqueue_scripts() {
 	$template = get_template_directory_uri();
 	wp_enqueue_style( 'scapegoat-lato', scapegoat_font_url(), array(), null );
 	wp_enqueue_script('scapegoat-modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
@@ -60,14 +60,14 @@ add_action('login_head', 'custom_login');
 require_once(get_stylesheet_directory().'/inc/theme-options.php');
 
 /* add twitter and wiki profile */
-function add_twitter_contactmethod( $contactmethods ) {
+add_filter('user_contactmethods','scapegoat_add_twitter_contactmethod',10,1);
+function scapegoat_add_twitter_contactmethod( $contactmethods ) {
 	/* Add Twitter */
 	$contactmethods['twitter'] = __('Twitter (without @)','scapegoat');
 	/* Add Wiki */
 	$contactmethods['wiki'] = __('Wiki (Username)','scapegoat');
 	return $contactmethods;
 }
-add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
 
 /* add custom image-sizes */
 if ( function_exists( 'add_theme_support' ) ) { 
@@ -360,11 +360,11 @@ function scapegoat_button( $atts, $content = null ) {
 
     return $out;
 }
-add_shortcode('button', 'scapegoat_button');
+
 
 
 /* add custom caption-function */
-function custom_caption($attr, $content = null) {
+function scapegoat_custom_caption($attr, $content = null) {
 	/* New-style shortcode with the caption inside the shortcode with the link and image tags. */
 	if ( ! isset( $attr['caption'] ) ) {
 		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
@@ -390,9 +390,8 @@ function custom_caption($attr, $content = null) {
 
 	return '<figure '. $id .'class="wp-caption '. $align .'" style="width: '. ($width) .'px">'. do_shortcode($content) .'<span class="wp-caption-text">'. $caption .'</span></figure>';
 }
-
-add_shortcode('wp_caption', 'custom_caption');
-add_shortcode('caption', 'custom_caption');
+add_shortcode('wp_caption', 'scapegoat_custom_caption');
+add_shortcode('caption', 'scapegoat_custom_caption');
 
 
 /* catch the first image */
@@ -819,76 +818,71 @@ function custom_comment($comment, $args, $depth) {
 
 
 
- function scapegoat_relativeimgurl($content){
-        return preg_replace_callback('/<img[^>]+/', 'scapegoat_relativeimgurl_callback', $content);
+function scapegoat_relativeimgurl($content) {
+	return preg_replace_callback('/<img[^>]+/', 'scapegoat_relativeimgurl_callback', $content);
 }
 function scapegoat_relativeimgurl_callback($matches) {
-        $link = $matches[0];
-        $site_link =  wp_make_link_relative(home_url());  
-        $link = preg_replace("%src=\"$site_link%i", 'src="', $link);                 
-        return $link;
-    }
- add_filter('the_content', 'scapegoat_relativeimgurl');
-
-
- function wpi_relativeurl($content){
-        return preg_replace_callback('/<a[^>]+/', 'wpi_relativeurl_callback', $content);
-    }
- 
-function wpi_relativeurl_callback($matches) {
-        $link = $matches[0];
-        $site_link =  wp_make_link_relative(home_url());  
-        $link = preg_replace("%href=\"$site_link%i", 'href="', $link);                 
-        return $link;
-    }
- add_filter('the_content', 'wpi_relativeurl');
-   
-
-add_action('template_redirect', 'rw_relative_urls');
-function rw_relative_urls() {
-    // Don't do anything if:
-    // - In feed
-    // - In sitemap by WordPress SEO plugin
-    if (is_admin() || is_feed() || get_query_var('sitemap')) {
-        return;
-    }
-    $filters = array(
-  //      'post_link',
-        /* we leave this shit absolute, die to stupid social media plugins, that
-        which expect an absolute link here :/ */
-        'post_type_link',
-        'page_link',
-        'attachment_link',
-        'get_shortlink',
-        'post_type_archive_link',
-        'get_pagenum_link',
-        'get_comments_pagenum_link',
-        'term_link',
-        'search_link',
-        'day_link',
-        'month_link',
-        'year_link',
-        'script_loader_src',
-        'style_loader_src',
-    );
-    foreach ($filters as $filter) {
-        add_filter($filter, 'scapegoat_make_link_relative');
-    }
+	$link = $matches[0];
+	$site_link =  wp_make_link_relative(home_url());  
+	$link = preg_replace("%src=\"$site_link%i", 'src="', $link);                 
+	return $link;
 }
+add_filter('the_content', 'scapegoat_relativeimgurl');
+
+
+function scapegoat_relativeurl($content) {
+	return preg_replace_callback('/<a[^>]+/', 'scapegoat_relativeurl_callback', $content);
+}
+function scapegoat_relativeurl_callback($matches) {
+	$link = $matches[0];
+	$site_link =  wp_make_link_relative(home_url());  
+	$link = preg_replace("%href=\"$site_link%i", 'href="', $link);                 
+	return $link;
+}
+add_filter('the_content', 'scapegoat_relativeurl');
+
+
+function scapegoat_relative_urls() {
+	if (is_admin() || is_feed() || get_query_var('sitemap')) {
+		return;
+	}
+	$filters = array(
+		//      'post_link',
+		/* we leave this for social media plugins, that expect absolute links */
+		'post_type_link',
+		'page_link',
+		'attachment_link',
+		'get_shortlink',
+		'post_type_archive_link',
+		'get_pagenum_link',
+		'get_comments_pagenum_link',
+		'term_link',
+		'search_link',
+		'day_link',
+		'month_link',
+		'year_link',
+		'script_loader_src',
+		'style_loader_src',
+	);
+	foreach ($filters as $filter) {
+		add_filter($filter, 'scapegoat_make_link_relative');
+	}
+}
+add_action('template_redirect', 'scapegoat_relative_urls');
 
 function scapegoat_make_link_relative($url) {
-    $current_site_url = get_site_url();   
+	$current_site_url = get_site_url();   
 	if (!empty($GLOBALS['_wp_switched_stack'])) {
-        $switched_stack = $GLOBALS['_wp_switched_stack'];
-        $blog_id = end($switched_stack);
-        if ($GLOBALS['blog_id'] != $blog_id) {
-            $current_site_url = get_site_url($blog_id);
-        }
-    }
-    $current_host = parse_url($current_site_url, PHP_URL_HOST);
-    $host = parse_url($url, PHP_URL_HOST);
-    if($current_host == $host) {
-        $url = wp_make_link_relative($url);
-    }
-    return $url; 
+		$switched_stack = $GLOBALS['_wp_switched_stack'];
+		$blog_id = end($switched_stack);
+		if ($GLOBALS['blog_id'] != $blog_id) {
+			$current_site_url = get_site_url($blog_id);
+		}
+	}
+	$current_host = parse_url($current_site_url, PHP_URL_HOST);
+	$host = parse_url($url, PHP_URL_HOST);
+	if($current_host == $host) {
+		$url = wp_make_link_relative($url);
+	}
+	return $url; 
 }
