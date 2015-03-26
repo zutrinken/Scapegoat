@@ -407,6 +407,7 @@ function catch_post_image($size = 'thumbnail') {
 /* Custom Excerpt
 /*-----------------------------------------------------------------------------------*/
 function custom_wp_trim_excerpt($text) {
+	global $post;
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
 		// Retrieve the post content

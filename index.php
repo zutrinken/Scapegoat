@@ -31,7 +31,7 @@
 						</span>
 					</aside>
 					
-					<?php if(get_post_meta($post->ID, 'video', true) && $options['custom-excerpt']) : ?>
+					<?php if(get_post_meta($post->ID, 'video', true)) : ?>
 						<figure class="post-video">
 							<?php echo get_post_meta($post->ID, 'video', true); ?>
 						</figure>
