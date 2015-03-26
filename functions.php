@@ -83,8 +83,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 /*-----------------------------------------------------------------------------------*/
 
 /* register all menus */
-add_action( 'init', 'register_my_menus' );
-function register_my_menus() {
+add_action( 'init', 'scapegoat_register_my_menus' );
+function scapegoat_register_my_menus() {
 	register_nav_menus(
 		array(
 			'header' => __('Header','scapegoat'),
@@ -93,7 +93,7 @@ function register_my_menus() {
 	);
 }
 
-function fallback_menu() {
+function scapegoat_fallback_menu() {
     wp_page_menu(
     	array(
     		'show_home' => __('Start','scapegoat')

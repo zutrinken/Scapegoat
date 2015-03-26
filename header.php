@@ -165,7 +165,7 @@
 					</div>
 					<h2 id="nav-title" class="visuallyhidden"><?php _e('Navigation','scapegoat'); ?></h2>
 					<a href="#header-inside" id="menu-close"><?php _e('Navigation','scapegoat'); ?></a>
-					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => fallback_menu, 'walker' => new My_Walker_Nav_Menu())); ?>
+					<?php wp_nav_menu(array('theme_location' => 'header', 'fallback_cb' => 'scapegoat_fallback_menu', 'walker' => new My_Walker_Nav_Menu())); ?>
 					<div class="clear"></div>
 				</nav><!-- main-nav -->
 			</div><!-- main-nav-inside -->
