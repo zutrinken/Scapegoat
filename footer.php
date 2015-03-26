@@ -96,7 +96,5 @@
 				});
 			}(jQuery, document, window))
 		</script>
-<!--              ▲              -->
-<!--             ▲ ▲             -->
 	</body>
 </html>

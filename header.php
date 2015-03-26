@@ -4,62 +4,7 @@
 	<?php $options = get_option('scapegoat_theme_options'); /* load the Theme Options */ ?>
 	<?php $template_url = get_bloginfo('template_url'); /* Template Path */ ?>
 	<head profile="http://gmpg.org/xfn/11">
-	
-		<!--
-                    
-                                  ..:MMMMMMM8::..                                
-                               MMMMMMMMMMMMMMMMMMO                              
-                           .MMMMMMMMMMMMMMMMMMMMMMMM..                          
-                         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:                        
-                      .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        
-                    ..MM MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO:                    
-                   .MM.  .MMMMMMMMMMMMMMMMMM.   .MMMMMMMMMM.                    
-                   MM     .MMMMMMMMMMMMMM.         MMMMMMMMM                    
-                  MM.       MMMMMMMMMMM.            .MMMMMMMM                   
-                 MM.  MM   .MMMMMMMMMM.              .MMMMMMM.                  
-                MM.  MMMM.  .MMMMMMMM     .MMMM.       MMMMMMM.                 
-               MM   .MMMM   .MMMMMMM:     MMMMMM.      MMMMMMMM                 
-              :MM   .MMM$   MMMMMMMM     .MMMMMM.       MMMMMMMM                
-              MM           MMMMMMMMMM     MMMMMM.       MMMMMMMM.               
-             .MM..         MMMMMMMMMM     .MMMM        .MMMMMMMMM               
-             MMMM..         .MMMMMMM.                   MMMMMMMMM.              
-             MMMMM..                                   .MMMMMMMMM.              
-            MMMMMMMM..                                 MMMMMMMMMMM.             
-            MMMMMMMMMMM:.                            .MMMMMMMMMMMM.             
-           .MMM,,,,,,.:MMMMMM:..                ..MMMMMMMMMMMMMMMMM.            
-           MMM,,,,,,,,,,,,,,,MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,:MMM.            
-           MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM,,,,,,,,,,,MMM.           
-          .M8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,=MMM:,,,,,,,,,,,,,,MM.           
-          =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,,,,,,,,MM.          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,MM.          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,M:          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,MM          
-          MO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,MM.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,NM.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,,M.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,,M.         
-          M=,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,:,,,,,,,,,,,,,,,,,,,,,,M          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,M.         
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,MM,,,,,,,M.         
-        MMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMMMMMMM,,,,,,,,IM:        
-      MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM         
-      MMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMZ        
-       MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM        
-       MMMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM        
-       .8MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMMMMMM        
-          MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM.        
-           .MMMMMMMMMMMN,,,DMMMMMMMMMMMMMMMMMMM:,,,,,,,,,,,,,,,MMMMMMMM         
-              .MMMMM ..,MMM~.                ..MMMMMMMN,,,,+MMMMMMMMMM         
-                                                      ,MMMMZ.MMMMMMMM.          
-                                                             .MMMMMM.           
-                                                              .MMM.             
-                                                                         
-			
-		-->
-
 		<title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
-
-		<!-- ♥ ♥ ♥ Oh nice, you take a look at the sourcecode. I'm flattered. ♥ ♥ ♥ -->
 		<meta name="author" content="Peter Amende" />
 		<meta name="description" content="<?php bloginfo('description'); ?>" />
 
