@@ -212,42 +212,25 @@ function my_register_sidebars() {
 
 /* Add support for custom headers */
 
-define('NO_HEADER_TEXT', true );
-define('HEADER_IMAGE', '%s/images/default_header.jpg');
-define('HEADER_IMAGE_WIDTH', 1440);
-define('HEADER_IMAGE_HEIGHT', 486);
-
-register_default_headers(array(
-	'ruins' => array(
-		'url' => '%s/images/default_header.jpg',
-		'thumbnail_url' => '%s/images/default_header.jpg',
-		'description' => __('Default', 'scapegoat')
+add_theme_support(
+	'custom-header',
+	array(
+		'width' => 1440,
+		'height' => 486,
+		'header-text' => false,
+		'uploads' => true
 	)
-));
-
-function header_style() {
-	?><style type="text/css">
-		.custom-header {
-			background: url('<?php header_image(); ?>') scroll no-repeat;
-			background-size: 100% auto;
-		}
-	</style><?php
+);
+function scapegoat_header_image_style() {
+	if (get_header_image()) {
+		echo '<style type="text/css">';
+		echo '.custom-header {background: url("';
+		echo header_image();
+		echo '") no-repeat scroll center center / cover transparent;}';
+		echo '</style>';
+	}
 }
-
-function admin_header_style() {
-    ?><style type="text/css">
-        #headimg {
-            width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
-            height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-            background: no-repeat;
-        }
-        .default-header label img {
-			width: 360px;
-        	height: auto;
-        }
-    </style><?php
-}
-add_custom_image_header('header_style', 'admin_header_style');
+add_filter('wp_head', 'scapegoat_header_image_style');
 
 
 
