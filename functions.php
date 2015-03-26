@@ -343,7 +343,7 @@ function scapegoat_button( $atts, $content = null ) {
 
     return $out;
 }
-
+add_shortcode('button', 'scapegoat_button');
 
 
 /* add custom caption-function */
