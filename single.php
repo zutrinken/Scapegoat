@@ -178,7 +178,7 @@
 					</span>
 					<?php endif; ?>
 					<figure class="author-avatar">
-						<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), 96); }?>
+						<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_meta('email'), 96); }?>
 					</figure>
 					<?php if(get_the_author_meta('description')) : ?>
 					<span class="author-biography">
