@@ -10,16 +10,11 @@
 		} else {
 			$cat = '';
 		}
-		if($options['slider-order']) {
-			$order = 'rand';
-		} else {
-			$order = 'DESC';
-		}
 		$args = array(
 			'posts_per_page' => $num,
 			'cat' => $cat,
 			'post__not_in' => get_option('sticky_posts'),
-			'orderby' => $order
+			'orderby' => 'DESC'
 		);
 		query_posts($args);
 	

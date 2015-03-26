@@ -91,10 +91,6 @@ function scapegoat_theme_options_page() {
 								<th scope="row"><?php _e('Amount of slides','scapegoat'); ?></th>
 								<td><input id="scapegoat_theme_options[slider-num]" class="small-text" type="text" name="scapegoat_theme_options[slider-num]" value="<?php esc_attr_e( $options['slider-num'] ); ?>" /> <span class="description"><?php _e('Default: 6','scapegoat'); ?></span></td>
 							</tr>
-							<tr>
-								<th scope="row"><?php _e('Random Order','scapegoat'); ?></th>
-								<td><input id="scapegoat_theme_options[slider-order]" type="checkbox" name="scapegoat_theme_options[slider-order]" value="1" <?php checked( '1', $options['slider-order'] ); ?> /></td>
-							</tr>
 						</table>
 						<label for="show-header">
 							<input id="show-header" type="radio" name="scapegoat_theme_options[header-option]" value="show-header" <?php checked( 'show-header' == $options['header-option'] ); ?> /> <?php _e('Header','scapegoat'); ?> <span class="description"><?php _e('Default Wordpress Header Function','scapegoat'); ?></span>
