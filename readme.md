@@ -10,13 +10,6 @@
 * Font "PoliticsHeadBold" by [Fred Bordfeld](http://kaklotter.de/)
 * Font "Awesome" by [Dave Gandy](http://fontawesome.io/)
 
-## Support
-
-Feel free to support this project.
-
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/scapegoat&title=scapegoat&language=php-js-html-css&tags=github&category=software)
-[![Donate to this git repo](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WHN7573VTUQQY)
-
 ## How to
 
 * Slider Image Size ```1440x486```
